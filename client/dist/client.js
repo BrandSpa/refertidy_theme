@@ -79,10 +79,10 @@ var Slider = function (_Component) {
 				slides.map(function (slide) {
 					return _react2.default.createElement(
 						'div',
-						null,
-						_react2.default.createElement('div', { style: { background: slide.bg_img } }),
-						_react2.default.createElement('div', { style: { background: slide.model_img } }),
-						_react2.default.createElement('div', { style: { background: slide.object_img } })
+						{ style: { position: 'relative' } },
+						_react2.default.createElement('div', { style: { height: '100hv', position: 'absolute', background: slide.bg_img } }),
+						_react2.default.createElement('div', { style: { height: '100hv', position: 'absolute', background: slide.model_img } }),
+						_react2.default.createElement('div', { style: { height: '100hv', position: 'absolute', background: slide.object_img } })
 					);
 				})
 			);
