@@ -78,9 +78,7 @@ var Slider = function (_Component) {
 				height: '100vh',
 				width: '100%',
 				position: 'absolute',
-				top: '0',
-				backgroundPosition: 'center center',
-				backgroundSize: 'cover'
+				top: '0'
 			};
 
 			return _react2.default.createElement(
@@ -90,9 +88,21 @@ var Slider = function (_Component) {
 					return _react2.default.createElement(
 						'div',
 						{ style: { position: 'relative', height: '100vh' } },
-						_react2.default.createElement('div', { style: _extends({}, slideStyle, { background: 'url(' + slide.bg_img + ') no-repeat' }) }),
-						_react2.default.createElement('div', { style: _extends({}, slideStyle, { background: 'url(' + slide.model_img + ') no-repeat' }) }),
-						_react2.default.createElement('div', { style: _extends({}, slideStyle, { background: 'url(' + slide.object_img + ') no-repeat' }) })
+						_react2.default.createElement('div', { style: _extends({}, slideStyle, {
+								background: 'url(' + slide.bg_img + ') no-repeat',
+								backgroundPosition: 'center',
+								backgroundSize: 'cover'
+							}) }),
+						_react2.default.createElement('div', { style: _extends({}, slideStyle, {
+								background: 'url(' + slide.model_img + ') no-repeat',
+								backgroundPosition: 'center',
+								backgroundSize: 'cover'
+							}) }),
+						_react2.default.createElement('div', { style: _extends({}, slideStyle, {
+								background: 'url(' + slide.object_img + ') no-repeat',
+								backgroundPosition: 'center',
+								backgroundSize: 'cover'
+							}) })
 					);
 				})
 			);
