@@ -27,8 +27,6 @@ function ra_slider_sc( $atts , $content) {
   ob_start();
 	?>
 	<!--html-->
-		<?php var_dump($slides) ?>
-		<?php var_dump($at['slides']) ?>
 		<div class="ra-slider" data-props="<?php echo $slidesJson ?>"></div>
 	<!--/html-->
 	<?php
