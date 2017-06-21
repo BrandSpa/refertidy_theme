@@ -34,7 +34,20 @@
 		.slider__slide--active .slider__slide__object {
 			animation: slideObject 3s;
 		}
+
+		#app-header {
+			position: fixed;
+			top: 0;
+			width: 100%;
+			height: 400px;
+			background: rgba(255, 255, 255, 0.01);
+		}
 	</style>
 </head>
 <body>
 	
+<header id="app-header">
+	<img src="<?php echo get_template_directory_uri() ?>/imgs/logo.svg" alt="">
+	<ul></ul>
+</header>
+
