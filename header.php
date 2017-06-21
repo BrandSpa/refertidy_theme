@@ -46,6 +46,13 @@
 			z-index: 999;
 		}
 	</style>
+
+	#app-header ul {
+		float: left;
+	}
+	#app-header ul li {
+		display: inline-block;
+	}
 </head>
 <body>
 	
