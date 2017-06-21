@@ -19,7 +19,7 @@ class Slider extends Component {
 				{slides.map(slide => {
 					return (
 						<div style={{position: 'relative', height: '100vh'}}>
-							<div>
+							<div style={{paddingTop: '200px', width: '500px'}}>
 								{slide.slide_content}
 							</div>
 							<div style={{

@@ -94,7 +94,7 @@ var Slider = function (_Component) {
 						{ style: { position: 'relative', height: '100vh' } },
 						_react2.default.createElement(
 							'div',
-							null,
+							{ style: { paddingTop: '200px', width: '500px' } },
 							slide.slide_content
 						),
 						_react2.default.createElement('div', { style: _extends({}, slideStyle, {
