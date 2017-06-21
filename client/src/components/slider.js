@@ -14,9 +14,9 @@ class Slider extends Component {
 					return (
 						<div style={{position: 'relative', height: '100vh'}}>
 							<div 
-							style={{height: '100vh', position: 'absolute', background: `url(${slide.bg_img})`}}></div>
-							<div style={{height: '100vh', position: 'absolute', background: `url(${slide.model_img}`}}></div>
-							<div style={{height: '100vh', position: 'absolute', background: `url(${slide.object_img}`}}></div>
+							style={{height: '100vh', width: '100%', position: 'absolute', background: `url(${slide.bg_img})`}}></div>
+							<div style={{height: '100vh', width: '100%', position: 'absolute', background: `url(${slide.model_img}`}}></div>
+							<div style={{height: '100vh', width: '100%', position: 'absolute', background: `url(${slide.object_img}`}}></div>
 						</div>
 					)
 				})}
