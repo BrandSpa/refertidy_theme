@@ -15,9 +15,9 @@ class Slider extends Component {
 			backgroundPosition: 'center center',
 			backgroundSize: 'cover'
 		};
-		const slideBg = {...slideStyle, background: `url(${slide.bg_img} no-repeat`};
-		const slideModel = {...slideStyle, background: `url(${slide.model_img} no-repeat`};
-		const slideObject = {...slideStyle, background: `url(${slide.object_img} no-repeat`};
+		let slideBg = {...slideStyle, background: `url(${slide.bg_img}) no-repeat`};
+		let slideModel = {...slideStyle, background: `url(${slide.model_img}) no-repeat`};
+		let slideObject = {...slideStyle, background: `url(${slide.object_img}) no-repeat`};
 
 		return (
 			<div>
