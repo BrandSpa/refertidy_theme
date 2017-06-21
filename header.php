@@ -8,7 +8,7 @@
 	<style>
 		@keyframes slideModel {
 			from {
-				transform: scale(1.1) translate3d(-30px, 0, 0);
+				transform: scale(1.1) translate3d(100px, 0, 0);
 			}
 
 			to {
