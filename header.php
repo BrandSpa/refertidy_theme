@@ -75,11 +75,12 @@
 		<img src="<?php echo get_template_directory_uri() ?>/imgs/logo.svg" alt="">
 		<ul>
 			<?php
-			echo wp_nav_menu([
+			$nav = wp_nav_menu([
 					'theme_location' => 'header',
 					'container' => false,
 					'echo' => false
 				]);
+				echo clean_menu($nav);
    	 ?>
 		</ul>
 	</div>
