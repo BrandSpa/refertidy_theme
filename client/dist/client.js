@@ -184,6 +184,15 @@ var SliderImgs = function (_Component) {
 						{ style: { position: 'relative', height: '100vh' } },
 						_react2.default.createElement(
 							'div',
+							{ style: { width: '30%', position: 'absolute', left: '0' } },
+							_react2.default.createElement(
+								'h2',
+								null,
+								slide.slide_content
+							)
+						),
+						_react2.default.createElement(
+							'div',
 							{ style: slideStyle },
 							_react2.default.createElement('img', { src: slide.bg_img, alt: '' })
 						),
