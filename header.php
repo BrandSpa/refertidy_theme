@@ -52,7 +52,15 @@
 <header id="app-header">
 	<div class="container">
 		<img src="<?php echo get_template_directory_uri() ?>/imgs/logo.svg" alt="">
-		<ul></ul>
+		<ul>
+			<?php
+			echo wp_nav_menu([
+					'theme_location' => 'header',
+					'container' => false,
+					'echo' => false
+				]);
+   	 ?>
+		</ul>
 	</div>
 </header>
 
