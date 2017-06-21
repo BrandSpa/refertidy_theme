@@ -75,6 +75,8 @@
 			background: #fff;
 			border-radius: 100px;
 			width: 150px;
+			height: 50px;
+			border: none;
 		}
 
 		input, select {
