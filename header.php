@@ -43,6 +43,7 @@
 			height: 200px;
 			background: rgba(255, 255, 255, 0.01);
 			padding-top: 50px;
+			z-index: 999;
 		}
 	</style>
 </head>
