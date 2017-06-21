@@ -52,8 +52,12 @@
 		li {
 			list-style: none;
 		}
-
+		#app-header img {
+			float: left;
+		}
+		
 		#app-header ul {
+			float: left;
 			display: inline-block;
 		}
 		
