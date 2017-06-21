@@ -81,6 +81,7 @@
 			border: none;
 			border-bottom: 1px solid #fff;
 			color: #fff;
+			background: transparent;
 		} 
 	</style>
 
@@ -105,9 +106,17 @@
 </header>
 
 <form action="" style=" background: #6031BA; position: fixed; bottom: 0; z-index: 998; height: 100px; max-width: 1140px; margin: 0 auto; left: 0; right: 0">
-	<input type="text" placeholder="Nombre" />
-	<input type="text" placeholder="Email" />
-	<input type="text" placeholder="Télefono" />
+<div class="row">
+	<div class="col-lg-3">
+		<input type="text" placeholder="Nombre" />
+	</div>
+	<div class="col-lg-3">
+		<input type="text" placeholder="Email" />
+	</div>
+	<div class="col-lg-3">
+		<input type="text" placeholder="Télefono" />
+	</div>
+	</div>
 	<button class="btn">Cotizar</button>
 </form>
 
