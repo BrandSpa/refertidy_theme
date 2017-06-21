@@ -7,16 +7,26 @@ class Slider extends Component {
 
 	render() {
 		const { slides } = this.props;
+		const slideStyle = {
+			height: '100vh', 
+			width: '100%', 
+			position: 'absolute',
+			top: '0',
+			backgroundPosition: 'center center',
+			backgroundSize: 'cover'
+		};
+		const slideBg = {...slideStyle, background: `url(${slide.bg_img} no-repeat`};
+		const slideModel = {...slideStyle, background: `url(${slide.model_img} no-repeat`};
+		const slideObject = {...slideStyle, background: `url(${slide.object_img} no-repeat`};
 
 		return (
 			<div>
 				{slides.map(slide => {
 					return (
 						<div style={{position: 'relative', height: '100vh'}}>
-							<div 
-							style={{height: '100vh', width: '100%', position: 'absolute', background: `url(${slide.bg_img})`}}></div>
-							<div style={{height: '100vh', width: '100%', position: 'absolute', background: `url(${slide.model_img}`}}></div>
-							<div style={{height: '100vh', width: '100%', position: 'absolute', background: `url(${slide.object_img}`}}></div>
+							<div style={slideBg}></div>
+							<div style={slideModel}></div>
+							<div style={slideObject}></div>
 						</div>
 					)
 				})}
