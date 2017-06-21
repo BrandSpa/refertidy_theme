@@ -14,17 +14,17 @@ function parseSlides($slides) {
 }
 
 function ra_slider_sc( $atts ) {
-  $at = shortcode_atts( [
-    'slides' => ''
-	], $atts );
+  $at = shortcode_atts( [ 'slides' => '' ], $atts );
 		
 	//$slides = parseSlides($at['slides']); 
 	$slides = vc_param_group_parse_atts($at['slides']); 
 	$slidesJson = json_encode($slides);
+	
   ob_start();
 	?>
 	<!--html-->
 		<?php var_dump($slides) ?>
+		<?php var_dump($at['slides']) ?>
 		<div class="ra-slider" data-props="<?php echo $slidesJson ?>"></div>
 	<!--/html-->
 	<?php

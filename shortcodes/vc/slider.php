@@ -37,7 +37,6 @@
 	 $params = [
 		  [
         'type' => 'param_group',
-        'value' => '',
         'param_name' => 'slides',
         'params' => $subparams
       ]
