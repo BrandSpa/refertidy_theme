@@ -82,6 +82,8 @@
 			border-bottom: 1px solid #fff;
 			color: #fff;
 			background: transparent;
+			width: 100%;
+			height: 35px;
 		} 
 	</style>
 
