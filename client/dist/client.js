@@ -185,17 +185,17 @@ var SliderImgs = function (_Component) {
 						_react2.default.createElement(
 							'div',
 							{ style: slideStyle },
-							_react2.default.createElement('img', { src: slide.bg_img, alt: '' })
+							_react2.default.createElement('img', { src: slide.bg_img, style: { width: '100%' } })
 						),
 						_react2.default.createElement(
 							'div',
 							{ style: slideStyle },
-							_react2.default.createElement('img', { src: slide.model_img, alt: '' })
+							_react2.default.createElement('img', { src: slide.model_img, style: { width: '100%' } })
 						),
 						_react2.default.createElement(
 							'div',
 							{ style: slideStyle },
-							_react2.default.createElement('img', { src: slide.object_img, alt: '' })
+							_react2.default.createElement('img', { src: slide.object_img, style: { width: '100%' } })
 						),
 						_react2.default.createElement(
 							'div',

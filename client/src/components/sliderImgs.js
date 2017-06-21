@@ -19,16 +19,15 @@ class SliderImgs extends Component {
 				{slides.map(slide => {
 					return (
 						<div style={{position: 'relative', height: '100vh'}}>
-						
 
 							<div style={slideStyle}>
-								<img src={slide.bg_img} alt=""/>
+								<img src={slide.bg_img} style={{width: '100%'}}/>
 							</div>
 							<div style={slideStyle}>
-								<img src={slide.model_img} alt=""/>
+								<img src={slide.model_img} style={{width: '100%'}}/>
 							</div>
 								<div style={slideStyle}>
-								<img src={slide.object_img} alt=""/>
+								<img src={slide.object_img} style={{width: '100%'}}/>
 							</div>
 
 							<div style={{width: '30%', position: 'absolute', left: '0'}}>
