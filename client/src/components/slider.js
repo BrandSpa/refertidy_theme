@@ -13,9 +13,10 @@ class Slider extends Component {
 				{slides.map(slide => {
 					return (
 						<div style={{position: 'relative'}}>
-							<div style={{height: '100hv', position: 'absolute', background: slide.bg_img}}></div>
-							<div style={{height: '100hv', position: 'absolute', background: slide.model_img}}></div>
-							<div style={{height: '100hv', position: 'absolute', background: slide.object_img}}></div>
+							<div 
+							style={{height: '100hv', position: 'absolute', background: `url(${slide.bg_img})`}}></div>
+							<div style={{height: '100hv', position: 'absolute', background: `url(${slide.model_img}`}}></div>
+							<div style={{height: '100hv', position: 'absolute', background: `url(${slide.object_img}`}}></div>
 						</div>
 					)
 				})}

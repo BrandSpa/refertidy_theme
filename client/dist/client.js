@@ -80,9 +80,10 @@ var Slider = function (_Component) {
 					return _react2.default.createElement(
 						'div',
 						{ style: { position: 'relative' } },
-						_react2.default.createElement('div', { style: { height: '100hv', position: 'absolute', background: slide.bg_img } }),
-						_react2.default.createElement('div', { style: { height: '100hv', position: 'absolute', background: slide.model_img } }),
-						_react2.default.createElement('div', { style: { height: '100hv', position: 'absolute', background: slide.object_img } })
+						_react2.default.createElement('div', {
+							style: { height: '100hv', position: 'absolute', background: 'url(' + slide.bg_img + ')' } }),
+						_react2.default.createElement('div', { style: { height: '100hv', position: 'absolute', background: 'url(' + slide.model_img } }),
+						_react2.default.createElement('div', { style: { height: '100hv', position: 'absolute', background: 'url(' + slide.object_img } })
 					);
 				})
 			);
