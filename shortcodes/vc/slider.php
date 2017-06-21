@@ -8,12 +8,12 @@
         "param_name" => "bg_img"
       ],
 			[
-        "type" => "attach_iimage",
+        "type" => "attach_image",
         "heading" => "Model image",
         "param_name" => "model_img"
       ],
 			[
-        "type" => "attach_iimage",
+        "type" => "attach_image",
         "heading" => "Object image",
         "param_name" => "object_img"
       ],
