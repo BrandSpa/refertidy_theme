@@ -93,5 +93,5 @@ form {
 	border-radius: 100px 0 0 0;
 	display: flex;
 	justify-content: center;
-	align-content: center
+	align-items: center;
 }
