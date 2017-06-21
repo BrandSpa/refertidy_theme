@@ -1,0 +1,10 @@
+{
+    "name": "dev/rentadvisor_theme",
+    "authors": [
+        {
+            "name": "Alejandro Sanabria",
+            "email": "alesanabriav@gmail.com"
+        }
+    ],
+    "require": {}
+}
