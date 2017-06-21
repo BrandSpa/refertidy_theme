@@ -97,7 +97,7 @@
 	</div>
 </header>
 
-<form action="">
+<form action="" style="position: fixed; footer: 0; z-index: 998">
 	<input type="text" placeholder="Nombre" />
 	<input type="text" placeholder="Email" />
 	<input type="text" placeholder="Télefono" />
