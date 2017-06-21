@@ -92,6 +92,11 @@ var Slider = function (_Component) {
 					return _react2.default.createElement(
 						'div',
 						{ style: { position: 'relative', height: '100vh' } },
+						_react2.default.createElement(
+							'div',
+							null,
+							slide.slide_content
+						),
 						_react2.default.createElement('div', { style: _extends({}, slideStyle, {
 								background: 'url(' + slide.bg_img + ') center / cover no-repeat'
 

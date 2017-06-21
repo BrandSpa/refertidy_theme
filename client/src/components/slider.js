@@ -19,6 +19,9 @@ class Slider extends Component {
 				{slides.map(slide => {
 					return (
 						<div style={{position: 'relative', height: '100vh'}}>
+							<div>
+								{slide.slide_content}
+							</div>
 							<div style={{
 								...slideStyle, 
 								background: `url(${slide.bg_img}) center / cover no-repeat`,
