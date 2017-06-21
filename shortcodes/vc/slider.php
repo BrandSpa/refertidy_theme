@@ -3,17 +3,17 @@
  function ra_slider_vc() {
 	 $subparams = [
 		  [
-        "type" => "image",
+        "type" => "attach_image",
         "heading" => "Background image",
         "param_name" => "bg_img"
       ],
 			[
-        "type" => "image",
+        "type" => "attach_iimage",
         "heading" => "Model image",
         "param_name" => "model_img"
       ],
 			[
-        "type" => "image",
+        "type" => "attach_iimage",
         "heading" => "Object image",
         "param_name" => "object_img"
       ],
@@ -23,12 +23,12 @@
 				"param_name" => "slide_content"
 			],
       [
-        "type" => "texfield",
+        "type" => "textfield",
 				"heading" => "Button text",
 				"param_name" => "btn_txt"
       ],
       [
-        "type" => "colopicker",
+        "type" => "colorpicker",
 				"heading" => "Button color",
 				"param_name" => "btn_color"
       ]
