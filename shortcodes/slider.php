@@ -17,7 +17,7 @@ function ra_slider_sc( $atts ) {
     'slides' => []
 	], $atts );
 		
-	$slides = parseSlides($slides); 
+	$slides = parseSlides($at['slides']); 
 	$slidesJson = json_encode($slides);
   ob_start();
 	?>
