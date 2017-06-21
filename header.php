@@ -73,7 +73,8 @@
 
 		.btn {
 			background: #fff;
-			border-radius: 50%;
+			border-radius: 100px;
+			width: 150px;
 		}
 	</style>
 
