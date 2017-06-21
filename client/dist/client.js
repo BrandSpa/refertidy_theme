@@ -91,7 +91,7 @@ var Slider = function (_Component) {
 				slides.map(function (slide) {
 					return _react2.default.createElement(
 						'div',
-						{ 'class': 'slider__slide--active', style: { position: 'relative', height: '100vh' } },
+						{ className: 'slider__slide--active', style: { position: 'relative', height: '100vh' } },
 						_react2.default.createElement(
 							'div',
 							{ style: { paddingTop: '200px', width: '500px' } },
