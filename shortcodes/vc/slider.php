@@ -21,7 +21,17 @@
 				"type" => "textarea",
 				"heading" => "Slide content",
 				"param_name" => "slide_content"
-			]
+			],
+      [
+        "type" => "texfield",
+				"heading" => "Button text",
+				"param_name" => "btn_txt"
+      ],
+      [
+        "type" => "colopicker",
+				"heading" => "Button color",
+				"param_name" => "btn_color"
+      ]
 	 ];
 
 	 $params = [
