@@ -70,6 +70,11 @@
 			display: block;
 			padding: 0 20px;
 		}
+
+		.btn {
+			background: #fff;
+			border-radius: 50%;
+		}
 	</style>
 
 	
@@ -91,4 +96,11 @@
 		</ul>
 	</div>
 </header>
+
+<form action="">
+	<input type="text" placeholder="Nombre" />
+	<input type="text" placeholder="Email" />
+	<input type="text" placeholder="Télefono" />
+	<button class="btn">Cotizar</button>
+</form>
 
