@@ -28,11 +28,12 @@
 
 
 		.slider__slide--active .slider__slide__model {
-			animation: slideModel 3s;
+			animation: slideModel 2s;
 		}
 
 		.slider__slide--active .slider__slide__object {
-			animation: slideObject 4s;
+			animation: slideObject 2s;
+			animation-delay: 3s;
 		}
 	</style>
 </head>
