@@ -32,8 +32,7 @@
 		}
 
 		.slider__slide--active .slider__slide__object {
-			animation: slideObject 2s;
-			animation-delay: 1s;
+			animation: slideObject 3s;
 		}
 	</style>
 </head>
