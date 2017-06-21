@@ -21,21 +21,16 @@ class Slider extends Component {
 						<div style={{position: 'relative', height: '100vh'}}>
 							<div style={{
 								...slideStyle, 
-								background: `url(${slide.bg_img}) no-repeat`,
-								backgroundPosition: 'center',
-								backgroundSize: 'cover'
+								background: `url(${slide.bg_img}) center / cover no-repeat`,
+			
 							}}></div>
 							<div style={{
 								...slideStyle, 
-								background: `url(${slide.model_img}) no-repeat`,
-								backgroundPosition: 'center',
-								backgroundSize: 'cover'
+								background: `url(${slide.model_img}) right / cover no-repeat`
 							}}></div>
 							<div style={{
 								...slideStyle, 
-								background: `url(${slide.object_img}) no-repeat`,
-								backgroundPosition: 'center',
-								backgroundSize: 'cover'
+								background: `url(${slide.object_img}) right / cover no-repeat`
 							}}></div>
 						</div>
 					)

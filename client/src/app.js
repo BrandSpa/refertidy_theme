@@ -3,4 +3,4 @@ import multipleRender from "react-multiple-render";
 import Slider from './components/slider';
 import SliderImgs from './components/sliderImgs';
 
-multipleRender(SliderImgs, '.ra-slider');
+multipleRender(Slider, '.ra-slider');

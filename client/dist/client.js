@@ -24,7 +24,7 @@ var _sliderImgs2 = _interopRequireDefault(_sliderImgs);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-(0, _reactMultipleRender2.default)(_sliderImgs2.default, '.ra-slider');
+(0, _reactMultipleRender2.default)(_slider2.default, '.ra-slider');
 
 /***/ }),
 
@@ -93,19 +93,14 @@ var Slider = function (_Component) {
 						'div',
 						{ style: { position: 'relative', height: '100vh' } },
 						_react2.default.createElement('div', { style: _extends({}, slideStyle, {
-								background: 'url(' + slide.bg_img + ') no-repeat',
-								backgroundPosition: 'center',
-								backgroundSize: 'cover'
+								background: 'url(' + slide.bg_img + ') center / cover no-repeat'
+
 							}) }),
 						_react2.default.createElement('div', { style: _extends({}, slideStyle, {
-								background: 'url(' + slide.model_img + ') no-repeat',
-								backgroundPosition: 'center',
-								backgroundSize: 'cover'
+								background: 'url(' + slide.model_img + ') right / cover no-repeat'
 							}) }),
 						_react2.default.createElement('div', { style: _extends({}, slideStyle, {
-								background: 'url(' + slide.object_img + ') no-repeat',
-								backgroundPosition: 'center',
-								backgroundSize: 'cover'
+								background: 'url(' + slide.object_img + ') right / cover no-repeat'
 							}) })
 					);
 				})
