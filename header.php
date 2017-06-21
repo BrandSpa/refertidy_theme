@@ -67,7 +67,8 @@
 
 		#app-header ul li a {
 			color: #6031BA;
-			padding: 20px 0;
+			display: block;
+			padding: 0 20px;
 		}
 	</style>
 
