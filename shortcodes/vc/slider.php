@@ -43,7 +43,12 @@
       ]
 	 ];
 
-	 vc_map($params);
+	 vc_map([
+     'name' => 'Slider',
+     'base' => 'ra_slider',
+     'category' => 'RA',
+     'params' => $params
+     ]);
  }
 
  add_action( 'vc_before_init', 'ra_slider_vc' );
