@@ -118,7 +118,10 @@
 	<div class="col-lg-3">
 		<input type="text" placeholder="Télefono" />
 	</div>
+	<div class="col-lg-3">
+		<button class="btn">Cotizar</button>
 	</div>
-	<button class="btn">Cotizar</button>
+	</div>
+	
 </form>
 
