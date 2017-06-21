@@ -55,7 +55,7 @@
 		#app-header img {
 			float: left;
 		}
-		
+
 		#app-header ul {
 			float: left;
 			display: inline-block;
@@ -67,6 +67,7 @@
 
 		#app-header ul li a {
 			color: #6031BA;
+			padding: 20px 0;
 		}
 	</style>
 
