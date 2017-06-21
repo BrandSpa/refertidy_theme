@@ -76,6 +76,12 @@
 			border-radius: 100px;
 			width: 150px;
 		}
+
+		input, select {
+			border: none;
+			border-bottom: 1px solid #fff;
+			color: #fff;
+		} 
 	</style>
 
 	
