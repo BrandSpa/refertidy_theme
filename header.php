@@ -39,8 +39,9 @@
 			position: fixed;
 			top: 0;
 			width: 100%;
-			height: 400px;
+			height: 200px;
 			background: rgba(255, 255, 255, 0.01);
+			padding-top: 50px;
 		}
 	</style>
 </head>
