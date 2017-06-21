@@ -1,7 +1,8 @@
 <?php
 
 function parseSlides($slides) {
-	$parseAtts = vc_param_group_parse_atts( $slides );
+	$parseAtts = function_exists('vc_param_group_parse_atts') ? vc_param_group_parse_atts( $slides ) : [];
+
 	$arrResult = array_map(function($slide) {
 			$slide['bg_img'] = wp_get_attachment_url($slide['bg_img']);			
 			$slide['model_img'] = wp_get_attachment_url($slide['model_img']);			
@@ -14,14 +15,16 @@ function parseSlides($slides) {
 
 function ra_slider_sc( $atts ) {
   $at = shortcode_atts( [
-    'slides' => []
+    'slides' => ''
 	], $atts );
 		
-	$slides = parseSlides($at['slides']); 
+	//$slides = parseSlides($at['slides']); 
+	$slides = vc_param_group_parse_atts($at['slides']); 
 	$slidesJson = json_encode($slides);
   ob_start();
 	?>
 	<!--html-->
+		<?php var_dump($slides) ?>
 		<div class="ra-slider" data-props="<?php echo $slidesJson ?>"></div>
 	<!--/html-->
 	<?php
