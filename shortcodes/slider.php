@@ -13,11 +13,11 @@ function parseSlides($slides) {
 	return $arrResult;
 }
 
-function ra_slider_sc( $atts ) {
+function ra_slider_sc( $atts , $content) {
   $at = shortcode_atts( [ 'slides' => '' ], $atts );
 		
 	//$slides = parseSlides($at['slides']); 
-	$slides = vc_param_group_parse_atts($at['slides']); 
+	$slides = vc_param_group_parse_atts($atts['slides']); 
 	$slidesJson = json_encode($slides);
 	
   ob_start();
