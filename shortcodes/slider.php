@@ -27,7 +27,7 @@ function ra_slider_sc( $atts , $content) {
   ob_start();
 	?>
 	<!--html-->
-		<div class="ra-slider" data-props="{"slides": <?php echo $slidesJson ?>}"></div>
+		<div class="ra-slider" data-props='{"slides": <?php echo $slidesJson ?>}'></div>
 	<!--/html-->
 	<?php
 	return ob_get_clean();
