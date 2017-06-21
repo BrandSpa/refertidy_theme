@@ -18,7 +18,7 @@
 
 		@keyframes slideObject {
 			from {
-				transform: scale(1.1) translate3d(-70px, -20px, 0);
+				transform: scale(1.1) translate3d(0, -20px, 0);
 			}
 
 			to {
