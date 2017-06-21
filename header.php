@@ -45,13 +45,25 @@
 			padding-top: 50px;
 			z-index: 999;
 		}
+		a {
+			text-decoration: none;
+		}
 		
+		li {
+			list-style: none;
+		}
+
 		#app-header ul {
-		float: left;
-	}
-	#app-header ul li {
-		display: inline-block;
-	}
+			display: inline-block;
+		}
+		
+		#app-header ul li {
+			display: inline-block;
+		}
+
+		#app-header ul li a {
+			color: #6031BA;
+		}
 	</style>
 
 	
