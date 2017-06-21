@@ -18,7 +18,7 @@ class Slider extends Component {
 			<div>
 				{slides.map(slide => {
 					return (
-						<div style={{position: 'relative', height: '100vh'}}>
+						<div class="slider__slide--active" style={{position: 'relative', height: '100vh'}}>
 							<div style={{paddingTop: '200px', width: '500px'}}>
 								{slide.slide_content}
 							</div>
@@ -27,11 +27,11 @@ class Slider extends Component {
 								background: `url(${slide.bg_img}) center / cover no-repeat`,
 			
 							}}></div>
-							<div style={{
+							<div className="slider__slide__model" style={{
 								...slideStyle, 
 								background: `url(${slide.model_img}) right / cover no-repeat`
 							}}></div>
-							<div style={{
+							<div className="slider__slide__object" style={{
 								...slideStyle, 
 								background: `url(${slide.object_img}) right / cover no-repeat`
 							}}></div>

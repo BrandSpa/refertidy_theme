@@ -91,7 +91,7 @@ var Slider = function (_Component) {
 				slides.map(function (slide) {
 					return _react2.default.createElement(
 						'div',
-						{ style: { position: 'relative', height: '100vh' } },
+						{ 'class': 'slider__slide--active', style: { position: 'relative', height: '100vh' } },
 						_react2.default.createElement(
 							'div',
 							{ style: { paddingTop: '200px', width: '500px' } },
@@ -101,10 +101,10 @@ var Slider = function (_Component) {
 								background: 'url(' + slide.bg_img + ') center / cover no-repeat'
 
 							}) }),
-						_react2.default.createElement('div', { style: _extends({}, slideStyle, {
+						_react2.default.createElement('div', { className: 'slider__slide__model', style: _extends({}, slideStyle, {
 								background: 'url(' + slide.model_img + ') right / cover no-repeat'
 							}) }),
-						_react2.default.createElement('div', { style: _extends({}, slideStyle, {
+						_react2.default.createElement('div', { className: 'slider__slide__object', style: _extends({}, slideStyle, {
 								background: 'url(' + slide.object_img + ') right / cover no-repeat'
 							}) })
 					);
