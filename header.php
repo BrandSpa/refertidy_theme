@@ -30,21 +30,22 @@
 	</div>
 </header>
 
-<form action="" style=" background: #6031BA; position: fixed; bottom: 0; z-index: 998; height: 100px; max-width: 1140px; margin: 0 auto; left: 0; right: 0">
-<div class="row">
-	<div class="col-lg-3">
-		<input type="text" placeholder="Nombre" />
-	</div>
-	<div class="col-lg-3">
-		<input type="text" placeholder="Email" />
-	</div>
-	<div class="col-lg-3">
-		<input type="text" placeholder="Télefono" />
-	</div>
-	<div class="col-lg-3">
-		<button class="btn">Cotizar</button>
-	</div>
-	</div>
-	
-</form>
-
+<div class="contact-form" style="padding: 0 15px">
+	<form action="" style=" background: #6031BA; position: fixed; bottom: 0; z-index: 998; height: 100px; max-width: 1140px; margin: 0 auto; left: 0; right: 0">
+	<div class="row">
+		<div class="col-lg-3">
+			<input type="text" placeholder="Nombre" />
+		</div>
+		<div class="col-lg-3">
+			<input type="text" placeholder="Email" />
+		</div>
+		<div class="col-lg-3">
+			<input type="text" placeholder="Télefono" />
+		</div>
+		<div class="col-lg-3">
+			<button class="btn">Cotizar</button>
+		</div>
+		</div>
+		
+	</form>
+</div>
