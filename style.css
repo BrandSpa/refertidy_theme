@@ -42,8 +42,8 @@ body {
 
 @keyframes slideContent {
   from {
-		opacity: .3;
-    transform: translate3d(0, -100px, 0);
+		opacity: .5;
+    transform: translate3d(0, -50%, 0);
   }
 
   to {
@@ -61,7 +61,7 @@ body {
 }
 
 .slider__slide--active .slider__slide__content {
-	animation: slideContent 3s;
+	animation: slideContent 2s;
 }
 
 .slider__viewport {
