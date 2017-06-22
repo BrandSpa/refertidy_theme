@@ -159,6 +159,7 @@ form {
 	font-size: 45px;
 	color: #6031ba;
 	line-height: 1.16;
+	font-weight: normal;
 }
 
 .slider__content__btn {
@@ -166,4 +167,6 @@ form {
 	border-radius: 90px;
 	background-color: #6031ba;
 	padding: 20px 40px;
+	letter-spacing: 1.5px;
+	font-size: 1.333rem;
 }
