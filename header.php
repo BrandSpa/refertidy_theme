@@ -9,8 +9,8 @@
 	<link rel="stylesheet" href="<?php echo get_template_directory_uri() ?>/fonts/aktiv.css">
 	<link rel="stylesheet" href="<?php echo get_template_directory_uri() ?>/style.css">	
 	<!--wordpress files-->
-<?php wp_header() ?>
-<!-- /wordpress files-->
+	<?php wp_head(); ?>
+	<!-- /wordpress files-->
 </head>
 <body>
 	
