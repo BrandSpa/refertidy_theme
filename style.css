@@ -10,21 +10,21 @@ Use it to make something cool, have fun, and share what you've learned with othe
 */
 		@keyframes slideModel {
 			from {
-				transform: scale(1.1) translate3d(50px, 0, 0);
+				transform: translate3d(50px, 0, 0);
 			}
 
 			to {
-				transform: scale(1) translate3d(0, 0, 0);
+				transform: translate3d(0, 0, 0);
 			}
 		}
 
 		@keyframes slideObject {
 			from {
-				transform: scale(1.1) translate3d(0, -20px, 0);
+				transform: translate3d(0, -20px, 0);
 			}
 
 			to {
-				transform: scale(1) translate3d(0, 0, 0);
+				transform: translate3d(0, 0, 0);
 			}
 		}
 
