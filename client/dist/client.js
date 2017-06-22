@@ -87,6 +87,8 @@ var Slider = function (_Component) {
 				width: 100 * slides.length + '%'
 			};
 
+			var slideWidth = 100 / slides.length + '%';
+
 			return _react2.default.createElement(
 				'div',
 				{ className: 'slider' },
@@ -94,7 +96,12 @@ var Slider = function (_Component) {
 					'div',
 					{ className: 'slider__viewport', style: viewportStyle },
 					slides.map(function (slide, i) {
-						return _react2.default.createElement(_slider_slide2.default, { slide: slide, current: _this2.state.slide, index: i });
+						return _react2.default.createElement(_slider_slide2.default, {
+							slide: slide,
+							current: _this2.state.slide,
+							index: i,
+							slideWidth: slideWidth
+						});
 					})
 				)
 			);
@@ -247,6 +254,7 @@ var SliderSlide = function (_Component) {
     value: function render() {
       var _props = this.props,
           slide = _props.slide,
+          slideWidth = _props.slideWidth,
           current = _props.current,
           index = _props.index;
 
@@ -261,7 +269,7 @@ var SliderSlide = function (_Component) {
         'section',
         {
           className: 'slider__slide ' + (current == index ? "slider__slide--active" : ""),
-          style: { position: "relative", height: "100vh" }
+          style: { position: "relative", height: "100vh", width: slideWidth }
         },
         _react2.default.createElement(
           'div',

@@ -3,10 +3,10 @@ import React, { Component } from "react";
 class SliderSlide extends Component {
 
   render() {
-		const { slide, current, index } = this.props;
+		const { slide, slideWidth, current, index } = this.props;
     const slideStyle = {
 			height: '100vh', 
-			width: '100%', 
+			width: '100%',
 			position: 'absolute',
 			top: '0'
 		};
@@ -17,7 +17,7 @@ class SliderSlide extends Component {
           ? "slider__slide--active"
           : ""}`
 				}
-        style={{ position: "relative", height: "100vh" }}
+        style={{ position: "relative", height: "100vh", width: slideWidth }}
       >
         <div style={{ paddingTop: "200px", width: "500px" }}>
           {slide.slide_content}
