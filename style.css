@@ -107,6 +107,7 @@ form {
   width: 30px;
   height: 30px;
   margin: auto;
+	z-index: 997;
 }
 
 .slider__btns .slider__btns__left {
