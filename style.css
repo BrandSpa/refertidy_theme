@@ -9,166 +9,181 @@ This theme, like WordPress, is licensed under the GPL.
 Use it to make something cool, have fun, and share what you've learned with others.
 */
 body, html {
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 body {
-	font-family: 'Aktiv Grotesk';
-	font-size: 15px;
-	margin: 0;
-	padding: 0
+  font-family: 'Aktiv Grotesk';
+  font-size: 15px;
+  margin: 0;
+  padding: 0;
 }
 
 @keyframes slideModel {
-			from {
-				transform: translate3d(50px, 0, 0);
-			}
+  from {
+    transform: translate3d(50px, 0, 0);
+  }
 
-			to {
-				transform: translate3d(0, 0, 0);
-			}
-		}
+  to {
+    transform: translate3d(0, 0, 0);
+  }
+}
 
-		@keyframes slideObject {
-			from {
-				transform: translate3d(0, -20px, 0);
-			}
+@keyframes slideObject {
+  from {
+    transform: translate3d(0, -20px, 0);
+  }
 
-			to {
-				transform: translate3d(0, 0, 0);
-			}
-		}
+  to {
+    transform: translate3d(0, 0, 0);
+  }
+}
 
+@keyframes slideContent {
+  from {
+		opacity: .3;
+    transform: translate3d(0, -100px, 0);
+  }
 
-		.slider__slide--active .slider__slide__model {
-			animation: slideModel 2s;
-		}
+  to {
+		opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
 
-		.slider__slide--active .slider__slide__object {
-			animation: slideObject 3s;
-		}
+.slider__slide--active .slider__slide__model {
+  animation: slideModel 2s;
+}
 
-		.slider__viewport {
-			overflow: hidden;
-		}
+.slider__slide--active .slider__slide__object {
+  animation: slideObject 3s;
+}
 
-		#app-header {
-			position: fixed;
-			top: 0;
-			width: 100%;
-			background: rgba(255, 255, 255, 0.01);
-			padding-top: 50px;
-			z-index: 999;
-		}
+.slider__slide--active .slider__slide__content {
+	animation: slideContent 3s;
+}
 
-		a {
-			text-decoration: none;
-			font-size: 1rem;
-		}
+.slider__viewport {
+  overflow: hidden;
+}
 
-		button {
-			border: none;
-			outline: none;
-			cursor: pointer;
-		}
+#app-header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.01);
+  padding-top: 50px;
+  z-index: 999;
+}
 
-		button:focus {
-			outline: none;
-		}
-		
-		li {
-			list-style: none;
-		}
+a {
+  text-decoration: none;
+  font-size: 1rem;
+}
 
-		#app-header img {
-			float: left;
-		}
+button {
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
 
-		#app-header ul {
-			float: left;
-		}
-		
-		#app-header ul li {
-			display: inline-block;
-		}
+button:focus {
+  outline: none;
+}
 
-		#app-header ul li a {
-			color: #6031BA;
-			display: block;
-			padding: 0 20px;
-			font-family: 'Aktiv Grotesk Medium';
-			display: block;
-			transition: all 500ms; 
-		}
+li {
+  list-style: none;
+}
 
-		#app-header .current_page_item {
-			padding-bottom: 8px;
-			border-bottom: 2px solid #fff;
-		}
+#app-header img {
+  float: left;
+}
 
-		.btn {
-			background: #fff;
-			border-radius: 100px;
-			width: 150px;
-			height: 50px;
-			border: none;
-			cursor: pointer;
-		}
+#app-header ul {
+  float: left;
+}
 
-		input, select {
-			border: none;
-			border-bottom: 1px solid #fff;
-			color: #fff;
-			background: transparent;
-			width: 100%;
-			height: 35px;
-		} 
+#app-header ul li {
+  display: inline-block;
+}
+
+#app-header ul li a {
+  color: #6031BA;
+  display: block;
+  padding: 0 20px;
+  font-family: 'Aktiv Grotesk Medium';
+  display: block;
+  transition: all 500ms;
+}
+
+#app-header .current_page_item {
+  padding-bottom: 8px;
+  border-bottom: 2px solid #fff;
+}
+
+.btn {
+  background: #fff;
+  border-radius: 100px;
+  width: 150px;
+  height: 50px;
+  border: none;
+  cursor: pointer;
+}
+
+input, select {
+  border: none;
+  border-bottom: 1px solid #fff;
+  color: #fff;
+  background: transparent;
+  width: 100%;
+  height: 35px;
+}
 
 form {
-	border-radius: 100px 0 0 0;
-	display: flex;
-	justify-content: center;
-	align-items: center;
+  border-radius: 100px 0 0 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .slider__btns {
-	margin: 0; 
-	width: 100%
+  margin: 0;
+  width: 100%;
 }
 
 .slider__btns a {
-	position: absolute;
+  position: absolute;
   top: 0;
   bottom: 0;
   width: 30px;
   height: 30px;
   margin: auto;
-	z-index: 997;
+  z-index: 997;
 }
 
 .slider__btns .slider__btns__left {
-	left: 40px;
+  left: 40px;
 }
 
 .slider__btns .slider__btns__right {
-	right: 40px;
+  right: 40px;
 }
 
 .slider__content__title {
-	font-size: 45px;
-	color: #6031ba;
-	line-height: 1.16;
-	font-weight: normal;
+  font-size: 45px;
+  color: #6031ba;
+  line-height: 1.16;
+  font-weight: normal;
 }
 
 .slider__content__btn {
-	display: inline-block;
-	height: 60px;
-	border-radius: 90px;
-	background-color: #6031ba;
-	padding: 18px 40px;
-	letter-spacing: 1.5px;
-	font-size: 1.333rem;
-	color: #fff;
+  display: inline-block;
+  height: 60px;
+  border-radius: 90px;
+  background-color: #6031ba;
+  padding: 18px 40px;
+  letter-spacing: 1.5px;
+  font-size: 1.333rem;
+  color: #fff;
 }
