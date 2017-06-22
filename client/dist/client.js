@@ -304,7 +304,7 @@ var SliderSlide = function (_Component) {
           { className: 'container' },
           _react2.default.createElement(
             'div',
-            { style: { paddingTop: "200px", width: "500px", position: "absolute", zIndex: '998' } },
+            { style: { width: "500px", position: "absolute", zIndex: '998' } },
             _react2.default.createElement('div', { dangerouslySetInnerHTML: { __html: slide.slide_content } })
           )
         ),
