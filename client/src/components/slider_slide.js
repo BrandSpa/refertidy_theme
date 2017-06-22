@@ -17,7 +17,7 @@ class SliderSlide extends Component {
           ? "slider__slide--active"
           : ""}`
 				}
-        style={{ position: "relative", height: "100vh", width: slideWidth }}
+        style={{ position: "relative", height: "100vh", width: slideWidth, float: 'left' }}
       >
         <div style={{ paddingTop: "200px", width: "500px" }}>
           {slide.slide_content}

@@ -10,7 +10,9 @@ class Slider extends Component {
 		const { slides } = this.props;
 
 		const viewportStyle = {
-			width: `${100 * slides.length}%`
+			width: `${100 * slides.length}%`,
+			transform: `translate3d( -${}%, 0, 0 )`,
+			transition: 'transform 500ms'
 		};
 
 		const slideWidth = `${100 / slides.length}%`;
