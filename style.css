@@ -70,6 +70,7 @@ body {
 		button {
 			border: none;
 			outline: none;
+			cursor: pointer;
 		}
 
 		button:focus {
@@ -164,5 +165,5 @@ form {
 	height: 60px;
 	border-radius: 90px;
 	background-color: #6031ba;
-	padding: 20px;
+	padding: 20px 40px;
 }
