@@ -4,6 +4,13 @@ class SliderSlide extends Component {
 
   render() {
 		const { slide, current, index } = this.props;
+    const slideStyle = {
+			height: '100vh', 
+			width: '100%', 
+			position: 'absolute',
+			top: '0'
+		};
+
     return (
       <section
         className={`slider__slide ${current == index

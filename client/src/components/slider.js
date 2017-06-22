@@ -8,12 +8,7 @@ class Slider extends Component {
 
 	render() {
 		const { slides } = this.props;
-		const slideStyle = {
-			height: '100vh', 
-			width: '100%', 
-			position: 'absolute',
-			top: '0'
-		};
+		
 		const viewportStyle = {
 			width: `${100 * slides.length}%`
 		};

@@ -82,12 +82,7 @@ var Slider = function (_Component) {
 
 			var slides = this.props.slides;
 
-			var slideStyle = {
-				height: '100vh',
-				width: '100%',
-				position: 'absolute',
-				top: '0'
-			};
+
 			var viewportStyle = {
 				width: 100 * slides.length + '%'
 			};
@@ -248,39 +243,46 @@ var SliderSlide = function (_Component) {
   }
 
   _createClass(SliderSlide, [{
-    key: "render",
+    key: 'render',
     value: function render() {
       var _props = this.props,
           slide = _props.slide,
           current = _props.current,
           index = _props.index;
 
+      var slideStyle = {
+        height: '100vh',
+        width: '100%',
+        position: 'absolute',
+        top: '0'
+      };
+
       return _react2.default.createElement(
-        "section",
+        'section',
         {
-          className: "slider__slide " + (current == index ? "slider__slide--active" : ""),
+          className: 'slider__slide ' + (current == index ? "slider__slide--active" : ""),
           style: { position: "relative", height: "100vh" }
         },
         _react2.default.createElement(
-          "div",
+          'div',
           { style: { paddingTop: "200px", width: "500px" } },
           slide.slide_content
         ),
-        _react2.default.createElement("div", {
+        _react2.default.createElement('div', {
           style: _extends({}, slideStyle, {
-            background: "url(" + slide.bg_img + ") center / cover no-repeat"
+            background: 'url(' + slide.bg_img + ') center / cover no-repeat'
           })
         }),
-        _react2.default.createElement("div", {
-          className: "slider__slide__model",
+        _react2.default.createElement('div', {
+          className: 'slider__slide__model',
           style: _extends({}, slideStyle, {
-            background: "url(" + slide.model_img + ") right / cover no-repeat"
+            background: 'url(' + slide.model_img + ') right / cover no-repeat'
           })
         }),
-        _react2.default.createElement("div", {
-          className: "slider__slide__object",
+        _react2.default.createElement('div', {
+          className: 'slider__slide__object',
           style: _extends({}, slideStyle, {
-            background: "url(" + slide.object_img + ") right / cover no-repeat"
+            background: 'url(' + slide.object_img + ') right / cover no-repeat'
           })
         })
       );
