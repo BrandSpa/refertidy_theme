@@ -6,6 +6,22 @@ class Slider extends Component {
 		slide: 0
 	}
 
+	next = e => {
+		if(e) e.preventDefault();
+		const total = this.props.slides.length;
+		const current = this.state.slide;
+		const slide = current < total ? current + 1 : 0;
+		this.setState({ slide });
+	}
+
+	prev = e => {
+		if(e) e.preventDefault();
+		const total = this.props.slides.length;
+		const current = this.state.slide;
+		const slide = current > 0 ? current - 1 : 0;
+		this.setState({ slide });
+	}
+
 	render() {
 		const { slides } = this.props;
 
@@ -28,7 +44,11 @@ class Slider extends Component {
 								slideWidth={slideWidth}
 							/>
 					)}
-					</div>
+				</div>
+				<div className="slider-btns">
+					<a href="#" onClick={this.prev}> < </a>
+					<a href="#" onClick={this.next}> > </a>
+				</div>
 			</div>
 		)
 	}
