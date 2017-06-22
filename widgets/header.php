@@ -29,6 +29,7 @@ class Header_Widget extends WP_Widget {
 	 */
 	public function form( $instance ) {
 		// outputs the options form on admin
+
 	}
 
 	/**
@@ -39,10 +40,12 @@ class Header_Widget extends WP_Widget {
 	 */
 	public function update( $new_instance, $old_instance ) {
 		// processes widget options to be saved
+		
 	}
 
 }
+function add_widget() { 
+	register_widget( 'header_widget' );
+}
 
-add_action('widgets_init', function() { 
-	register_widget( 'Header_Widget' );
-});
+add_action('widgets_init', 'add_widget');
