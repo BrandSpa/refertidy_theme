@@ -89,6 +89,7 @@ body {
 			padding: 0 20px;
 			font-family: 'Aktiv Grotesk Medium';
 			display: block;
+			transition: all 500ms; 
 		}
 
 		#app-header .current_page_item {
