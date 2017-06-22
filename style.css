@@ -15,9 +15,10 @@ body, html {
 
 body {
 	font-family: 'Aktiv Grotesk';
+	font-size: 15px;
 }
 
-		@keyframes slideModel {
+@keyframes slideModel {
 			from {
 				transform: translate3d(50px, 0, 0);
 			}
@@ -59,13 +60,16 @@ body {
 			padding-top: 50px;
 			z-index: 999;
 		}
+
 		a {
 			text-decoration: none;
+			font-size: 1rem;
 		}
 		
 		li {
 			list-style: none;
 		}
+
 		#app-header img {
 			float: left;
 		}
@@ -83,6 +87,7 @@ body {
 			color: #6031BA;
 			display: block;
 			padding: 0 20px;
+			font-family: 'Aktiv Grotesk Medium';
 		}
 
 		.btn {
