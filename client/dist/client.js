@@ -105,7 +105,7 @@ var Slider = function (_Component) {
 
 			return _react2.default.createElement(
 				'div',
-				{ className: 'slider' },
+				{ className: 'slider', style: { position: 'relative' } },
 				_react2.default.createElement(
 					'div',
 					{ className: 'slider__viewport', style: viewportStyle },
@@ -120,7 +120,7 @@ var Slider = function (_Component) {
 				),
 				_react2.default.createElement(
 					'div',
-					{ className: 'slider-btns' },
+					{ className: 'slider-btns', style: { position: 'absolute', top: 0, bottom: 0, margin: 0 } },
 					_react2.default.createElement(
 						'a',
 						{ href: '#', onClick: this.prev },

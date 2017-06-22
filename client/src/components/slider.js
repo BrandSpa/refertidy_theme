@@ -34,7 +34,7 @@ class Slider extends Component {
 		const slideWidth = `${100 / slides.length}%`;
 
 		return (
-			<div className="slider">
+			<div className="slider" style={{position: 'relative'}}>
 				<div className="slider__viewport" style={viewportStyle}>
 					{slides.map((slide, i) =>
 							<Slide 
@@ -45,7 +45,7 @@ class Slider extends Component {
 							/>
 					)}
 				</div>
-				<div className="slider-btns">
+				<div className="slider-btns" style={{position: 'absolute', top: 0, bottom: 0, margin: 0}} >
 					<a href="#" onClick={this.prev}> {'<'} </a>
 					<a href="#" onClick={this.next}> {'>'} </a>
 				</div>
