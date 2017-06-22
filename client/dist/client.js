@@ -301,8 +301,12 @@ var SliderSlide = function (_Component) {
         },
         _react2.default.createElement(
           'div',
-          { style: { paddingTop: "200px", width: "500px" } },
-          slide.slide_content
+          { className: 'container' },
+          _react2.default.createElement(
+            'div',
+            { style: { paddingTop: "200px", width: "500px" } },
+            slide.slide_content
+          )
         ),
         _react2.default.createElement('div', {
           style: _extends({}, slideStyle, {
