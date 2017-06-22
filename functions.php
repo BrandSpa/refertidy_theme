@@ -57,7 +57,7 @@ function register_foo_widget() {
 }
 
 add_action( 'widgets_init', 'register_foo_widget');
-
+wp_widgets_init();
 //MENUS
 register_nav_menus(
   array(
