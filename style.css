@@ -88,6 +88,12 @@ body {
 			display: block;
 			padding: 0 20px;
 			font-family: 'Aktiv Grotesk Medium';
+			display: block;
+		}
+
+		#app-header .current_page_item {
+			padding-bottom: 8px;
+			border-bottom: 2px solid #fff;
 		}
 
 		.btn {
