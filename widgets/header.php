@@ -4,7 +4,7 @@ class Header_Widget extends WP_Widget {
 
 	public function __construct() {
 		$widget_ops = array( 
-			'classname' => 'header__widget',
+			'classname' => 'header_widget',
 			'description' => 'header content'
 		);
 
@@ -44,8 +44,7 @@ class Header_Widget extends WP_Widget {
 	}
 
 }
-function add_widget() { 
-	register_widget( 'header_widget' );
-}
 
-add_action('widgets_init', 'add_widget');
+add_action('widgets_init', function() {
+	register_widget( 'header_widget' );
+});
