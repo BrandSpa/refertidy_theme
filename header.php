@@ -29,7 +29,7 @@
    	 ?>
 		</ul>
 		<?php if ( is_active_sidebar( 'header_widget' ) ) : ?>
-			<div id="primary-sidebar" class="primary-sidebar widget-area">
+			<div class="header__widget">
 				<?php dynamic_sidebar( 'header_widget' ); ?>
 			</div><!-- #primary-sidebar -->
 		<?php endif; ?>
