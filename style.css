@@ -37,6 +37,10 @@ Use it to make something cool, have fun, and share what you've learned with othe
 			animation: slideObject 3s;
 		}
 
+		.slider__viewport {
+			overflow: hidden;
+		}
+
 		#app-header {
 			position: fixed;
 			top: 0;

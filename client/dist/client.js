@@ -38,8 +38,6 @@ Object.defineProperty(exports, "__esModule", {
 	value: true
 });
 
-var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
-
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 var _react = __webpack_require__(68);
@@ -86,33 +84,20 @@ var Slider = function (_Component) {
 				position: 'absolute',
 				top: '0'
 			};
+			var viewportStyle = {
+				width: 100 * slides.length + '%'
+			};
 
 			return _react2.default.createElement(
 				'div',
-				null,
-				slides.map(function (slide, i) {
-					return _react2.default.createElement(
-						'div',
-						{
-							className: 'slider__slide ' + (_this2.state.slide == i ? 'slider__slide--active' : ''),
-							style: { position: 'relative', height: '100vh' } },
-						_react2.default.createElement(
-							'div',
-							{ style: { paddingTop: '200px', width: '500px' } },
-							slide.slide_content
-						),
-						_react2.default.createElement('div', { style: _extends({}, slideStyle, {
-								background: 'url(' + slide.bg_img + ') center / cover no-repeat'
-
-							}) }),
-						_react2.default.createElement('div', { className: 'slider__slide__model', style: _extends({}, slideStyle, {
-								background: 'url(' + slide.model_img + ') right / cover no-repeat'
-							}) }),
-						_react2.default.createElement('div', { className: 'slider__slide__object', style: _extends({}, slideStyle, {
-								background: 'url(' + slide.object_img + ') right / cover no-repeat'
-							}) })
-					);
-				})
+				{ className: 'slider' },
+				_react2.default.createElement(
+					'div',
+					{ className: 'slider__viewport', style: viewportStyle },
+					slides.map(function (slide, i) {
+						return _react2.default.createElement(Slide, { slide: slide, current: _this2.state.slide, index: i });
+					})
+				)
 			);
 		}
 	}]);
