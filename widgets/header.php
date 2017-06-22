@@ -9,7 +9,7 @@ class Header_Widget extends WP_Widget {
 		$widget_ops = array( 
 			'classname' => 'header__widget'
 		);
-		parent::__construct( 'Header_widget', 'Header widget', $widget_ops );
+		parent::__construct( 'header_widget', 'Header widget', $widget_ops );
 	}
 
 	/**
