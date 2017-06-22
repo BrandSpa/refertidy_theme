@@ -150,3 +150,10 @@ form {
 	color: #6031ba;
 	line-height: 1.16;
 }
+
+.slider__content__btn {
+	height: 60px;
+	border-radius: 90px;
+	background-color: #6031ba;
+	padding: 20px;
+}
