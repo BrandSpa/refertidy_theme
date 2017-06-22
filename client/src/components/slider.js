@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 
 class Slider extends Component {
 	state = {
-		slide: 1
+		slide: 0
 	}
 
 	render() {
@@ -16,9 +16,11 @@ class Slider extends Component {
 
 		return (
 			<div>
-				{slides.map(slide => {
+				{slides.map((slide, i) => {
 					return (
-						<div className="slider__slide--active" style={{position: 'relative', height: '100vh'}}>
+						<div 
+							className={`slider__slide ${this.state.slide == i ?  'slider__slide--active' : ''}`} 
+							style={{position: 'relative', height: '100vh'}}>
 							<div style={{paddingTop: '200px', width: '500px'}}>
 								{slide.slide_content}
 							</div>

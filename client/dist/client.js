@@ -6,7 +6,7 @@ webpackJsonp([0],{
 "use strict";
 
 
-var _react = __webpack_require__(83);
+var _react = __webpack_require__(68);
 
 var _react2 = _interopRequireDefault(_react);
 
@@ -42,7 +42,7 @@ var _extends = Object.assign || function (target) { for (var i = 1; i < argument
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-var _react = __webpack_require__(83);
+var _react = __webpack_require__(68);
 
 var _react2 = _interopRequireDefault(_react);
 
@@ -69,13 +69,15 @@ var Slider = function (_Component) {
 		}
 
 		return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = Slider.__proto__ || Object.getPrototypeOf(Slider)).call.apply(_ref, [this].concat(args))), _this), _this.state = {
-			slide: 1
+			slide: 0
 		}, _temp), _possibleConstructorReturn(_this, _ret);
 	}
 
 	_createClass(Slider, [{
 		key: 'render',
 		value: function render() {
+			var _this2 = this;
+
 			var slides = this.props.slides;
 
 			var slideStyle = {
@@ -88,10 +90,12 @@ var Slider = function (_Component) {
 			return _react2.default.createElement(
 				'div',
 				null,
-				slides.map(function (slide) {
+				slides.map(function (slide, i) {
 					return _react2.default.createElement(
 						'div',
-						{ className: 'slider__slide--active', style: { position: 'relative', height: '100vh' } },
+						{
+							className: 'slider__slide ' + (_this2.state.slide == i ? 'slider__slide--active' : ''),
+							style: { position: 'relative', height: '100vh' } },
 						_react2.default.createElement(
 							'div',
 							{ style: { paddingTop: '200px', width: '500px' } },
@@ -132,7 +136,7 @@ Object.defineProperty(exports, "__esModule", {
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-var _react = __webpack_require__(83);
+var _react = __webpack_require__(68);
 
 var _react2 = _interopRequireDefault(_react);
 
