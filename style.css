@@ -144,3 +144,9 @@ form {
 .slider__btns .slider__btns__right {
 	right: 40px;
 }
+
+.slider__content__title {
+	font-size: 45px;
+	color: #6031ba;
+	line-height: 1.16;
+}
