@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Slide from './slider_slide';
 
 class Slider extends Component {
 	state = {
