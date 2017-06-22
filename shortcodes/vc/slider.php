@@ -24,6 +24,11 @@
 			],
       [
         "type" => "textfield",
+				"heading" => "Button link",
+				"param_name" => "btn_link"
+      ],
+      [
+        "type" => "textfield",
 				"heading" => "Button text",
 				"param_name" => "btn_txt"
       ],

@@ -286,6 +286,7 @@ var SliderSlide = function (_Component) {
           current = _props.current,
           index = _props.index;
 
+
       var slideStyle = {
         height: '100vh',
         width: '100%',
@@ -307,8 +308,8 @@ var SliderSlide = function (_Component) {
             { style: { width: "500px", position: "absolute", zIndex: '998' } },
             _react2.default.createElement('div', { dangerouslySetInnerHTML: { __html: slide.slide_content } }),
             _react2.default.createElement(
-              'button',
-              { className: 'slider__content__btn', style: { background: slide.btn_color } },
+              'a',
+              { href: slide.btn_link, className: 'slider__content__btn', style: { background: slide.btn_color } },
               slide.btn_txt
             )
           )

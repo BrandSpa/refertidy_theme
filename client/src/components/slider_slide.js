@@ -4,6 +4,7 @@ class SliderSlide extends Component {
 
   render() {
 		const { slide, slideWidth, current, index } = this.props;
+
     const slideStyle = {
 			height: '100vh', 
 			width: '100%',
@@ -22,9 +23,9 @@ class SliderSlide extends Component {
       <div className="container">
        <div style={{ width: "500px", position: "absolute", zIndex: '998' }}>
          <div dangerouslySetInnerHTML={{__html: slide.slide_content}} />
-         <button className="slider__content__btn" style={{background: slide.btn_color}}>
+         <a href={slide.btn_link} className="slider__content__btn" style={{background: slide.btn_color}}>
           {slide.btn_txt}
-         </button>
+         </a>
         </div>      
       </div>
        
