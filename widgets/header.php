@@ -7,7 +7,8 @@ class Header_Widget extends WP_Widget {
 	 */
 	public function __construct() {
 		$widget_ops = array( 
-			'classname' => 'header__widget'
+			'classname' => 'header__widget',
+			'description' => 'header content'
 		);
 		parent::__construct( 'header_widget', 'Header widget', $widget_ops );
 	}
