@@ -6,7 +6,6 @@ function register_foo_widget() {
 
 add_action( 'widgets_init', 'register_foo_widget');
 
-
 class ra_Header_Widget extends WP_Widget {
 
 	public function __construct() {
