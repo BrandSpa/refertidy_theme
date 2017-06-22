@@ -1,11 +1,11 @@
 <?php
 
-class Header_Widget extends WP_Widget {
+class ra_Header_Widget extends WP_Widget {
 
 	public function __construct() {
 		$widget_ops = array( 
 			'classname' => 'header_widget',
-			'description' => 'header content'
+			'description' => 'My Widget is awesome',
 		);
 
 		parent::__construct( 'header_widget', 'Header Content', $widget_ops );
@@ -45,6 +45,9 @@ class Header_Widget extends WP_Widget {
 
 }
 
-add_action('widgets_init', function() {
-	register_widget( 'header_widget' );
-});
+
+function register_foo_widget() {
+    register_widget( 'ra_Header_Widget' );
+}
+
+add_action( 'widgets_init', 'register_foo_widget');
