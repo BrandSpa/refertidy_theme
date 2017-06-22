@@ -34,7 +34,7 @@
  * Register our sidebars and widgetized areas.
  *
  */
-function arphabet_widgets_init() {
+function ra_widgets_init() {
 
 	register_sidebar( array(
 		'name'          => 'Header right sidebar',
@@ -47,4 +47,4 @@ function arphabet_widgets_init() {
 
 }
 
-add_action( 'widgets_init', 'arphabet_widgets_init' );
+add_action( 'widgets_init', 'ra_widgets_init' );
