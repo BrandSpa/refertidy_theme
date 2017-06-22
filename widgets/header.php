@@ -10,7 +10,7 @@ class Header_Widget extends WP_Widget {
 			'classname' => 'header__widget',
 			'description' => 'header content'
 		);
-		parent::__construct( 'header_widget', 'Header widget', $widget_ops );
+		parent::__construct( 'header_content', 'Header Content', $widget_ops );
 	}
 
 	/**
@@ -21,17 +21,6 @@ class Header_Widget extends WP_Widget {
 	 */
 	public function widget( $args, $instance ) {
 		// outputs the content of the widget
-
-	}
-
-	/**
-	 * Processing widget options on save
-	 *
-	 * @param array $new_instance The new options
-	 * @param array $old_instance The previous options
-	 */
-	public function update( $new_instance, $old_instance ) {
-		// processes widget options to be saved
 
 	}
 }
