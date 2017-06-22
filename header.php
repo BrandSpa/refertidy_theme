@@ -17,6 +17,7 @@
 <header id="app-header">
 	<div class="container">
 		<img src="<?php echo get_template_directory_uri() ?>/imgs/logo.svg" alt="">
+
 		<ul>
 			<?php
 			$nav = wp_nav_menu([
@@ -27,6 +28,12 @@
 				echo clean_menu($nav);
    	 ?>
 		</ul>
+
+		<?php if ( is_active_sidebar( 'header_widget' ) ) : ?>
+			<div id="primary-sidebar" class="primary-sidebar widget-area">
+				<?php dynamic_sidebar( 'header_widget' ); ?>
+			</div><!-- #primary-sidebar -->
+		<?php endif; ?>
 	</div>
 </header>
 
