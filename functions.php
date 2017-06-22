@@ -52,10 +52,11 @@ class MyHeader_Widget extends WP_Widget {
 	}
 
 }
+function register_foo_widget() {
+    register_widget( 'MyHeader_Widget' );
+}
 
-add_action( 'widgets_init', function(){
-	register_widget( 'MyHeader_Widget' );
-});
+add_action( 'widgets_init', 'register_foo_widget');
 
 //MENUS
 register_nav_menus(
