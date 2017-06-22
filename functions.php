@@ -7,12 +7,13 @@ include_once 'shortcodes/vc/slider.php';
 //LIBS
 include_once 'lib/clean_menu.php';
 //WIDGETS
+
 class Header_Widget extends WP_Widget {
 
 	public function __construct() {
 		$widget_ops = array( 
 			'classname' => 'header_widget',
-			'description' => 'header content'
+			'description' => 'My Widget is awesome',
 		);
 
 		parent::__construct( 'header_widget', 'Header Content', $widget_ops );
@@ -52,10 +53,9 @@ class Header_Widget extends WP_Widget {
 
 }
 
-add_action('widgets_init', function() {
-	register_widget( 'header_widget' );
+add_action( 'widgets_init', function(){
+	register_widget( 'Header_Widget' );
 });
-
 
 //MENUS
 register_nav_menus(
