@@ -20,7 +20,7 @@ class SliderSlide extends Component {
         style={{ position: "relative", height: "100vh", width: slideWidth, float: 'left' }}
       >
       <div className="container">
-       <div style={{ paddingTop: "200px", width: "500px" }}>
+       <div style={{ paddingTop: "200px", width: "500px", position: "absolute", zIndex: '998' }}>
           {slide.slide_content}
         </div>      
       </div>
