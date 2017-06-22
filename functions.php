@@ -8,7 +8,7 @@ include_once 'shortcodes/vc/slider.php';
 include_once 'lib/clean_menu.php';
 //WIDGETS
 
-class Header_Widget extends WP_Widget {
+class MyHeader_Widget extends WP_Widget {
 
 	public function __construct() {
 		$widget_ops = array( 
@@ -54,7 +54,7 @@ class Header_Widget extends WP_Widget {
 }
 
 add_action( 'widgets_init', function(){
-	register_widget( 'Header_Widget' );
+	register_widget( 'MyHeader_Widget' );
 });
 
 //MENUS
