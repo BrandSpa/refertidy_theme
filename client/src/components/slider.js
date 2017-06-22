@@ -11,7 +11,7 @@ class Slider extends Component {
 
 		const viewportStyle = {
 			width: `${100 * slides.length}%`,
-			transform: `translate3d( -${}%, 0, 0 )`,
+			transform: `translate3d( -${100 / slides.length * this.state.slide}%, 0, 0 )`,
 			transition: 'transform 500ms'
 		};
 
