@@ -8,7 +8,7 @@ class Header_Widget extends WP_Widget {
 			'description' => 'header content'
 		);
 
-		parent::__construct( 'header_content', 'Header Content', $widget_ops );
+		parent::__construct( 'header_widget', 'Header Content', $widget_ops );
 	}
 
 	/**
