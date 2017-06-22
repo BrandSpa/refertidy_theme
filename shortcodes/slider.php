@@ -5,6 +5,7 @@ function parseSlides($slides) {
 
 	$arrResult = array_map(function($slide) {
 		if(!empty($slide)) {
+			$slide['slide_content'] = esc_html($slide['slide_content']);
 			$slide['bg_img'] = wp_get_attachment_url($slide['bg_img']);			
 			$slide['model_img'] = wp_get_attachment_url($slide['model_img']);			
 			$slide['object_img'] = wp_get_attachment_url($slide['object_img']);			
