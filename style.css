@@ -106,12 +106,12 @@ li {
 
 #app-header ul li {
   display: inline-block;
+	margin: 0 10px;
 }
 
 #app-header ul li a {
   color: #6031BA;
   display: block;
-  padding: 0 20px;
   font-family: 'Aktiv Grotesk Medium';
   display: block;
   transition: all 500ms;
