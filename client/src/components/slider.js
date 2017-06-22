@@ -10,7 +10,7 @@ class Slider extends Component {
 		if(e) e.preventDefault();
 		const total = this.props.slides.length;
 		const current = this.state.slide;
-		const slide = current < total ? current + 1 : 0;
+		const slide = current <= total ? current + 1 : 0;
 		this.setState({ slide });
 	}
 

@@ -76,7 +76,7 @@ var Slider = function (_Component) {
 			if (e) e.preventDefault();
 			var total = _this.props.slides.length;
 			var current = _this.state.slide;
-			var slide = current < total ? current + 1 : 0;
+			var slide = current <= total ? current + 1 : 0;
 			_this.setState({ slide: slide });
 		}, _this.prev = function (e) {
 			if (e) e.preventDefault();
