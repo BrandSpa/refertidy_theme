@@ -120,17 +120,17 @@ var Slider = function (_Component) {
 				),
 				_react2.default.createElement(
 					'div',
-					{ className: 'slider-btns', style: { position: 'absolute', top: 0, bottom: 0, margin: 0 } },
+					{ className: 'slider__btns', style: { position: 'absolute', top: 0, bottom: 0, margin: 0 } },
 					_react2.default.createElement(
 						'a',
-						{ href: '#', onClick: this.prev },
+						{ className: 'slider__btns__left', href: '#', onClick: this.prev },
 						' ',
 						'<',
 						' '
 					),
 					_react2.default.createElement(
 						'a',
-						{ href: '#', onClick: this.next },
+						{ className: 'slider__btns__right', href: '#', onClick: this.next },
 						' ',
 						'>',
 						' '

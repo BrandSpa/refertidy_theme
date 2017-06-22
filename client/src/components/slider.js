@@ -45,9 +45,9 @@ class Slider extends Component {
 							/>
 					)}
 				</div>
-				<div className="slider-btns" style={{position: 'absolute', top: 0, bottom: 0, margin: 0}} >
-					<a href="#" onClick={this.prev}> {'<'} </a>
-					<a href="#" onClick={this.next}> {'>'} </a>
+				<div className="slider__btns" style={{position: 'absolute', top: 0, bottom: 0, margin: 0}} >
+					<a className="slider__btns__left" href="#" onClick={this.prev}> {'<'} </a>
+					<a className="slider__btns__right" href="#" onClick={this.next}> {'>'} </a>
 				</div>
 			</div>
 		)
