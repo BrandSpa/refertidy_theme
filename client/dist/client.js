@@ -243,10 +243,96 @@ exports.default = SliderImgs;
 /***/ }),
 
 /***/ 485:
-/***/ (function(module, exports) {
+/***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-throw new Error("Module build failed: SyntaxError: Unexpected token, expected } (24:45)\n\n\u001b[0m \u001b[90m 22 | \u001b[39m      \u001b[33m<\u001b[39m\u001b[33mdiv\u001b[39m className\u001b[33m=\u001b[39m\u001b[32m\"container\"\u001b[39m\u001b[33m>\u001b[39m\n \u001b[90m 23 | \u001b[39m       \u001b[33m<\u001b[39m\u001b[33mdiv\u001b[39m style\u001b[33m=\u001b[39m{{ paddingTop\u001b[33m:\u001b[39m \u001b[32m\"200px\"\u001b[39m\u001b[33m,\u001b[39m width\u001b[33m:\u001b[39m \u001b[32m\"500px\"\u001b[39m\u001b[33m,\u001b[39m position\u001b[33m:\u001b[39m \u001b[32m\"absolute\"\u001b[39m\u001b[33m,\u001b[39m zIndex\u001b[33m:\u001b[39m \u001b[32m'998'\u001b[39m }}\u001b[33m>\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 24 | \u001b[39m         \u001b[33m<\u001b[39m\u001b[33mdiv\u001b[39m dangerouslySetInnerHTML\u001b[33m=\u001b[39m{__html\u001b[33m:\u001b[39m {slide\u001b[33m.\u001b[39mslide_content}} \u001b[33m/\u001b[39m\u001b[33m>\u001b[39m\n \u001b[90m    | \u001b[39m                                             \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 25 | \u001b[39m        \u001b[33m<\u001b[39m\u001b[33m/\u001b[39m\u001b[33mdiv\u001b[39m\u001b[33m>\u001b[39m      \n \u001b[90m 26 | \u001b[39m      \u001b[33m<\u001b[39m\u001b[33m/\u001b[39m\u001b[33mdiv\u001b[39m\u001b[33m>\u001b[39m\n \u001b[90m 27 | \u001b[39m       \u001b[0m\n");
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = __webpack_require__(68);
+
+var _react2 = _interopRequireDefault(_react);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var SliderSlide = function (_Component) {
+  _inherits(SliderSlide, _Component);
+
+  function SliderSlide() {
+    _classCallCheck(this, SliderSlide);
+
+    return _possibleConstructorReturn(this, (SliderSlide.__proto__ || Object.getPrototypeOf(SliderSlide)).apply(this, arguments));
+  }
+
+  _createClass(SliderSlide, [{
+    key: 'render',
+    value: function render() {
+      var _props = this.props,
+          slide = _props.slide,
+          slideWidth = _props.slideWidth,
+          current = _props.current,
+          index = _props.index;
+
+      var slideStyle = {
+        height: '100vh',
+        width: '100%',
+        position: 'absolute',
+        top: '0'
+      };
+
+      return _react2.default.createElement(
+        'section',
+        {
+          className: 'slider__slide ' + (current == index ? "slider__slide--active" : ""),
+          style: { position: "relative", height: "100vh", width: slideWidth, float: 'left' }
+        },
+        _react2.default.createElement(
+          'div',
+          { className: 'container' },
+          _react2.default.createElement(
+            'div',
+            { style: { paddingTop: "200px", width: "500px", position: "absolute", zIndex: '998' } },
+            _react2.default.createElement('div', { dangerouslySetInnerHTML: { __html: slide.slide_content } })
+          )
+        ),
+        _react2.default.createElement('div', {
+          style: _extends({}, slideStyle, {
+            background: 'url(' + slide.bg_img + ') center / cover no-repeat'
+          })
+        }),
+        _react2.default.createElement('div', {
+          className: 'slider__slide__model',
+          style: _extends({}, slideStyle, {
+            background: 'url(' + slide.model_img + ') right / cover no-repeat'
+          })
+        }),
+        _react2.default.createElement('div', {
+          className: 'slider__slide__object',
+          style: _extends({}, slideStyle, {
+            background: 'url(' + slide.object_img + ') right / cover no-repeat'
+          })
+        })
+      );
+    }
+  }]);
+
+  return SliderSlide;
+}(_react.Component);
+
+exports.default = SliderSlide;
 
 /***/ })
 
