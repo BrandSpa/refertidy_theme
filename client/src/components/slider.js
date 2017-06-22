@@ -8,9 +8,9 @@ class Slider extends Component {
 
 	next = e => {
 		if(e) e.preventDefault();
-		const total = this.props.slides.length;
+		const total = this.props.slides.length - 1;
 		const current = this.state.slide;
-		const slide = current <= total ? current + 1 : 0;
+		const slide = current < total ? current + 1 : 0;
 		this.setState({ slide });
 	}
 
