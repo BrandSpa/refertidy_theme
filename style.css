@@ -61,7 +61,7 @@ body {
 }
 
 .slider__slide--active .slider__slide__content {
-	animation: slideContent 2s;
+	animation: slideContent 1s;
 }
 
 .slider__viewport {
