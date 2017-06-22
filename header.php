@@ -28,7 +28,6 @@
 				echo clean_menu($nav);
    	 ?>
 		</ul>
-		<?php var_dump(is_active_sidebar( 'header_widget' )) ?>
 		<?php if ( is_active_sidebar( 'header_widget' ) ) : ?>
 			<div id="primary-sidebar" class="primary-sidebar widget-area">
 				<?php dynamic_sidebar( 'header_widget' ); ?>
