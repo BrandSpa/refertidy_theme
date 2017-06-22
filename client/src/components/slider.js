@@ -34,7 +34,7 @@ class Slider extends Component {
 		const slideWidth = `${100 / slides.length}%`;
 
 		return (
-			<div className="slider" style={{position: 'relative'}}>
+			<div className="slider" style={{position: 'relative', overflow: 'hidden'}}>
 				<div className="slider__viewport" style={viewportStyle}>
 					{slides.map((slide, i) =>
 							<Slide 

@@ -105,7 +105,7 @@ var Slider = function (_Component) {
 
 			return _react2.default.createElement(
 				'div',
-				{ className: 'slider', style: { position: 'relative' } },
+				{ className: 'slider', style: { position: 'relative', overflow: 'hidden' } },
 				_react2.default.createElement(
 					'div',
 					{ className: 'slider__viewport', style: viewportStyle },
