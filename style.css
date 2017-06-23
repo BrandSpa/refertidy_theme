@@ -216,15 +216,17 @@ form {
   padding: 0 50px;
 }
 
-.quo-fixed form::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+.quo-fixed input::-webkit-input-placeholder { /* Chrome/Opera/Safari */
   color: pink;
 }
-.quo-fixed form::-moz-placeholder { /* Firefox 19+ */
+.quo-fixed input::-moz-placeholder { /* Firefox 19+ */
   color: pink;
 }
-.quo-fixed form:-ms-input-placeholder { /* IE 10+ */
+
+.quo-fixed input:-ms-input-placeholder { /* IE 10+ */
   color: pink;
 }
-.quo-fixed form:-moz-placeholder { /* Firefox 18- */
+
+.quo-fixed input:-moz-placeholder { /* Firefox 18- */
   color: pink;
 }
