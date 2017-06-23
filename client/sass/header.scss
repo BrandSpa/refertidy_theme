@@ -14,16 +14,18 @@
 
   &--scrolling {
     background: #6031BA;
-    color: #fff;
+    color: #fff !important;
     
     .logo {
-      fill: #fff;
+      path {
+        fill: #fff !important;
+      }
     }
 
     ul {
       li {
         a {
-          color: #fff;
+          color: #fff !important;
         }
       }
     }

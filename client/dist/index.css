@@ -64,11 +64,11 @@ li {
       text-align: center; } }
   .app-header--scrolling {
     background: #6031BA;
-    color: #fff; }
-    .app-header--scrolling .logo {
-      fill: #fff; }
+    color: #fff !important; }
+    .app-header--scrolling .logo path {
+      fill: #fff !important; }
     .app-header--scrolling ul li a {
-      color: #fff; }
+      color: #fff !important; }
   .app-header img {
     float: left; }
   .app-header ul {

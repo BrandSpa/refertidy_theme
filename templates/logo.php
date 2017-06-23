@@ -1,4 +1,4 @@
-<svg width="228px" height="41px" viewBox="0 0 228 41" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<svg class="logo" width="228px" height="41px" viewBox="0 0 228 41" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 
     <defs>
         <polygon id="path-1" points="9.98202252 16.8319377 9.98202252 0.0155480519 0.0205419516 0.0155480519 0.0205419516 16.8319377 9.98202252 16.8319377"></polygon>
