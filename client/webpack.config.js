@@ -3,7 +3,7 @@ const webpack = require('webpack');
 
 module.exports = {
   entry: {
-		vendor: ['babel-polyfill', 'react', 'react-dom', 'react-multiple-render'],
+		vendor: ['babel-polyfill', 'react', 'react-dom', 'react-multiple-render', 'axios'],
 		client: './src/app.js'
 	},
   output: {

@@ -1,6 +1,30 @@
 import React, { Component } from "react";
+import request from 'axios';
+import qs from 'qs';
+const endpoint = '/wp-admin/admin-ajax.php';
 
-class Quo extends Component {
+class QuoFixed extends Component {
+	state = {
+		name: '',
+		email: '',
+		phone: '',
+		product: ''
+	}
+
+	handleChange = e => {
+		this.setState({ [e.target.name]: e.taget.value });
+	}
+
+	handleSubmit = e => {
+		const data = this.data;
+		const reqData = qs.stringify({action: 'store_contact', data};
+
+		request.post(enpoint, reqData)
+			.then(({data}) => {
+				console.log(data);
+			}) 
+	}
+
   render() {
     return (
       <div className="quo-fixed">
@@ -31,4 +55,4 @@ class Quo extends Component {
   }
 }
 
-export default Quo;
+export default QuoFixed;
