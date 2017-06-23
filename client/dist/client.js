@@ -499,15 +499,15 @@ var QuoFixed = function (_Component) {
                 'Cotizar'
               )
             )
-          ),
+          )
+        ),
+        _react2.default.createElement(
+          'div',
+          { className: 'row errors' },
           _react2.default.createElement(
             'div',
-            { className: 'row' },
-            _react2.default.createElement(
-              'div',
-              { className: 'errors col-lg-12' },
-              _react2.default.createElement('div', { dangerouslySetInnerHTML: { __html: errors } })
-            )
+            { className: 'col-lg-12' },
+            _react2.default.createElement('div', { dangerouslySetInnerHTML: { __html: errors } })
           )
         )
       );

@@ -72,12 +72,12 @@ class QuoFixed extends Component {
               <button className="btn">Cotizar</button>
             </div>
           </div>
-          <div className="row">
-            <div className="errors col-lg-12" >
+        </form>
+         <div className="row errors">
+            <div className="col-lg-12" >
               <div dangerouslySetInnerHTML={{__html: errors}} />
             </div>
           </div>
-        </form>
       </div>
     );
   }

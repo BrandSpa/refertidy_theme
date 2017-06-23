@@ -150,13 +150,6 @@ input, select {
   height: 35px;
 }
 
-form {
-  border-radius: 100px 0 0 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
 .slider__btns {
   margin: 0;
   width: 100%;
@@ -209,11 +202,17 @@ form {
   padding: 0 15px;
 }
 
-.quo-fixed form {
+ form {
+ 
+}
+
+.quo-fixed {
   background: #6031BA; 
   width: 100%; 
   min-height: 100px;
+  border-radius: 100px 0 0 0;
 }
+
 
 .quo-fixed__container {
   width: 100%;
