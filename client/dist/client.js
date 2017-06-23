@@ -499,12 +499,12 @@ var QuoFixed = function (_Component) {
                 'Cotizar'
               )
             )
+          ),
+          _react2.default.createElement(
+            'div',
+            { className: 'errors col-lg-12' },
+            _react2.default.createElement('div', { dangerouslySetInnerHTML: { __html: errors } })
           )
-        ),
-        _react2.default.createElement(
-          'div',
-          { className: 'errors' },
-          errors
         )
       );
     }
