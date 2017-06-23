@@ -30,10 +30,10 @@ class QuoFixed extends Component {
       <div className="quo-fixed">
         <form>
           <div className="row quo-fixed__container">
-            <div className="col-lg-2">
+            <div className="col-lg-3">
               <input type="text" name="name" placeholder="Nombre" />
             </div>
-            <div className="col-lg-2">
+            <div className="col-lg-3">
               <input type="text" name="email" placeholder="Email" />
             </div>
             <div className="col-lg-2">
