@@ -30,22 +30,22 @@ class QuoFixed extends Component {
       <div className="quo-fixed">
         <form>
           <div className="row">
-            <div className="col-lg-3">
+            <div className="col-lg-2">
               <input type="text" name="name" placeholder="Nombre" />
             </div>
-            <div className="col-lg-3">
+            <div className="col-lg-2">
               <input type="text" name="email" placeholder="Email" />
             </div>
-            <div className="col-lg-3">
+            <div className="col-lg-2">
               <input type="text" name="phone" placeholder="Télefono" />
             </div>
-            <div className="col-lg-3">
+            <div className="col-lg-2">
               <select name="product">
                 <option value="Desktops">Desktops</option>
                 <option value="Laptops">Laptops</option>
               </select>
             </div>
-            <div className="col-lg-3">
+            <div className="col-lg-2">
               <button className="btn">Cotizar</button>
             </div>
           </div>

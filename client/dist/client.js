@@ -430,22 +430,22 @@ var QuoFixed = function (_Component) {
             { className: 'row' },
             _react2.default.createElement(
               'div',
-              { className: 'col-lg-3' },
+              { className: 'col-lg-2' },
               _react2.default.createElement('input', { type: 'text', name: 'name', placeholder: 'Nombre' })
             ),
             _react2.default.createElement(
               'div',
-              { className: 'col-lg-3' },
+              { className: 'col-lg-2' },
               _react2.default.createElement('input', { type: 'text', name: 'email', placeholder: 'Email' })
             ),
             _react2.default.createElement(
               'div',
-              { className: 'col-lg-3' },
+              { className: 'col-lg-2' },
               _react2.default.createElement('input', { type: 'text', name: 'phone', placeholder: 'T\xE9lefono' })
             ),
             _react2.default.createElement(
               'div',
-              { className: 'col-lg-3' },
+              { className: 'col-lg-2' },
               _react2.default.createElement(
                 'select',
                 { name: 'product' },
@@ -463,7 +463,7 @@ var QuoFixed = function (_Component) {
             ),
             _react2.default.createElement(
               'div',
-              { className: 'col-lg-3' },
+              { className: 'col-lg-2' },
               _react2.default.createElement(
                 'button',
                 { className: 'btn' },
