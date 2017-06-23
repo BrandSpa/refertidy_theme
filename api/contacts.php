@@ -22,6 +22,11 @@ function store_contact() {
 		'phone' => isset($data['phone']) ? $data['phone'] : '',
 		'product' => isset($data['product']) ? $data['product'] : ''
 	];
+	
+	GUMP::set_error_messages(array(
+    "validate_required"     => "{field} es requerido",
+     "validate_valid_email"  => "{field} debe ser un email valido",
+  ));
 
 	$isValid = GUMP::is_valid($data, $rules);
 
