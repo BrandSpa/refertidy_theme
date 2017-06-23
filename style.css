@@ -217,6 +217,7 @@ input, select {
 
 .quo-fixed__errors {
   color: #fff;
+  padding: 10px 50px;
 }
 
 .quo-fixed input::-webkit-input-placeholder {
