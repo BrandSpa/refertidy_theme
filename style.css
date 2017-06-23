@@ -220,6 +220,10 @@ input, select {
   padding: 10px 50px;
 }
 
+.quo-fixed__errors div {
+  display: inline-block;
+}
+
 .quo-fixed input::-webkit-input-placeholder {
       color: #fff;
     }
