@@ -55,11 +55,18 @@ li {
   width: 100%;
   background: rgba(255, 255, 255, 0.01);
   padding-top: 50px;
-  z-index: 999; }
+  z-index: 999;
+  -webkit-transition: all 500ms;
+  transition: all 500ms; }
   @media (max-width: 767px) {
     #app-header {
       padding-top: 20px;
       text-align: center; } }
+  #app-header--scrolling {
+    background: #6031BA;
+    color: #fff; }
+    #app-header--scrolling ul li a {
+      color: #fff; }
   #app-header img {
     float: left; }
   #app-header ul {

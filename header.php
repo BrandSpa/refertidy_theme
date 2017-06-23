@@ -16,8 +16,7 @@
 	
 <header id="app-header">
 	<div class="container">
-		<img src="<?php echo get_template_directory_uri() ?>/imgs/logo.svg" alt="">
-		
+		<?php  require('templates/logo.php') ?>
 		<?php if ( is_active_sidebar( 'header_widget' ) ) : ?>
 			<div class="header__widget">
 				<?php dynamic_sidebar( 'header_widget' ); ?>
