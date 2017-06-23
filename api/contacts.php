@@ -18,6 +18,6 @@ function store_contact() {
 		array( '%s', '%s', '%s', '%s' ) 
 	);
 
-	responseJson(["message" => "test"]);
+	responseJson($res);
 	die();
 }
