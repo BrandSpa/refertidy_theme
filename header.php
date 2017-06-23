@@ -28,7 +28,7 @@
 	<script>
 		onLoad(function() {
 			jQuery(window).on('scroll', function(e) {
-				console.log($(window).scrollTop());
+				console.log(jQuery(window).scrollTop());
 			});
 		});
 	</script>
