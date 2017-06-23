@@ -193,3 +193,33 @@ form {
   font-size: 1.333rem;
   color: #fff;
 }
+
+.quo-fixed {
+  position: fixed; 
+  bottom: 0; 
+  left: 0; 
+  right: 0;
+  z-index: 998;
+  max-width: 1140px; 
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.quo-fixed form {
+  background: #6031BA; 
+  width: 100%; 
+  min-height: 100px;
+}
+
+.quo-fixed form::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: pink;
+}
+.quo-fixed form::-moz-placeholder { /* Firefox 19+ */
+  color: pink;
+}
+.quo-fixed form:-ms-input-placeholder { /* IE 10+ */
+  color: pink;
+}
+.quo-fixed form:-moz-placeholder { /* Firefox 18- */
+  color: pink;
+}

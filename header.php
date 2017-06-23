@@ -37,23 +37,3 @@
 		
 	</div>
 </header>
-
-<div class="contact-form" style="padding: 0 15px; position: fixed; bottom: 0; z-index: 998;max-width: 1140px; margin: 0 auto; left: 0; right: 0">
-	<form action="" style=" background: #6031BA; width: 100%; min-height: 100px; ">
-	<div class="row" style="width: 100%; padding: 0 100px">
-		<div class="col-lg-3">
-			<input type="text" placeholder="Nombre" />
-		</div>
-		<div class="col-lg-3">
-			<input type="text" placeholder="Email" />
-		</div>
-		<div class="col-lg-3">
-			<input type="text" placeholder="Télefono" />
-		</div>
-		<div class="col-lg-3">
-			<button class="btn">Cotizar</button>
-		</div>
-		</div>
-		
-	</form>
-</div>
