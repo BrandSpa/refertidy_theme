@@ -27,7 +27,7 @@
 <body>
 	<script>
 		onLoad(function() {
-			$(window).on('scroll', function(e) {
+			jQuery(window).on('scroll', function(e) {
 				console.log(e);
 			});
 		});
