@@ -38,6 +38,7 @@ class Slider extends Component {
 				<div className="slider__viewport" style={viewportStyle}>
 					{slides.map((slide, i) =>
 							<Slide 
+								key={i}
 								slide={slide} 
 								current={this.state.slide} 
 								index={i} 

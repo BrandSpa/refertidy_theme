@@ -116,6 +116,7 @@ var Slider = function (_Component) {
 					{ className: 'slider__viewport', style: viewportStyle },
 					slides.map(function (slide, i) {
 						return _react2.default.createElement(_slider_slide2.default, {
+							key: i,
 							slide: slide,
 							current: _this2.state.slide,
 							index: i,
