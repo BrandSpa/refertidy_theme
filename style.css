@@ -222,6 +222,7 @@ input, select {
 
 .quo-fixed__errors div {
   display: inline-block;
+  margin-right: 20px;
 }
 
 .quo-fixed input::-webkit-input-placeholder {
