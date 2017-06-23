@@ -20,7 +20,7 @@ class QuoFixed extends Component {
 		const data = this.data;
 		const reqData = qs.stringify({action: 'store_contact', data});
 
-		request.post(enpoint, reqData)
+		request.post(endpoint, reqData)
 			.then(({data}) => {
 				console.log(data);
 			}) 

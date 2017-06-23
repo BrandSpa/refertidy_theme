@@ -409,7 +409,7 @@ var QuoFixed = function (_Component) {
       var data = _this.data;
       var reqData = _qs2.default.stringify({ action: 'store_contact', data: data });
 
-      _axios2.default.post(enpoint, reqData).then(function (_ref2) {
+      _axios2.default.post(endpoint, reqData).then(function (_ref2) {
         var data = _ref2.data;
 
         console.log(data);
