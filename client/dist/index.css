@@ -69,7 +69,7 @@ li {
       fill: #fff !important; }
     .app-header--scrolling ul li a {
       color: #fff !important; }
-    .app-header--scrolling .header__widget {
+    .app-header--scrolling .header__widget a {
       color: #fff !important; }
   .app-header img {
     float: left; }

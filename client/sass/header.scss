@@ -31,7 +31,9 @@
     }
 
     .header__widget {
-      color: #fff !important;
+      a {
+        color: #fff !important;
+      }
     }
     
   }
