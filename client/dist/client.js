@@ -401,7 +401,8 @@ var QuoFixed = function (_Component) {
       name: '',
       email: '',
       phone: '',
-      product: ''
+      product: '',
+      errors: []
     }, _this.handleChange = function (e) {
       _this.setState(_defineProperty({}, e.target.name, e.target.value));
     }, _this.handleSubmit = function (e) {
@@ -412,7 +413,9 @@ var QuoFixed = function (_Component) {
       _axios2.default.post(endpoint, reqData).then(function (_ref2) {
         var data = _ref2.data;
 
-        console.log(data);
+        if (Array.isArray(data)) {
+          _this.setState({ errors: data });
+        }
       });
     }, _temp), _possibleConstructorReturn(_this, _ret);
   }
@@ -424,7 +427,8 @@ var QuoFixed = function (_Component) {
           name = _state.name,
           email = _state.email,
           phone = _state.phone,
-          product = _state.product;
+          product = _state.product,
+          errors = _state.errors;
 
       return _react2.default.createElement(
         'div',
@@ -496,6 +500,11 @@ var QuoFixed = function (_Component) {
               )
             )
           )
+        ),
+        _react2.default.createElement(
+          'div',
+          { className: 'errors' },
+          errors
         )
       );
     }

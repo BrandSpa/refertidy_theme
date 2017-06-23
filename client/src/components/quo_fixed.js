@@ -8,7 +8,8 @@ class QuoFixed extends Component {
 		name: '',
 		email: '',
 		phone: '',
-		product: ''
+		product: '',
+    errors: []
 	}
 
 	handleChange = e => {
@@ -22,12 +23,14 @@ class QuoFixed extends Component {
 
 		request.post(endpoint, reqData)
 			.then(({data}) => {
-				console.log(data);
+				if(Array.isArray(data)) {
+          this.setState({errors: data});
+        }
 			}) 
 	}
 
   render() {
-    const { name, email, phone, product } = this.state;
+    const { name, email, phone, product, errors } = this.state;
     return (
       <div className="quo-fixed">
         <form onSubmit={this.handleSubmit}>
@@ -70,7 +73,9 @@ class QuoFixed extends Component {
             </div>
           </div>
         </form>
-
+        <div className="errors">
+          {errors}
+        </div>
       </div>
     );
   }
