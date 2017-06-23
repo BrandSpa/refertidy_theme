@@ -18,7 +18,6 @@ class QuoFixed extends Component {
 	handleSubmit = e => {
     if(e) e.preventDefault();
 		const data = this.state;
-    console.log(this.state);
 		const reqData = qs.stringify({action: 'store_contact', data});
 
 		request.post(endpoint, reqData)
@@ -71,6 +70,7 @@ class QuoFixed extends Component {
             </div>
           </div>
         </form>
+
       </div>
     );
   }

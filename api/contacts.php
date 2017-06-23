@@ -37,8 +37,8 @@ function store_contact() {
 			$data, 
 			array( '%s', '%s', '%s', '%s' ) 
 		);
-		
-		responseJson($data);
+
+		responseJson($res);
 	} else {
 		responseJson($isValid);
 	}
