@@ -427,20 +427,20 @@ var QuoFixed = function (_Component) {
           null,
           _react2.default.createElement(
             'div',
-            { 'class': 'row', style: 'width: 100%; padding: 0 100px' },
+            { className: 'row' },
             _react2.default.createElement(
               'div',
-              { 'class': 'col-lg-3' },
+              { className: 'col-lg-3' },
               _react2.default.createElement('input', { type: 'text', name: 'name', placeholder: 'Nombre' })
             ),
             _react2.default.createElement(
               'div',
-              { 'class': 'col-lg-3' },
+              { className: 'col-lg-3' },
               _react2.default.createElement('input', { type: 'text', name: 'email', placeholder: 'Email' })
             ),
             _react2.default.createElement(
               'div',
-              { 'class': 'col-lg-3' },
+              { className: 'col-lg-3' },
               _react2.default.createElement('input', { type: 'text', name: 'phone', placeholder: 'T\xE9lefono' })
             ),
             _react2.default.createElement(
@@ -463,10 +463,10 @@ var QuoFixed = function (_Component) {
             ),
             _react2.default.createElement(
               'div',
-              { 'class': 'col-lg-3' },
+              { className: 'col-lg-3' },
               _react2.default.createElement(
                 'button',
-                { 'class': 'btn' },
+                { className: 'btn' },
                 'Cotizar'
               )
             )
