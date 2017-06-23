@@ -9,10 +9,10 @@ add_action( 'wp_ajax_store_contact', 'store_contact' );
 function store_contact() {
 	global $wpdb;
 	$gump = new GUMP();
-	$gump->validation_rules(array(
+	$rules = array(
 		'name'  => 'required',
 		'email' => 'required|valid_email',
-	));
+	);
 
 	$data = $gump->sanitize($_POST['data']);
 
@@ -23,7 +23,7 @@ function store_contact() {
 		'product' => isset($data['product']) ? $data['product'] : ''
 	];
 
-	$isValid = $gump->validate($data);
+	$isValid = GUMP::is_valid($data, $rules);
 
 	if($isValid === true) {
 		$res = $wpdb->insert( 'contacts', 
