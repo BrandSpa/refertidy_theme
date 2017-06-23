@@ -3,12 +3,12 @@
   top: 0;
   width: 100%;
   background: rgba(255, 255, 255, 0.01);
-  padding: 20px 0;
+  padding: 40px 0;
   z-index: 999;
   transition: all 500ms;
   
   @media #{$s} {
-    padding-top: 20px;
+    padding: 20px 0;
     text-align: center;
   }
 
