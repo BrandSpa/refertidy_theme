@@ -23,7 +23,7 @@ function store_contact() {
 		'product' => isset($data['product']) ? $data['product'] : ''
 	];
 
-	$isValid = $gump->run($data);
+	$isValid = $gump->validate($data);
 
 	if($isValid === true) {
 		$res = $wpdb->insert( 'contacts', 
