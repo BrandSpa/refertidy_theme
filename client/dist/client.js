@@ -504,13 +504,9 @@ var QuoFixed = function (_Component) {
         errors.length > 0 ? _react2.default.createElement(
           'div',
           { className: 'row quo-fixed__errors' },
-          _react2.default.createElement(
-            'div',
-            { className: 'col-lg-12' },
-            errors.map(function (err) {
-              return _react2.default.createElement('div', { dangerouslySetInnerHTML: { __html: err } });
-            })
-          )
+          errors.map(function (err) {
+            return _react2.default.createElement('div', { className: 'col-lg-3', dangerouslySetInnerHTML: { __html: err } });
+          })
         ) : ''
       );
     }

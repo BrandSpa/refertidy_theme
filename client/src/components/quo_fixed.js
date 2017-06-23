@@ -76,11 +76,9 @@ class QuoFixed extends Component {
 
         {errors.length > 0 ?
           <div className="row quo-fixed__errors">
-            <div className="col-lg-12" >
               {errors.map(err => 
-                <div dangerouslySetInnerHTML={{__html: err}} />
+                <div className="col-lg-3" dangerouslySetInnerHTML={{__html: err}} />
               )}
-            </div>
           </div>
         :''}
          
