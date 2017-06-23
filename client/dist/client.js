@@ -179,14 +179,32 @@ var SliderSlide = function (_Component) {
   _inherits(SliderSlide, _Component);
 
   function SliderSlide() {
+    var _ref;
+
+    var _temp, _this, _ret;
+
     _classCallCheck(this, SliderSlide);
 
-    return _possibleConstructorReturn(this, (SliderSlide.__proto__ || Object.getPrototypeOf(SliderSlide)).apply(this, arguments));
+    for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
+      args[_key] = arguments[_key];
+    }
+
+    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = SliderSlide.__proto__ || Object.getPrototypeOf(SliderSlide)).call.apply(_ref, [this].concat(args))), _this), _this.state = {
+      mobile: false
+    }, _temp), _possibleConstructorReturn(_this, _ret);
   }
 
   _createClass(SliderSlide, [{
+    key: 'componentDidMount',
+    value: function componentDidMount() {
+      if (window.innerWidth < 768) {
+        this.setState({ mobile: true });
+      }
+    }
+  }, {
     key: 'render',
     value: function render() {
+      var mobile = this.state.mobile;
       var _props = this.props,
           slide = _props.slide,
           slideWidth = _props.slideWidth,
@@ -229,13 +247,13 @@ var SliderSlide = function (_Component) {
         _react2.default.createElement('div', {
           className: 'slider__slide__model',
           style: _extends({}, slideStyle, {
-            background: 'url(' + slide.model_img + ') right / cover no-repeat'
+            background: 'url(' + (mobile ? slide.model_img_mobile : slide.model_img) + ') right / cover no-repeat'
           })
         }),
         _react2.default.createElement('div', {
           className: 'slider__slide__object',
           style: _extends({}, slideStyle, {
-            background: 'url(' + slide.object_img + ') right / cover no-repeat'
+            background: 'url(' + (mobile ? slide.object_img_mobile : slide.object_img) + ') right / cover no-repeat'
           })
         })
       );

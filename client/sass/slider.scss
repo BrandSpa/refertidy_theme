@@ -31,10 +31,6 @@
 }
 
 .slider {
-
-  @media #{$s} {
-    display: none;
-  }
   
   &__viewport {
     overflow: hidden;

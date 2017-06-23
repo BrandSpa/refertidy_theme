@@ -38,11 +38,7 @@ function ra_slider_sc( $atts , $content) {
 	?>
 
 	<!--ra_slider html-->
-	<?php if(!$detect->isMobile()): ?>
 		<div class="ra-slider" data-props='{"slides": <?php echo $slidesJson ?>}'></div>
-		<?php else: ?>
-		<div class="ra-slider-mobile" data-props='{"slides": <?php echo $slidesJson ?>}'></div>
-	<?php endif ?>
 	<!--/ra_slider html-->
 	<?php
 	return ob_get_clean();

@@ -1,8 +1,18 @@
 import React, { Component } from "react";
 
 class SliderSlide extends Component {
+  state = {
+    mobile: false
+  }
+  
+  componentDidMount() {
+    if(window.innerWidth < 768) {
+      this.setState({mobile: true});
+    }
+  }
 
   render() {
+    const { mobile } = this.state;
 		const { slide, slideWidth, current, index } = this.props;
 
     const slideStyle = {
@@ -40,7 +50,7 @@ class SliderSlide extends Component {
           className="slider__slide__model"
           style={{
             ...slideStyle,
-            background: `url(${slide.model_img}) right / cover no-repeat`
+            background: `url(${mobile ? slide.model_img_mobile : slide.model_img}) right / cover no-repeat`
           }}
         />
 
@@ -48,7 +58,7 @@ class SliderSlide extends Component {
           className="slider__slide__object"
           style={{
             ...slideStyle,
-            background: `url(${slide.object_img}) right / cover no-repeat`
+            background: `url(${mobile ? slide.object_img_mobile : slide.object_img}) right / cover no-repeat`
           }}
         />
 
