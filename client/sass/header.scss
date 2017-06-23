@@ -5,34 +5,35 @@
   background: rgba(255, 255, 255, 0.01);
   padding-top: 50px;
   z-index: 999;
-}
 
-#app-header img {
-  float: left;
-}
+  img {
+    float: left;
+  }
 
-#app-header ul {
-  float: right;
-  margin: 0;
-  padding: 3px 0 0 0;
-}
+  ul {
+    float: right;
+    margin: 0;
+    padding: 3px 0 0 0;
 
-#app-header ul li {
-  display: inline-block;
-	margin: 0 10px;
-}
+    li {
+      display: inline-block;
+	    margin: 0 10px;
+      
+      a {
+        color: #6031BA;
+        display: block;
+        font-family: 'Aktiv Grotesk Medium';
+        display: block;
+        transition: all 500ms;
+      }
+    }
+  }
 
-#app-header ul li a {
-  color: #6031BA;
-  display: block;
-  font-family: 'Aktiv Grotesk Medium';
-  display: block;
-  transition: all 500ms;
-}
+  .current_page_item {
+    padding-bottom: 8px;
+    border-bottom: 2px solid #fff;
+  }
 
-#app-header .current_page_item {
-  padding-bottom: 8px;
-  border-bottom: 2px solid #fff;
 }
 
 .header__widget {
