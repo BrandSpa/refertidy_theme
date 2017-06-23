@@ -62,6 +62,9 @@ li {
     float: right;
     margin: 0;
     padding: 3px 0 0 0; }
+    @media (max-width: 767px) {
+      #app-header ul {
+        display: none; } }
     #app-header ul li {
       display: inline-block;
       margin: 0 10px; }
