@@ -29,7 +29,7 @@ class QuoFixed extends Component {
     return (
       <div className="quo-fixed">
         <form>
-          <div className="row">
+          <div className="row quo-fixed__container">
             <div className="col-lg-2">
               <input type="text" name="name" placeholder="Nombre" />
             </div>

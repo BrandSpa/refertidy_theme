@@ -427,7 +427,7 @@ var QuoFixed = function (_Component) {
           null,
           _react2.default.createElement(
             'div',
-            { className: 'row' },
+            { className: 'row quo-fixed__container' },
             _react2.default.createElement(
               'div',
               { className: 'col-lg-2' },

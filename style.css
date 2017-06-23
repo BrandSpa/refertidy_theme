@@ -211,6 +211,11 @@ form {
   min-height: 100px;
 }
 
+.quo-fixed__container {
+  width: 100%;
+  padding: 0 40px;
+}
+
 .quo-fixed form::-webkit-input-placeholder { /* Chrome/Opera/Safari */
   color: pink;
 }
