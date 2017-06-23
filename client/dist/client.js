@@ -501,7 +501,7 @@ var QuoFixed = function (_Component) {
             )
           )
         ),
-        _react2.default.createElement(
+        errors.length > 0 ? _react2.default.createElement(
           'div',
           { className: 'row quo-fixed__errors' },
           _react2.default.createElement(
@@ -511,7 +511,7 @@ var QuoFixed = function (_Component) {
               return _react2.default.createElement('div', { dangerouslySetInnerHTML: { __html: err } });
             })
           )
-        )
+        ) : ''
       );
     }
   }]);
