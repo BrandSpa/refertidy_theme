@@ -65,6 +65,8 @@ li {
   #app-header--scrolling {
     background: #6031BA;
     color: #fff; }
+    #app-header--scrolling .logo {
+      fill: #fff; }
     #app-header--scrolling ul li a {
       color: #fff; }
   #app-header img {

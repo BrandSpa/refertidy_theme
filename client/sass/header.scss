@@ -15,6 +15,11 @@
   &--scrolling {
     background: #6031BA;
     color: #fff;
+    
+    .logo {
+      fill: #fff;
+    }
+
     ul {
       li {
         a {
@@ -22,6 +27,7 @@
         }
       }
     }
+    
   }
 
   img {
