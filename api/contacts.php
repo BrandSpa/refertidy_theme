@@ -9,8 +9,8 @@ function store_contact() {
 	$data = [
 		'name' => $_POST['name'],
 		'email' => $_POST['email'],
-		'phone' => $_POST['phone'],
-		'product' => $_POST['product']
+		'phone' => $_POST['phone'] ? $_POST['phone'] : '',
+		'product' => $_POST['product'] ? $_POST['product'] : ''
 	];
 
 	$res = $wpdb->insert( 'contacts', 
