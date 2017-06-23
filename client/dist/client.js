@@ -442,7 +442,7 @@ var QuoFixed = function (_Component) {
             { className: 'row quo-fixed__container' },
             _react2.default.createElement(
               'div',
-              { className: 'col-lg-3' },
+              { className: 'col-lg-3 col-md-3' },
               _react2.default.createElement('input', {
                 type: 'text',
                 name: 'name',
@@ -453,7 +453,7 @@ var QuoFixed = function (_Component) {
             ),
             _react2.default.createElement(
               'div',
-              { className: 'col-lg-3' },
+              { className: 'col-lg-3 col-md-3' },
               _react2.default.createElement('input', {
                 type: 'text',
                 name: 'email',
@@ -464,7 +464,7 @@ var QuoFixed = function (_Component) {
             ),
             _react2.default.createElement(
               'div',
-              { className: 'col-lg-2' },
+              { className: 'col-lg-2 col-md-2' },
               _react2.default.createElement('input', {
                 type: 'text',
                 name: 'phone',
@@ -475,7 +475,7 @@ var QuoFixed = function (_Component) {
             ),
             _react2.default.createElement(
               'div',
-              { className: 'col-lg-2' },
+              { className: 'col-lg-2 col-md-2' },
               _react2.default.createElement(
                 'select',
                 { name: 'product', onChange: this.handleChange, value: product },
@@ -493,7 +493,7 @@ var QuoFixed = function (_Component) {
             ),
             _react2.default.createElement(
               'div',
-              { className: 'col-lg-2' },
+              { className: 'col-lg-2 col-md-2' },
               _react2.default.createElement(
                 'button',
                 { className: 'btn' },
