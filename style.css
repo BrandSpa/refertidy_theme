@@ -217,12 +217,12 @@ input, select {
 
 .quo-fixed__errors {
   color: #fff;
-  padding: 10px 50px;
+  padding: 10px 50px 0 50px;
 }
 
 .quo-fixed__errors div {
   display: inline-block;
-  margin-right: 20px;
+  margin-right: 10px;
 }
 
 .quo-fixed input::-webkit-input-placeholder {
