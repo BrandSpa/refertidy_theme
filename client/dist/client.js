@@ -421,6 +421,12 @@ var QuoFixed = function (_Component) {
   _createClass(QuoFixed, [{
     key: 'render',
     value: function render() {
+      var _state = this.state,
+          name = _state.name,
+          email = _state.email,
+          phone = _state.phone,
+          product = _state.product;
+
       return _react2.default.createElement(
         'div',
         { className: 'quo-fixed' },
@@ -433,24 +439,42 @@ var QuoFixed = function (_Component) {
             _react2.default.createElement(
               'div',
               { className: 'col-lg-3' },
-              _react2.default.createElement('input', { type: 'text', name: 'name', placeholder: 'Nombre' })
+              _react2.default.createElement('input', {
+                type: 'text',
+                name: 'name',
+                placeholder: 'Nombre',
+                onChange: this.handleChange,
+                value: name
+              })
             ),
             _react2.default.createElement(
               'div',
               { className: 'col-lg-3' },
-              _react2.default.createElement('input', { type: 'text', name: 'email', placeholder: 'Email' })
+              _react2.default.createElement('input', {
+                type: 'text',
+                name: 'email',
+                placeholder: 'Email',
+                onChange: this.handleChange,
+                value: email
+              })
             ),
             _react2.default.createElement(
               'div',
               { className: 'col-lg-2' },
-              _react2.default.createElement('input', { type: 'text', name: 'phone', placeholder: 'T\xE9lefono' })
+              _react2.default.createElement('input', {
+                type: 'text',
+                name: 'phone',
+                placeholder: 'T\xE9lefono',
+                onChange: this.handleChange,
+                value: phone
+              })
             ),
             _react2.default.createElement(
               'div',
               { className: 'col-lg-2' },
               _react2.default.createElement(
                 'select',
-                { name: 'product' },
+                { name: 'product', onChange: this.handleChange, value: product },
                 _react2.default.createElement(
                   'option',
                   { value: 'Desktops' },

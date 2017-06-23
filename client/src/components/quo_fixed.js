@@ -28,21 +28,40 @@ class QuoFixed extends Component {
 	}
 
   render() {
+    const { name, email, phone, product } = this.state;
     return (
       <div className="quo-fixed">
         <form onSubmit={this.handleSubmit}>
           <div className="row quo-fixed__container">
             <div className="col-lg-3">
-              <input type="text" name="name" placeholder="Nombre" />
+              <input 
+                type="text" 
+                name="name" 
+                placeholder="Nombre" 
+                onChange={this.handleChange} 
+                value={name} 
+              />
             </div>
             <div className="col-lg-3">
-              <input type="text" name="email" placeholder="Email" />
+              <input 
+                type="text" 
+                name="email" 
+                placeholder="Email" 
+                onChange={this.handleChange} 
+                value={email} 
+              />
             </div>
             <div className="col-lg-2">
-              <input type="text" name="phone" placeholder="Télefono" />
+              <input 
+                type="text" 
+                name="phone" 
+                placeholder="Télefono" 
+                onChange={this.handleChange} 
+                value={phone} 
+              />
             </div>
             <div className="col-lg-2">
-              <select name="product">
+              <select name="product" onChange={this.handleChange} value={product}>
                 <option value="Desktops">Desktops</option>
                 <option value="Laptops">Laptops</option>
               </select>
