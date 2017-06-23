@@ -5,6 +5,11 @@
   background: rgba(255, 255, 255, 0.01);
   padding-top: 50px;
   z-index: 999;
+  
+  @media #{$s} {
+    padding-top: 20px;
+    text-align: center;
+  }
 
   img {
     float: left;
