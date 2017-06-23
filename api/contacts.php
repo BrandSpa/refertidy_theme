@@ -33,7 +33,7 @@ function store_contact() {
 
 		responseJson($data);
 	} else {
-		echo $gump->get_readable_errors(true);
+		responseJson(['validation', $isValid]);
 	}
 	
 	die();
