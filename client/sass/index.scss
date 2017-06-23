@@ -1,0 +1,57 @@
+body, html {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-family: 'Aktiv Grotesk';
+  font-size: 15px;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  font-size: 1rem;
+}
+
+input, input:focus, select {
+  outline: none;
+}
+
+input, select {
+  border: none;
+  border-bottom: 1px solid #fff;
+  color: #fff;
+  background: transparent;
+  width: 100%;
+  height: 35px;
+}
+
+
+button {
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+button:focus {
+  outline: none;
+}
+
+li {
+  list-style: none;
+}
+
+.btn {
+  background: #fff;
+  border-radius: 100px;
+  width: 150px;
+  height: 50px;
+  border: none;
+  cursor: pointer;
+}
+
+@import 'header';
+@import 'slider';
+@import 'quo_fixed';

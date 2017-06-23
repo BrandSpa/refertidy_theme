@@ -1,0 +1,46 @@
+.quo-fixed {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 998;
+  max-width: 1110px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.quo-fixed {
+  background: #6031BA;
+  width: 100%;
+  min-height: 100px;
+  border-radius: 100px 0 0 0;
+  padding: 30px 40px;
+}
+
+.quo-fixed__container {
+  width: 100%;
+  padding: 0 50px;
+}
+
+.quo-fixed__errors {
+  color: #fff;
+  padding: 10px 50px 0 50px;
+}
+
+.quo-fixed input::-webkit-input-placeholder {
+  color: #fff;
+}
+
+.quo-fixed input:-moz-placeholder {
+  /* Firefox 18- */
+  color: #fff;
+}
+
+.quo-fixed input::-moz-placeholder {
+  /* Firefox 19+ */
+  color: #fff;
+}
+
+.quo-fixed input:-ms-input-placeholder {
+  color: #fff;
+}
