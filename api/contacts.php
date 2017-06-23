@@ -37,10 +37,10 @@ function store_contact() {
 			$data, 
 			array( '%s', '%s', '%s', '%s' ) 
 		);
-
+		
 		responseJson($data);
 	} else {
-		responseJson(['validation', $isValid]);
+		responseJson($isValid);
 	}
 	
 	die();
