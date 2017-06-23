@@ -28,11 +28,17 @@
 	<script>
 		onLoad(function() {
 			jQuery(window).on('scroll', function(e) {
-				console.log(jQuery(window).scrollTop());
+				var $header = $('.app-header');
+				if(jQuery(window).scrollTop() > $header.height) {
+					$header.addClass('.app-header--scrolling');
+				} else {
+					$header.removeClass('.app-header--scrolling');
+				}
 			});
 		});
 	</script>
-<header id="app-header">
+
+<header class="app-header">
 	<div class="container">
 		<?php  require('templates/logo.php') ?>
 		<?php if ( is_active_sidebar( 'header_widget' ) ) : ?>
