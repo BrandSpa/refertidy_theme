@@ -11,6 +11,18 @@
 	<!--wordpress files-->
 	<?php wp_head(); ?>
 	<!-- /wordpress files-->
+		<script>
+      function onLoad(cb) {
+        if (window.addEventListener)
+          window.addEventListener("load", cb, false);
+        else if (window.attachEvent) {
+          window.attachEvent("onload", cb);
+        } else {
+          window.onload = cb;
+        }
+      }
+  </script>
+
 </head>
 <body>
 	<script>
