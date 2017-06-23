@@ -503,7 +503,7 @@ var QuoFixed = function (_Component) {
         ),
         _react2.default.createElement(
           'div',
-          { className: 'row errors' },
+          { className: 'row quo-fixed__errors' },
           _react2.default.createElement(
             'div',
             { className: 'col-lg-12' },
