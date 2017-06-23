@@ -54,7 +54,7 @@ li {
   top: 0;
   width: 100%;
   background: rgba(255, 255, 255, 0.01);
-  padding-top: 50px;
+  padding: 20px 0;
   z-index: 999;
   -webkit-transition: all 500ms;
   transition: all 500ms; }
