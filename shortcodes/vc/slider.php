@@ -7,15 +7,30 @@
         "heading" => "Background image",
         "param_name" => "bg_img"
       ],
+      [
+        "type" => "attach_image",
+        "heading" => "Background image mobile",
+        "param_name" => "bg_img_mobile"
+      ],
 			[
         "type" => "attach_image",
         "heading" => "Model image",
         "param_name" => "model_img"
       ],
+      [
+        "type" => "attach_image",
+        "heading" => "Model image mobile",
+        "param_name" => "model_img_mobile"
+      ],
 			[
         "type" => "attach_image",
         "heading" => "Object image",
         "param_name" => "object_img"
+      ],
+			[
+        "type" => "attach_image",
+        "heading" => "Object image mobile",
+        "param_name" => "object_img_mobile"
       ],
 			[
 				"type" => "textarea",
