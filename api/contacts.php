@@ -28,7 +28,7 @@ function store_contact() {
      "validate_valid_email"  => "{field} debe ser un email valido",
   ));
 
-	GUMP::set_field_name("name", "nombre");
+	GUMP::set_field_name("name", "Nombre");
 
 	$isValid = GUMP::is_valid($data, $rules);
 
