@@ -86,6 +86,10 @@ a {
   font-size: 1rem;
 }
 
+input, input:focus, select {
+  outline: none;
+}
+
 button {
   border: none;
   outline: none;
