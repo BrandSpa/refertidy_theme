@@ -6,5 +6,7 @@
             "email": "alesanabriav@gmail.com"
         }
     ],
-    "require": {}
+    "require": {
+        "wixel/gump": "1.5.2"
+    }
 }
