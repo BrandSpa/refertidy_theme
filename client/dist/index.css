@@ -1,3 +1,7 @@
+/* Portrait tablets and medium desktops */
+/* Portrait tablets and small desktops */
+/* Landscape phones and portrait tablets */
+/* Landscape phones and smaller */
 body, html {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; }
@@ -7,6 +11,9 @@ body {
   font-size: 15px;
   margin: 0;
   padding: 0; }
+  @media (max-width: 767px) {
+    body {
+      font-size: 13px; } }
 
 a {
   text-decoration: none;
@@ -187,6 +194,9 @@ li {
   min-height: 100px;
   border-radius: 100px 0 0 0;
   padding: 30px 40px; }
+  @media (max-width: 767px) {
+    .quo-fixed {
+      display: none; } }
   .quo-fixed__container {
     width: 100%;
     padding: 0 50px; }
