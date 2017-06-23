@@ -30,9 +30,9 @@
 			jQuery(window).on('scroll', function(e) {
 				var $header = jQuery('.app-header');
 				if(jQuery(window).scrollTop() > $header.height()) {
-					$header.addClass('.app-header--scrolling');
+					$header.addClass('app-header--scrolling');
 				} else {
-					$header.removeClass('.app-header--scrolling');
+					$header.removeClass('app-header--scrolling');
 				}
 			});
 		});
