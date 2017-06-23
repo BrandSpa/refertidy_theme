@@ -14,6 +14,7 @@
     float: right;
     margin: 0;
     padding: 3px 0 0 0;
+
     @media #{$s} {
       display: none;
     }
@@ -37,8 +38,13 @@
     border-bottom: 2px solid #fff;
   }
 
+  .header__widget {
+    float: right;
+    @media #{$s} {
+      display: none;
+    }
+  }
+
+
 }
 
-.header__widget {
-  float: right;
-}

@@ -78,9 +78,11 @@ li {
   #app-header .current_page_item {
     padding-bottom: 8px;
     border-bottom: 2px solid #fff; }
-
-.header__widget {
-  float: right; }
+  #app-header .header__widget {
+    float: right; }
+    @media (max-width: 767px) {
+      #app-header .header__widget {
+        display: none; } }
 
 @-webkit-keyframes slideModel {
   from {
