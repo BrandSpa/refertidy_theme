@@ -247,13 +247,13 @@ var SliderSlide = function (_Component) {
         _react2.default.createElement('div', {
           className: 'slider__slide__model',
           style: _extends({}, slideStyle, {
-            background: 'url(' + (mobile ? slide.model_img_mobile : slide.model_img) + ') right / cover no-repeat'
+            background: 'url(' + (mobile ? slide.model_img_mobile : slide.model_img) + ') center / cover no-repeat'
           })
         }),
         _react2.default.createElement('div', {
           className: 'slider__slide__object',
           style: _extends({}, slideStyle, {
-            background: 'url(' + (mobile ? slide.object_img_mobile : slide.object_img) + ') right / cover no-repeat'
+            background: 'url(' + (mobile ? slide.object_img_mobile : slide.object_img) + ') center / cover no-repeat'
           })
         })
       );

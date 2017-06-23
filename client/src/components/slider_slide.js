@@ -50,7 +50,7 @@ class SliderSlide extends Component {
           className="slider__slide__model"
           style={{
             ...slideStyle,
-            background: `url(${mobile ? slide.model_img_mobile : slide.model_img}) right / cover no-repeat`
+            background: `url(${mobile ? slide.model_img_mobile : slide.model_img}) center / cover no-repeat`
           }}
         />
 
@@ -58,7 +58,7 @@ class SliderSlide extends Component {
           className="slider__slide__object"
           style={{
             ...slideStyle,
-            background: `url(${mobile ? slide.object_img_mobile : slide.object_img}) right / cover no-repeat`
+            background: `url(${mobile ? slide.object_img_mobile : slide.object_img}) center / cover no-repeat`
           }}
         />
 
