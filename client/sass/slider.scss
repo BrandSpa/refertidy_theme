@@ -52,6 +52,7 @@
   }
 
   &__content {
+
     &__title {
       font-size: 45px;
       color: #6031ba;
@@ -72,6 +73,16 @@
   }
 
   &__slide {
+    &__content {
+       max-width: 500px; 
+       position: absolute;
+       z-index: 998;
+       margin-top: 40%;
+
+       @media #{$s} {
+         margin-top: 20%;
+       }
+    }
     &--active {
       .slider__slide__model {
         animation: slideModel 2s;
