@@ -151,6 +151,10 @@ li {
     -webkit-transform: translate3d(0, 0, 0);
     transform: translate3d(0, 0, 0); } }
 
+@media (max-width: 767px) {
+  .slider {
+    display: none; } }
+
 .slider__viewport {
   overflow: hidden; }
 

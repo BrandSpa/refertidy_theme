@@ -7,6 +7,7 @@
         }
     ],
     "require": {
-        "wixel/gump": "1.5.2"
+        "wixel/gump": "1.5.2",
+        "mobiledetect/mobiledetectlib": "^2.8"
     }
 }

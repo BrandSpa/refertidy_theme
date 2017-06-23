@@ -1,4 +1,6 @@
 <?php
+$dir_base = get_template_directory();
+require_once $dir_base . '/vendor/autoload.php';
 
 function parseSlides($slides) {
 	$parseAtts = function_exists('vc_param_group_parse_atts') ? vc_param_group_parse_atts( $slides ) : [];
@@ -23,11 +25,14 @@ function ra_slider_sc( $atts , $content) {
 	$slides = parseSlides($at['slides']); 
 	// $slides = vc_param_group_parse_atts($atts['slides']); 
 	$slidesJson = json_encode($slides);
-	
+	$detect = new Mobile_Detect;
+
   ob_start();
 	?>
 	<!--ra_slider html-->
+	<?php if(!$detect->isMobile()): ?>
 		<div class="ra-slider" data-props='{"slides": <?php echo $slidesJson ?>}'></div>
+	<?php endif ?>
 	<!--/ra_slider html-->
 	<?php
 	return ob_get_clean();
