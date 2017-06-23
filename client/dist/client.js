@@ -507,7 +507,9 @@ var QuoFixed = function (_Component) {
           _react2.default.createElement(
             'div',
             { className: 'col-lg-12' },
-            _react2.default.createElement('div', { dangerouslySetInnerHTML: { __html: errors } })
+            errors.map(function (err) {
+              return _react2.default.createElement('div', { dangerouslySetInnerHTML: { __html: err } });
+            })
           )
         )
       );
