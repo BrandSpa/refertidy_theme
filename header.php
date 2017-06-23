@@ -13,7 +13,13 @@
 	<!-- /wordpress files-->
 </head>
 <body>
-	
+	<script>
+		onLoad(function() {
+			$(window).on('scroll', function(e) {
+				console.log(e);
+			});
+		});
+	</script>
 <header id="app-header">
 	<div class="container">
 		<?php  require('templates/logo.php') ?>
