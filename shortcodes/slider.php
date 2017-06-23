@@ -2,8 +2,8 @@
 $dir_base = get_template_directory();
 require_once $dir_base . '/vendor/autoload.php';
 
-function checkParam($param) {
-	return isset($param) ? $param : '';
+function getAttachment($arr, $field) {
+	return isset($arr[$field]) ? wp_get_attachment_url($arr[$field]) : '';
 }
 
 function parseSlides($slides) {
@@ -11,12 +11,12 @@ function parseSlides($slides) {
 
 	$arrResult = array_map(function($slide) {
 		if(!empty($slide)) {
-			$slide['bg_img'] = wp_get_attachment_url(checkParam($slide['bg_img']));			
-			$slide['bg_img_mobile'] = wp_get_attachment_url(checkParam($slide['bg_img_mobile']));			
-			$slide['model_img'] = wp_get_attachment_url(checkParam($slide['model_img']));
-			$slide['model_img_mobile'] = wp_get_attachment_url(checkParam($slide['model_img_mobile']));			
-			$slide['object_img'] = wp_get_attachment_url(checkParam($slide['object_img']));
-			$slide['object_img_mobile'] = wp_get_attachment_url(checkParam($slide['object_img_mobile']));			
+			$slide['bg_img'] = getAttachment($slide, 'bg_img');
+			$slide['bg_img_mobile'] = getAttachment($slide, 'bg_img_mobile');			
+			$slide['model_img'] = getAttachment($slide, 'model_img');
+			$slide['model_img_mobile'] = getAttachment($slide, 'model_img_mobile');			
+			$slide['object_img'] = getAttachment($slide, 'object_img');
+			$slide['object_img_mobile'] = getAttachment($slide, 'object_img_mobile');			
 		}
 		
 		return $slide;
