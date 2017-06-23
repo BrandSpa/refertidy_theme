@@ -405,6 +405,7 @@ var QuoFixed = function (_Component) {
     }, _this.handleChange = function (e) {
       _this.setState(_defineProperty({}, e.target.name, e.taget.value));
     }, _this.handleSubmit = function (e) {
+      if (e) e.preventDefault();
       var data = _this.data;
       var reqData = _qs2.default.stringify({ action: 'store_contact', data: data });
 
