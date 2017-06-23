@@ -28,7 +28,7 @@
 	<script>
 		onLoad(function() {
 			jQuery(window).on('scroll', function(e) {
-				var $header = $('.app-header');
+				var $header = jQuery('.app-header');
 				if(jQuery(window).scrollTop() > $header.height) {
 					$header.addClass('.app-header--scrolling');
 				} else {
