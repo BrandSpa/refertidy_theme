@@ -29,6 +29,7 @@
 		onLoad(function() {
 			jQuery(window).on('scroll', function(e) {
 				var $header = jQuery('.app-header');
+				console.log($header.height);
 				if(jQuery(window).scrollTop() > $header.height) {
 					$header.addClass('.app-header--scrolling');
 				} else {
