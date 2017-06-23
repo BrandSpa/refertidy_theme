@@ -1,6 +1,6 @@
 <?php
 
-register_activation_hook( __FILE__, 'prefix_create_table' );
+add_action('after_switch_theme', 'prefix_create_table' );
 
 function prefix_create_table() {
 	global $wpdb;
