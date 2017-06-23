@@ -12,6 +12,10 @@
   min-height: 100px;
   border-radius: 100px 0 0 0;
   padding: 30px 40px;
+  
+  @media #{$m} {
+    width: 100%;
+  }
 
   @media #{$s} {
     display: none;
