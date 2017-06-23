@@ -403,7 +403,7 @@ var QuoFixed = function (_Component) {
       phone: '',
       product: ''
     }, _this.handleChange = function (e) {
-      _this.setState(_defineProperty({}, e.target.name, e.taget.value));
+      _this.setState(_defineProperty({}, e.target.name, e.target.value));
     }, _this.handleSubmit = function (e) {
       if (e) e.preventDefault();
       var data = _this.state;
