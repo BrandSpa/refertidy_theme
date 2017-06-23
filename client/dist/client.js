@@ -425,7 +425,7 @@ var QuoFixed = function (_Component) {
         { className: 'quo-fixed' },
         _react2.default.createElement(
           'form',
-          null,
+          { onSubmit: this.handleSubmit },
           _react2.default.createElement(
             'div',
             { className: 'row quo-fixed__container' },
