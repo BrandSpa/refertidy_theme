@@ -6,6 +6,7 @@ add_action( 'wp_ajax_store_contact', 'store_contact' );
 
 function store_contact() {
 	global $wpdb;
+	
 	$data = [
 		'name' => $_POST['name'],
 		'email' => $_POST['email'],
