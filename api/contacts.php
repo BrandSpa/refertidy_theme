@@ -6,12 +6,12 @@ add_action( 'wp_ajax_store_contact', 'store_contact' );
 
 function store_contact() {
 	global $wpdb;
-	
+	$data = $_POST['data'];
 	$data = [
-		'name' => $_POST['name'],
-		'email' => $_POST['email'],
-		'phone' => isset($_POST['phone']) ? $_POST['phone'] : '',
-		'product' => isset($_POST['product']) ? $_POST['product'] : ''
+		'name' => $data['name'],
+		'email' => $data['email'],
+		'phone' => isset($data['phone']) ? $data['phone'] : '',
+		'product' => isset($data['product']) ? $data['product'] : ''
 	];
 
 	$res = $wpdb->insert( 'contacts', 
