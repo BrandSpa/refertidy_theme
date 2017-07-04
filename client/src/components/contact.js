@@ -10,6 +10,7 @@ class Contact extends Component {
       phone: '',
       company: '',
       question: '',
+      privacy: false
       errors: {}
   }
 
@@ -17,6 +18,10 @@ class Contact extends Component {
     let field = e.target.name;
     let val = e.target.value;
     this.setState({[field]: val});
+  }
+
+  toggleCheckbox = e => {
+    this.setState({checkbox: !this.state.privacy});
   }
 
   handleSubmit = e => {
@@ -98,8 +103,7 @@ class Contact extends Component {
             <input
               type="checkbox"
               name="privacy"
-              onChange={this.handleChange}
-              value={true}
+              onChange={this.toggleCheckbox}
               checked={this.state.privacy}
             /> He leído y acepto la política de privacidad
           </label>
