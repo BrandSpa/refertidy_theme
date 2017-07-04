@@ -51,7 +51,7 @@ class Contact extends Component {
           <input name="company" type="text" className="form-control" placeholder="Empresa"/>
         </div>
         <div className="form-group">
-          <textarea name="question" id="" rows="3" className="form-control" placeholder="¿Dudas?"></textarea>
+          <textarea name="question" rows="3" className="form-control" placeholder="¿Dudas?"/>
         </div>
       </form>
     )
