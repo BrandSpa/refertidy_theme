@@ -2181,7 +2181,7 @@ var PostsSlider = function (_Component) {
       var posts = this.props.posts;
 
       var total = posts.length;
-      var viewportWidth = total / 3 + '%';
+      var viewportWidth = total / 3 * 100 + '%';
       var viewportLeft = '-%{this.state.state * 100}%';
 
       if (window.innerWidth < 768) {

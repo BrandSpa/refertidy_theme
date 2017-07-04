@@ -25,7 +25,7 @@ class PostsSlider extends Component {
   render() {
     const { posts } = this.props;
     let total = posts.length;
-    let viewportWidth = `${total / 3}%`;
+    let viewportWidth = `${total / 3 * 100}%`;
     let viewportLeft = `-%{this.state.state * 100}%`;
 
     if(window.innerWidth < 768) {
