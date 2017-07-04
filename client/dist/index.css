@@ -356,6 +356,6 @@ li {
       margin: auto;
       font-size: 30px; }
     .posts-slider__btns__left {
-      left: 40px; }
+      left: -40px; }
     .posts-slider__btns__right {
-      right: 40px; }
+      right: -40px; }
