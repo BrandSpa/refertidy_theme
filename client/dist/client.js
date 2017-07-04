@@ -2180,8 +2180,9 @@ var PostsSlider = function (_Component) {
     value: function render() {
       var posts = this.props.posts;
 
-      var viewportWidth = total / 3 + '%';
       var total = posts.length;
+      var viewportWidth = total / 3 + '%';
+      var viewportLeft = '-%{this.state.state * 100}%';
 
       if (window.innerWidth < 768) {
         viewportWidth = total * 100 + '%';
@@ -2192,7 +2193,7 @@ var PostsSlider = function (_Component) {
         { className: 'posts-slider' },
         _react2.default.createElement(
           'div',
-          { className: 'posts-slider__viewport', style: { width: viewportWidth, position: 'relative', left: '0' } },
+          { className: 'posts-slider__viewport', style: { width: viewportWidth, position: 'relative', left: viewportLeft } },
           posts.map(function (post) {
             return _react2.default.createElement(_post_slide2.default, { key: post.ID, post: post, total: posts.length });
           })
