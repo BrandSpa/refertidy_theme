@@ -20,7 +20,7 @@ function store_quotation() {
 
 	$gump->set_error_messages(array(
     "validate_required"     => "{field} es requerido",
-     "validate_valid_email"  => "{field} debe ser un email valido",
+     "validate_valid_email"  => "{field} debe ser un email valido"
   ));
 
 	$gump->set_field_name("name", "Nombre");
