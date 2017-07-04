@@ -21,14 +21,16 @@ class QuoFixed extends Component {
 		const data = this.state;
 		const reqData = qs.stringify({action: 'store_quotation', data});
 
-		request.post(endpoint, reqData)
-			.then(({data}) => {
-				console.log(data, Array.isArray(data));
-				if(Array.isArray(data)) {
-          this.setState({errors: data});
-        }
+		request
+		.post(endpoint, reqData)
+		.then(({data}) => {
+			console.log(data, Array.isArray(data));
 
-			})
+			if(Array.isArray(data)) {
+        this.setState({errors: data});
+      }
+
+		})
 	}
 
   render() {

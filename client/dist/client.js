@@ -1370,6 +1370,7 @@ var QuoFixed = function (_Component) {
         var data = _ref2.data;
 
         console.log(data, Array.isArray(data));
+
         if (Array.isArray(data)) {
           _this.setState({ errors: data });
         }
