@@ -8,7 +8,7 @@ class PostSlide extends Component {
 
   render() {
     const { post } = this.props;
-    const postWidth = `${200 / 6}%`;
+    const postWidth = `${200 / 12}%`;
 
     return (
       <div className="post-slide" style={{width: postWidth, float: 'left'}}>

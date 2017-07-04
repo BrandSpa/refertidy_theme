@@ -2240,7 +2240,7 @@ var PostSlide = function (_Component) {
     value: function render() {
       var post = this.props.post;
 
-      var postWidth = 200 / 6 + '%';
+      var postWidth = 200 / 12 + '%';
 
       return _react2.default.createElement(
         'div',
