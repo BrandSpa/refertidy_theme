@@ -341,7 +341,8 @@ li {
     position: relative;
     -webkit-transition: left .7s;
     transition: left .7s;
-    will-change: left; }
+    will-change: left;
+    z-index: 1; }
   .posts-slider__btns {
     position: absolute;
     width: 100%;
