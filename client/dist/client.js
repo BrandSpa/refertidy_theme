@@ -460,9 +460,12 @@ var SliderSlide = function (_Component) {
           )
         ),
         _react2.default.createElement('div', {
+          className: 'lazyload',
           style: _extends({}, slideStyle, {
-            background: 'url(' + slide.bg_img + ') center / cover no-repeat'
-          })
+            backgroundPosition: 'center',
+            backgroundSize: 'cover'
+          }),
+          'data-src': slide.bg_img
         }),
         _react2.default.createElement('div', {
           className: 'slider__slide__model lazyload',
@@ -473,10 +476,12 @@ var SliderSlide = function (_Component) {
           'data-bgset': slide.model_img_mobile + ' 768w, ' + slide.model_img + ' 1200w'
         }),
         _react2.default.createElement('div', {
-          className: 'slider__slide__object',
+          className: 'slider__slide__object lazyload',
           style: _extends({}, slideStyle, {
-            background: 'url(' + (mobile ? slide.object_img_mobile : slide.object_img) + ') center / cover no-repeat'
-          })
+            backgroundPosition: 'center',
+            backgroundSize: 'cover'
+          }),
+          'data-bgset': slide.model_img_mobile + ' 768w, ' + slide.model_img + ' 1200w'
         })
       );
     }

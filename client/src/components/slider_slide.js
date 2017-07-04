@@ -40,10 +40,13 @@ class SliderSlide extends Component {
       </div>
 
         <div
+          className="lazyload"
           style={{
             ...slideStyle,
-            background: `url(${slide.bg_img}) center / cover no-repeat`
+            backgroundPosition: 'center',
+            backgroundSize: 'cover'
           }}
+          data-src={slide.bg_img}
         />
 
         <div
@@ -57,11 +60,13 @@ class SliderSlide extends Component {
         />
 
         <div
-          className="slider__slide__object"
+          className="slider__slide__object lazyload"
           style={{
             ...slideStyle,
-            background: `url(${mobile ? slide.object_img_mobile : slide.object_img}) center / cover no-repeat`
+            backgroundPosition: 'center',
+            backgroundSize: 'cover'
           }}
+          data-bgset={`${slide.model_img_mobile} 768w, ${slide.model_img} 1200w`}
         />
 
       </section>
