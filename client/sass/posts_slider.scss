@@ -1,0 +1,25 @@
+.post-slide {
+  &__media {
+    background-color: #F8F8F8;
+    background-position: center;
+    background-size: cover;
+    min-height: 250px;
+  }
+
+  &__content {
+    background: #F8F8F8;
+    border-radius: 0 0 0 100px;
+    padding: 40px;
+  }
+
+  &__title {
+    font-size: 25 / 15 * 1rem;
+    color: #6031BA;
+    line-height: 33px;
+  }
+
+  &__excerpt {
+    font-size: 20 / 15 * 1rem;
+    color: #747E86;
+  }
+}

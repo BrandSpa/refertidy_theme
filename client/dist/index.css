@@ -55,6 +55,9 @@ li {
   border: none;
   cursor: pointer;
   font-size: 1.33333rem; }
+  .btn--outline {
+    background: transparent;
+    border: 2px solid #fff; }
 
 .blur-up {
   -webkit-filter: blur(5px);
@@ -300,3 +303,23 @@ li {
 
 .form-contact input:-ms-input-placeholder, .form-contact textarea:-ms-input-placeholder {
   color: #fff; }
+
+.post-slide__media {
+  background-color: #F8F8F8;
+  background-position: center;
+  background-size: cover;
+  min-height: 250px; }
+
+.post-slide__content {
+  background: #F8F8F8;
+  border-radius: 0 0 0 100px;
+  padding: 40px; }
+
+.post-slide__title {
+  font-size: 1.66667rem;
+  color: #6031BA;
+  line-height: 33px; }
+
+.post-slide__excerpt {
+  font-size: 1.33333rem;
+  color: #747E86; }

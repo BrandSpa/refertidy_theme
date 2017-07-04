@@ -6,7 +6,9 @@ import Slider from './components/slider';
 import SliderImgs from './components/sliderImgs';
 import QuoFixed from './components/quo_fixed';
 import Contact from './components/contact';
+import PostsSlider from './components/posts_slider';
 
 multipleRender(Slider, '.ra-slider');
 multipleRender(QuoFixed, '.ra-quo-fixed');
 multipleRender(Contact, '.ra-contact');
+multipleRender(PostsSlider, '.ra-posts-slider');

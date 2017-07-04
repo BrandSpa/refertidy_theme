@@ -12,11 +12,13 @@ include_once 'widgets/header.php';
 include_once 'shortcodes/slider.php';
 include_once 'shortcodes/quo_fixed.php';
 include_once 'shortcodes/contact.php';
+include_once 'shortcodes/posts_slider.php';
 
 //VISUAL COMPOSER
 include_once 'shortcodes/vc/slider.php';
 include_once 'shortcodes/vc/quo_fixed.php';
 include_once 'shortcodes/vc/contact.php';
+include_once 'shortcodes/vc/posts_slider.php';
 
 //LIBS
 include_once 'lib/clean_menu.php';

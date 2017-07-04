@@ -74,6 +74,12 @@ li {
   border: none;
   cursor: pointer;
   font-size: 20 / 15 * 1rem;
+
+  &--outline {
+    background: transparent;
+    border: 2px solid #fff;
+  }
+
 }
 
 .blur-up {
@@ -121,3 +127,4 @@ li {
 @import 'slider';
 @import 'quo_fixed';
 @import 'contact';
+@import 'posts_slider';
