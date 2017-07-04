@@ -1443,7 +1443,9 @@ var PostsSlider = function (_Component) {
       slide: 0,
       mobile: false
     }, _this.componentDidMount = function () {
-      window.addEventListener("resize", _this.isMobile);
+      window.addEventListener('resize', _this.isMobile);
+    }, _this.componentWillUnmount = function () {
+      window.removeEventListener('resize', _this.isMobile);
     }, _this.isMobile = function () {
       if (window.innerWidth < 768) {
         _this.setState({ mobile: true });

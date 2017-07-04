@@ -8,7 +8,11 @@ class PostsSlider extends Component {
 	}
 
   componentDidMount = () => {
-    window.addEventListener("resize", this.isMobile);
+    window.addEventListener('resize', this.isMobile);
+  }
+
+  componentWillUnmount = () => {
+    window.removeEventListener('resize', this.isMobile);
   }
 
   isMobile = () => {
