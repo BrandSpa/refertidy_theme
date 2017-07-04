@@ -77,7 +77,7 @@ class QuoFixed extends Component {
               </select>
             </div>
             <div className="col-lg-2 col-md-2">
-              <button className="btn">Cotizar</button>
+              <button className="btn" stlye={{color: '#6031BA'}}>Cotizar</button>
             </div>
           </div>
         </form>
