@@ -1220,12 +1220,12 @@ var SliderSlide = function (_Component) {
         _react2.default.createElement('div', {
           className: 'slider__slide__model lazyload blur-up',
           style: slideStyle,
-          'data-bgset': slide.model_img_mobile + ' 768w, ' + slide.model_img + ' 1200w'
+          'data-bgset': slide.model_img_mobile + ' [(max-width: 767px)] | ' + slide.model_img
         }),
         _react2.default.createElement('div', {
           className: 'slider__slide__object lazyload blur-up',
           style: slideStyle,
-          'data-bgset': slide.object_img_mobile + ' 768w, ' + slide.object_img + ' 1200w'
+          'data-bgset': slide.object_img_mobile + ' [(max-width: 767px)] | ' + slide.object_img
         })
       );
     }
