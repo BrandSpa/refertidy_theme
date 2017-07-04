@@ -2,18 +2,31 @@ import React, { Component } from 'react';
 import Post from './post_slide';
 
 class PostsSlider extends Component {
-  prev = () => {
+  state = {
+		slide: 0
+	}
 
-  }
+	next = e => {
+		if(e) e.preventDefault();
+		const total = this.props.posts.length - 1;
+		const current = this.state.slide;
+		const slide = current < total ? current + 1 : 0;
+		this.setState({ slide });
+	}
 
-  next = () => {
-
-  }
+	prev = e => {
+		if(e) e.preventDefault();
+		const total = this.props.posts.length;
+		const current = this.state.slide;
+		const slide = current > 0 ? current - 1 : 0;
+		this.setState({ slide });
+	}
 
   render() {
     const { posts } = this.props;
-    let viewportWidth = '200%';
+    let viewportWidth = `${total / 3}%`;
     let total = posts.length;
+
     if(window.innerWidth < 768) {
       viewportWidth = `${total * 100}%`;
     }

@@ -2158,7 +2158,21 @@ var PostsSlider = function (_Component) {
       args[_key] = arguments[_key];
     }
 
-    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = PostsSlider.__proto__ || Object.getPrototypeOf(PostsSlider)).call.apply(_ref, [this].concat(args))), _this), _this.prev = function () {}, _this.next = function () {}, _temp), _possibleConstructorReturn(_this, _ret);
+    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = PostsSlider.__proto__ || Object.getPrototypeOf(PostsSlider)).call.apply(_ref, [this].concat(args))), _this), _this.state = {
+      slide: 0
+    }, _this.next = function (e) {
+      if (e) e.preventDefault();
+      var total = _this.props.posts.length - 1;
+      var current = _this.state.slide;
+      var slide = current < total ? current + 1 : 0;
+      _this.setState({ slide: slide });
+    }, _this.prev = function (e) {
+      if (e) e.preventDefault();
+      var total = _this.props.posts.length;
+      var current = _this.state.slide;
+      var slide = current > 0 ? current - 1 : 0;
+      _this.setState({ slide: slide });
+    }, _temp), _possibleConstructorReturn(_this, _ret);
   }
 
   _createClass(PostsSlider, [{
@@ -2166,8 +2180,9 @@ var PostsSlider = function (_Component) {
     value: function render() {
       var posts = this.props.posts;
 
-      var viewportWidth = '200%';
+      var viewportWidth = total / 3 + '%';
       var total = posts.length;
+
       if (window.innerWidth < 768) {
         viewportWidth = total * 100 + '%';
       }
