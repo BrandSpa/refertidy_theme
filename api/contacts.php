@@ -35,7 +35,7 @@ function store_contact() {
 	$gump->set_field_name("question", "Duda");
 
 	$gump->validation_rules($rules);
-	$gump->run($data);
+	$isValid =$gump->run($data);
 
 	if($isValid === true) {
 		$res = $wpdb->insert( 'contacts',

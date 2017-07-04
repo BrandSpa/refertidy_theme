@@ -27,7 +27,7 @@ function store_quotation() {
 
 	$gump->validation_rules($rules);
 
-	$gump->run($data);
+	$isValid = $gump->run($data);
 
 	if($isValid === true) {
 		$res = $wpdb->insert( 'quotations',
