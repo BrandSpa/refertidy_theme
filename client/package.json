@@ -5,7 +5,8 @@
   "author": "Alejandro Sanabria <alejandro@brandspa.com>",
   "license": "MIT",
   "scripts": {
-    "build": "webpack --watch"
+    "build": "webpack --watch",
+    "build:prod": "webpack --p"
   },
   "dependencies": {
     "axios": "^0.16.2",

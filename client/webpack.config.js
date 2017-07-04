@@ -3,7 +3,15 @@ const webpack = require('webpack');
 
 module.exports = {
   entry: {
-		vendor: ['babel-polyfill', 'react', 'react-dom', 'react-multiple-render', 'axios'],
+		vendor: [
+      'babel-polyfill',
+      'react',
+      'react-dom',
+      'react-multiple-render',
+      'axios',
+      'lazysizes/lazysizes.min.js',
+      'lazysizes/plugins/bgset/ls.bgset.min.js'
+    ],
 		client: './src/app.js'
 	},
   output: {
@@ -12,17 +20,17 @@ module.exports = {
   },
   module: {
     loaders: [
-      { 
-				test: /\.js$/, 
-				loader: 'babel-loader?cacheDirectory=true', 
-				exclude: /node_modules/ 
+      {
+				test: /\.js$/,
+				loader: 'babel-loader?cacheDirectory=true',
+				exclude: /node_modules/
 			},
     ]
   },
 		plugins: [
-      new webpack.optimize.CommonsChunkPlugin({ 
+      new webpack.optimize.CommonsChunkPlugin({
         name: 'vendor',
-        filename: 'vendor.js', 
+        filename: 'vendor.js',
         minChunks: 2
       })
     ]
