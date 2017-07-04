@@ -7,11 +7,11 @@ class PostSlide extends Component {
   }
 
   render() {
-    const { post } = this.props;
+    const { post, total } = this.props;
     let postWidth = `${200 / 12}%`;
-    
+
     if(window.innerWidth < 768) {
-      postWidth = '100%';
+      postWidth = `${100 / total}%`;
     }
 
     return (

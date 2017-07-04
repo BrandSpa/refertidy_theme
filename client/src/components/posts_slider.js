@@ -5,16 +5,16 @@ class PostsSlider extends Component {
   render() {
     const { posts } = this.props;
     let viewportWidth = '200%';
-    
+    let total = posts.length;
     if(window.innerWidth < 768) {
-      viewportWidth = `${posts.length * 100}%`;
+      viewportWidth = `${total * 100}%`;
     }
 
     return (
       <div className="posts-slider">
         <div className="posts-slider__viewport" style={{width: viewportWidth, position: 'relative', left: '0'}}>
           {posts.map(post =>
-            <Post key={post.ID} post={post} />
+            <Post key={post.ID} post={post} total={posts.length} />
           )}
         </div>
         <div className="posts-slider__btns">

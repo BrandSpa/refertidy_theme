@@ -2157,9 +2157,9 @@ var PostsSlider = function (_Component) {
       var posts = this.props.posts;
 
       var viewportWidth = '200%';
-
+      var total = posts.length;
       if (window.innerWidth < 768) {
-        viewportWidth = posts.length * 100 + '%';
+        viewportWidth = total * 100 + '%';
       }
 
       return _react2.default.createElement(
@@ -2169,7 +2169,7 @@ var PostsSlider = function (_Component) {
           'div',
           { className: 'posts-slider__viewport', style: { width: viewportWidth, position: 'relative', left: '0' } },
           posts.map(function (post) {
-            return _react2.default.createElement(_post_slide2.default, { key: post.ID, post: post });
+            return _react2.default.createElement(_post_slide2.default, { key: post.ID, post: post, total: posts.length });
           })
         ),
         _react2.default.createElement(
@@ -2243,12 +2243,14 @@ var PostSlide = function (_Component) {
   _createClass(PostSlide, [{
     key: 'render',
     value: function render() {
-      var post = this.props.post;
+      var _props = this.props,
+          post = _props.post,
+          total = _props.total;
 
       var postWidth = 200 / 12 + '%';
 
       if (window.innerWidth < 768) {
-        postWidth = '100%';
+        postWidth = 100 / total + '%';
       }
 
       return _react2.default.createElement(
