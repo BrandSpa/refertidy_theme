@@ -1,5 +1,9 @@
 <?php
 
+//MIGRATIONS
+include_once 'migrations/contacts.php';
+include_once 'migrations/quotations.php';
+
 //WIDGETS
 include_once 'widgets/header.php';
 
@@ -13,9 +17,8 @@ include_once 'shortcodes/vc/quo_fixed.php';
 
 //LIBS
 include_once 'lib/clean_menu.php';
-include_once 'lib/create_table.php';
 
-//API 
+//API
 include_once 'api/contacts.php';
 
 //MENUS

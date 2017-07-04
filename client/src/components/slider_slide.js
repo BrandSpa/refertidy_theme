@@ -32,6 +32,7 @@ class SliderSlide extends Component {
 				}
         style={{ position: "relative", height: "100vh", width: slideWidth, float: 'left' }}
       >
+
       <div className="container">
        <div className="slider__slide__content">
          <div dangerouslySetInnerHTML={{__html: slide.slide_content}} />

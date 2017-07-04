@@ -1,18 +1,17 @@
 <?php
 
-add_action('after_switch_theme', 'prefix_create_table' );
-
-function prefix_create_table() {
+function ra_contacts_migration() {
 	global $wpdb;
 
 	$charset_collate = $wpdb->get_charset_collate();
 
 	$sql = "CREATE TABLE contacts (
 				id mediumint(9) NOT NULL AUTO_INCREMENT,
-            name varchar(55) NOT NULL,
-            phone varchar(55) NOT NULL,
-            email varchar(55) NOT NULL,
-            product varchar(55) NOT NULL,
+            name varchar(55),
+            phone varchar(55),
+            email varchar(55),
+            company varchar(55),
+            question TEXT,
             UNIQUE KEY id (id)
         ) $charset_collate;";
 
@@ -22,3 +21,5 @@ function prefix_create_table() {
 
   dbDelta( $sql );
 }
+
+add_action('after_switch_theme', 'ra_contacts_migration' );

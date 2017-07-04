@@ -7,7 +7,7 @@
 	<title>RentAdvisor</title>
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha.6/css/bootstrap-grid.css">
 	<link rel="stylesheet" href="<?php echo get_template_directory_uri() ?>/fonts/aktiv.css">
-	<link rel="stylesheet" href="<?php echo get_template_directory_uri() ?>/client/dist/index.css">	
+	<link rel="stylesheet" href="<?php echo get_template_directory_uri() ?>/client/dist/index.css">
 	<!--wordpress files-->
 	<?php wp_head(); ?>
 	<!-- /wordpress files-->
@@ -57,6 +57,6 @@
 				echo clean_menu($nav);
    	 ?>
 		</ul>
-		
+
 	</div>
 </header>

@@ -33,15 +33,15 @@ function store_contact() {
 	$isValid = GUMP::is_valid($data, $rules);
 
 	if($isValid === true) {
-		$res = $wpdb->insert( 'contacts', 
-			$data, 
-			array( '%s', '%s', '%s', '%s' ) 
+		$res = $wpdb->insert( 'contacts',
+			$data,
+			array( '%s', '%s', '%s', '%s' )
 		);
 
 		responseJson($data);
 	} else {
 		responseJson($isValid);
 	}
-	
+
 	die();
 }
