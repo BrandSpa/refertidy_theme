@@ -6,7 +6,7 @@ function store_quotation() {
 
 	$rules = array(
 		'name'  => 'required',
-		'email' => 'required|valid_email',
+		'email' => 'required|valid_email'
 	);
 
 	$data = $gump->sanitize($_POST['data']);
@@ -26,18 +26,13 @@ function store_quotation() {
 	$gump->set_field_name("name", "Nombre");
 
 	$gump->validation_rules($rules);
-
 	$isValid = $gump->run($data);
 
 	if($isValid === true) {
-		$res = $wpdb->insert( 'quotations',
-			$data,
-			array( '%s', '%s', '%s', '%s' )
-		);
-
+		$res = $wpdb->insert( 'quotations', $data, [ '%s', '%s', '%s', '%s' ] );
 		responseJson($data);
 	} else {
-		responseJson($gump->get_errors_array());
+		responseJson( $gump->get_errors_array() );
 	}
 
 	die();

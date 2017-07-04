@@ -1,8 +1,5 @@
 <?php
 
-add_action( 'wp_ajax_nopriv_store_contact', 'store_contact' );
-add_action( 'wp_ajax_store_contact', 'store_contact' );
-
 function store_contact() {
 	global $wpdb;
 	$gump = new GUMP();
@@ -24,22 +21,18 @@ function store_contact() {
 	];
 
 	$gump->set_error_messages([
-    "validate_required"     => "{field} es requerido",
-     "validate_valid_email"  => "{field} debe ser un email valido",
+    "validate_required" => "{field} es requerido",
+     "validate_valid_email" => "{field} debe ser un email valido",
   ]);
 
 	$gump->set_field_name("name", "Nombre");
 	$gump->set_field_name("question", "Duda");
 
 	$gump->validation_rules($rules);
-	$isValid =$gump->run($data);
+	$isValid = $gump->run($data);
 
 	if($isValid === true) {
-		$res = $wpdb->insert( 'contacts',
-			$data,
-			array( '%s', '%s', '%s', '%s', '%s' )
-		);
-
+		$res = $wpdb->insert( 'contacts', $data, [ '%s', '%s', '%s', '%s', '%s' ] );
 		responseJson( $data );
 	} else {
 		responseJson( $gump->get_errors_array() );
@@ -47,3 +40,6 @@ function store_contact() {
 
 	die();
 }
+
+add_action( 'wp_ajax_nopriv_store_contact', 'store_contact' );
+add_action( 'wp_ajax_store_contact', 'store_contact' );
