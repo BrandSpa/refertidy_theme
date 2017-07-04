@@ -226,23 +226,23 @@ var _react = __webpack_require__(55);
 
 var _react2 = _interopRequireDefault(_react);
 
-__webpack_require__(518);
+__webpack_require__(511);
 
-__webpack_require__(519);
+__webpack_require__(512);
 
 var _reactMultipleRender = __webpack_require__(199);
 
 var _reactMultipleRender2 = _interopRequireDefault(_reactMultipleRender);
 
-var _slider = __webpack_require__(511);
+var _slider = __webpack_require__(514);
 
 var _slider2 = _interopRequireDefault(_slider);
 
-var _sliderImgs = __webpack_require__(513);
+var _sliderImgs = __webpack_require__(516);
 
 var _sliderImgs2 = _interopRequireDefault(_sliderImgs);
 
-var _quo_fixed = __webpack_require__(514);
+var _quo_fixed = __webpack_require__(517);
 
 var _quo_fixed2 = _interopRequireDefault(_quo_fixed);
 
@@ -254,918 +254,6 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 /***/ }),
 
 /***/ 511:
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-	value: true
-});
-
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-var _react = __webpack_require__(55);
-
-var _react2 = _interopRequireDefault(_react);
-
-var _slider_slide = __webpack_require__(512);
-
-var _slider_slide2 = _interopRequireDefault(_slider_slide);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-var Slider = function (_Component) {
-	_inherits(Slider, _Component);
-
-	function Slider() {
-		var _ref;
-
-		var _temp, _this, _ret;
-
-		_classCallCheck(this, Slider);
-
-		for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
-			args[_key] = arguments[_key];
-		}
-
-		return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = Slider.__proto__ || Object.getPrototypeOf(Slider)).call.apply(_ref, [this].concat(args))), _this), _this.state = {
-			slide: 0
-		}, _this.next = function (e) {
-			if (e) e.preventDefault();
-			var total = _this.props.slides.length - 1;
-			var current = _this.state.slide;
-			var slide = current < total ? current + 1 : 0;
-			_this.setState({ slide: slide });
-		}, _this.prev = function (e) {
-			if (e) e.preventDefault();
-			var total = _this.props.slides.length;
-			var current = _this.state.slide;
-			var slide = current > 0 ? current - 1 : 0;
-			_this.setState({ slide: slide });
-		}, _temp), _possibleConstructorReturn(_this, _ret);
-	}
-
-	_createClass(Slider, [{
-		key: 'render',
-		value: function render() {
-			var _this2 = this;
-
-			var slides = this.props.slides;
-
-
-			var viewportStyle = {
-				width: 100 * slides.length + '%',
-				transform: 'translate3d( -' + 100 / slides.length * this.state.slide + '%, 0, 0 )',
-				transition: 'transform 700ms'
-			};
-
-			var slideWidth = 100 / slides.length + '%';
-
-			return _react2.default.createElement(
-				'div',
-				{ className: 'slider', style: { position: 'relative', overflow: 'hidden' } },
-				_react2.default.createElement(
-					'div',
-					{ className: 'slider__viewport', style: viewportStyle },
-					slides.map(function (slide, i) {
-						return _react2.default.createElement(_slider_slide2.default, {
-							key: i,
-							slide: slide,
-							current: _this2.state.slide,
-							index: i,
-							slideWidth: slideWidth
-						});
-					})
-				),
-				_react2.default.createElement(
-					'div',
-					{ className: 'slider__btns' },
-					_react2.default.createElement(
-						'a',
-						{ className: 'slider__btns__left', href: '#', onClick: this.prev },
-						'<'
-					),
-					_react2.default.createElement(
-						'a',
-						{ className: 'slider__btns__right', href: '#', onClick: this.next },
-						'>'
-					)
-				)
-			);
-		}
-	}]);
-
-	return Slider;
-}(_react.Component);
-
-exports.default = Slider;
-
-/***/ }),
-
-/***/ 512:
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-var _react = __webpack_require__(55);
-
-var _react2 = _interopRequireDefault(_react);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-var SliderSlide = function (_Component) {
-  _inherits(SliderSlide, _Component);
-
-  function SliderSlide() {
-    var _ref;
-
-    var _temp, _this, _ret;
-
-    _classCallCheck(this, SliderSlide);
-
-    for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
-      args[_key] = arguments[_key];
-    }
-
-    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = SliderSlide.__proto__ || Object.getPrototypeOf(SliderSlide)).call.apply(_ref, [this].concat(args))), _this), _this.state = {
-      mobile: false
-    }, _temp), _possibleConstructorReturn(_this, _ret);
-  }
-
-  _createClass(SliderSlide, [{
-    key: 'componentDidMount',
-    value: function componentDidMount() {
-      if (window.innerWidth < 768) {
-        this.setState({ mobile: true });
-      }
-    }
-  }, {
-    key: 'render',
-    value: function render() {
-      var mobile = this.state.mobile;
-      var _props = this.props,
-          slide = _props.slide,
-          slideWidth = _props.slideWidth,
-          current = _props.current,
-          index = _props.index;
-
-
-      var slideStyle = {
-        height: '100vh',
-        width: '100%',
-        position: 'absolute',
-        top: '0',
-        backgroundPosition: 'center',
-        backgroundSize: 'cover'
-      };
-
-      return _react2.default.createElement(
-        'section',
-        {
-          className: 'slider__slide ' + (current == index ? "slider__slide--active" : ""),
-          style: { position: "relative", height: "100vh", width: slideWidth, float: 'left' }
-        },
-        _react2.default.createElement(
-          'div',
-          { className: 'container' },
-          _react2.default.createElement(
-            'div',
-            { className: 'slider__slide__content' },
-            _react2.default.createElement('div', { dangerouslySetInnerHTML: { __html: slide.slide_content } }),
-            _react2.default.createElement(
-              'a',
-              { href: slide.btn_link, className: 'slider__content__btn', style: { background: slide.btn_color } },
-              slide.btn_txt
-            )
-          )
-        ),
-        _react2.default.createElement('div', {
-          className: 'lazyload',
-          style: slideStyle,
-          'data-bgset': slide.bg_img
-        }),
-        _react2.default.createElement('div', {
-          className: 'slider__slide__model lazyload blur-up',
-          style: slideStyle,
-          'data-bgset': slide.model_img_mobile + ' 768w, ' + slide.model_img + ' 1200w'
-        }),
-        _react2.default.createElement('div', {
-          className: 'slider__slide__object lazyload blur-up',
-          style: slideStyle,
-          'data-bgset': slide.object_img_mobile + ' 768w, ' + slide.object_img + ' 1200w'
-        })
-      );
-    }
-  }]);
-
-  return SliderSlide;
-}(_react.Component);
-
-exports.default = SliderSlide;
-
-/***/ }),
-
-/***/ 513:
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-	value: true
-});
-
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-var _react = __webpack_require__(55);
-
-var _react2 = _interopRequireDefault(_react);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-var SliderImgs = function (_Component) {
-	_inherits(SliderImgs, _Component);
-
-	function SliderImgs() {
-		var _ref;
-
-		var _temp, _this, _ret;
-
-		_classCallCheck(this, SliderImgs);
-
-		for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
-			args[_key] = arguments[_key];
-		}
-
-		return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = SliderImgs.__proto__ || Object.getPrototypeOf(SliderImgs)).call.apply(_ref, [this].concat(args))), _this), _this.state = {
-			slide: 1
-		}, _temp), _possibleConstructorReturn(_this, _ret);
-	}
-
-	_createClass(SliderImgs, [{
-		key: 'render',
-		value: function render() {
-			var slides = this.props.slides;
-
-			var slideStyle = {
-				height: '100vh',
-				width: '100%',
-				position: 'absolute',
-				top: '0'
-			};
-
-			return _react2.default.createElement(
-				'div',
-				null,
-				slides.map(function (slide) {
-					return _react2.default.createElement(
-						'div',
-						{ style: { position: 'relative', height: '100vh' } },
-						_react2.default.createElement(
-							'div',
-							{ style: slideStyle },
-							_react2.default.createElement('img', { src: slide.bg_img, style: { width: '100%' } })
-						),
-						_react2.default.createElement(
-							'div',
-							{ style: slideStyle },
-							_react2.default.createElement('img', { src: slide.model_img, style: { width: '100%' } })
-						),
-						_react2.default.createElement(
-							'div',
-							{ style: slideStyle },
-							_react2.default.createElement('img', { src: slide.object_img, style: { width: '100%' } })
-						),
-						_react2.default.createElement(
-							'div',
-							{ style: { width: '30%', position: 'absolute', left: '0' } },
-							_react2.default.createElement(
-								'h2',
-								null,
-								slide.slide_content
-							)
-						)
-					);
-				})
-			);
-		}
-	}]);
-
-	return SliderImgs;
-}(_react.Component);
-
-exports.default = SliderImgs;
-
-/***/ }),
-
-/***/ 514:
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-var _react = __webpack_require__(55);
-
-var _react2 = _interopRequireDefault(_react);
-
-var _axios = __webpack_require__(200);
-
-var _axios2 = _interopRequireDefault(_axios);
-
-var _qs = __webpack_require__(515);
-
-var _qs2 = _interopRequireDefault(_qs);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-var endpoint = '/wp-admin/admin-ajax.php';
-
-var QuoFixed = function (_Component) {
-  _inherits(QuoFixed, _Component);
-
-  function QuoFixed() {
-    var _ref;
-
-    var _temp, _this, _ret;
-
-    _classCallCheck(this, QuoFixed);
-
-    for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
-      args[_key] = arguments[_key];
-    }
-
-    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = QuoFixed.__proto__ || Object.getPrototypeOf(QuoFixed)).call.apply(_ref, [this].concat(args))), _this), _this.state = {
-      name: '',
-      email: '',
-      phone: '',
-      product: '',
-      errors: []
-    }, _this.handleChange = function (e) {
-      _this.setState(_defineProperty({}, e.target.name, e.target.value));
-    }, _this.handleSubmit = function (e) {
-      if (e) e.preventDefault();
-      var data = _this.state;
-      var reqData = _qs2.default.stringify({ action: 'store_quotation', data: data });
-
-      _axios2.default.post(endpoint, reqData).then(function (_ref2) {
-        var data = _ref2.data;
-
-        if (Array.isArray(data)) {
-          _this.setState({ errors: data });
-        }
-      });
-    }, _temp), _possibleConstructorReturn(_this, _ret);
-  }
-
-  _createClass(QuoFixed, [{
-    key: 'render',
-    value: function render() {
-      var _state = this.state,
-          name = _state.name,
-          email = _state.email,
-          phone = _state.phone,
-          product = _state.product,
-          errors = _state.errors;
-
-      return _react2.default.createElement(
-        'div',
-        { className: 'quo-fixed' },
-        _react2.default.createElement(
-          'form',
-          { onSubmit: this.handleSubmit },
-          _react2.default.createElement(
-            'div',
-            { className: 'row quo-fixed__container' },
-            _react2.default.createElement(
-              'div',
-              { className: 'col-lg-3 col-md-3' },
-              _react2.default.createElement('input', {
-                type: 'text',
-                name: 'name',
-                placeholder: 'Nombre',
-                onChange: this.handleChange,
-                value: name
-              })
-            ),
-            _react2.default.createElement(
-              'div',
-              { className: 'col-lg-3 col-md-3' },
-              _react2.default.createElement('input', {
-                type: 'text',
-                name: 'email',
-                placeholder: 'Email',
-                onChange: this.handleChange,
-                value: email
-              })
-            ),
-            _react2.default.createElement(
-              'div',
-              { className: 'col-lg-2 col-md-2' },
-              _react2.default.createElement('input', {
-                type: 'text',
-                name: 'phone',
-                placeholder: 'T\xE9lefono',
-                onChange: this.handleChange,
-                value: phone
-              })
-            ),
-            _react2.default.createElement(
-              'div',
-              { className: 'col-lg-2 col-md-2' },
-              _react2.default.createElement(
-                'select',
-                { name: 'product', onChange: this.handleChange, value: product },
-                _react2.default.createElement(
-                  'option',
-                  { value: 'Desktops' },
-                  'Desktops'
-                ),
-                _react2.default.createElement(
-                  'option',
-                  { value: 'Laptops' },
-                  'Laptops'
-                )
-              )
-            ),
-            _react2.default.createElement(
-              'div',
-              { className: 'col-lg-2 col-md-2' },
-              _react2.default.createElement(
-                'button',
-                { className: 'btn' },
-                'Cotizar'
-              )
-            )
-          )
-        ),
-        errors.length > 0 ? _react2.default.createElement(
-          'div',
-          { className: 'row quo-fixed__errors' },
-          errors.map(function (err) {
-            return _react2.default.createElement('div', { className: 'col-lg-3', dangerouslySetInnerHTML: { __html: err } });
-          })
-        ) : ''
-      );
-    }
-  }]);
-
-  return QuoFixed;
-}(_react.Component);
-
-exports.default = QuoFixed;
-
-/***/ }),
-
-/***/ 515:
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-var stringify = __webpack_require__(516);
-var parse = __webpack_require__(517);
-var formats = __webpack_require__(207);
-
-module.exports = {
-    formats: formats,
-    parse: parse,
-    stringify: stringify
-};
-
-
-/***/ }),
-
-/***/ 516:
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-var utils = __webpack_require__(206);
-var formats = __webpack_require__(207);
-
-var arrayPrefixGenerators = {
-    brackets: function brackets(prefix) { // eslint-disable-line func-name-matching
-        return prefix + '[]';
-    },
-    indices: function indices(prefix, key) { // eslint-disable-line func-name-matching
-        return prefix + '[' + key + ']';
-    },
-    repeat: function repeat(prefix) { // eslint-disable-line func-name-matching
-        return prefix;
-    }
-};
-
-var toISO = Date.prototype.toISOString;
-
-var defaults = {
-    delimiter: '&',
-    encode: true,
-    encoder: utils.encode,
-    encodeValuesOnly: false,
-    serializeDate: function serializeDate(date) { // eslint-disable-line func-name-matching
-        return toISO.call(date);
-    },
-    skipNulls: false,
-    strictNullHandling: false
-};
-
-var stringify = function stringify( // eslint-disable-line func-name-matching
-    object,
-    prefix,
-    generateArrayPrefix,
-    strictNullHandling,
-    skipNulls,
-    encoder,
-    filter,
-    sort,
-    allowDots,
-    serializeDate,
-    formatter,
-    encodeValuesOnly
-) {
-    var obj = object;
-    if (typeof filter === 'function') {
-        obj = filter(prefix, obj);
-    } else if (obj instanceof Date) {
-        obj = serializeDate(obj);
-    } else if (obj === null) {
-        if (strictNullHandling) {
-            return encoder && !encodeValuesOnly ? encoder(prefix) : prefix;
-        }
-
-        obj = '';
-    }
-
-    if (typeof obj === 'string' || typeof obj === 'number' || typeof obj === 'boolean' || utils.isBuffer(obj)) {
-        if (encoder) {
-            var keyValue = encodeValuesOnly ? prefix : encoder(prefix);
-            return [formatter(keyValue) + '=' + formatter(encoder(obj))];
-        }
-        return [formatter(prefix) + '=' + formatter(String(obj))];
-    }
-
-    var values = [];
-
-    if (typeof obj === 'undefined') {
-        return values;
-    }
-
-    var objKeys;
-    if (Array.isArray(filter)) {
-        objKeys = filter;
-    } else {
-        var keys = Object.keys(obj);
-        objKeys = sort ? keys.sort(sort) : keys;
-    }
-
-    for (var i = 0; i < objKeys.length; ++i) {
-        var key = objKeys[i];
-
-        if (skipNulls && obj[key] === null) {
-            continue;
-        }
-
-        if (Array.isArray(obj)) {
-            values = values.concat(stringify(
-                obj[key],
-                generateArrayPrefix(prefix, key),
-                generateArrayPrefix,
-                strictNullHandling,
-                skipNulls,
-                encoder,
-                filter,
-                sort,
-                allowDots,
-                serializeDate,
-                formatter,
-                encodeValuesOnly
-            ));
-        } else {
-            values = values.concat(stringify(
-                obj[key],
-                prefix + (allowDots ? '.' + key : '[' + key + ']'),
-                generateArrayPrefix,
-                strictNullHandling,
-                skipNulls,
-                encoder,
-                filter,
-                sort,
-                allowDots,
-                serializeDate,
-                formatter,
-                encodeValuesOnly
-            ));
-        }
-    }
-
-    return values;
-};
-
-module.exports = function (object, opts) {
-    var obj = object;
-    var options = opts || {};
-
-    if (options.encoder !== null && options.encoder !== undefined && typeof options.encoder !== 'function') {
-        throw new TypeError('Encoder has to be a function.');
-    }
-
-    var delimiter = typeof options.delimiter === 'undefined' ? defaults.delimiter : options.delimiter;
-    var strictNullHandling = typeof options.strictNullHandling === 'boolean' ? options.strictNullHandling : defaults.strictNullHandling;
-    var skipNulls = typeof options.skipNulls === 'boolean' ? options.skipNulls : defaults.skipNulls;
-    var encode = typeof options.encode === 'boolean' ? options.encode : defaults.encode;
-    var encoder = typeof options.encoder === 'function' ? options.encoder : defaults.encoder;
-    var sort = typeof options.sort === 'function' ? options.sort : null;
-    var allowDots = typeof options.allowDots === 'undefined' ? false : options.allowDots;
-    var serializeDate = typeof options.serializeDate === 'function' ? options.serializeDate : defaults.serializeDate;
-    var encodeValuesOnly = typeof options.encodeValuesOnly === 'boolean' ? options.encodeValuesOnly : defaults.encodeValuesOnly;
-    if (typeof options.format === 'undefined') {
-        options.format = formats.default;
-    } else if (!Object.prototype.hasOwnProperty.call(formats.formatters, options.format)) {
-        throw new TypeError('Unknown format option provided.');
-    }
-    var formatter = formats.formatters[options.format];
-    var objKeys;
-    var filter;
-
-    if (typeof options.filter === 'function') {
-        filter = options.filter;
-        obj = filter('', obj);
-    } else if (Array.isArray(options.filter)) {
-        filter = options.filter;
-        objKeys = filter;
-    }
-
-    var keys = [];
-
-    if (typeof obj !== 'object' || obj === null) {
-        return '';
-    }
-
-    var arrayFormat;
-    if (options.arrayFormat in arrayPrefixGenerators) {
-        arrayFormat = options.arrayFormat;
-    } else if ('indices' in options) {
-        arrayFormat = options.indices ? 'indices' : 'repeat';
-    } else {
-        arrayFormat = 'indices';
-    }
-
-    var generateArrayPrefix = arrayPrefixGenerators[arrayFormat];
-
-    if (!objKeys) {
-        objKeys = Object.keys(obj);
-    }
-
-    if (sort) {
-        objKeys.sort(sort);
-    }
-
-    for (var i = 0; i < objKeys.length; ++i) {
-        var key = objKeys[i];
-
-        if (skipNulls && obj[key] === null) {
-            continue;
-        }
-
-        keys = keys.concat(stringify(
-            obj[key],
-            key,
-            generateArrayPrefix,
-            strictNullHandling,
-            skipNulls,
-            encode ? encoder : null,
-            filter,
-            sort,
-            allowDots,
-            serializeDate,
-            formatter,
-            encodeValuesOnly
-        ));
-    }
-
-    return keys.join(delimiter);
-};
-
-
-/***/ }),
-
-/***/ 517:
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-var utils = __webpack_require__(206);
-
-var has = Object.prototype.hasOwnProperty;
-
-var defaults = {
-    allowDots: false,
-    allowPrototypes: false,
-    arrayLimit: 20,
-    decoder: utils.decode,
-    delimiter: '&',
-    depth: 5,
-    parameterLimit: 1000,
-    plainObjects: false,
-    strictNullHandling: false
-};
-
-var parseValues = function parseQueryStringValues(str, options) {
-    var obj = {};
-    var parts = str.split(options.delimiter, options.parameterLimit === Infinity ? undefined : options.parameterLimit);
-
-    for (var i = 0; i < parts.length; ++i) {
-        var part = parts[i];
-        var pos = part.indexOf(']=') === -1 ? part.indexOf('=') : part.indexOf(']=') + 1;
-
-        var key, val;
-        if (pos === -1) {
-            key = options.decoder(part);
-            val = options.strictNullHandling ? null : '';
-        } else {
-            key = options.decoder(part.slice(0, pos));
-            val = options.decoder(part.slice(pos + 1));
-        }
-        if (has.call(obj, key)) {
-            obj[key] = [].concat(obj[key]).concat(val);
-        } else {
-            obj[key] = val;
-        }
-    }
-
-    return obj;
-};
-
-var parseObject = function parseObjectRecursive(chain, val, options) {
-    if (!chain.length) {
-        return val;
-    }
-
-    var root = chain.shift();
-
-    var obj;
-    if (root === '[]') {
-        obj = [];
-        obj = obj.concat(parseObject(chain, val, options));
-    } else {
-        obj = options.plainObjects ? Object.create(null) : {};
-        var cleanRoot = root.charAt(0) === '[' && root.charAt(root.length - 1) === ']' ? root.slice(1, -1) : root;
-        var index = parseInt(cleanRoot, 10);
-        if (
-            !isNaN(index) &&
-            root !== cleanRoot &&
-            String(index) === cleanRoot &&
-            index >= 0 &&
-            (options.parseArrays && index <= options.arrayLimit)
-        ) {
-            obj = [];
-            obj[index] = parseObject(chain, val, options);
-        } else {
-            obj[cleanRoot] = parseObject(chain, val, options);
-        }
-    }
-
-    return obj;
-};
-
-var parseKeys = function parseQueryStringKeys(givenKey, val, options) {
-    if (!givenKey) {
-        return;
-    }
-
-    // Transform dot notation to bracket notation
-    var key = options.allowDots ? givenKey.replace(/\.([^.[]+)/g, '[$1]') : givenKey;
-
-    // The regex chunks
-
-    var brackets = /(\[[^[\]]*])/;
-    var child = /(\[[^[\]]*])/g;
-
-    // Get the parent
-
-    var segment = brackets.exec(key);
-    var parent = segment ? key.slice(0, segment.index) : key;
-
-    // Stash the parent if it exists
-
-    var keys = [];
-    if (parent) {
-        // If we aren't using plain objects, optionally prefix keys
-        // that would overwrite object prototype properties
-        if (!options.plainObjects && has.call(Object.prototype, parent)) {
-            if (!options.allowPrototypes) {
-                return;
-            }
-        }
-
-        keys.push(parent);
-    }
-
-    // Loop through children appending to the array until we hit depth
-
-    var i = 0;
-    while ((segment = child.exec(key)) !== null && i < options.depth) {
-        i += 1;
-        if (!options.plainObjects && has.call(Object.prototype, segment[1].slice(1, -1))) {
-            if (!options.allowPrototypes) {
-                return;
-            }
-        }
-        keys.push(segment[1]);
-    }
-
-    // If there's a remainder, just add whatever is left
-
-    if (segment) {
-        keys.push('[' + key.slice(segment.index) + ']');
-    }
-
-    return parseObject(keys, val, options);
-};
-
-module.exports = function (str, opts) {
-    var options = opts || {};
-
-    if (options.decoder !== null && options.decoder !== undefined && typeof options.decoder !== 'function') {
-        throw new TypeError('Decoder has to be a function.');
-    }
-
-    options.delimiter = typeof options.delimiter === 'string' || utils.isRegExp(options.delimiter) ? options.delimiter : defaults.delimiter;
-    options.depth = typeof options.depth === 'number' ? options.depth : defaults.depth;
-    options.arrayLimit = typeof options.arrayLimit === 'number' ? options.arrayLimit : defaults.arrayLimit;
-    options.parseArrays = options.parseArrays !== false;
-    options.decoder = typeof options.decoder === 'function' ? options.decoder : defaults.decoder;
-    options.allowDots = typeof options.allowDots === 'boolean' ? options.allowDots : defaults.allowDots;
-    options.plainObjects = typeof options.plainObjects === 'boolean' ? options.plainObjects : defaults.plainObjects;
-    options.allowPrototypes = typeof options.allowPrototypes === 'boolean' ? options.allowPrototypes : defaults.allowPrototypes;
-    options.parameterLimit = typeof options.parameterLimit === 'number' ? options.parameterLimit : defaults.parameterLimit;
-    options.strictNullHandling = typeof options.strictNullHandling === 'boolean' ? options.strictNullHandling : defaults.strictNullHandling;
-
-    if (str === '' || str === null || typeof str === 'undefined') {
-        return options.plainObjects ? Object.create(null) : {};
-    }
-
-    var tempObj = typeof str === 'string' ? parseValues(str, options) : str;
-    var obj = options.plainObjects ? Object.create(null) : {};
-
-    // Iterate over the keys and setup the new object
-
-    var keys = Object.keys(tempObj);
-    for (var i = 0; i < keys.length; ++i) {
-        var key = keys[i];
-        var newObj = parseKeys(key, tempObj[key], options);
-        obj = utils.merge(obj, newObj, options);
-    }
-
-    return utils.compact(obj);
-};
-
-
-/***/ }),
-
-/***/ 518:
 /***/ (function(module, exports) {
 
 /*! lazysizes - v4.0.0-rc3 */
@@ -1173,15 +261,15 @@ module.exports = function (str, opts) {
 
 /***/ }),
 
-/***/ 519:
+/***/ 512:
 /***/ (function(module, exports, __webpack_require__) {
 
 /*! lazysizes - v4.0.0-rc3 */
-!function(a,b){var c=function(){b(a.lazySizes),a.removeEventListener("lazyunveilread",c,!0)};b=b.bind(null,a,a.document),"object"==typeof module&&module.exports?b(__webpack_require__(520)):a.lazySizes?c():a.addEventListener("lazyunveilread",c,!0)}(window,function(a,b,c){"use strict";if(a.addEventListener){var d=/\s+/g,e=/\s*\|\s+|\s+\|\s*/g,f=/^(.+?)(?:\s+\[\s*(.+?)\s*\])?$/,g=/\(|\)|'/,h={contain:1,cover:1},i=function(a){var b=c.gW(a,a.parentNode);return(!a._lazysizesWidth||b>a._lazysizesWidth)&&(a._lazysizesWidth=b),a._lazysizesWidth},j=function(a){var b;return b=(getComputedStyle(a)||{getPropertyValue:function(){}}).getPropertyValue("background-size"),!h[b]&&h[a.style.backgroundSize]&&(b=a.style.backgroundSize),b},k=function(a,c,g){var h=b.createElement("picture"),i=c.getAttribute(lazySizesConfig.sizesAttr),j=c.getAttribute("data-ratio"),k=c.getAttribute("data-optimumx");c._lazybgset&&c._lazybgset.parentNode==c&&c.removeChild(c._lazybgset),Object.defineProperty(g,"_lazybgset",{value:c,writable:!0}),Object.defineProperty(c,"_lazybgset",{value:h,writable:!0}),a=a.replace(d," ").split(e),h.style.display="none",g.className=lazySizesConfig.lazyClass,1!=a.length||i||(i="auto"),a.forEach(function(a){var c=b.createElement("source");i&&"auto"!=i&&c.setAttribute("sizes",i),a.match(f)&&(c.setAttribute(lazySizesConfig.srcsetAttr,RegExp.$1),RegExp.$2&&c.setAttribute("media",lazySizesConfig.customMedia[RegExp.$2]||RegExp.$2)),h.appendChild(c)}),i&&(g.setAttribute(lazySizesConfig.sizesAttr,i),c.removeAttribute(lazySizesConfig.sizesAttr),c.removeAttribute("sizes")),k&&g.setAttribute("data-optimumx",k),j&&g.setAttribute("data-ratio",j),h.appendChild(g),c.appendChild(h)},l=function(a){if(a.target._lazybgset){var b=a.target,d=b._lazybgset,e=b.currentSrc||b.src;e&&(d.style.backgroundImage="url("+(g.test(e)?JSON.stringify(e):e)+")"),b._lazybgsetLoading&&(c.fire(d,"_lazyloaded",{},!1,!0),delete b._lazybgsetLoading)}};addEventListener("lazybeforeunveil",function(a){var d,e,f;!a.defaultPrevented&&(d=a.target.getAttribute("data-bgset"))&&(f=a.target,e=b.createElement("img"),e.alt="",e._lazybgsetLoading=!0,a.detail.firesLoad=!0,k(d,f,e),setTimeout(function(){c.loader.unveil(e),c.rAF(function(){c.fire(e,"_lazyloaded",{},!0,!0),e.complete&&l({target:e})})}))}),b.addEventListener("load",l,!0),a.addEventListener("lazybeforesizes",function(a){if(a.detail.instance==c&&a.target._lazybgset&&a.detail.dataAttr){var b=a.target._lazybgset,d=j(b);h[d]&&(a.target._lazysizesParentFit=d,c.rAF(function(){a.target.setAttribute("data-parent-fit",d),a.target._lazysizesParentFit&&delete a.target._lazysizesParentFit}))}},!0),b.documentElement.addEventListener("lazybeforesizes",function(a){!a.defaultPrevented&&a.target._lazybgset&&a.detail.instance==c&&(a.detail.width=i(a.target._lazybgset))})}});
+!function(a,b){var c=function(){b(a.lazySizes),a.removeEventListener("lazyunveilread",c,!0)};b=b.bind(null,a,a.document),"object"==typeof module&&module.exports?b(__webpack_require__(513)):a.lazySizes?c():a.addEventListener("lazyunveilread",c,!0)}(window,function(a,b,c){"use strict";if(a.addEventListener){var d=/\s+/g,e=/\s*\|\s+|\s+\|\s*/g,f=/^(.+?)(?:\s+\[\s*(.+?)\s*\])?$/,g=/\(|\)|'/,h={contain:1,cover:1},i=function(a){var b=c.gW(a,a.parentNode);return(!a._lazysizesWidth||b>a._lazysizesWidth)&&(a._lazysizesWidth=b),a._lazysizesWidth},j=function(a){var b;return b=(getComputedStyle(a)||{getPropertyValue:function(){}}).getPropertyValue("background-size"),!h[b]&&h[a.style.backgroundSize]&&(b=a.style.backgroundSize),b},k=function(a,c,g){var h=b.createElement("picture"),i=c.getAttribute(lazySizesConfig.sizesAttr),j=c.getAttribute("data-ratio"),k=c.getAttribute("data-optimumx");c._lazybgset&&c._lazybgset.parentNode==c&&c.removeChild(c._lazybgset),Object.defineProperty(g,"_lazybgset",{value:c,writable:!0}),Object.defineProperty(c,"_lazybgset",{value:h,writable:!0}),a=a.replace(d," ").split(e),h.style.display="none",g.className=lazySizesConfig.lazyClass,1!=a.length||i||(i="auto"),a.forEach(function(a){var c=b.createElement("source");i&&"auto"!=i&&c.setAttribute("sizes",i),a.match(f)&&(c.setAttribute(lazySizesConfig.srcsetAttr,RegExp.$1),RegExp.$2&&c.setAttribute("media",lazySizesConfig.customMedia[RegExp.$2]||RegExp.$2)),h.appendChild(c)}),i&&(g.setAttribute(lazySizesConfig.sizesAttr,i),c.removeAttribute(lazySizesConfig.sizesAttr),c.removeAttribute("sizes")),k&&g.setAttribute("data-optimumx",k),j&&g.setAttribute("data-ratio",j),h.appendChild(g),c.appendChild(h)},l=function(a){if(a.target._lazybgset){var b=a.target,d=b._lazybgset,e=b.currentSrc||b.src;e&&(d.style.backgroundImage="url("+(g.test(e)?JSON.stringify(e):e)+")"),b._lazybgsetLoading&&(c.fire(d,"_lazyloaded",{},!1,!0),delete b._lazybgsetLoading)}};addEventListener("lazybeforeunveil",function(a){var d,e,f;!a.defaultPrevented&&(d=a.target.getAttribute("data-bgset"))&&(f=a.target,e=b.createElement("img"),e.alt="",e._lazybgsetLoading=!0,a.detail.firesLoad=!0,k(d,f,e),setTimeout(function(){c.loader.unveil(e),c.rAF(function(){c.fire(e,"_lazyloaded",{},!0,!0),e.complete&&l({target:e})})}))}),b.addEventListener("load",l,!0),a.addEventListener("lazybeforesizes",function(a){if(a.detail.instance==c&&a.target._lazybgset&&a.detail.dataAttr){var b=a.target._lazybgset,d=j(b);h[d]&&(a.target._lazysizesParentFit=d,c.rAF(function(){a.target.setAttribute("data-parent-fit",d),a.target._lazysizesParentFit&&delete a.target._lazysizesParentFit}))}},!0),b.documentElement.addEventListener("lazybeforesizes",function(a){!a.defaultPrevented&&a.target._lazybgset&&a.detail.instance==c&&(a.detail.width=i(a.target._lazybgset))})}});
 
 /***/ }),
 
-/***/ 520:
+/***/ 513:
 /***/ (function(module, exports) {
 
 (function(window, factory) {
@@ -1880,6 +968,918 @@ module.exports = function (str, opts) {
 	return lazysizes;
 }
 ));
+
+
+/***/ }),
+
+/***/ 514:
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+	value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = __webpack_require__(55);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _slider_slide = __webpack_require__(515);
+
+var _slider_slide2 = _interopRequireDefault(_slider_slide);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var Slider = function (_Component) {
+	_inherits(Slider, _Component);
+
+	function Slider() {
+		var _ref;
+
+		var _temp, _this, _ret;
+
+		_classCallCheck(this, Slider);
+
+		for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
+			args[_key] = arguments[_key];
+		}
+
+		return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = Slider.__proto__ || Object.getPrototypeOf(Slider)).call.apply(_ref, [this].concat(args))), _this), _this.state = {
+			slide: 0
+		}, _this.next = function (e) {
+			if (e) e.preventDefault();
+			var total = _this.props.slides.length - 1;
+			var current = _this.state.slide;
+			var slide = current < total ? current + 1 : 0;
+			_this.setState({ slide: slide });
+		}, _this.prev = function (e) {
+			if (e) e.preventDefault();
+			var total = _this.props.slides.length;
+			var current = _this.state.slide;
+			var slide = current > 0 ? current - 1 : 0;
+			_this.setState({ slide: slide });
+		}, _temp), _possibleConstructorReturn(_this, _ret);
+	}
+
+	_createClass(Slider, [{
+		key: 'render',
+		value: function render() {
+			var _this2 = this;
+
+			var slides = this.props.slides;
+
+
+			var viewportStyle = {
+				width: 100 * slides.length + '%',
+				transform: 'translate3d( -' + 100 / slides.length * this.state.slide + '%, 0, 0 )',
+				transition: 'transform 700ms'
+			};
+
+			var slideWidth = 100 / slides.length + '%';
+
+			return _react2.default.createElement(
+				'div',
+				{ className: 'slider', style: { position: 'relative', overflow: 'hidden' } },
+				_react2.default.createElement(
+					'div',
+					{ className: 'slider__viewport', style: viewportStyle },
+					slides.map(function (slide, i) {
+						return _react2.default.createElement(_slider_slide2.default, {
+							key: i,
+							slide: slide,
+							current: _this2.state.slide,
+							index: i,
+							slideWidth: slideWidth
+						});
+					})
+				),
+				_react2.default.createElement(
+					'div',
+					{ className: 'slider__btns' },
+					_react2.default.createElement(
+						'a',
+						{ className: 'slider__btns__left', href: '#', onClick: this.prev },
+						'<'
+					),
+					_react2.default.createElement(
+						'a',
+						{ className: 'slider__btns__right', href: '#', onClick: this.next },
+						'>'
+					)
+				)
+			);
+		}
+	}]);
+
+	return Slider;
+}(_react.Component);
+
+exports.default = Slider;
+
+/***/ }),
+
+/***/ 515:
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = __webpack_require__(55);
+
+var _react2 = _interopRequireDefault(_react);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var SliderSlide = function (_Component) {
+  _inherits(SliderSlide, _Component);
+
+  function SliderSlide() {
+    var _ref;
+
+    var _temp, _this, _ret;
+
+    _classCallCheck(this, SliderSlide);
+
+    for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
+      args[_key] = arguments[_key];
+    }
+
+    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = SliderSlide.__proto__ || Object.getPrototypeOf(SliderSlide)).call.apply(_ref, [this].concat(args))), _this), _this.state = {
+      mobile: false
+    }, _temp), _possibleConstructorReturn(_this, _ret);
+  }
+
+  _createClass(SliderSlide, [{
+    key: 'componentDidMount',
+    value: function componentDidMount() {
+      if (window.innerWidth < 768) {
+        this.setState({ mobile: true });
+      }
+    }
+  }, {
+    key: 'render',
+    value: function render() {
+      var mobile = this.state.mobile;
+      var _props = this.props,
+          slide = _props.slide,
+          slideWidth = _props.slideWidth,
+          current = _props.current,
+          index = _props.index;
+
+
+      var slideStyle = {
+        height: '100vh',
+        width: '100%',
+        position: 'absolute',
+        top: '0',
+        backgroundPosition: 'center',
+        backgroundSize: 'cover'
+      };
+
+      return _react2.default.createElement(
+        'section',
+        {
+          className: 'slider__slide ' + (current == index ? "slider__slide--active" : ""),
+          style: { position: "relative", height: "100vh", width: slideWidth, float: 'left' }
+        },
+        _react2.default.createElement(
+          'div',
+          { className: 'container' },
+          _react2.default.createElement(
+            'div',
+            { className: 'slider__slide__content' },
+            _react2.default.createElement('div', { dangerouslySetInnerHTML: { __html: slide.slide_content } }),
+            _react2.default.createElement(
+              'a',
+              { href: slide.btn_link, className: 'slider__content__btn', style: { background: slide.btn_color } },
+              slide.btn_txt
+            )
+          )
+        ),
+        _react2.default.createElement('div', {
+          className: 'lazyload',
+          style: slideStyle,
+          'data-bgset': slide.bg_img
+        }),
+        _react2.default.createElement('div', {
+          className: 'slider__slide__model lazyload blur-up',
+          style: slideStyle,
+          'data-bgset': slide.model_img_mobile + ' 768w, ' + slide.model_img + ' 1200w'
+        }),
+        _react2.default.createElement('div', {
+          className: 'slider__slide__object lazyload blur-up',
+          style: slideStyle,
+          'data-bgset': slide.object_img_mobile + ' 768w, ' + slide.object_img + ' 1200w'
+        })
+      );
+    }
+  }]);
+
+  return SliderSlide;
+}(_react.Component);
+
+exports.default = SliderSlide;
+
+/***/ }),
+
+/***/ 516:
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+	value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = __webpack_require__(55);
+
+var _react2 = _interopRequireDefault(_react);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var SliderImgs = function (_Component) {
+	_inherits(SliderImgs, _Component);
+
+	function SliderImgs() {
+		var _ref;
+
+		var _temp, _this, _ret;
+
+		_classCallCheck(this, SliderImgs);
+
+		for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
+			args[_key] = arguments[_key];
+		}
+
+		return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = SliderImgs.__proto__ || Object.getPrototypeOf(SliderImgs)).call.apply(_ref, [this].concat(args))), _this), _this.state = {
+			slide: 1
+		}, _temp), _possibleConstructorReturn(_this, _ret);
+	}
+
+	_createClass(SliderImgs, [{
+		key: 'render',
+		value: function render() {
+			var slides = this.props.slides;
+
+			var slideStyle = {
+				height: '100vh',
+				width: '100%',
+				position: 'absolute',
+				top: '0'
+			};
+
+			return _react2.default.createElement(
+				'div',
+				null,
+				slides.map(function (slide) {
+					return _react2.default.createElement(
+						'div',
+						{ style: { position: 'relative', height: '100vh' } },
+						_react2.default.createElement(
+							'div',
+							{ style: slideStyle },
+							_react2.default.createElement('img', { src: slide.bg_img, style: { width: '100%' } })
+						),
+						_react2.default.createElement(
+							'div',
+							{ style: slideStyle },
+							_react2.default.createElement('img', { src: slide.model_img, style: { width: '100%' } })
+						),
+						_react2.default.createElement(
+							'div',
+							{ style: slideStyle },
+							_react2.default.createElement('img', { src: slide.object_img, style: { width: '100%' } })
+						),
+						_react2.default.createElement(
+							'div',
+							{ style: { width: '30%', position: 'absolute', left: '0' } },
+							_react2.default.createElement(
+								'h2',
+								null,
+								slide.slide_content
+							)
+						)
+					);
+				})
+			);
+		}
+	}]);
+
+	return SliderImgs;
+}(_react.Component);
+
+exports.default = SliderImgs;
+
+/***/ }),
+
+/***/ 517:
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = __webpack_require__(55);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _axios = __webpack_require__(200);
+
+var _axios2 = _interopRequireDefault(_axios);
+
+var _qs = __webpack_require__(518);
+
+var _qs2 = _interopRequireDefault(_qs);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var endpoint = '/wp-admin/admin-ajax.php';
+
+var QuoFixed = function (_Component) {
+  _inherits(QuoFixed, _Component);
+
+  function QuoFixed() {
+    var _ref;
+
+    var _temp, _this, _ret;
+
+    _classCallCheck(this, QuoFixed);
+
+    for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
+      args[_key] = arguments[_key];
+    }
+
+    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = QuoFixed.__proto__ || Object.getPrototypeOf(QuoFixed)).call.apply(_ref, [this].concat(args))), _this), _this.state = {
+      name: '',
+      email: '',
+      phone: '',
+      product: '',
+      errors: []
+    }, _this.handleChange = function (e) {
+      _this.setState(_defineProperty({}, e.target.name, e.target.value));
+    }, _this.handleSubmit = function (e) {
+      if (e) e.preventDefault();
+      var data = _this.state;
+      var reqData = _qs2.default.stringify({ action: 'store_quotation', data: data });
+
+      _axios2.default.post(endpoint, reqData).then(function (_ref2) {
+        var data = _ref2.data;
+
+        if (Array.isArray(data)) {
+          _this.setState({ errors: data });
+        }
+      });
+    }, _temp), _possibleConstructorReturn(_this, _ret);
+  }
+
+  _createClass(QuoFixed, [{
+    key: 'render',
+    value: function render() {
+      var _state = this.state,
+          name = _state.name,
+          email = _state.email,
+          phone = _state.phone,
+          product = _state.product,
+          errors = _state.errors;
+
+      return _react2.default.createElement(
+        'div',
+        { className: 'quo-fixed' },
+        _react2.default.createElement(
+          'form',
+          { onSubmit: this.handleSubmit },
+          _react2.default.createElement(
+            'div',
+            { className: 'row quo-fixed__container' },
+            _react2.default.createElement(
+              'div',
+              { className: 'col-lg-3 col-md-3' },
+              _react2.default.createElement('input', {
+                type: 'text',
+                name: 'name',
+                placeholder: 'Nombre',
+                onChange: this.handleChange,
+                value: name
+              })
+            ),
+            _react2.default.createElement(
+              'div',
+              { className: 'col-lg-3 col-md-3' },
+              _react2.default.createElement('input', {
+                type: 'text',
+                name: 'email',
+                placeholder: 'Email',
+                onChange: this.handleChange,
+                value: email
+              })
+            ),
+            _react2.default.createElement(
+              'div',
+              { className: 'col-lg-2 col-md-2' },
+              _react2.default.createElement('input', {
+                type: 'text',
+                name: 'phone',
+                placeholder: 'T\xE9lefono',
+                onChange: this.handleChange,
+                value: phone
+              })
+            ),
+            _react2.default.createElement(
+              'div',
+              { className: 'col-lg-2 col-md-2' },
+              _react2.default.createElement(
+                'select',
+                { name: 'product', onChange: this.handleChange, value: product },
+                _react2.default.createElement(
+                  'option',
+                  { value: 'Desktops' },
+                  'Desktops'
+                ),
+                _react2.default.createElement(
+                  'option',
+                  { value: 'Laptops' },
+                  'Laptops'
+                )
+              )
+            ),
+            _react2.default.createElement(
+              'div',
+              { className: 'col-lg-2 col-md-2' },
+              _react2.default.createElement(
+                'button',
+                { className: 'btn' },
+                'Cotizar'
+              )
+            )
+          )
+        ),
+        errors.length > 0 ? _react2.default.createElement(
+          'div',
+          { className: 'row quo-fixed__errors' },
+          errors.map(function (err) {
+            return _react2.default.createElement('div', { className: 'col-lg-3', dangerouslySetInnerHTML: { __html: err } });
+          })
+        ) : ''
+      );
+    }
+  }]);
+
+  return QuoFixed;
+}(_react.Component);
+
+exports.default = QuoFixed;
+
+/***/ }),
+
+/***/ 518:
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var stringify = __webpack_require__(519);
+var parse = __webpack_require__(520);
+var formats = __webpack_require__(207);
+
+module.exports = {
+    formats: formats,
+    parse: parse,
+    stringify: stringify
+};
+
+
+/***/ }),
+
+/***/ 519:
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var utils = __webpack_require__(206);
+var formats = __webpack_require__(207);
+
+var arrayPrefixGenerators = {
+    brackets: function brackets(prefix) { // eslint-disable-line func-name-matching
+        return prefix + '[]';
+    },
+    indices: function indices(prefix, key) { // eslint-disable-line func-name-matching
+        return prefix + '[' + key + ']';
+    },
+    repeat: function repeat(prefix) { // eslint-disable-line func-name-matching
+        return prefix;
+    }
+};
+
+var toISO = Date.prototype.toISOString;
+
+var defaults = {
+    delimiter: '&',
+    encode: true,
+    encoder: utils.encode,
+    encodeValuesOnly: false,
+    serializeDate: function serializeDate(date) { // eslint-disable-line func-name-matching
+        return toISO.call(date);
+    },
+    skipNulls: false,
+    strictNullHandling: false
+};
+
+var stringify = function stringify( // eslint-disable-line func-name-matching
+    object,
+    prefix,
+    generateArrayPrefix,
+    strictNullHandling,
+    skipNulls,
+    encoder,
+    filter,
+    sort,
+    allowDots,
+    serializeDate,
+    formatter,
+    encodeValuesOnly
+) {
+    var obj = object;
+    if (typeof filter === 'function') {
+        obj = filter(prefix, obj);
+    } else if (obj instanceof Date) {
+        obj = serializeDate(obj);
+    } else if (obj === null) {
+        if (strictNullHandling) {
+            return encoder && !encodeValuesOnly ? encoder(prefix) : prefix;
+        }
+
+        obj = '';
+    }
+
+    if (typeof obj === 'string' || typeof obj === 'number' || typeof obj === 'boolean' || utils.isBuffer(obj)) {
+        if (encoder) {
+            var keyValue = encodeValuesOnly ? prefix : encoder(prefix);
+            return [formatter(keyValue) + '=' + formatter(encoder(obj))];
+        }
+        return [formatter(prefix) + '=' + formatter(String(obj))];
+    }
+
+    var values = [];
+
+    if (typeof obj === 'undefined') {
+        return values;
+    }
+
+    var objKeys;
+    if (Array.isArray(filter)) {
+        objKeys = filter;
+    } else {
+        var keys = Object.keys(obj);
+        objKeys = sort ? keys.sort(sort) : keys;
+    }
+
+    for (var i = 0; i < objKeys.length; ++i) {
+        var key = objKeys[i];
+
+        if (skipNulls && obj[key] === null) {
+            continue;
+        }
+
+        if (Array.isArray(obj)) {
+            values = values.concat(stringify(
+                obj[key],
+                generateArrayPrefix(prefix, key),
+                generateArrayPrefix,
+                strictNullHandling,
+                skipNulls,
+                encoder,
+                filter,
+                sort,
+                allowDots,
+                serializeDate,
+                formatter,
+                encodeValuesOnly
+            ));
+        } else {
+            values = values.concat(stringify(
+                obj[key],
+                prefix + (allowDots ? '.' + key : '[' + key + ']'),
+                generateArrayPrefix,
+                strictNullHandling,
+                skipNulls,
+                encoder,
+                filter,
+                sort,
+                allowDots,
+                serializeDate,
+                formatter,
+                encodeValuesOnly
+            ));
+        }
+    }
+
+    return values;
+};
+
+module.exports = function (object, opts) {
+    var obj = object;
+    var options = opts || {};
+
+    if (options.encoder !== null && options.encoder !== undefined && typeof options.encoder !== 'function') {
+        throw new TypeError('Encoder has to be a function.');
+    }
+
+    var delimiter = typeof options.delimiter === 'undefined' ? defaults.delimiter : options.delimiter;
+    var strictNullHandling = typeof options.strictNullHandling === 'boolean' ? options.strictNullHandling : defaults.strictNullHandling;
+    var skipNulls = typeof options.skipNulls === 'boolean' ? options.skipNulls : defaults.skipNulls;
+    var encode = typeof options.encode === 'boolean' ? options.encode : defaults.encode;
+    var encoder = typeof options.encoder === 'function' ? options.encoder : defaults.encoder;
+    var sort = typeof options.sort === 'function' ? options.sort : null;
+    var allowDots = typeof options.allowDots === 'undefined' ? false : options.allowDots;
+    var serializeDate = typeof options.serializeDate === 'function' ? options.serializeDate : defaults.serializeDate;
+    var encodeValuesOnly = typeof options.encodeValuesOnly === 'boolean' ? options.encodeValuesOnly : defaults.encodeValuesOnly;
+    if (typeof options.format === 'undefined') {
+        options.format = formats.default;
+    } else if (!Object.prototype.hasOwnProperty.call(formats.formatters, options.format)) {
+        throw new TypeError('Unknown format option provided.');
+    }
+    var formatter = formats.formatters[options.format];
+    var objKeys;
+    var filter;
+
+    if (typeof options.filter === 'function') {
+        filter = options.filter;
+        obj = filter('', obj);
+    } else if (Array.isArray(options.filter)) {
+        filter = options.filter;
+        objKeys = filter;
+    }
+
+    var keys = [];
+
+    if (typeof obj !== 'object' || obj === null) {
+        return '';
+    }
+
+    var arrayFormat;
+    if (options.arrayFormat in arrayPrefixGenerators) {
+        arrayFormat = options.arrayFormat;
+    } else if ('indices' in options) {
+        arrayFormat = options.indices ? 'indices' : 'repeat';
+    } else {
+        arrayFormat = 'indices';
+    }
+
+    var generateArrayPrefix = arrayPrefixGenerators[arrayFormat];
+
+    if (!objKeys) {
+        objKeys = Object.keys(obj);
+    }
+
+    if (sort) {
+        objKeys.sort(sort);
+    }
+
+    for (var i = 0; i < objKeys.length; ++i) {
+        var key = objKeys[i];
+
+        if (skipNulls && obj[key] === null) {
+            continue;
+        }
+
+        keys = keys.concat(stringify(
+            obj[key],
+            key,
+            generateArrayPrefix,
+            strictNullHandling,
+            skipNulls,
+            encode ? encoder : null,
+            filter,
+            sort,
+            allowDots,
+            serializeDate,
+            formatter,
+            encodeValuesOnly
+        ));
+    }
+
+    return keys.join(delimiter);
+};
+
+
+/***/ }),
+
+/***/ 520:
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var utils = __webpack_require__(206);
+
+var has = Object.prototype.hasOwnProperty;
+
+var defaults = {
+    allowDots: false,
+    allowPrototypes: false,
+    arrayLimit: 20,
+    decoder: utils.decode,
+    delimiter: '&',
+    depth: 5,
+    parameterLimit: 1000,
+    plainObjects: false,
+    strictNullHandling: false
+};
+
+var parseValues = function parseQueryStringValues(str, options) {
+    var obj = {};
+    var parts = str.split(options.delimiter, options.parameterLimit === Infinity ? undefined : options.parameterLimit);
+
+    for (var i = 0; i < parts.length; ++i) {
+        var part = parts[i];
+        var pos = part.indexOf(']=') === -1 ? part.indexOf('=') : part.indexOf(']=') + 1;
+
+        var key, val;
+        if (pos === -1) {
+            key = options.decoder(part);
+            val = options.strictNullHandling ? null : '';
+        } else {
+            key = options.decoder(part.slice(0, pos));
+            val = options.decoder(part.slice(pos + 1));
+        }
+        if (has.call(obj, key)) {
+            obj[key] = [].concat(obj[key]).concat(val);
+        } else {
+            obj[key] = val;
+        }
+    }
+
+    return obj;
+};
+
+var parseObject = function parseObjectRecursive(chain, val, options) {
+    if (!chain.length) {
+        return val;
+    }
+
+    var root = chain.shift();
+
+    var obj;
+    if (root === '[]') {
+        obj = [];
+        obj = obj.concat(parseObject(chain, val, options));
+    } else {
+        obj = options.plainObjects ? Object.create(null) : {};
+        var cleanRoot = root.charAt(0) === '[' && root.charAt(root.length - 1) === ']' ? root.slice(1, -1) : root;
+        var index = parseInt(cleanRoot, 10);
+        if (
+            !isNaN(index) &&
+            root !== cleanRoot &&
+            String(index) === cleanRoot &&
+            index >= 0 &&
+            (options.parseArrays && index <= options.arrayLimit)
+        ) {
+            obj = [];
+            obj[index] = parseObject(chain, val, options);
+        } else {
+            obj[cleanRoot] = parseObject(chain, val, options);
+        }
+    }
+
+    return obj;
+};
+
+var parseKeys = function parseQueryStringKeys(givenKey, val, options) {
+    if (!givenKey) {
+        return;
+    }
+
+    // Transform dot notation to bracket notation
+    var key = options.allowDots ? givenKey.replace(/\.([^.[]+)/g, '[$1]') : givenKey;
+
+    // The regex chunks
+
+    var brackets = /(\[[^[\]]*])/;
+    var child = /(\[[^[\]]*])/g;
+
+    // Get the parent
+
+    var segment = brackets.exec(key);
+    var parent = segment ? key.slice(0, segment.index) : key;
+
+    // Stash the parent if it exists
+
+    var keys = [];
+    if (parent) {
+        // If we aren't using plain objects, optionally prefix keys
+        // that would overwrite object prototype properties
+        if (!options.plainObjects && has.call(Object.prototype, parent)) {
+            if (!options.allowPrototypes) {
+                return;
+            }
+        }
+
+        keys.push(parent);
+    }
+
+    // Loop through children appending to the array until we hit depth
+
+    var i = 0;
+    while ((segment = child.exec(key)) !== null && i < options.depth) {
+        i += 1;
+        if (!options.plainObjects && has.call(Object.prototype, segment[1].slice(1, -1))) {
+            if (!options.allowPrototypes) {
+                return;
+            }
+        }
+        keys.push(segment[1]);
+    }
+
+    // If there's a remainder, just add whatever is left
+
+    if (segment) {
+        keys.push('[' + key.slice(segment.index) + ']');
+    }
+
+    return parseObject(keys, val, options);
+};
+
+module.exports = function (str, opts) {
+    var options = opts || {};
+
+    if (options.decoder !== null && options.decoder !== undefined && typeof options.decoder !== 'function') {
+        throw new TypeError('Decoder has to be a function.');
+    }
+
+    options.delimiter = typeof options.delimiter === 'string' || utils.isRegExp(options.delimiter) ? options.delimiter : defaults.delimiter;
+    options.depth = typeof options.depth === 'number' ? options.depth : defaults.depth;
+    options.arrayLimit = typeof options.arrayLimit === 'number' ? options.arrayLimit : defaults.arrayLimit;
+    options.parseArrays = options.parseArrays !== false;
+    options.decoder = typeof options.decoder === 'function' ? options.decoder : defaults.decoder;
+    options.allowDots = typeof options.allowDots === 'boolean' ? options.allowDots : defaults.allowDots;
+    options.plainObjects = typeof options.plainObjects === 'boolean' ? options.plainObjects : defaults.plainObjects;
+    options.allowPrototypes = typeof options.allowPrototypes === 'boolean' ? options.allowPrototypes : defaults.allowPrototypes;
+    options.parameterLimit = typeof options.parameterLimit === 'number' ? options.parameterLimit : defaults.parameterLimit;
+    options.strictNullHandling = typeof options.strictNullHandling === 'boolean' ? options.strictNullHandling : defaults.strictNullHandling;
+
+    if (str === '' || str === null || typeof str === 'undefined') {
+        return options.plainObjects ? Object.create(null) : {};
+    }
+
+    var tempObj = typeof str === 'string' ? parseValues(str, options) : str;
+    var obj = options.plainObjects ? Object.create(null) : {};
+
+    // Iterate over the keys and setup the new object
+
+    var keys = Object.keys(tempObj);
+    for (var i = 0; i < keys.length; ++i) {
+        var key = keys[i];
+        var newObj = parseKeys(key, tempObj[key], options);
+        obj = utils.merge(obj, newObj, options);
+    }
+
+    return utils.compact(obj);
+};
 
 
 /***/ })
