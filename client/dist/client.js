@@ -2162,7 +2162,7 @@ var PostsSlider = function (_Component) {
       slide: 0
     }, _this.next = function (e) {
       if (e) e.preventDefault();
-      var total = _this.props.posts.length / 3;
+      var total = _this.props.posts.length / 3 - 1;
 
       if (window.innerWidth < 768) {
         total = _this.props.posts.length - 1;
@@ -2173,7 +2173,7 @@ var PostsSlider = function (_Component) {
       _this.setState({ slide: slide });
     }, _this.prev = function (e) {
       if (e) e.preventDefault();
-      var total = _this.props.posts.length / 3;
+      var total = _this.props.posts.length / 3 - 1;
 
       if (window.innerWidth < 768) {
         total = _this.props.posts.length - 1;

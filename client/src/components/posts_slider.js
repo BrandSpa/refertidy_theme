@@ -8,7 +8,7 @@ class PostsSlider extends Component {
 
 	next = e => {
 		if(e) e.preventDefault();
-	  let total = this.props.posts.length / 3;
+	  let total = (this.props.posts.length / 3) - 1;
 
     if(window.innerWidth < 768) {
       total = this.props.posts.length - 1;
@@ -21,7 +21,7 @@ class PostsSlider extends Component {
 
 	prev = e => {
 		if(e) e.preventDefault();
-    let total = this.props.posts.length / 3;
+    let total = (this.props.posts.length / 3) - 1;
 
     if(window.innerWidth < 768) {
       total = this.props.posts.length - 1;

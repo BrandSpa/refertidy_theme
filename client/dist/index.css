@@ -337,6 +337,11 @@ li {
 
 .posts-slider {
   overflow: hidden; }
+  .posts-slider__viewport {
+    position: relative;
+    -webkit-transition: left .7s;
+    transition: left .7s;
+    will-change: left; }
   .posts-slider__btns {
     position: absolute;
     z-index: 2;

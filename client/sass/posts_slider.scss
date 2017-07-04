@@ -38,6 +38,11 @@
 
 .posts-slider {
   overflow: hidden;
+  &__viewport {
+    position: relative;
+    transition: left .7s;
+    will-change: left;
+  }
 
   &__btns {
     position: absolute;
