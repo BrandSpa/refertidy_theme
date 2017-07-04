@@ -2,6 +2,12 @@
 
  function ra_slider_vc() {
 	 $subparams = [
+     [
+       "type" => "colorpicker",
+       "heading" => "Background color",
+       "param_name" => "bg_color",
+       "value" => "#000"
+     ],
 		  [
         "type" => "attach_image",
         "heading" => "Background image",

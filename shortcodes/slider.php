@@ -31,14 +31,14 @@ function ra_slider_sc( $atts , $content) {
 
 	$slides = parseSlides($at['slides']);
 	// $slides = vc_param_group_parse_atts($atts['slides']);
-	$slidesJson = json_encode($slides);
+	$props =  ["slides" => json_encode($slides)];
 	$detect = new Mobile_Detect;
 
   ob_start();
 	?>
 
 	<!--ra_slider html-->
-		<div class="ra-slider" data-props='{"slides": <?php echo $slidesJson ?>}'></div>
+		<div class="ra-slider" data-props='<?php echo json_encode($props) ?>'></div>
 	<!--/ra_slider html-->
 
 	<?php
