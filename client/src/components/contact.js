@@ -21,7 +21,7 @@ class Contact extends Component {
   }
 
   toggleCheckbox = e => {
-    this.setState({checkbox: !this.state.privacy});
+    this.setState({privacy: !this.state.privacy});
   }
 
   handleSubmit = e => {

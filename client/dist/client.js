@@ -1964,7 +1964,7 @@ var Contact = function (_Component) {
       var val = e.target.value;
       _this.setState(_defineProperty({}, field, val));
     }, _this.toggleCheckbox = function (e) {
-      _this.setState({ checkbox: !_this.state.privacy });
+      _this.setState({ privacy: !_this.state.privacy });
     }, _this.handleSubmit = function (e) {
       e.preventDefault();
       var data = _qs2.default.stringify({ action: 'store_contact', data: _this.state });
