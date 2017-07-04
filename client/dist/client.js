@@ -2182,7 +2182,7 @@ var PostsSlider = function (_Component) {
 
       var total = posts.length;
       var viewportWidth = total / 3 * 100 + '%';
-      var viewportLeft = '-' + this.state.state * 100 + '%';
+      var viewportLeft = '-' + this.state.slide * 100 + '%';
 
       if (window.innerWidth < 768) {
         viewportWidth = total * 100 + '%';
