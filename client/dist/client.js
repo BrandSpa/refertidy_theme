@@ -2156,6 +2156,7 @@ var PostsSlider = function (_Component) {
     value: function render() {
       var posts = this.props.posts;
 
+      var postWidth = 100 / 3 + '%';
 
       return _react2.default.createElement(
         'div',
@@ -2163,13 +2164,9 @@ var PostsSlider = function (_Component) {
         _react2.default.createElement(
           'div',
           { className: 'posts-slider__viewport' },
-          _react2.default.createElement(
-            'div',
-            { className: 'row' },
-            posts.map(function (post) {
-              return _react2.default.createElement(_post_slide2.default, { key: post.ID, post: post });
-            })
-          )
+          posts.map(function (post) {
+            return _react2.default.createElement(_post_slide2.default, { key: post.ID, post: post, postWidth: postWidth });
+          })
         ),
         _react2.default.createElement(
           'div',
@@ -2240,36 +2237,38 @@ var PostSlide = function (_Component) {
   }
 
   _createClass(PostSlide, [{
-    key: "render",
+    key: 'render',
     value: function render() {
-      var post = this.props.post;
+      var _props = this.props,
+          post = _props.post,
+          postWidth = _props.postWidth;
 
 
       return _react2.default.createElement(
-        "div",
-        { className: "post-slide col-lg-4 col-md-6 col-sm-12" },
-        _react2.default.createElement("div", {
-          className: "post-slide__media lazyload",
+        'div',
+        { className: 'post-slide', style: { widht: postWidth, float: 'left' } },
+        _react2.default.createElement('div', {
+          className: 'post-slide__media lazyload',
           onClick: this.openPost,
-          "data-bgset": post.post_thumbnail
+          'data-bgset': post.post_thumbnail
         }),
         _react2.default.createElement(
-          "div",
-          { className: "post-slide__content" },
+          'div',
+          { className: 'post-slide__content' },
           _react2.default.createElement(
-            "h2",
-            { className: "post-slide__title" },
+            'h2',
+            { className: 'post-slide__title' },
             post.post_title
           ),
           _react2.default.createElement(
-            "div",
-            { className: "post-slide__excerpt" },
+            'div',
+            { className: 'post-slide__excerpt' },
             post.post_excerpt.substr(0, 150)
           ),
           _react2.default.createElement(
-            "a",
-            { href: post.guid, className: "btn btn--outline", style: { borderColor: '#6031BA', color: '#6031BA' } },
-            "VER MAS"
+            'a',
+            { href: post.guid, className: 'btn btn--outline', style: { borderColor: '#6031BA', color: '#6031BA' } },
+            'VER MAS'
           )
         )
       );
