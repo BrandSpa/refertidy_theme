@@ -11,14 +11,14 @@ function store_contact() {
 		'name'  => 'required',
 		'email' => 'required|valid_email',
 		'question' => 'required',
-		'privacy' => 'contains, true'
+		'privacy' => 'contains, 1'
 	);
 
 	$data = [
 		'name' => $data['name'],
 		'email' => $data['email'],
 		'question' => $data['question'],
-		'privacy' => $data['privacy'],
+		'privacy' => $data['privacy'] === 'true' ? 1 : 0,
 		'phone' => isset($data['phone']) ? $data['phone'] : '',
 		'company' => isset($data['company']) ? $data['company'] : ''
 	];
