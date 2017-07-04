@@ -33,7 +33,7 @@ input, select {
   height: 35px; }
 
 .form-group {
-  padding-bottom: 20px; }
+  margin-bottom: 20px; }
 
 button {
   border: none;
