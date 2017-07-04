@@ -5,7 +5,7 @@ function ra_posts_slider_sc( $atts ) {
 
   $query = new Wp_Query(array(
     'post_type' => 'post',
-		'posts_per_page' => 6,
+		'posts_per_page' => 8,
 		'post_status' => 'publish'
   ));
 
