@@ -28,11 +28,11 @@ function store_quotation() {
 	$gump->validation_rules($rules);
 	$isValid = $gump->run($data);
 
-	if($isValid === true) {
+	if($isValid === false) {
+		responseJson( $gump->get_errors_array() );
+	} else {
 		$res = $wpdb->insert( 'quotations', $data, [ '%s', '%s', '%s', '%s' ] );
 		responseJson($data);
-	} else {
-		responseJson( $gump->get_errors_array() );
 	}
 
 	die();
