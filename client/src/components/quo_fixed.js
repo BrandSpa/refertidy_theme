@@ -19,14 +19,14 @@ class QuoFixed extends Component {
 	handleSubmit = e => {
     if(e) e.preventDefault();
 		const data = this.state;
-		const reqData = qs.stringify({action: 'store_contact', data});
+		const reqData = qs.stringify({action: 'store_quotation', data});
 
 		request.post(endpoint, reqData)
 			.then(({data}) => {
 				if(Array.isArray(data)) {
           this.setState({errors: data});
         }
-			}) 
+			})
 	}
 
   render() {
@@ -36,30 +36,30 @@ class QuoFixed extends Component {
         <form onSubmit={this.handleSubmit}>
           <div className="row quo-fixed__container">
             <div className="col-lg-3 col-md-3">
-              <input 
-                type="text" 
-                name="name" 
-                placeholder="Nombre" 
-                onChange={this.handleChange} 
-                value={name} 
+              <input
+                type="text"
+                name="name"
+                placeholder="Nombre"
+                onChange={this.handleChange}
+                value={name}
               />
             </div>
             <div className="col-lg-3 col-md-3">
-              <input 
-                type="text" 
-                name="email" 
-                placeholder="Email" 
-                onChange={this.handleChange} 
-                value={email} 
+              <input
+                type="text"
+                name="email"
+                placeholder="Email"
+                onChange={this.handleChange}
+                value={email}
               />
             </div>
             <div className="col-lg-2 col-md-2">
-              <input 
-                type="text" 
-                name="phone" 
-                placeholder="Télefono" 
-                onChange={this.handleChange} 
-                value={phone} 
+              <input
+                type="text"
+                name="phone"
+                placeholder="Télefono"
+                onChange={this.handleChange}
+                value={phone}
               />
             </div>
             <div className="col-lg-2 col-md-2">
@@ -76,12 +76,12 @@ class QuoFixed extends Component {
 
         {errors.length > 0 ?
           <div className="row quo-fixed__errors">
-              {errors.map(err => 
+              {errors.map(err =>
                 <div className="col-lg-3" dangerouslySetInnerHTML={{__html: err}} />
               )}
           </div>
         :''}
-         
+
       </div>
     );
   }
