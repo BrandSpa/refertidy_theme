@@ -93,7 +93,8 @@ li {
   .checkbox input[type=checkbox] {
     position: absolute;
     margin-top: -11px;
-    margin-left: -20px; }
+    margin-left: -20px;
+    width: 15px; }
 
 .app-header {
   position: fixed;
