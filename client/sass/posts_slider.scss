@@ -15,11 +15,13 @@
   &__title {
     font-size: 25 / 15 * 1rem;
     color: #6031BA;
-    line-height: 33px;
+    margin: 0 0 40px 0;
+    font-weight: normal;
   }
 
   &__excerpt {
     font-size: 20 / 15 * 1rem;
     color: #747E86;
+    margin: 0 0 40px 0;
   }
 }

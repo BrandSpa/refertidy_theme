@@ -318,8 +318,10 @@ li {
 .post-slide__title {
   font-size: 1.66667rem;
   color: #6031BA;
-  line-height: 33px; }
+  margin: 0 0 40px 0;
+  font-weight: normal; }
 
 .post-slide__excerpt {
   font-size: 1.33333rem;
-  color: #747E86; }
+  color: #747E86;
+  margin: 0 0 40px 0; }
