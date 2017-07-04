@@ -1465,7 +1465,7 @@ var QuoFixed = function (_Component) {
               { className: 'col-lg-2 col-md-2' },
               _react2.default.createElement(
                 'button',
-                { className: 'btn', stlye: { color: '#6031BA' } },
+                { className: 'btn', style: { color: '#6031BA' } },
                 'Cotizar'
               )
             )
