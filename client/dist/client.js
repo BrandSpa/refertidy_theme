@@ -1985,7 +1985,13 @@ var Contact = function (_Component) {
         _react2.default.createElement(
           'div',
           { className: 'form-group' },
-          _react2.default.createElement('input', { name: 'name', type: 'text', className: 'form-control', placeholder: 'Nombre', value: name }),
+          _react2.default.createElement('input', {
+            name: 'name',
+            type: 'text',
+            className: 'form-control',
+            placeholder: 'Nombre',
+            onChange: this.handleChange,
+            value: name }),
           _react2.default.createElement(
             'div',
             { className: 'input-error', style: errors.name ? { display: 'block' } : { display: 'none' } },
@@ -1995,7 +2001,13 @@ var Contact = function (_Component) {
         _react2.default.createElement(
           'div',
           { className: 'form-group' },
-          _react2.default.createElement('input', { name: 'email', type: 'text', className: 'form-control', placeholder: 'Email', value: email }),
+          _react2.default.createElement('input', {
+            name: 'email',
+            type: 'text',
+            className: 'form-control',
+            placeholder: 'Email',
+            onChange: this.handleChange,
+            value: email }),
           _react2.default.createElement(
             'div',
             { className: 'input-error', style: errors.email ? { display: 'block' } : { display: 'none' } },
@@ -2005,17 +2017,35 @@ var Contact = function (_Component) {
         _react2.default.createElement(
           'div',
           { className: 'form-group' },
-          _react2.default.createElement('input', { name: 'phone', type: 'text', className: 'form-control', placeholder: 'Tel\xE9fono', value: phone })
+          _react2.default.createElement('input', {
+            name: 'phone',
+            type: 'text',
+            className: 'form-control',
+            placeholder: 'Tel\xE9fono',
+            onChange: this.handleChange,
+            value: phone })
         ),
         _react2.default.createElement(
           'div',
           { className: 'form-group' },
-          _react2.default.createElement('input', { name: 'company', type: 'text', className: 'form-control', placeholder: 'Empresa', value: name })
+          _react2.default.createElement('input', {
+            name: 'company',
+            type: 'text',
+            className: 'form-control',
+            placeholder: 'Empresa',
+            onChange: this.handleChange,
+            value: company })
         ),
         _react2.default.createElement(
           'div',
           { className: 'form-group' },
-          _react2.default.createElement('textarea', { name: 'question', rows: '4', className: 'form-control', placeholder: '\xBFDudas?', value: name }),
+          _react2.default.createElement('textarea', {
+            name: 'question',
+            rows: '4',
+            className: 'form-control',
+            placeholder: '\xBFDudas?',
+            onChange: this.handleChange,
+            value: question }),
           _react2.default.createElement(
             'div',
             { className: 'input-error', style: errors.question ? { display: 'block' } : { display: 'none' }, s: true },

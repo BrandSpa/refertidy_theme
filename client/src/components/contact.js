@@ -41,25 +41,55 @@ class Contact extends Component {
     return (
       <form className="form-contact" onSubmit={this.handleSubmit}>
         <div className="form-group">
-          <input name="name" type="text" className="form-control" placeholder="Nombre" value={name}/>
+          <input
+            name="name"
+            type="text"
+            className="form-control"
+            placeholder="Nombre"
+            onChange={this.handleChange}
+            value={name}/>
           <div className="input-error" style={ errors.name ? {display: 'block'} : {display: 'none'}}>{errors.name}</div>
         </div>
 
         <div className="form-group">
-          <input name="email" type="text" className="form-control" placeholder="Email" value={email}/>
+          <input
+            name="email"
+            type="text"
+            className="form-control"
+            placeholder="Email"
+            onChange={this.handleChange}
+            value={email}/>
           <div className="input-error" style={ errors.email ? {display: 'block'} : {display: 'none'}}>{errors.email}</div>
         </div>
 
         <div className="form-group">
-          <input name="phone" type="text" className="form-control" placeholder="Teléfono" value={phone}/>
+          <input
+            name="phone"
+            type="text"
+            className="form-control"
+            placeholder="Teléfono"
+            onChange={this.handleChange}
+            value={phone}/>
         </div>
 
         <div className="form-group">
-          <input name="company" type="text" className="form-control" placeholder="Empresa" value={name}/>
+          <input
+            name="company"
+            type="text"
+            className="form-control"
+            placeholder="Empresa"
+            onChange={this.handleChange}
+            value={company}/>
         </div>
 
         <div className="form-group">
-          <textarea name="question" rows="4" className="form-control" placeholder="¿Dudas?" value={name}/>
+          <textarea
+            name="question"
+            rows="4"
+            className="form-control"
+            placeholder="¿Dudas?"
+            onChange={this.handleChange}
+            value={question}/>
           <div className="input-error" style={ errors.question ? {display: 'block'} : {display: 'none'}}s>{errors.question}</div>
         </div>
 
