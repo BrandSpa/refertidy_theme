@@ -1957,7 +1957,7 @@ var Contact = function (_Component) {
       phone: '',
       company: '',
       question: '',
-      privacy: 0,
+      privacy: false,
       errors: {}
     }, _this.handleChange = function (e) {
       var _e$target = e.target,

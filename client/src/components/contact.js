@@ -10,7 +10,7 @@ class Contact extends Component {
       phone: '',
       company: '',
       question: '',
-      privacy: 0,
+      privacy: false,
       errors: {}
   }
 
