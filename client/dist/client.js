@@ -2247,7 +2247,7 @@ var PostSlide = function (_Component) {
           post = _props.post,
           total = _props.total;
 
-      var postWidth = 200 / 12 + '%';
+      var postWidth = 200 / (total * 2) + '%';
 
       if (window.innerWidth < 768) {
         postWidth = 100 / total + '%';
