@@ -87,7 +87,7 @@ li {
     font-size: 0.73333rem; }
   .checkbox input[type=checkbox] {
     position: absolute;
-    margin-top: -9px;
+    margin-top: -11px;
     margin-left: -20px; }
 
 .app-header {
