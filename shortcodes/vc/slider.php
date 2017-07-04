@@ -5,8 +5,7 @@
      [
        "type" => "colorpicker",
        "heading" => "Background color",
-       "param_name" => "bg_color",
-       "value" => "#000"
+       "param_name" => "bg_color"
      ],
 		  [
         "type" => "attach_image",
