@@ -1902,10 +1902,197 @@ module.exports = function (str, opts) {
 /***/ }),
 
 /***/ 521:
-/***/ (function(module, exports) {
+/***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-throw new Error("Module build failed: SyntaxError: Unexpected token, expected , (14:6)\n\n\u001b[0m \u001b[90m 12 | \u001b[39m      question\u001b[33m:\u001b[39m \u001b[32m''\u001b[39m\u001b[33m,\u001b[39m\n \u001b[90m 13 | \u001b[39m      privacy\u001b[33m:\u001b[39m \u001b[36mfalse\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 14 | \u001b[39m      errors\u001b[33m:\u001b[39m {}\n \u001b[90m    | \u001b[39m      \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 15 | \u001b[39m  }\n \u001b[90m 16 | \u001b[39m\n \u001b[90m 17 | \u001b[39m  handleChange \u001b[33m=\u001b[39m e \u001b[33m=>\u001b[39m  {\u001b[0m\n");
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = __webpack_require__(55);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _axios = __webpack_require__(200);
+
+var _axios2 = _interopRequireDefault(_axios);
+
+var _qs = __webpack_require__(518);
+
+var _qs2 = _interopRequireDefault(_qs);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var endpoint = '/wp-admin/admin-ajax.php';
+
+var Contact = function (_Component) {
+  _inherits(Contact, _Component);
+
+  function Contact() {
+    var _ref;
+
+    var _temp, _this, _ret;
+
+    _classCallCheck(this, Contact);
+
+    for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
+      args[_key] = arguments[_key];
+    }
+
+    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = Contact.__proto__ || Object.getPrototypeOf(Contact)).call.apply(_ref, [this].concat(args))), _this), _this.state = {
+      name: '',
+      email: '',
+      phone: '',
+      company: '',
+      question: '',
+      privacy: false,
+      errors: {}
+    }, _this.handleChange = function (e) {
+      var field = e.target.name;
+      var val = e.target.value;
+      _this.setState(_defineProperty({}, field, val));
+    }, _this.toggleCheckbox = function (e) {
+      _this.setState({ checkbox: !_this.state.privacy });
+    }, _this.handleSubmit = function (e) {
+      e.preventDefault();
+      var data = _qs2.default.stringify({ action: 'store_contact', data: _this.state });
+
+      _axios2.default.post(endpoint, data).then(function (_ref2) {
+        var data = _ref2.data;
+
+
+        if (Object.keys(data).length > 0) {
+          _this.setState({ errors: data });
+        }
+      });
+    }, _temp), _possibleConstructorReturn(_this, _ret);
+  }
+
+  _createClass(Contact, [{
+    key: 'render',
+    value: function render() {
+      var _state = this.state,
+          name = _state.name,
+          email = _state.email,
+          phone = _state.phone,
+          company = _state.company,
+          question = _state.question,
+          errors = _state.errors;
+
+
+      return _react2.default.createElement(
+        'form',
+        { className: 'form-contact', onSubmit: this.handleSubmit },
+        _react2.default.createElement(
+          'div',
+          { className: 'form-group' },
+          _react2.default.createElement('input', {
+            name: 'name',
+            type: 'text',
+            className: 'form-control',
+            placeholder: 'Nombre',
+            onChange: this.handleChange,
+            value: name }),
+          _react2.default.createElement(
+            'div',
+            { className: 'input-error', style: errors.name ? { display: 'block' } : { display: 'none' } },
+            errors.name
+          )
+        ),
+        _react2.default.createElement(
+          'div',
+          { className: 'form-group' },
+          _react2.default.createElement('input', {
+            name: 'email',
+            type: 'text',
+            className: 'form-control',
+            placeholder: 'Email',
+            onChange: this.handleChange,
+            value: email }),
+          _react2.default.createElement(
+            'div',
+            { className: 'input-error', style: errors.email ? { display: 'block' } : { display: 'none' } },
+            errors.email
+          )
+        ),
+        _react2.default.createElement(
+          'div',
+          { className: 'form-group' },
+          _react2.default.createElement('input', {
+            name: 'phone',
+            type: 'text',
+            className: 'form-control',
+            placeholder: 'Tel\xE9fono',
+            onChange: this.handleChange,
+            value: phone })
+        ),
+        _react2.default.createElement(
+          'div',
+          { className: 'form-group' },
+          _react2.default.createElement('input', {
+            name: 'company',
+            type: 'text',
+            className: 'form-control',
+            placeholder: 'Empresa',
+            onChange: this.handleChange,
+            value: company })
+        ),
+        _react2.default.createElement(
+          'div',
+          { className: 'form-group' },
+          _react2.default.createElement('textarea', {
+            name: 'question',
+            rows: '4',
+            className: 'form-control',
+            placeholder: '\xBFDudas?',
+            onChange: this.handleChange,
+            value: question }),
+          _react2.default.createElement(
+            'div',
+            { className: 'input-error', style: errors.question ? { display: 'block' } : { display: 'none' }, s: true },
+            errors.question
+          )
+        ),
+        _react2.default.createElement(
+          'div',
+          { className: 'checkbox' },
+          _react2.default.createElement(
+            'label',
+            { htmlFor: 'privacy' },
+            _react2.default.createElement('input', {
+              type: 'checkbox',
+              name: 'privacy',
+              onChange: this.toggleCheckbox,
+              checked: this.state.privacy
+            }),
+            ' He le\xEDdo y acepto la pol\xEDtica de privacidad'
+          )
+        ),
+        _react2.default.createElement(
+          'button',
+          { className: 'btn', style: { background: '#62FFC8', color: '#6031BA' } },
+          'ENVIAR'
+        )
+      );
+    }
+  }]);
+
+  return Contact;
+}(_react.Component);
+
+exports.default = Contact;
 
 /***/ })
 
