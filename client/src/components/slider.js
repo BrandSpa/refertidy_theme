@@ -28,7 +28,7 @@ class Slider extends Component {
 		const viewportStyle = {
 			width: `${100 * slides.length}%`,
 			transform: `translate3d( -${100 / slides.length * this.state.slide}%, 0, 0 )`,
-			transition: 'transform 500ms'
+			transition: 'transform 700ms'
 		};
 
 		const slideWidth = `${100 / slides.length}%`;
@@ -37,11 +37,11 @@ class Slider extends Component {
 			<div className="slider" style={{position: 'relative', overflow: 'hidden'}}>
 				<div className="slider__viewport" style={viewportStyle}>
 					{slides.map((slide, i) =>
-							<Slide 
+							<Slide
 								key={i}
-								slide={slide} 
-								current={this.state.slide} 
-								index={i} 
+								slide={slide}
+								current={this.state.slide}
+								index={i}
 								slideWidth={slideWidth}
 							/>
 					)}

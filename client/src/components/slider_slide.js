@@ -4,7 +4,7 @@ class SliderSlide extends Component {
   state = {
     mobile: false
   }
-  
+
   componentDidMount() {
     if(window.innerWidth < 768) {
       this.setState({mobile: true});
@@ -16,7 +16,7 @@ class SliderSlide extends Component {
 		const { slide, slideWidth, current, index } = this.props;
 
     const slideStyle = {
-			height: '100vh', 
+			height: '100vh',
 			width: '100%',
 			position: 'absolute',
 			top: '0'
@@ -36,9 +36,9 @@ class SliderSlide extends Component {
          <a href={slide.btn_link} className="slider__content__btn" style={{background: slide.btn_color}}>
           {slide.btn_txt}
          </a>
-        </div>      
+        </div>
       </div>
-       
+
         <div
           style={{
             ...slideStyle,
