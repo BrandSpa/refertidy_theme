@@ -1,6 +1,6 @@
 <?php
 
-function ra_contact_sc() {
+function ra_contact_sc( $atts ) {
   $at = shortcode_atts([], $atts);
   ob_start();
   ?>
