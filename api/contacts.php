@@ -26,15 +26,15 @@ function store_contact() {
 		'company' => isset($data['company']) ? $data['company'] : ''
 	];
 
-	GUMP::set_error_messages(array(
+	$gump->set_error_messages(array(
     "validate_required"     => "{field} es requerido",
      "validate_valid_email"  => "{field} debe ser un email valido",
   ));
 
-	GUMP::set_field_name("name", "Nombre");
-	GUMP::set_field_name("question", "Duda");
+	$gump->set_field_name("name", "Nombre");
+	$gump->set_field_name("question", "Duda");
 
-	$isValid = GUMP::is_valid($data, $rules);
+	$isValid = $gump->is_valid($data, $rules);
 
 	if($isValid === true) {
 		$res = $wpdb->insert( 'contacts',
@@ -44,7 +44,7 @@ function store_contact() {
 
 		responseJson($data);
 	} else {
-		$errors = GUMP::get_errors_array();
+		$errors = $gump->get_errors_array();
 		responseJson( [ 'errors' => $errors ] );
 	}
 
