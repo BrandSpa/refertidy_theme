@@ -1960,11 +1960,15 @@ var Contact = function (_Component) {
       privacy: false,
       errors: {}
     }, _this.handleChange = function (e) {
-      var field = e.target.name;
-      var val = e.target.value;
-      _this.setState(_defineProperty({}, field, val));
+      var _e$target$name = e.target.name,
+          name = _e$target$name.name,
+          value = _e$target$name.value;
+
+      _this.setState(_defineProperty({}, name, value));
     }, _this.toggleCheckbox = function (e) {
-      _this.setState({ privacy: !_this.state.privacy });
+      var name = e.target.name;
+
+      _this.setState(_defineProperty({}, name, !_this.state[name]));
     }, _this.handleSubmit = function (e) {
       e.preventDefault();
       var data = _qs2.default.stringify({ action: 'store_contact', data: _this.state });
@@ -1989,6 +1993,8 @@ var Contact = function (_Component) {
           phone = _state.phone,
           company = _state.company,
           question = _state.question,
+          privacy = _state.privacy,
+          privacyErr = _state.privacyErr,
           errors = _state.errors;
 
 
@@ -2061,7 +2067,7 @@ var Contact = function (_Component) {
             value: question }),
           _react2.default.createElement(
             'div',
-            { className: 'input-error', style: errors.question ? { display: 'block' } : { display: 'none' }, s: true },
+            { className: 'input-error', style: errors.question ? { display: 'block' } : { display: 'none' } },
             errors.question
           )
         ),
@@ -2074,10 +2080,15 @@ var Contact = function (_Component) {
             _react2.default.createElement('input', {
               type: 'checkbox',
               name: 'privacy',
-              checked: this.state.privacy
+              checked: privacy
             }),
             ' He le\xEDdo y acepto la pol\xEDtica de privacidad'
           )
+        ),
+        _react2.default.createElement(
+          'div',
+          { className: 'input-error', style: privacyErr ? { display: 'block' } : { display: 'none' } },
+          'Debe aceptar la pol\xEDtica de privacidad'
         ),
         _react2.default.createElement(
           'button',

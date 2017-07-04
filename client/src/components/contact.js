@@ -15,13 +15,13 @@ class Contact extends Component {
   }
 
   handleChange = e =>  {
-    let field = e.target.name;
-    let val = e.target.value;
-    this.setState({[field]: val});
+    let { name, value } = e.target.name;
+    this.setState({ [name]: value });
   }
 
   toggleCheckbox = e => {
-    this.setState({privacy: !this.state.privacy});
+    const { name } = e.target;
+    this.setState({[name]: !this.state[name]});
   }
 
   handleSubmit = e => {
@@ -41,7 +41,7 @@ class Contact extends Component {
   }
 
   render() {
-    const {name, email, phone, company, question, errors} = this.state;
+    const {name, email, phone, company, question, privacy, privacyErr, errors} = this.state;
 
     return (
       <form className="form-contact" onSubmit={this.handleSubmit}>
@@ -95,7 +95,7 @@ class Contact extends Component {
             placeholder="¿Dudas?"
             onChange={this.handleChange}
             value={question}/>
-          <div className="input-error" style={ errors.question ? {display: 'block'} : {display: 'none'}}s>{errors.question}</div>
+          <div className="input-error" style={ errors.question ? {display: 'block'} : {display: 'none'}}>{errors.question}</div>
         </div>
 
         <div className="checkbox">
@@ -103,11 +103,11 @@ class Contact extends Component {
             <input
               type="checkbox"
               name="privacy"
-              checked={this.state.privacy}
+              checked={privacy}
             /> He leído y acepto la política de privacidad
           </label>
         </div>
-
+        <div className="input-error" style={ privacyErr ? {display: 'block'} : {display: 'none'}}>Debe aceptar la política de privacidad</div>
         <button className="btn" style={{background: '#62FFC8', color: '#6031BA'}}>ENVIAR</button>
       </form>
     )

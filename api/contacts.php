@@ -7,7 +7,8 @@ function store_contact() {
 	$rules = array(
 		'name'  => 'required',
 		'email' => 'required|valid_email',
-		'question' => 'required'
+		'question' => 'required',
+		'privacy' => 'boolean'
 	);
 
 	$data = $gump->sanitize($_POST['data']);
@@ -16,13 +17,14 @@ function store_contact() {
 		'name' => $data['name'],
 		'email' => $data['email'],
 		'question' => $data['question'],
+		'privacy' => $data['privacy'],
 		'phone' => isset($data['phone']) ? $data['phone'] : '',
 		'company' => isset($data['company']) ? $data['company'] : ''
 	];
 
 	$gump->set_error_messages([
     "validate_required" => "{field} es requerido",
-     "validate_valid_email" => "{field} debe ser un email valido",
+    "validate_valid_email" => "{field} debe ser un email valido",
   ]);
 
 	$gump->set_field_name("name", "Nombre");
