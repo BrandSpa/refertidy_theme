@@ -46,7 +46,7 @@ class SliderSlide extends Component {
             backgroundPosition: 'center',
             backgroundSize: 'cover'
           }}
-          data-src={slide.bg_img}
+          data-bgset={slide.bg_img}
         />
 
         <div
@@ -66,7 +66,7 @@ class SliderSlide extends Component {
             backgroundPosition: 'center',
             backgroundSize: 'cover'
           }}
-          data-bgset={`${slide.model_img_mobile} 768w, ${slide.model_img} 1200w`}
+          data-bgset={`${slide.object_img_mobile} 768w, ${slide.object_img} 1200w`}
         />
 
       </section>

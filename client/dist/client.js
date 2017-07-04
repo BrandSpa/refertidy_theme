@@ -465,7 +465,7 @@ var SliderSlide = function (_Component) {
             backgroundPosition: 'center',
             backgroundSize: 'cover'
           }),
-          'data-src': slide.bg_img
+          'data-bgset': slide.bg_img
         }),
         _react2.default.createElement('div', {
           className: 'slider__slide__model lazyload',
@@ -481,7 +481,7 @@ var SliderSlide = function (_Component) {
             backgroundPosition: 'center',
             backgroundSize: 'cover'
           }),
-          'data-bgset': slide.model_img_mobile + ' 768w, ' + slide.model_img + ' 1200w'
+          'data-bgset': slide.object_img_mobile + ' 768w, ' + slide.object_img + ' 1200w'
         })
       );
     }
