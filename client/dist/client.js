@@ -1976,12 +1976,22 @@ var Contact = function (_Component) {
         _react2.default.createElement(
           'div',
           { className: 'form-group' },
-          _react2.default.createElement('input', { name: 'name', type: 'text', className: 'form-control', placeholder: 'Nombre' })
+          _react2.default.createElement('input', { name: 'name', type: 'text', className: 'form-control', placeholder: 'Nombre' }),
+          _react2.default.createElement(
+            'div',
+            { className: 'input-error', style: errors.name ? { display: 'block' } : { display: 'none' } },
+            errors.name
+          )
         ),
         _react2.default.createElement(
           'div',
           { className: 'form-group' },
-          _react2.default.createElement('input', { name: 'email', type: 'text', className: 'form-control', placeholder: 'Email' })
+          _react2.default.createElement('input', { name: 'email', type: 'text', className: 'form-control', placeholder: 'Email' }),
+          _react2.default.createElement(
+            'div',
+            { className: 'input-error', style: errors.email ? { display: 'block' } : { display: 'none' } },
+            errors.email
+          )
         ),
         _react2.default.createElement(
           'div',
@@ -1996,9 +2006,18 @@ var Contact = function (_Component) {
         _react2.default.createElement(
           'div',
           { className: 'form-group' },
-          _react2.default.createElement('textarea', { name: 'question', rows: '4', className: 'form-control', placeholder: '\xBFDudas?' })
+          _react2.default.createElement('textarea', { name: 'question', rows: '4', className: 'form-control', placeholder: '\xBFDudas?' }),
+          _react2.default.createElement(
+            'div',
+            { className: 'input-error', style: errors.question ? { display: 'block' } : { display: 'none' }, s: true },
+            errors.question
+          )
         ),
-        _react2.default.createElement('button', null)
+        _react2.default.createElement(
+          'button',
+          { className: 'btn', style: { background: '#62FFC8', color: '#6031BA' } },
+          'ENVIAR'
+        )
       );
     }
   }]);

@@ -49,6 +49,7 @@ class QuoFixed extends Component {
 								{errors.name}
 							</span>
             </div>
+
             <div className="col-lg-3 col-md-3">
               <input
                 type="text"
@@ -61,6 +62,7 @@ class QuoFixed extends Component {
 								{errors.email}
 							</span>
             </div>
+
             <div className="col-lg-2 col-md-2">
               <input
                 type="text"
@@ -70,12 +72,14 @@ class QuoFixed extends Component {
                 value={phone}
               />
             </div>
+
             <div className="col-lg-2 col-md-2">
               <select name="product" onChange={this.handleChange} value={product}>
                 <option value="Desktops">Desktops</option>
                 <option value="Laptops">Laptops</option>
               </select>
             </div>
+						
             <div className="col-lg-2 col-md-2">
               <button className="btn" style={{color: '#6031BA'}}>COTIZAR</button>
             </div>

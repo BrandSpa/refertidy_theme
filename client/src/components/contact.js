@@ -40,22 +40,28 @@ class Contact extends Component {
       <form className="form-contact">
         <div className="form-group">
           <input name="name" type="text" className="form-control" placeholder="Nombre"/>
+          <div className="input-error" style={ errors.name ? {display: 'block'} : {display: 'none'}}>{errors.name}</div>
         </div>
+
         <div className="form-group">
           <input name="email" type="text" className="form-control" placeholder="Email"/>
+          <div className="input-error" style={ errors.email ? {display: 'block'} : {display: 'none'}}>{errors.email}</div>
         </div>
+
         <div className="form-group">
           <input name="phone" type="text" className="form-control" placeholder="Teléfono"/>
         </div>
+
         <div className="form-group">
           <input name="company" type="text" className="form-control" placeholder="Empresa"/>
         </div>
+
         <div className="form-group">
           <textarea name="question" rows="4" className="form-control" placeholder="¿Dudas?"/>
+          <div className="input-error" style={ errors.question ? {display: 'block'} : {display: 'none'}}s>{errors.question}</div>
         </div>
-        <button>
 
-        </button>
+        <button className="btn" style={{background: '#62FFC8', color: '#6031BA'}}>ENVIAR</button>
       </form>
     )
   }
