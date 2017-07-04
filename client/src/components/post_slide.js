@@ -10,7 +10,7 @@ class PostSlide extends Component {
     const { post } = this.props;
 
     return (
-      <div className="post-slide col-lg-4">
+      <div className="post-slide col-lg-4 col-md-6 col-sm-12">
         <div
           className="post-slide__media lazyload"
           onClick={this.openPost}
