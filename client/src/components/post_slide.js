@@ -11,7 +11,7 @@ class PostSlide extends Component {
         <div className="post-slide__content">
             <h2 className="post-slide__title">{post.post_title}</h2>
             <div className="post-slide__excerpt">
-              {post.post_excerpt}
+              {post.post_excerpt.substr(0, 150)}
             </div>
             <button className="btn btn--outline" style={{borderColor: '#6031BA', color: '#6031BA'}}>VER MAS</button>
         </div>

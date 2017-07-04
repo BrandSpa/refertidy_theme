@@ -2052,7 +2052,7 @@ var PostSlide = function (_Component) {
           _react2.default.createElement(
             "div",
             { className: "post-slide__excerpt" },
-            post.post_excerpt
+            post.post_excerpt.substr(0, 150)
           ),
           _react2.default.createElement(
             "button",
