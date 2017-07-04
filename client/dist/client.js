@@ -1442,11 +1442,17 @@ var PostsSlider = function (_Component) {
     return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = PostsSlider.__proto__ || Object.getPrototypeOf(PostsSlider)).call.apply(_ref, [this].concat(args))), _this), _this.state = {
       slide: 0,
       mobile: false
+    }, _this.componentDidMount = function () {
+      window.addEventListener("resize", _this.isMobile);
+    }, _this.isMobile = function () {
+      if (window.innerWidth < 768) {
+        _this.setState({ mobile: true });
+      }
     }, _this.next = function (e) {
       if (e) e.preventDefault();
       var total = _this.props.posts.length / 3 - 1;
 
-      if (window.innerWidth < 768) {
+      if (_this.state.mobile) {
         total = _this.props.posts.length - 1;
       }
 
@@ -1457,7 +1463,7 @@ var PostsSlider = function (_Component) {
       if (e) e.preventDefault();
       var total = _this.props.posts.length / 3 - 1;
 
-      if (window.innerWidth < 768) {
+      if (_this.state.mobile) {
         total = _this.props.posts.length - 1;
       }
 
@@ -1468,22 +1474,17 @@ var PostsSlider = function (_Component) {
   }
 
   _createClass(PostsSlider, [{
-    key: 'componentDidMount',
-    value: function componentDidMount() {
-      window.addEventListener("resize", function () {
-        console.log('resize');
-      });
-    }
-  }, {
     key: 'render',
     value: function render() {
+      var _this2 = this;
+
       var posts = this.props.posts;
 
       var total = posts.length;
       var viewportWidth = total / 3 * 100 + '%';
       var viewportLeft = '-' + this.state.slide * 100 + '%';
 
-      if (window.innerWidth < 768) {
+      if (this.state.mobile) {
         viewportWidth = total * 100 + '%';
       }
 
@@ -1494,7 +1495,7 @@ var PostsSlider = function (_Component) {
           'div',
           { className: 'posts-slider__viewport', style: { width: viewportWidth, left: viewportLeft } },
           posts.map(function (post) {
-            return _react2.default.createElement(_post_slide2.default, { key: post.ID, post: post, total: posts.length });
+            return _react2.default.createElement(_post_slide2.default, { key: post.ID, post: post, total: posts.length, mobile: _this2.state.mobile });
           })
         ),
         _react2.default.createElement(
@@ -1574,7 +1575,7 @@ var PostSlide = function (_Component) {
 
       var postWidth = 200 / (total * 2) + '%';
 
-      if (window.innerWidth < 768) {
+      if (this.props.mobile) {
         postWidth = 100 / total + '%';
       }
 

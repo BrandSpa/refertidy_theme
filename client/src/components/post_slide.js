@@ -10,7 +10,7 @@ class PostSlide extends Component {
     const { post, total } = this.props;
     let postWidth = `${200 / (total * 2)}%`;
 
-    if(window.innerWidth < 768) {
+    if(this.props.mobile) {
       postWidth = `${100 / total}%`;
     }
 

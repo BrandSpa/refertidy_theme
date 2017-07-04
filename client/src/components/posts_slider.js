@@ -7,17 +7,21 @@ class PostsSlider extends Component {
     mobile: false
 	}
 
-  componentDidMount() {
-    window.addEventListener("resize", function() {
-      console.log('resize');
-    });
+  componentDidMount = () => {
+    window.addEventListener("resize", this.isMobile);
+  }
+
+  isMobile = () => {
+    if(window.innerWidth < 768) {
+      this.setState({mobile: true});
+    }
   }
 
 	next = e => {
 		if(e) e.preventDefault();
 	  let total = (this.props.posts.length / 3) - 1;
 
-    if(window.innerWidth < 768) {
+    if(this.state.mobile) {
       total = this.props.posts.length - 1;
     }
 
@@ -30,7 +34,7 @@ class PostsSlider extends Component {
 		if(e) e.preventDefault();
     let total = (this.props.posts.length / 3) - 1;
 
-    if(window.innerWidth < 768) {
+    if(this.state.mobile) {
       total = this.props.posts.length - 1;
     }
 
@@ -45,7 +49,7 @@ class PostsSlider extends Component {
     let viewportWidth = `${total / 3 * 100}%`;
     let viewportLeft = `-${this.state.slide * 100}%`;
 
-    if(window.innerWidth < 768) {
+    if(this.state.mobile) {
       viewportWidth = `${total * 100}%`;
     }
 
@@ -53,7 +57,7 @@ class PostsSlider extends Component {
       <div className="posts-slider">
         <div className="posts-slider__viewport" style={{width: viewportWidth,  left: viewportLeft}}>
           {posts.map(post =>
-            <Post key={post.ID} post={post} total={posts.length} />
+            <Post key={post.ID} post={post} total={posts.length} mobile={this.state.mobile} />
           )}
         </div>
         <div className="posts-slider__btns">
