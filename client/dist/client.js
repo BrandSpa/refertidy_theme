@@ -2156,7 +2156,6 @@ var PostsSlider = function (_Component) {
     value: function render() {
       var posts = this.props.posts;
 
-      var postWidth = 100 / 3 + '%';
 
       return _react2.default.createElement(
         'div',
@@ -2165,7 +2164,7 @@ var PostsSlider = function (_Component) {
           'div',
           { className: 'posts-slider__viewport' },
           posts.map(function (post) {
-            return _react2.default.createElement(_post_slide2.default, { key: post.ID, post: post, postWidth: postWidth });
+            return _react2.default.createElement(_post_slide2.default, { key: post.ID, post: post });
           })
         ),
         _react2.default.createElement(
@@ -2239,14 +2238,14 @@ var PostSlide = function (_Component) {
   _createClass(PostSlide, [{
     key: 'render',
     value: function render() {
-      var _props = this.props,
-          post = _props.post,
-          postWidth = _props.postWidth;
+      var post = this.props.post;
 
+      var postWidth = 100 / 3 + '%';
+      console.log(postWidth);
 
       return _react2.default.createElement(
         'div',
-        { className: 'post-slide', style: { widht: postWidth, float: 'left' } },
+        { className: 'post-slide', style: { width: postWidth, float: 'left' } },
         _react2.default.createElement('div', {
           className: 'post-slide__media lazyload',
           onClick: this.openPost,

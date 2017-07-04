@@ -7,10 +7,12 @@ class PostSlide extends Component {
   }
 
   render() {
-    const { post, postWidth } = this.props;
+    const { post} = this.props;
+    const postWidth = `${100 / 3}%`;
+    console.log(postWidth);
 
     return (
-      <div className="post-slide" style={{widht: postWidth, float: 'left'}}>
+      <div className="post-slide" style={{width: postWidth, float: 'left'}}>
         <div
           className="post-slide__media lazyload"
           onClick={this.openPost}
