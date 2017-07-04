@@ -204,8 +204,10 @@ li {
   .slider__viewport {
     overflow: hidden;
     will-change: transform;
-    -webkit-transition: 'transform 700ms';
-    transition: 'transform 700ms'; }
+    -webkit-transition: -webkit-transform 700ms;
+    transition: -webkit-transform 700ms;
+    transition: transform 700ms;
+    transition: transform 700ms, -webkit-transform 700ms; }
   .slider__btns {
     margin: 0;
     width: 100%;
