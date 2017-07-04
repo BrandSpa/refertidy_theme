@@ -35,7 +35,7 @@ function store_quotation() {
 
 		responseJson($data);
 	} else {
-		responseJson($gump->get_errors_array());
+		responseJson($isValid->get_errors_array());
 	}
 
 	die();
