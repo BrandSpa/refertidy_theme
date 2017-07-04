@@ -246,10 +246,15 @@ var _quo_fixed = __webpack_require__(517);
 
 var _quo_fixed2 = _interopRequireDefault(_quo_fixed);
 
+var _contact = __webpack_require__(521);
+
+var _contact2 = _interopRequireDefault(_contact);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 (0, _reactMultipleRender2.default)(_slider2.default, '.ra-slider');
 (0, _reactMultipleRender2.default)(_quo_fixed2.default, '.ra-quo-fixed');
+(0, _reactMultipleRender2.default)(_contact2.default, '.ra-contact');
 
 /***/ }),
 
@@ -1883,6 +1888,124 @@ module.exports = function (str, opts) {
     return utils.compact(obj);
 };
 
+
+/***/ }),
+
+/***/ 521:
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = __webpack_require__(55);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _axios = __webpack_require__(200);
+
+var _axios2 = _interopRequireDefault(_axios);
+
+var _qs = __webpack_require__(518);
+
+var _qs2 = _interopRequireDefault(_qs);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var endpoint = '/wp-admin/admin-ajax.php';
+
+var Contact = function (_Component) {
+  _inherits(Contact, _Component);
+
+  function Contact() {
+    var _ref;
+
+    var _temp, _this, _ret;
+
+    _classCallCheck(this, Contact);
+
+    for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
+      args[_key] = arguments[_key];
+    }
+
+    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = Contact.__proto__ || Object.getPrototypeOf(Contact)).call.apply(_ref, [this].concat(args))), _this), _this.state = {
+      name: '',
+      email: '',
+      phone: '',
+      company: '',
+      question: '',
+      errors: {}
+    }, _this.handleChange = function (e) {
+      var field = e.target.name;
+      var val = e.target.value;
+      _this.setState(_defineProperty({}, field, val));
+    }, _this.handleSubmit = function (e) {
+      e.preventDefault();
+      var data = _qs2.default.stringify({ action: 'store_contact', data: _this.state });
+
+      _axios2.default.post(endpoint, data).then(function (_ref2) {
+        var data = _ref2.data;
+
+
+        if (Object.keys(data).length > 0) {
+          _this.setState({ errors: data });
+        }
+      });
+    }, _temp), _possibleConstructorReturn(_this, _ret);
+  }
+
+  _createClass(Contact, [{
+    key: 'render',
+    value: function render() {
+      return _react2.default.createElement(
+        'form',
+        null,
+        _react2.default.createElement(
+          'div',
+          { className: 'form-group' },
+          _react2.default.createElement('input', { name: 'name', type: 'text', className: 'form-control', placeholder: 'Nombre' })
+        ),
+        _react2.default.createElement(
+          'div',
+          { className: 'form-group' },
+          _react2.default.createElement('input', { name: 'email', type: 'text', className: 'form-control', placeholder: 'Email' })
+        ),
+        _react2.default.createElement(
+          'div',
+          { className: 'form-group' },
+          _react2.default.createElement('input', { name: 'phone', type: 'text', className: 'form-control', placeholder: 'Tel\xE9fono' })
+        ),
+        _react2.default.createElement(
+          'div',
+          { className: 'form-group' },
+          _react2.default.createElement('input', { name: 'company', type: 'text', className: 'form-control', placeholder: 'Empresa' })
+        ),
+        _react2.default.createElement(
+          'div',
+          { className: 'form-group' },
+          _react2.default.createElement('textarea', { name: 'question', id: '', rows: '3', placeholder: '\xBFDudas?' })
+        )
+      );
+    }
+  }]);
+
+  return Contact;
+}(_react.Component);
+
+exports.default = Contact;
 
 /***/ })
 

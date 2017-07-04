@@ -13,7 +13,7 @@ class Contact extends Component {
       errors: {}
   }
 
-  handleChange = => e {
+  handleChange = e =>  {
     let field = e.target.name;
     let val = e.target.value;
     this.setState({[field]: val});
@@ -30,6 +30,8 @@ class Contact extends Component {
       if(Object.keys(data).length > 0) {
         this.setState({errors: data});
       }
+
+    })
 
   }
 
