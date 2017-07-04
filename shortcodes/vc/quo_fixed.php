@@ -2,7 +2,7 @@
 
 function ra_quo_fixed_vc() {
 	vc_map([
-		'name' => 'Contact fixed',
+		'name' => 'quotation fixed',
 		'base' => 'ra_quo_fixed',
 		'category' => 'RA'
 	]);
