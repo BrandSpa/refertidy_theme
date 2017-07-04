@@ -37,8 +37,8 @@ function store_contact() {
 	if($isValid === false) {
 		responseJson( $gump->get_errors_array() );
 	} else {
-		$res = $wpdb->insert( 'contacts', $data, [ '%s', '%s', '%s', '%s', '%s' ] );
-		responseJson( ['data' => $data, 'is valid' => $isValid] );
+		$res = $wpdb->insert( 'contacts', $data, [ '%s', '%s', '%s', '%s', '%s', '%s' ] );
+		responseJson( $data );
 	}
 
 	die();
