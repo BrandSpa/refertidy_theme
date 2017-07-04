@@ -1960,9 +1960,9 @@ var Contact = function (_Component) {
       privacy: false,
       errors: {}
     }, _this.handleChange = function (e) {
-      var _e$target$name = e.target.name,
-          name = _e$target$name.name,
-          value = _e$target$name.value;
+      var _e$target = e.target,
+          name = _e$target.name,
+          value = _e$target.value;
 
       _this.setState(_defineProperty({}, name, value));
     }, _this.toggleCheckbox = function (e) {

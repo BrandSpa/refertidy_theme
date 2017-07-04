@@ -15,7 +15,7 @@ class Contact extends Component {
   }
 
   handleChange = e =>  {
-    let { name, value } = e.target.name;
+    let { name, value } = e.target;
     this.setState({ [name]: value });
   }
 
