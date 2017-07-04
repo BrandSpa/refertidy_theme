@@ -91,6 +91,21 @@ li {
   font-size: .9rem;
 }
 
+.checkbox {
+  position: relative;
+  display: block;
+  margin-top: 10px;
+  margin-bottom: 10px;
+
+  label {
+    min-height: 20px;
+    padding-left: 20px;
+    margin-bottom: 0;
+    font-weight: 400;
+    cursor: pointer;
+  }
+}
+
 @import 'header';
 @import 'slider';
 @import 'quo_fixed';

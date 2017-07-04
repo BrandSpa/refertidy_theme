@@ -2053,6 +2053,16 @@ var Contact = function (_Component) {
           )
         ),
         _react2.default.createElement(
+          'div',
+          { className: 'checkbox' },
+          _react2.default.createElement(
+            'label',
+            { htmlFor: 'privacy' },
+            _react2.default.createElement('input', { type: 'checkbox', name: 'privacy' }),
+            ' He le\xEDdo y acepto la pol\xEDtica de privacidad'
+          )
+        ),
+        _react2.default.createElement(
           'button',
           { className: 'btn', style: { background: '#62FFC8', color: '#6031BA' } },
           'ENVIAR'
