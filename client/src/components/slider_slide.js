@@ -19,7 +19,9 @@ class SliderSlide extends Component {
 			height: '100vh',
 			width: '100%',
 			position: 'absolute',
-			top: '0'
+			top: '0',
+      backgroundPosition: 'center',
+      backgroundSize: 'cover'
 		};
 
     return (
@@ -41,31 +43,19 @@ class SliderSlide extends Component {
 
         <div
           className="lazyload"
-          style={{
-            ...slideStyle,
-            backgroundPosition: 'center',
-            backgroundSize: 'cover'
-          }}
+          style={slideStyle}
           data-bgset={slide.bg_img}
         />
 
         <div
           className="slider__slide__model lazyload"
-          style={{
-            ...slideStyle,
-            backgroundPosition: 'center',
-            backgroundSize: 'cover'
-          }}
+          style={slideStyle}
           data-bgset={`${slide.model_img_mobile} 768w, ${slide.model_img} 1200w`}
         />
 
         <div
           className="slider__slide__object lazyload"
-          style={{
-            ...slideStyle,
-            backgroundPosition: 'center',
-            backgroundSize: 'cover'
-          }}
+          style={slideStyle}
           data-bgset={`${slide.object_img_mobile} 768w, ${slide.object_img} 1200w`}
         />
 

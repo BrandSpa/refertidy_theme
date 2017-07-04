@@ -379,8 +379,6 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
-
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 var _react = __webpack_require__(55);
@@ -436,7 +434,9 @@ var SliderSlide = function (_Component) {
         height: '100vh',
         width: '100%',
         position: 'absolute',
-        top: '0'
+        top: '0',
+        backgroundPosition: 'center',
+        backgroundSize: 'cover'
       };
 
       return _react2.default.createElement(
@@ -461,26 +461,17 @@ var SliderSlide = function (_Component) {
         ),
         _react2.default.createElement('div', {
           className: 'lazyload',
-          style: _extends({}, slideStyle, {
-            backgroundPosition: 'center',
-            backgroundSize: 'cover'
-          }),
+          style: slideStyle,
           'data-bgset': slide.bg_img
         }),
         _react2.default.createElement('div', {
           className: 'slider__slide__model lazyload',
-          style: _extends({}, slideStyle, {
-            backgroundPosition: 'center',
-            backgroundSize: 'cover'
-          }),
+          style: slideStyle,
           'data-bgset': slide.model_img_mobile + ' 768w, ' + slide.model_img + ' 1200w'
         }),
         _react2.default.createElement('div', {
           className: 'slider__slide__object lazyload',
-          style: _extends({}, slideStyle, {
-            backgroundPosition: 'center',
-            backgroundSize: 'cover'
-          }),
+          style: slideStyle,
           'data-bgset': slide.object_img_mobile + ' 768w, ' + slide.object_img + ' 1200w'
         })
       );
