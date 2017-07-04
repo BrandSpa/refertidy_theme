@@ -9,7 +9,7 @@ class QuoFixed extends Component {
 		email: '',
 		phone: '',
 		product: '',
-    errors: []
+    errors: {}
 	}
 
 	handleChange = e => {
@@ -23,9 +23,11 @@ class QuoFixed extends Component {
 
 		request.post(endpoint, reqData)
 			.then(({data}) => {
+				console.log(data, Array.isArray(data));
 				if(Array.isArray(data)) {
           this.setState({errors: data});
         }
+
 			})
 	}
 

@@ -1358,7 +1358,7 @@ var QuoFixed = function (_Component) {
       email: '',
       phone: '',
       product: '',
-      errors: []
+      errors: {}
     }, _this.handleChange = function (e) {
       _this.setState(_defineProperty({}, e.target.name, e.target.value));
     }, _this.handleSubmit = function (e) {
@@ -1369,6 +1369,7 @@ var QuoFixed = function (_Component) {
       _axios2.default.post(endpoint, reqData).then(function (_ref2) {
         var data = _ref2.data;
 
+        console.log(data, Array.isArray(data));
         if (Array.isArray(data)) {
           _this.setState({ errors: data });
         }
