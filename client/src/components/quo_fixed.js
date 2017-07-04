@@ -19,7 +19,7 @@ class QuoFixed extends Component {
 	handleSubmit = e => {
     if(e) e.preventDefault();
 		const data = this.state;
-		const reqData = qs.stringify({action: 'store_quotation', data});
+		const reqData = qs.stringify({action: 'store_quotation', data});
 
 		request.post(endpoint, reqData)
 			.then(({data}) => {
