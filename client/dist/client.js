@@ -2213,12 +2213,12 @@ var PostsSlider = function (_Component) {
           { className: 'posts-slider__btns' },
           _react2.default.createElement(
             'a',
-            { className: 'slider__btns__left', href: '#', onClick: this.prev },
+            { className: 'posts-slider__btns__left', href: '#', onClick: this.prev },
             '<'
           ),
           _react2.default.createElement(
             'a',
-            { className: 'slider__btns__right', href: '#', onClick: this.next },
+            { className: 'posts-slider__btns__right', href: '#', onClick: this.next },
             '>'
           )
         )
