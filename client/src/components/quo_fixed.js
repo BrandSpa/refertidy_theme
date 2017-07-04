@@ -75,11 +75,13 @@ class QuoFixed extends Component {
 
             <div className="col-lg-2 col-md-2">
               <select name="product" onChange={this.handleChange} value={product}>
+                <option value="">Equipos</option>
                 <option value="Desktops">Desktops</option>
                 <option value="Laptops">Laptops</option>
+                <option value="Servers">Servers</option>
               </select>
             </div>
-						
+
             <div className="col-lg-2 col-md-2">
               <button className="btn" style={{color: '#6031BA'}}>COTIZAR</button>
             </div>

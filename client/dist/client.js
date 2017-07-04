@@ -1450,6 +1450,11 @@ var QuoFixed = function (_Component) {
                 { name: 'product', onChange: this.handleChange, value: product },
                 _react2.default.createElement(
                   'option',
+                  { value: '' },
+                  'Equipos'
+                ),
+                _react2.default.createElement(
+                  'option',
                   { value: 'Desktops' },
                   'Desktops'
                 ),
@@ -1457,6 +1462,11 @@ var QuoFixed = function (_Component) {
                   'option',
                   { value: 'Laptops' },
                   'Laptops'
+                ),
+                _react2.default.createElement(
+                  'option',
+                  { value: 'Servers' },
+                  'Servers'
                 )
               )
             ),
@@ -2058,7 +2068,7 @@ var Contact = function (_Component) {
           _react2.default.createElement(
             'label',
             { htmlFor: 'privacy' },
-            _react2.default.createElement('input', { type: 'checkbox', name: 'privacy' }),
+            _react2.default.createElement('input', { type: 'checkbox', name: 'privacy', onChange: this.handleChange }),
             ' He le\xEDdo y acepto la pol\xEDtica de privacidad'
           )
         ),

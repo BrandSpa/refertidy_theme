@@ -92,11 +92,13 @@ class Contact extends Component {
             value={question}/>
           <div className="input-error" style={ errors.question ? {display: 'block'} : {display: 'none'}}s>{errors.question}</div>
         </div>
+
         <div className="checkbox">
           <label htmlFor="privacy">
-            <input type="checkbox" name="privacy" /> He leído y acepto la política de privacidad
+            <input type="checkbox" name="privacy" onChange={this.handleChange} /> He leído y acepto la política de privacidad
           </label>
         </div>
+
         <button className="btn" style={{background: '#62FFC8', color: '#6031BA'}}>ENVIAR</button>
       </form>
     )
