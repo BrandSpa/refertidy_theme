@@ -2,16 +2,17 @@
 
 function store_contact() {
 	global $wpdb;
+
 	$gump = new GUMP();
+
+	$data = $gump->sanitize($_POST['data']);
 
 	$rules = array(
 		'name'  => 'required',
 		'email' => 'required|valid_email',
 		'question' => 'required',
-		'privacy' => 'boolean'
+		'privacy' => 'contains, 1'
 	);
-
-	$data = $gump->sanitize($_POST['data']);
 
 	$data = [
 		'name' => $data['name'],
