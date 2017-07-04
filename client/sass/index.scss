@@ -85,13 +85,14 @@ li {
 }
 
 
-.lazyload {
-  opacity: 0;
-  transition: opacity .7s;
+.lazyload,
+.lazyloading {
+	opacity: 0;
 }
 
 .lazyloaded {
 	opacity: 1;
+	transition: opacity 300ms;
 }
 
 .input-error {

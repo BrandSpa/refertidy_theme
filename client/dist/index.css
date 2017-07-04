@@ -61,13 +61,14 @@ li {
     background: transparent;
     border: 2px solid #fff; }
 
-.lazyload {
-  opacity: 0;
-  -webkit-transition: opacity .7s;
-  transition: opacity .7s; }
+.lazyload,
+.lazyloading {
+  opacity: 0; }
 
 .lazyloaded {
-  opacity: 1; }
+  opacity: 1;
+  -webkit-transition: opacity 300ms;
+  transition: opacity 300ms; }
 
 .input-error {
   color: #fff;
