@@ -44,8 +44,8 @@ function store_contact() {
 
 		responseJson($data);
 	} else {
-
-		responseJson( GUMP::get_errors_array() );
+		$errors = GUMP::get_errors_array();
+		responseJson( [ 'errors' => $errors ] );
 	}
 
 	die();
