@@ -95,7 +95,13 @@ class Contact extends Component {
 
         <div className="checkbox">
           <label htmlFor="privacy">
-            <input type="checkbox" name="privacy" onChange={this.handleChange} /> He leído y acepto la política de privacidad
+            <input
+              type="checkbox"
+              name="privacy"
+              onChange={this.handleChange}
+              value={true}
+              checked={this.state.privacy}
+            /> He leído y acepto la política de privacidad
           </label>
         </div>
 
