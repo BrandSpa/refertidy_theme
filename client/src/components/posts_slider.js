@@ -2,6 +2,14 @@ import React, { Component } from 'react';
 import Post from './post_slide';
 
 class PostsSlider extends Component {
+  prev = () => {
+
+  }
+
+  next = () => {
+
+  }
+
   render() {
     const { posts } = this.props;
     let viewportWidth = '200%';

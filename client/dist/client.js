@@ -1101,12 +1101,14 @@ var Slider = function (_Component) {
 					_react2.default.createElement(
 						'a',
 						{ className: 'slider__btns__left', href: '#', onClick: this.prev },
-						_react2.default.createElement('i', { className: 'ion-chevron-left' })
+						' ',
+						'<',
+						' '
 					),
 					_react2.default.createElement(
 						'a',
 						{ className: 'slider__btns__right', href: '#', onClick: this.next },
-						_react2.default.createElement('i', { className: 'ion-chevron-right' })
+						'>'
 					)
 				)
 			);
@@ -2146,9 +2148,17 @@ var PostsSlider = function (_Component) {
   _inherits(PostsSlider, _Component);
 
   function PostsSlider() {
+    var _ref;
+
+    var _temp, _this, _ret;
+
     _classCallCheck(this, PostsSlider);
 
-    return _possibleConstructorReturn(this, (PostsSlider.__proto__ || Object.getPrototypeOf(PostsSlider)).apply(this, arguments));
+    for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
+      args[_key] = arguments[_key];
+    }
+
+    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = PostsSlider.__proto__ || Object.getPrototypeOf(PostsSlider)).call.apply(_ref, [this].concat(args))), _this), _this.prev = function () {}, _this.next = function () {}, _temp), _possibleConstructorReturn(_this, _ret);
   }
 
   _createClass(PostsSlider, [{
