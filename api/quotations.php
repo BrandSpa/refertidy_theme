@@ -18,14 +18,14 @@ function store_quotation() {
 		'product' => isset($data['product']) ? $data['product'] : ''
 	];
 
-	GUMP::set_error_messages(array(
+	$gump->set_error_messages(array(
     "validate_required"     => "{field} es requerido",
      "validate_valid_email"  => "{field} debe ser un email valido",
   ));
 
-	GUMP::set_field_name("name", "Nombre");
+	$gump->set_field_name("name", "Nombre");
 
-	$isValid = GUMP::is_valid($data, $rules);
+	$isValid = $gump->is_valid($data, $rules);
 
 	if($isValid === true) {
 		$res = $wpdb->insert( 'quotations',
