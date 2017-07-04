@@ -7,7 +7,7 @@ class PostsSlider extends Component {
 
     return (
       <div className="posts-slider">
-        <div className="posts-slider__viewport" >
+        <div className="posts-slider__viewport" style={{width: '200%', position: 'relative', left: '0'}}>
           {posts.map(post =>
             <Post key={post.ID} post={post} />
           )}
