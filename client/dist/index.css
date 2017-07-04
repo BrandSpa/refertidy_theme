@@ -27,7 +27,9 @@ input, select, textarea {
   border-bottom: 1px solid #fff;
   color: #fff;
   background: transparent;
-  width: 100%;
+  width: 100%; }
+
+input, select {
   height: 35px; }
 
 button {
