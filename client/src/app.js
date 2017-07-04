@@ -1,4 +1,6 @@
 import React from 'react';
+import 'lazysizes/lazysizes.min.js';
+import 'lazysizes/plugins/bgset/ls.bgset.min.js';
 import multipleRender from "react-multiple-render";
 import Slider from './components/slider';
 import SliderImgs from './components/sliderImgs';
