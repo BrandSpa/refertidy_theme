@@ -21,7 +21,7 @@ class Contact extends Component {
 
   handleSubmit = e => {
     e.preventDefault();
-    const data = qs.stringify({action: 'store_quotation', data: this.state});
+    const data = qs.stringify({action: 'store_contact', data: this.state});
 
     request
     .post(endpoint, data)
