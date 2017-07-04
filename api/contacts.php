@@ -17,7 +17,7 @@ function store_contact() {
 		'name' => $data['name'],
 		'email' => $data['email'],
 		'question' => $data['question'],
-		'privacy' => isset($data['privacy']) ? boolval($data['privacy']) : false,
+		'privacy' => $data['privacy'] == 'false' ? false : true,
 		'phone' => isset($data['phone']) ? $data['phone'] : '',
 		'company' => isset($data['company']) ? $data['company'] : ''
 	];
