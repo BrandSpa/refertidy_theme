@@ -105,9 +105,10 @@ class Contact extends Component {
               name="privacy"
               checked={privacy}
             /> He leído y acepto la política de privacidad
+            <div className="input-error" style={ errors.privacy ? {display: 'block'} : {display: 'none'}}>Debe aceptar la política de privacidad</div>
           </label>
         </div>
-        <div className="input-error" style={ errors.privacy ? {display: 'block'} : {display: 'none'}}>Debe aceptar la política de privacidad</div>
+
         <button className="btn" style={{background: '#62FFC8', color: '#6031BA'}}>ENVIAR</button>
       </form>
     )

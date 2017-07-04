@@ -2082,13 +2082,13 @@ var Contact = function (_Component) {
               name: 'privacy',
               checked: privacy
             }),
-            ' He le\xEDdo y acepto la pol\xEDtica de privacidad'
+            ' He le\xEDdo y acepto la pol\xEDtica de privacidad',
+            _react2.default.createElement(
+              'div',
+              { className: 'input-error', style: errors.privacy ? { display: 'block' } : { display: 'none' } },
+              'Debe aceptar la pol\xEDtica de privacidad'
+            )
           )
-        ),
-        _react2.default.createElement(
-          'div',
-          { className: 'input-error', style: errors.privacy ? { display: 'block' } : { display: 'none' } },
-          'Debe aceptar la pol\xEDtica de privacidad'
         ),
         _react2.default.createElement(
           'button',
