@@ -11,6 +11,7 @@ function ra_quotations_migration() {
             phone varchar(55),
             email varchar(55),
             product varchar(55),
+            created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
             UNIQUE KEY id (id)
         ) $charset_collate;";
 

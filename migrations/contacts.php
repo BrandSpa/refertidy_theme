@@ -10,8 +10,9 @@ function ra_contacts_migration() {
             name varchar(55),
             phone varchar(55),
             email varchar(55),
-            company varchar(55),
+            company varchar(155),
             question TEXT,
+						created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
             UNIQUE KEY id (id)
         ) $charset_collate;";
 
