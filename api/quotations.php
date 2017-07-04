@@ -1,19 +1,12 @@
 <?php
-$dir_base = get_template_directory();
-require_once $dir_base . '/vendor/autoload.php';
-require_once $dir_base . '/lib/response_json.php';
 
-add_action( 'wp_ajax_nopriv_store_contact', 'store_contact' );
-add_action( 'wp_ajax_store_contact', 'store_contact' );
-
-function store_contact() {
+function store_quotation() {
 	global $wpdb;
 	$gump = new GUMP();
 
 	$rules = array(
 		'name'  => 'required',
 		'email' => 'required|valid_email',
-		'question' => 'required'
 	);
 
 	$data = $gump->sanitize($_POST['data']);
@@ -21,9 +14,8 @@ function store_contact() {
 	$data = [
 		'name' => $data['name'],
 		'email' => $data['email'],
-		'question' => $data['question'],
 		'phone' => isset($data['phone']) ? $data['phone'] : '',
-		'company' => isset($data['company']) ? $data['company'] : ''
+		'product' => isset($data['product']) ? $data['product'] : ''
 	];
 
 	GUMP::set_error_messages(array(
@@ -32,14 +24,13 @@ function store_contact() {
   ));
 
 	GUMP::set_field_name("name", "Nombre");
-	GUMP::set_field_name("question", "Duda");
 
 	$isValid = GUMP::is_valid($data, $rules);
 
 	if($isValid === true) {
-		$res = $wpdb->insert( 'contacts',
+		$res = $wpdb->insert( 'questions',
 			$data,
-			array( '%s', '%s', '%s', '%s', '%s' )
+			array( '%s', '%s', '%s', '%s' )
 		);
 
 		responseJson($data);
@@ -49,3 +40,6 @@ function store_contact() {
 
 	die();
 }
+
+add_action( 'wp_ajax_nopriv_store_quotation', 'store_quotation' );
+add_action( 'wp_ajax_store_quotation', 'store_quotation' );

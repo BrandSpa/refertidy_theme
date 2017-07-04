@@ -1,4 +1,5 @@
 <?php
+require_once 'vendor/autoload.php';
 
 //MIGRATIONS
 include_once 'migrations/contacts.php';
@@ -17,8 +18,10 @@ include_once 'shortcodes/vc/quo_fixed.php';
 
 //LIBS
 include_once 'lib/clean_menu.php';
+require_once 'lib/response_json.php';
 
 //API
+include_once 'api/quotations.php';
 include_once 'api/contacts.php';
 
 //MENUS
