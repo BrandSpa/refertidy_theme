@@ -1996,8 +1996,9 @@ var Contact = function (_Component) {
         _react2.default.createElement(
           'div',
           { className: 'form-group' },
-          _react2.default.createElement('textarea', { name: 'question', rows: '3', className: 'form-control', placeholder: '\xBFDudas?' })
-        )
+          _react2.default.createElement('textarea', { name: 'question', rows: '4', className: 'form-control', placeholder: '\xBFDudas?' })
+        ),
+        _react2.default.createElement('button', null)
       );
     }
   }]);
