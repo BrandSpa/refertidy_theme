@@ -39,7 +39,7 @@ class Contact extends Component {
     const {name, email, phone, company, question, errors} = this.state;
 
     return (
-      <form className="form-contact">
+      <form className="form-contact" onSubmit={this.handleSubmit}>
         <div className="form-group">
           <input name="name" type="text" className="form-control" placeholder="Nombre" value={name}/>
           <div className="input-error" style={ errors.name ? {display: 'block'} : {display: 'none'}}>{errors.name}</div>

@@ -1981,7 +1981,7 @@ var Contact = function (_Component) {
 
       return _react2.default.createElement(
         'form',
-        { className: 'form-contact' },
+        { className: 'form-contact', onSubmit: this.handleSubmit },
         _react2.default.createElement(
           'div',
           { className: 'form-group' },
