@@ -645,7 +645,7 @@ var QuoFixed = function (_Component) {
     }, _this.handleSubmit = function (e) {
       if (e) e.preventDefault();
       var data = _this.state;
-      var reqData = _qs2.default.stringify({ action: 'store_quotation', data: data });
+      var reqData = _qs2.default.stringify({ action: 'store_quotation', data: data });
 
       _axios2.default.post(endpoint, reqData).then(function (_ref2) {
         var data = _ref2.data;

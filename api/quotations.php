@@ -28,7 +28,7 @@ function store_quotation() {
 	$isValid = GUMP::is_valid($data, $rules);
 
 	if($isValid === true) {
-		$res = $wpdb->insert( 'questions',
+		$res = $wpdb->insert( 'quotations',
 			$data,
 			array( '%s', '%s', '%s', '%s' )
 		);
