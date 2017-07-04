@@ -1447,6 +1447,8 @@ var PostsSlider = function (_Component) {
     }, _this.isMobile = function () {
       if (window.innerWidth < 768) {
         _this.setState({ mobile: true });
+      } else {
+        _this.setState({ mobile: false });
       }
     }, _this.next = function (e) {
       if (e) e.preventDefault();

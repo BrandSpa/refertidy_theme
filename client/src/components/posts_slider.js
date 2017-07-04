@@ -14,6 +14,8 @@ class PostsSlider extends Component {
   isMobile = () => {
     if(window.innerWidth < 768) {
       this.setState({mobile: true});
+    } else {
+      this.setState({mobile: false});
     }
   }
 
