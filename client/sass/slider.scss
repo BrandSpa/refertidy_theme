@@ -31,9 +31,13 @@
 }
 
 .slider {
+  position: relative;
+  overflow: hidden
 
   &__viewport {
     overflow: hidden;
+    will-change: transform;
+    transition: 'transform 700ms'
   }
 
   &__btns {

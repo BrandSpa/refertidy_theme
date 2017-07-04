@@ -1073,15 +1073,15 @@ var Slider = function (_Component) {
 
 			var viewportStyle = {
 				width: 100 * slides.length + '%',
-				transform: 'translate3d( -' + 100 / slides.length * this.state.slide + '%, 0, 0 )',
-				transition: 'transform 700ms'
+				transform: 'translate3d( -' + 100 / slides.length * this.state.slide + '%, 0, 0 )'
+
 			};
 
 			var slideWidth = 100 / slides.length + '%';
 
 			return _react2.default.createElement(
 				'div',
-				{ className: 'slider', style: { position: 'relative', overflow: 'hidden' } },
+				{ className: 'slider' },
 				_react2.default.createElement(
 					'div',
 					{ className: 'slider__viewport', style: viewportStyle },

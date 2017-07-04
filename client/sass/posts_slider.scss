@@ -64,10 +64,16 @@
 
     &__left {
       left: -40px;
+      @media #{$s} {
+        left: 0;
+      }
     }
 
     &__right {
       right: -40px;
+      @media #{$s} {
+        right: 0;
+      }
     }
 
   }
