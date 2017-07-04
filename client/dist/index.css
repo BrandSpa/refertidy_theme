@@ -313,7 +313,9 @@ li {
 .post-slide__content {
   background: #F8F8F8;
   border-radius: 0 0 0 100px;
-  padding: 20px 20px 40px 20px; }
+  padding: 20px 20px 40px 20px;
+  float: left;
+  width: 100%; }
 
 .post-slide__title {
   font-size: 1.66667rem;
@@ -325,3 +327,6 @@ li {
   font-size: 1.33333rem;
   color: #747E86;
   margin: 0 0 40px 0; }
+
+.post-slide .btn {
+  float: right; }

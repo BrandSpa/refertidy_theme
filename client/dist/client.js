@@ -2055,8 +2055,8 @@ var PostSlide = function (_Component) {
             post.post_excerpt.substr(0, 150)
           ),
           _react2.default.createElement(
-            "button",
-            { className: "btn btn--outline", style: { borderColor: '#6031BA', color: '#6031BA' } },
+            "a",
+            { href: post.guid, className: "btn btn--outline", style: { borderColor: '#6031BA', color: '#6031BA' } },
             "VER MAS"
           )
         )
