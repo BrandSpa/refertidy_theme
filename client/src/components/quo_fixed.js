@@ -4,6 +4,7 @@ import qs from 'qs';
 const endpoint = '/wp-admin/admin-ajax.php';
 
 class QuoFixed extends Component {
+
 	state = {
 		name: '',
 		email: '',

@@ -58,6 +58,11 @@ li {
   -webkit-filter: blur(0);
   filter: blur(0); }
 
+.input-error {
+  color: #fff;
+  padding: 10px 0 0 0;
+  font-size: .9rem; }
+
 .app-header {
   position: fixed;
   top: 0;
@@ -243,8 +248,7 @@ li {
     width: 100%;
     padding: 0 50px; }
   .quo-fixed__errors {
-    color: #fff;
-    padding: 10px 50px 0 50px; }
+    color: #fff; }
   .quo-fixed input::-webkit-input-placeholder {
     color: #fff; }
   .quo-fixed input:-moz-placeholder {
