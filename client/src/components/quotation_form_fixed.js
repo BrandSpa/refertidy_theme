@@ -3,7 +3,7 @@ import request from 'axios';
 import qs from 'qs';
 const endpoint = '/wp-admin/admin-ajax.php';
 
-class QuoFixed extends Component {
+class QuotationFormFixed extends Component {
 
 	state = {
 		name: '',
@@ -92,4 +92,4 @@ class QuoFixed extends Component {
   }
 }
 
-export default QuoFixed;
+export default QuotationFormFixed;
