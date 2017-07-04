@@ -44,7 +44,7 @@ class PostsSlider extends Component {
 
     return (
       <div className="posts-slider">
-        <div className="posts-slider__viewport" style={{width: viewportWidth, position: 'relative', left: viewportLeft}}>
+        <div className="posts-slider__viewport" style={{width: viewportWidth,  left: viewportLeft}}>
           {posts.map(post =>
             <Post key={post.ID} post={post} total={posts.length} />
           )}

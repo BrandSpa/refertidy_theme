@@ -347,7 +347,7 @@ li {
     z-index: 2;
     width: 100%;
     height: 100%; }
-    .posts-slider__btns__left, .posts-slider__btns__right {
+    .posts-slider__btns a {
       position: absolute;
       top: 0;
       bottom: 0;

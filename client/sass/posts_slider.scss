@@ -49,7 +49,8 @@
     z-index: 2;
     width: 100%;
     height: 100%;
-    &__left, &__right {
+
+    a {
       position: absolute;
       top: 0;
       bottom: 0;
@@ -58,6 +59,7 @@
       margin: auto;
       font-size: 30px;
     }
+    
     &__left {
       left: 40px;
     }
