@@ -25,7 +25,9 @@ function store_quotation() {
 
 	$gump->set_field_name("name", "Nombre");
 
-	$isValid = $gump->is_valid($data, $rules);
+	$gump->validation_rules($rules);
+
+	$gump->run($data);
 
 	if($isValid === true) {
 		$res = $wpdb->insert( 'quotations',
@@ -35,7 +37,7 @@ function store_quotation() {
 
 		responseJson($data);
 	} else {
-		responseJson($isValid->get_errors_array());
+		responseJson($gump->get_errors_array());
 	}
 
 	die();
