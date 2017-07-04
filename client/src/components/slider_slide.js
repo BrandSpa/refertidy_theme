@@ -48,13 +48,13 @@ class SliderSlide extends Component {
         />
 
         <div
-          className="slider__slide__model lazyload"
+          className="slider__slide__model lazyload blur-up"
           style={slideStyle}
           data-bgset={`${slide.model_img_mobile} 768w, ${slide.model_img} 1200w`}
         />
 
         <div
-          className="slider__slide__object lazyload"
+          className="slider__slide__object lazyload blur-up"
           style={slideStyle}
           data-bgset={`${slide.object_img_mobile} 768w, ${slide.object_img} 1200w`}
         />
