@@ -1466,7 +1466,7 @@ var QuoFixed = function (_Component) {
               _react2.default.createElement(
                 'button',
                 { className: 'btn', style: { color: '#6031BA' } },
-                'Cotizar'
+                'COTIZAR'
               )
             )
           )
