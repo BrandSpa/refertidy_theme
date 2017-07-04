@@ -8,7 +8,12 @@ class PostsSlider extends Component {
 
 	next = e => {
 		if(e) e.preventDefault();
-		const total = this.props.posts.length - 1;
+	  let total = this.props.posts.length / 3;
+
+    if(window.innerWidth < 768) {
+      total = this.props.posts.length - 1;
+    }
+
 		const current = this.state.slide;
 		const slide = current < total ? current + 1 : 0;
 		this.setState({ slide });
@@ -16,7 +21,12 @@ class PostsSlider extends Component {
 
 	prev = e => {
 		if(e) e.preventDefault();
-		const total = this.props.posts.length;
+    let total = this.props.posts.length / 3;
+
+    if(window.innerWidth < 768) {
+      total = this.props.posts.length - 1;
+    }
+
 		const current = this.state.slide;
 		const slide = current > 0 ? current - 1 : 0;
 		this.setState({ slide });
