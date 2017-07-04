@@ -8,9 +8,11 @@ class PostsSlider extends Component {
     return (
       <div className="posts-slider">
         <div className="posts-slider__viewport">
+          <div className="row">
           {posts.map(post =>
             <Post key={post.ID} post={post} />
           )}
+          </div>
         </div>
       </div>
     )

@@ -2160,9 +2160,13 @@ var PostsSlider = function (_Component) {
         _react2.default.createElement(
           'div',
           { className: 'posts-slider__viewport' },
-          posts.map(function (post) {
-            return _react2.default.createElement(_post_slide2.default, { key: post.ID, post: post });
-          })
+          _react2.default.createElement(
+            'div',
+            { className: 'row' },
+            posts.map(function (post) {
+              return _react2.default.createElement(_post_slide2.default, { key: post.ID, post: post });
+            })
+          )
         )
       );
     }
