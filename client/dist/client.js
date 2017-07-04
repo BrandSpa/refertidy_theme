@@ -461,10 +461,12 @@ var SliderSlide = function (_Component) {
           })
         }),
         _react2.default.createElement('div', {
-          className: 'slider__slide__model',
+          className: 'slider__slide__model lazyload',
           style: _extends({}, slideStyle, {
-            background: 'url(' + (mobile ? slide.model_img_mobile : slide.model_img) + ') center / cover no-repeat'
-          })
+            backgroundPosition: 'center',
+            backgroundSize: 'cover'
+          }),
+          'data-bgset': slide.model_img_mobile + ' 768w, ' + slide.model_img + ' 1200w'
         }),
         _react2.default.createElement('div', {
           className: 'slider__slide__object',
