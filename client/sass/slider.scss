@@ -31,7 +31,7 @@
 }
 
 .slider {
-  
+
   &__viewport {
     overflow: hidden;
   }
@@ -74,7 +74,7 @@
 
   &__slide {
     &__content {
-       max-width: 500px; 
+       max-width: 500px;
        position: absolute;
        z-index: 998;
        margin-top: 15%;
@@ -103,9 +103,10 @@
 
 .slider__btns .slider__btns__left {
   left: 40px;
+  font-size: 25px;
 }
 
 .slider__btns .slider__btns__right {
   right: 40px;
+  font-size: 25px;
 }
-

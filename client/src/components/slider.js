@@ -47,8 +47,8 @@ class Slider extends Component {
 					)}
 				</div>
 				<div className="slider__btns">
-					<a className="slider__btns__left" href="#" onClick={this.prev}>{'<'}</a>
-					<a className="slider__btns__right" href="#" onClick={this.next}>{'>'}</a>
+					<a className="slider__btns__left" href="#" onClick={this.prev}><i className="ion-chevron-left"></i></a>
+					<a className="slider__btns__right" href="#" onClick={this.next}><i className="ion-chevron-right"></i></a>
 				</div>
 			</div>
 		)

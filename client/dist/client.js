@@ -1101,12 +1101,12 @@ var Slider = function (_Component) {
 					_react2.default.createElement(
 						'a',
 						{ className: 'slider__btns__left', href: '#', onClick: this.prev },
-						'<'
+						_react2.default.createElement('i', { className: 'ion-chevron-left' })
 					),
 					_react2.default.createElement(
 						'a',
 						{ className: 'slider__btns__right', href: '#', onClick: this.next },
-						'>'
+						_react2.default.createElement('i', { className: 'ion-chevron-right' })
 					)
 				)
 			);
