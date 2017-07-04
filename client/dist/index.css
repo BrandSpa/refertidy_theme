@@ -313,7 +313,7 @@ li {
 .post-slide__content {
   background: #F8F8F8;
   border-radius: 0 0 0 100px;
-  padding: 40px; }
+  padding: 20px 20px 40px 20px; }
 
 .post-slide__title {
   font-size: 1.66667rem;
