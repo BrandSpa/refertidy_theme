@@ -1970,13 +1970,22 @@ var Contact = function (_Component) {
   _createClass(Contact, [{
     key: 'render',
     value: function render() {
+      var _state = this.state,
+          name = _state.name,
+          email = _state.email,
+          phone = _state.phone,
+          company = _state.company,
+          question = _state.question,
+          errors = _state.errors;
+
+
       return _react2.default.createElement(
         'form',
         { className: 'form-contact' },
         _react2.default.createElement(
           'div',
           { className: 'form-group' },
-          _react2.default.createElement('input', { name: 'name', type: 'text', className: 'form-control', placeholder: 'Nombre' }),
+          _react2.default.createElement('input', { name: 'name', type: 'text', className: 'form-control', placeholder: 'Nombre', value: name }),
           _react2.default.createElement(
             'div',
             { className: 'input-error', style: errors.name ? { display: 'block' } : { display: 'none' } },
@@ -1986,7 +1995,7 @@ var Contact = function (_Component) {
         _react2.default.createElement(
           'div',
           { className: 'form-group' },
-          _react2.default.createElement('input', { name: 'email', type: 'text', className: 'form-control', placeholder: 'Email' }),
+          _react2.default.createElement('input', { name: 'email', type: 'text', className: 'form-control', placeholder: 'Email', value: email }),
           _react2.default.createElement(
             'div',
             { className: 'input-error', style: errors.email ? { display: 'block' } : { display: 'none' } },
@@ -1996,17 +2005,17 @@ var Contact = function (_Component) {
         _react2.default.createElement(
           'div',
           { className: 'form-group' },
-          _react2.default.createElement('input', { name: 'phone', type: 'text', className: 'form-control', placeholder: 'Tel\xE9fono' })
+          _react2.default.createElement('input', { name: 'phone', type: 'text', className: 'form-control', placeholder: 'Tel\xE9fono', value: phone })
         ),
         _react2.default.createElement(
           'div',
           { className: 'form-group' },
-          _react2.default.createElement('input', { name: 'company', type: 'text', className: 'form-control', placeholder: 'Empresa' })
+          _react2.default.createElement('input', { name: 'company', type: 'text', className: 'form-control', placeholder: 'Empresa', value: name })
         ),
         _react2.default.createElement(
           'div',
           { className: 'form-group' },
-          _react2.default.createElement('textarea', { name: 'question', rows: '4', className: 'form-control', placeholder: '\xBFDudas?' }),
+          _react2.default.createElement('textarea', { name: 'question', rows: '4', className: 'form-control', placeholder: '\xBFDudas?', value: name }),
           _react2.default.createElement(
             'div',
             { className: 'input-error', style: errors.question ? { display: 'block' } : { display: 'none' }, s: true },
