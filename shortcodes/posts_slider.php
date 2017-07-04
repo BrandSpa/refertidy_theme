@@ -28,4 +28,4 @@ function ra_posts_slider_sc( $atts ) {
 	return ob_get_clean();
 }
 
-add_shortcode( 'ra_quo_fixed', 'ra_posts_slider_sc' );
+add_shortcode( 'ra_posts_slider', 'ra_posts_slider_sc' );

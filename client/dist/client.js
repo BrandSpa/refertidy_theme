@@ -276,8 +276,11 @@ var _posts_slider2 = _interopRequireDefault(_posts_slider);
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 (0, _reactMultipleRender2.default)(_slider2.default, '.ra-slider');
+
 (0, _reactMultipleRender2.default)(_quotation_form_fixed2.default, '.ra-quotation-form-fixed');
+
 (0, _reactMultipleRender2.default)(_contact2.default, '.ra-contact');
+
 (0, _reactMultipleRender2.default)(_posts_slider2.default, '.ra-posts-slider');
 
 /***/ }),
