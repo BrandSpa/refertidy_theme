@@ -1369,9 +1369,9 @@ var QuoFixed = function (_Component) {
       _axios2.default.post(endpoint, reqData).then(function (_ref2) {
         var data = _ref2.data;
 
-        console.log(data, Array.isArray(data));
+        console.log(data);
 
-        if (Array.isArray(data)) {
+        if (Object.keys(data).length > 0) {
           _this.setState({ errors: data });
         }
       });
@@ -1406,7 +1406,12 @@ var QuoFixed = function (_Component) {
                 placeholder: 'Nombre',
                 onChange: this.handleChange,
                 value: name
-              })
+              }),
+              _react2.default.createElement(
+                'span',
+                { className: 'input-error', style: errors.name ? { display: 'block' } : { display: 'none' } },
+                errors.name
+              )
             ),
             _react2.default.createElement(
               'div',
@@ -1417,7 +1422,12 @@ var QuoFixed = function (_Component) {
                 placeholder: 'Email',
                 onChange: this.handleChange,
                 value: email
-              })
+              }),
+              _react2.default.createElement(
+                'span',
+                { className: 'input-error', style: errors.email ? { display: 'block' } : { display: 'none' } },
+                errors.email
+              )
             ),
             _react2.default.createElement(
               'div',
@@ -1458,14 +1468,7 @@ var QuoFixed = function (_Component) {
               )
             )
           )
-        ),
-        errors.length > 0 ? _react2.default.createElement(
-          'div',
-          { className: 'row quo-fixed__errors' },
-          errors.map(function (err) {
-            return _react2.default.createElement('div', { className: 'col-lg-3', dangerouslySetInnerHTML: { __html: err } });
-          })
-        ) : ''
+        )
       );
     }
   }]);

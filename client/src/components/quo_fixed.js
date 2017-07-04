@@ -24,9 +24,9 @@ class QuoFixed extends Component {
 		request
 		.post(endpoint, reqData)
 		.then(({data}) => {
-			console.log(data, Array.isArray(data));
+			console.log(data);
 
-			if(Array.isArray(data)) {
+			if(Object.keys(data).length > 0) {
         this.setState({errors: data});
       }
 
@@ -47,6 +47,9 @@ class QuoFixed extends Component {
                 onChange={this.handleChange}
                 value={name}
               />
+							<span className="input-error" style={errors.name ? {display: 'block'} : {display: 'none'}}>
+								{errors.name}
+							</span>
             </div>
             <div className="col-lg-3 col-md-3">
               <input
@@ -56,6 +59,9 @@ class QuoFixed extends Component {
                 onChange={this.handleChange}
                 value={email}
               />
+							<span className="input-error" style={errors.email ? {display: 'block'} : {display: 'none'}}>
+								{errors.email}
+							</span>
             </div>
             <div className="col-lg-2 col-md-2">
               <input
@@ -77,15 +83,6 @@ class QuoFixed extends Component {
             </div>
           </div>
         </form>
-
-        {errors.length > 0 ?
-          <div className="row quo-fixed__errors">
-              {errors.map(err =>
-                <div className="col-lg-3" dangerouslySetInnerHTML={{__html: err}} />
-              )}
-          </div>
-        :''}
-
       </div>
     );
   }
