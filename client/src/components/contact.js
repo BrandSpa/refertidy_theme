@@ -99,11 +99,10 @@ class Contact extends Component {
         </div>
 
         <div className="checkbox">
-          <label htmlFor="privacy">
+          <label htmlFor="privacy" onClick={this.toggleCheckbox}>
             <input
               type="checkbox"
               name="privacy"
-              onChange={this.toggleCheckbox}
               checked={this.state.privacy}
             /> He leído y acepto la política de privacidad
           </label>

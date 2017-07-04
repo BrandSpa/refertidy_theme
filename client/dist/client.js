@@ -2070,11 +2070,10 @@ var Contact = function (_Component) {
           { className: 'checkbox' },
           _react2.default.createElement(
             'label',
-            { htmlFor: 'privacy' },
+            { htmlFor: 'privacy', onClick: this.toggleCheckbox },
             _react2.default.createElement('input', {
               type: 'checkbox',
               name: 'privacy',
-              onChange: this.toggleCheckbox,
               checked: this.state.privacy
             }),
             ' He le\xEDdo y acepto la pol\xEDtica de privacidad'
