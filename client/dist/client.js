@@ -2087,7 +2087,7 @@ var Contact = function (_Component) {
         ),
         _react2.default.createElement(
           'div',
-          { className: 'input-error', style: privacyErr ? { display: 'block' } : { display: 'none' } },
+          { className: 'input-error', style: errors.privacy ? { display: 'block' } : { display: 'none' } },
           'Debe aceptar la pol\xEDtica de privacidad'
         ),
         _react2.default.createElement(
