@@ -83,6 +83,10 @@ li {
     cursor: pointer;
     color: #fff;
     font-size: 0.73333rem; }
+  .checkbox input[type=checbox] {
+    position: absolute;
+    margin-top: 4px \ 9;
+    margin-left: -20px; }
 
 .app-header {
   position: fixed;
