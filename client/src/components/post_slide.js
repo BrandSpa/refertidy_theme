@@ -6,8 +6,8 @@ class PostSlide extends Component {
     const { post } = this.props;
 
     return (
-      <div className="post-slide">
-        <div className="post-slide__media" data-bgset={post.post_thumbnail}></div>
+      <div className="post-slide col-lg-3">
+        <div className="post-slide__media lazyload" data-bgset={post.post_thumbnail}></div>
         <div className="post-slide__content">
             <h2 className="post-slide__title">{post.post_title}</h2>
             <div className="post-slide__excerpt">

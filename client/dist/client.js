@@ -2216,8 +2216,8 @@ var PostSlide = function (_Component) {
 
       return _react2.default.createElement(
         "div",
-        { className: "post-slide" },
-        _react2.default.createElement("div", { className: "post-slide__media", "data-bgset": post.post_thumbnail }),
+        { className: "post-slide col-lg-3" },
+        _react2.default.createElement("div", { className: "post-slide__media lazyload", "data-bgset": post.post_thumbnail }),
         _react2.default.createElement(
           "div",
           { className: "post-slide__content" },
