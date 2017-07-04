@@ -37,7 +37,7 @@ class Contact extends Component {
 
   render() {
     return (
-      <form>
+      <form className="form-contact">
         <div className="form-group">
           <input name="name" type="text" className="form-control" placeholder="Nombre"/>
         </div>
@@ -51,7 +51,7 @@ class Contact extends Component {
           <input name="company" type="text" className="form-control" placeholder="Empresa"/>
         </div>
         <div className="form-group">
-          <textarea name="question" id="" rows="3" placeholder="¿Dudas?"></textarea>
+          <textarea name="question" id="" rows="3" className="form-control" placeholder="¿Dudas?"></textarea>
         </div>
       </form>
     )

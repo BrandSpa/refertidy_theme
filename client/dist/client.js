@@ -1972,7 +1972,7 @@ var Contact = function (_Component) {
     value: function render() {
       return _react2.default.createElement(
         'form',
-        null,
+        { className: 'form-contact' },
         _react2.default.createElement(
           'div',
           { className: 'form-group' },
@@ -1996,7 +1996,7 @@ var Contact = function (_Component) {
         _react2.default.createElement(
           'div',
           { className: 'form-group' },
-          _react2.default.createElement('textarea', { name: 'question', id: '', rows: '3', placeholder: '\xBFDudas?' })
+          _react2.default.createElement('textarea', { name: 'question', id: '', rows: '3', className: 'form-control', placeholder: '\xBFDudas?' })
         )
       );
     }

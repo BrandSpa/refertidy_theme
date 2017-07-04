@@ -259,3 +259,17 @@ li {
     color: #fff; }
   .quo-fixed input:-ms-input-placeholder {
     color: #fff; }
+
+.form-contact input::-webkit-input-placeholder, .form-contact textarea::-webkit-input-placeholder {
+  color: #fff; }
+
+.form-contact input:-moz-placeholder, .form-contact textarea:-moz-placeholder {
+  /* Firefox 18- */
+  color: #fff; }
+
+.form-contact input::-moz-placeholder, .form-contact textarea::-moz-placeholder {
+  /* Firefox 19+ */
+  color: #fff; }
+
+.form-contact input:-ms-input-placeholder, .form-contact textarea:-ms-input-placeholder {
+  color: #fff; }
