@@ -3,8 +3,15 @@ import Post from './post_slide';
 
 class PostsSlider extends Component {
   state = {
-		slide: 0
+		slide: 0,
+    mobile: false
 	}
+
+  componentDidMount() {
+    window.addEventListener("resize", function() {
+      console.log('resize');
+    });
+  }
 
 	next = e => {
 		if(e) e.preventDefault();

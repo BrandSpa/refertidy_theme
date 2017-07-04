@@ -1440,7 +1440,8 @@ var PostsSlider = function (_Component) {
     }
 
     return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = PostsSlider.__proto__ || Object.getPrototypeOf(PostsSlider)).call.apply(_ref, [this].concat(args))), _this), _this.state = {
-      slide: 0
+      slide: 0,
+      mobile: false
     }, _this.next = function (e) {
       if (e) e.preventDefault();
       var total = _this.props.posts.length / 3 - 1;
@@ -1467,6 +1468,13 @@ var PostsSlider = function (_Component) {
   }
 
   _createClass(PostsSlider, [{
+    key: 'componentDidMount',
+    value: function componentDidMount() {
+      window.addEventListener("resize", function () {
+        console.log('resize');
+      });
+    }
+  }, {
     key: 'render',
     value: function render() {
       var posts = this.props.posts;
