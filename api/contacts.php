@@ -31,11 +31,11 @@ function store_contact() {
 	$gump->validation_rules($rules);
 	$isValid = $gump->run($data);
 
-	if($isValid === true) {
+	if($isValid === false) {
+		responseJson( $gump->get_errors_array() );
+	} else {
 		$res = $wpdb->insert( 'contacts', $data, [ '%s', '%s', '%s', '%s', '%s' ] );
 		responseJson( ['data' => $data, 'is valid' => $isValid] );
-	} else {
-		responseJson( $gump->get_errors_array() );
 	}
 
 	die();
