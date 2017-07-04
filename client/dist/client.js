@@ -2049,7 +2049,7 @@ var PostSlide = function (_Component) {
 
       return _react2.default.createElement(
         "div",
-        { className: "post-slide col-lg-3" },
+        { className: "post-slide col-lg-4" },
         _react2.default.createElement("div", {
           className: "post-slide__media lazyload",
           onClick: this.openPost,

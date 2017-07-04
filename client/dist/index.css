@@ -333,3 +333,9 @@ li {
 
 .post-slide .btn {
   float: right; }
+
+.posts-slider {
+  overflow: hidden; }
+  .posts-slider .row {
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap; }

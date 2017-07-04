@@ -33,3 +33,11 @@
   }
 
 }
+
+.posts-slider {
+  overflow: hidden;
+
+  .row {
+    flex-wrap: nowrap;
+  }
+}
