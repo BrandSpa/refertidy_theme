@@ -2026,9 +2026,19 @@ var PostSlide = function (_Component) {
   _inherits(PostSlide, _Component);
 
   function PostSlide() {
+    var _ref;
+
+    var _temp, _this, _ret;
+
     _classCallCheck(this, PostSlide);
 
-    return _possibleConstructorReturn(this, (PostSlide.__proto__ || Object.getPrototypeOf(PostSlide)).apply(this, arguments));
+    for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
+      args[_key] = arguments[_key];
+    }
+
+    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = PostSlide.__proto__ || Object.getPrototypeOf(PostSlide)).call.apply(_ref, [this].concat(args))), _this), _this.openPost = function () {
+      window.location = _this.props.post.guid;
+    }, _temp), _possibleConstructorReturn(_this, _ret);
   }
 
   _createClass(PostSlide, [{
@@ -2040,7 +2050,11 @@ var PostSlide = function (_Component) {
       return _react2.default.createElement(
         "div",
         { className: "post-slide col-lg-3" },
-        _react2.default.createElement("div", { className: "post-slide__media lazyload", "data-bgset": post.post_thumbnail }),
+        _react2.default.createElement("div", {
+          className: "post-slide__media lazyload",
+          onClick: this.openPost,
+          "data-bgset": post.post_thumbnail
+        }),
         _react2.default.createElement(
           "div",
           { className: "post-slide__content" },

@@ -4,6 +4,7 @@
     background-position: center;
     background-size: cover;
     min-height: 250px;
+    cursor: pointer;
   }
 
   &__content {
@@ -30,5 +31,5 @@
   .btn {
     float: right;
   }
-  
+
 }

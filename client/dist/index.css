@@ -310,7 +310,8 @@ li {
   background-color: #F8F8F8;
   background-position: center;
   background-size: cover;
-  min-height: 250px; }
+  min-height: 250px;
+  cursor: pointer; }
 
 .post-slide__content {
   background: #F8F8F8;
