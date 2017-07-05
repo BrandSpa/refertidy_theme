@@ -1,0 +1,22 @@
+.img_hover {
+  position: relative;
+
+  &__overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    opacity: 0;
+    transition: opacity .7s;
+    max-width: 100%;
+    &:hover {
+      opacity: 1;
+    }
+  }
+
+  &__base {
+    position: relative;
+    max-width: 100%;
+    z-index: 1;
+  }
+}

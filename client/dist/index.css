@@ -368,3 +368,21 @@ li {
       @media (max-width: 767px) {
         .posts-slider__btns__right {
           right: 0; } }
+
+.img_hover {
+  position: relative; }
+  .img_hover__overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    opacity: 0;
+    -webkit-transition: opacity .7s;
+    transition: opacity .7s;
+    max-width: 100%; }
+    .img_hover__overlay:hover {
+      opacity: 1; }
+  .img_hover__base {
+    position: relative;
+    max-width: 100%;
+    z-index: 1; }
