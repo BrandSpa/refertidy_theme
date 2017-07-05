@@ -2,7 +2,7 @@
 
   $wp_scripts = wp_scripts();
   foreach ($wp_scripts->queue as $name) {
-    echo $wp_scripts->registered[$name]->src . '<br/>'
+    echo $wp_scripts->registered[$name]->src . '<br/>';
   }
  ?>
 
