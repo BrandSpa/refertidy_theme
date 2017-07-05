@@ -5,7 +5,7 @@
 		// wp_register_script('jquery', 'https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js', false, '3.1.1', true);
     //     wp_enqueue_script('jquery');
 
-function modify_jquery() {
+function de_scripts() {
 	if (!is_admin()) {
     global $wp_scripts;
 
@@ -21,4 +21,4 @@ function modify_jquery() {
 	}
 }
 
-add_filter('wp_enqueue_scripts', 'modify_jquery', 99);
+add_action('init', 'de_scripts', 99);

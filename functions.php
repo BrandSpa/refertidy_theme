@@ -1,6 +1,5 @@
 <?php
 require_once 'vendor/autoload.php';
-require_once 'lib/clean_theme.php';
 
 //MIGRATIONS
 include_once 'migrations/contacts.php';
