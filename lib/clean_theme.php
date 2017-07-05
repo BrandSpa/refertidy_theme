@@ -10,8 +10,11 @@ function modify_jquery() {
     $wp_scripts = wp_scripts();
 
     foreach ($wp_scripts->queue as $name) {
+      wp_deregister_script($name);
       wp_dequeue_script($name);
     }
+
+    print_r($wp_scripts->queue)
 
 	}
 }
