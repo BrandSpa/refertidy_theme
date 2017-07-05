@@ -1,17 +1,13 @@
-<script type="text/javascript">
-
 
 <?php
 
   $wp_scripts = wp_scripts();
+
   foreach ($wp_scripts->queue as $name) {
-    if(file_exists($name)) {
-      echo file_get_contents($wp_scripts->registered[$name]->src);
-    }
+      echo '<span>'.$wp_scripts->registered[$name]->src.'</span>';
   }
  ?>
 
-</script>
 <!--wordpress files-->
 <?php wp_footer() ?>
 <!-- /wordpress files-->
