@@ -1,4 +1,10 @@
-<?php global $wp_scripts; var_dump($wp_scripts); ?>
+<?php
+
+  global $wp_scripts;
+  foreach ($wp_scripts as $key => $value) {
+    echo $value . '</br>';
+  }
+ ?>
 
 <!--wordpress files-->
 <?php wp_footer() ?>
