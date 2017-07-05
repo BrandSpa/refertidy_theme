@@ -1,8 +1,8 @@
 <?php
 
   $wp_scripts = wp_scripts();
-  foreach ($wp_scripts as $value) {
-    var_dump($value);
+  foreach ($wp_scripts->queue as $name) {
+    echo $wp_scripts->registered[$name]->src . '<br/>'
   }
  ?>
 
