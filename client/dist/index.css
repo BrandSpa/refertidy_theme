@@ -213,7 +213,8 @@ li {
 
 .slider {
   position: relative;
-  overflow: hidden; }
+  overflow: hidden;
+  height: 100vh; }
   .slider__viewport {
     overflow: hidden;
     will-change: transform;
