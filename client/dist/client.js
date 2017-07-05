@@ -477,7 +477,7 @@ var SliderSlide = function (_Component) {
         'section',
         {
           className: 'slider__slide ' + (current == index ? "slider__slide--active" : ""),
-          style: { position: "relative", height: "100vh", width: slideWidth, float: 'left' }
+          style: { position: "relative", height: "100vh", width: slideWidth, float: 'left', backgroundColor: slide.bg_color }
         },
         _react2.default.createElement(
           'div',

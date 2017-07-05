@@ -30,7 +30,7 @@ class SliderSlide extends Component {
           ? "slider__slide--active"
           : ""}`
 				}
-        style={{ position: "relative", height: "100vh", width: slideWidth, float: 'left' }}
+        style={{ position: "relative", height: "100vh", width: slideWidth, float: 'left', backgroundColor: slide.bg_color }}
       >
 
       <div className="container">
