@@ -5,9 +5,7 @@ function combine_js() {
 
   $wp_scripts = wp_scripts();
   foreach ($wp_scripts->queue as $script) {
-    if ( file_exists(ABSPATH . $script->src) ) {
-      echo file_get_contents(ABSPATH . $script->src);
-    }
+    echo ABSPATH . $script->src;
   }
 
 }
