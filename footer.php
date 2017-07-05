@@ -1,7 +1,7 @@
 <!--wordpress files-->
 <?php wp_footer() ?>
 <!-- /wordpress files-->
-
+<script src="<?php echo get_template_directory_uri() ?>/client/dist/vendor.js"></script>
 <!--async load app-->
 <script type="text/javascript">
 function appendScript(src) {
@@ -10,18 +10,8 @@ function appendScript(src) {
   document.body.appendChild(element);
 }
 
-function appendLink(href) {
-  var element = document.createElement("link");
-  element.rel = 'stylesheet';
-  element.href = href;
-  element.type = 'text/css';
-  element.media = 'all';
-  document.head.appendChild(element);
-}
-
 function downloadJS (){
   [
-    "<?php echo get_template_directory_uri() ?>/client/dist/vendor.js",
     "<?php echo get_template_directory_uri() ?>/client/dist/client.js?v=<?php echo filemtime(get_template_directory() . '/client/dist/client.js') ?>"
   ]
   .forEach(function(src) {
