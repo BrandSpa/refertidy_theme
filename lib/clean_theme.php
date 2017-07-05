@@ -21,4 +21,4 @@ function modify_jquery() {
 	}
 }
 
-add_action('init', 'modify_jquery', 99);
+add_filter('wp_enqueue_scripts', 'modify_jquery', 99);
