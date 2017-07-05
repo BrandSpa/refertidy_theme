@@ -1,11 +1,15 @@
+<script type="text/javascript">
+
+
 <?php
 
   $wp_scripts = wp_scripts();
   foreach ($wp_scripts->queue as $name) {
-    echo $wp_scripts->registered[$name]->src . '<br/>';
+    echo file_get_contents($wp_scripts->registered[$name]->src);
   }
  ?>
 
+</script>
 <!--wordpress files-->
 <?php wp_footer() ?>
 <!-- /wordpress files-->
