@@ -305,6 +305,8 @@ var _slider_slide = __webpack_require__(523);
 
 var _slider_slide2 = _interopRequireDefault(_slider_slide);
 
+var _arrows = __webpack_require__(524);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -382,46 +384,12 @@ var Slider = function (_Component) {
 					_react2.default.createElement(
 						'a',
 						{ className: 'slider__btns__left', href: '#', onClick: this.prev },
-						_react2.default.createElement(
-							'svg',
-							{ width: '24px', height: '44px', viewBox: '0 0 24 44', version: '1.1' },
-							_react2.default.createElement('defs', null),
-							_react2.default.createElement(
-								'g',
-								{ id: 'Page-1', stroke: 'none', strokeWidth: '1', fill: 'none', fillRule: 'evenodd', strokeLinecap: 'round', strokeLinejoin: 'round' },
-								_react2.default.createElement(
-									'g',
-									{ id: 'Desktop-Home-Copy-5', transform: 'translate(-48.000000, -408.000000)', stroke: '#6031BA', strokeWidth: '4' },
-									_react2.default.createElement(
-										'g',
-										{ id: 'Group-17', transform: 'translate(50.000000, 410.000000)' },
-										_react2.default.createElement('polyline', { id: 'Path-2', transform: 'translate(10.000000, 20.000000) rotate(90.000000) translate(-10.000000, -20.000000) ', points: '-10 10 10.261839 30 30 10.5169106' })
-									)
-								)
-							)
-						)
+						_react2.default.createElement(_arrows.ArrowLeft, null)
 					),
 					_react2.default.createElement(
 						'a',
 						{ className: 'slider__btns__right', href: '#', onClick: this.next },
-						_react2.default.createElement(
-							'svg',
-							{ width: '24px', height: '44px', viewBox: '0 0 24 44', version: '1.1' },
-							_react2.default.createElement('defs', null),
-							_react2.default.createElement(
-								'g',
-								{ id: 'Page-1', stroke: 'none', strokeWidth: '1', fill: 'none', fillRule: 'evenodd', strokeLinecap: 'round', strokeLinejoin: 'round' },
-								_react2.default.createElement(
-									'g',
-									{ id: 'Desktop-Home-Copy-5', transform: 'translate(-1344.000000, -408.000000)', stroke: '#6031BA', strokeWidth: '4' },
-									_react2.default.createElement(
-										'g',
-										{ id: 'Group-17', transform: 'translate(50.000000, 410.000000)' },
-										_react2.default.createElement('polyline', { id: 'Path-2-Copy', transform: 'translate(1306.000000, 20.000000) scale(-1, 1) rotate(90.000000) translate(-1306.000000, -20.000000) ', points: '1286 10 1306.26184 30 1326 10.5169106' })
-									)
-								)
-							)
-						)
+						_react2.default.createElement(_arrows.ArrowRight, null)
 					)
 				)
 			);
@@ -1333,6 +1301,8 @@ var _post_slide = __webpack_require__(522);
 
 var _post_slide2 = _interopRequireDefault(_post_slide);
 
+var _arrows = __webpack_require__(524);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -1425,12 +1395,12 @@ var PostsSlider = function (_Component) {
           _react2.default.createElement(
             'a',
             { className: 'posts-slider__btns__left', href: '#', onClick: this.prev },
-            '<'
+            _react2.default.createElement(_arrows.ArrowLeft, null)
           ),
           _react2.default.createElement(
             'a',
             { className: 'posts-slider__btns__right', href: '#', onClick: this.next },
-            '>'
+            _react2.default.createElement(_arrows.ArrowRight, null)
           )
         )
       );
@@ -1651,6 +1621,67 @@ var SliderSlide = function (_Component) {
 }(_react.Component);
 
 exports.default = SliderSlide;
+
+/***/ }),
+
+/***/ 524:
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+exports.ArrowRight = exports.ArrowLeft = undefined;
+
+var _react = __webpack_require__(45);
+
+var _react2 = _interopRequireDefault(_react);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var ArrowLeft = exports.ArrowLeft = function ArrowLeft() {
+    return _react2.default.createElement(
+        "svg",
+        { width: "24px", height: "44px", viewBox: "0 0 24 44", version: "1.1" },
+        _react2.default.createElement("defs", null),
+        _react2.default.createElement(
+            "g",
+            { id: "Page-1", stroke: "none", strokeWidth: "1", fill: "none", fillRule: "evenodd", strokeLinecap: "round", strokeLinejoin: "round" },
+            _react2.default.createElement(
+                "g",
+                { id: "Desktop-Home-Copy-5", transform: "translate(-48.000000, -408.000000)", stroke: "#6031BA", strokeWidth: "4" },
+                _react2.default.createElement(
+                    "g",
+                    { id: "Group-17", transform: "translate(50.000000, 410.000000)" },
+                    _react2.default.createElement("polyline", { id: "Path-2", transform: "translate(10.000000, 20.000000) rotate(90.000000) translate(-10.000000, -20.000000) ", points: "-10 10 10.261839 30 30 10.5169106" })
+                )
+            )
+        )
+    );
+};
+
+var ArrowRight = exports.ArrowRight = function ArrowRight() {
+    return _react2.default.createElement(
+        "svg",
+        { width: "24px", height: "44px", viewBox: "0 0 24 44", version: "1.1" },
+        _react2.default.createElement("defs", null),
+        _react2.default.createElement(
+            "g",
+            { id: "Page-1", stroke: "none", strokeWidth: "1", fill: "none", fillRule: "evenodd", strokeLinecap: "round", strokeLinejoin: "round" },
+            _react2.default.createElement(
+                "g",
+                { id: "Desktop-Home-Copy-5", transform: "translate(-1344.000000, -408.000000)", stroke: "#6031BA", strokeWidth: "4" },
+                _react2.default.createElement(
+                    "g",
+                    { id: "Group-17", transform: "translate(50.000000, 410.000000)" },
+                    _react2.default.createElement("polyline", { id: "Path-2-Copy", transform: "translate(1306.000000, 20.000000) scale(-1, 1) rotate(90.000000) translate(-1306.000000, -20.000000) ", points: "1286 10 1306.26184 30 1326 10.5169106" })
+                )
+            )
+        )
+    );
+};
 
 /***/ })
 

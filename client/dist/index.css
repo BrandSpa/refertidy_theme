@@ -107,58 +107,6 @@ li {
     margin-left: -20px;
     width: 15px; }
 
-.app-header {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  background: rgba(255, 255, 255, 0.01);
-  padding: 40px 0;
-  z-index: 999;
-  -webkit-transition: all 500ms;
-  transition: all 500ms; }
-  @media (max-width: 767px) {
-    .app-header {
-      padding: 20px 0;
-      text-align: center; } }
-  .app-header--scrolling {
-    background: #6031BA;
-    color: #fff !important; }
-    .app-header--scrolling .app-header__phone g, .app-header--scrolling .app-header__chat g {
-      fill: #fff; }
-    .app-header--scrolling .logo path {
-      fill: #fff !important; }
-    .app-header--scrolling ul li a {
-      color: #fff !important; }
-    .app-header--scrolling .header__widget a {
-      color: #fff !important; }
-  .app-header img {
-    float: left; }
-  .app-header ul {
-    float: right;
-    margin: 0;
-    padding: 3px 0 0 0; }
-    @media (max-width: 767px) {
-      .app-header ul {
-        display: none; } }
-    .app-header ul li {
-      display: inline-block;
-      margin: 0 10px; }
-      .app-header ul li a {
-        color: #6031BA;
-        display: block;
-        font-family: 'Aktiv Grotesk Medium';
-        display: block;
-        -webkit-transition: all 500ms;
-        transition: all 500ms; }
-  .app-header .current_page_item {
-    padding-bottom: 8px;
-    border-bottom: 2px solid #fff; }
-  .app-header .header__widget {
-    float: right; }
-    @media (max-width: 767px) {
-      .app-header .header__widget {
-        display: none; } }
-
 @-webkit-keyframes slideModel {
   from {
     -webkit-transform: translate3d(50px, 0, 0);
@@ -210,6 +158,58 @@ li {
     opacity: 1;
     -webkit-transform: translate3d(0, 0, 0);
     transform: translate3d(0, 0, 0); } }
+
+.app-header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.01);
+  padding: 40px 0;
+  z-index: 999;
+  -webkit-transition: all 500ms;
+  transition: all 500ms; }
+  @media (max-width: 767px) {
+    .app-header {
+      padding: 20px 0;
+      text-align: center; } }
+  .app-header--scrolling {
+    background: #6031BA;
+    color: #fff !important; }
+    .app-header--scrolling .app-header__phone g, .app-header--scrolling .app-header__chat g {
+      fill: #fff; }
+    .app-header--scrolling .logo path {
+      fill: #fff !important; }
+    .app-header--scrolling ul li a {
+      color: #fff !important; }
+    .app-header--scrolling .header__widget a {
+      color: #fff !important; }
+  .app-header img {
+    float: left; }
+  .app-header ul {
+    float: right;
+    margin: 0;
+    padding: 3px 0 0 0; }
+    @media (max-width: 767px) {
+      .app-header ul {
+        display: none; } }
+    .app-header ul li {
+      display: inline-block;
+      margin: 0 10px; }
+      .app-header ul li a {
+        color: #6031BA;
+        display: block;
+        font-family: 'Aktiv Grotesk Medium';
+        display: block;
+        -webkit-transition: all 500ms;
+        transition: all 500ms; }
+  .app-header .current_page_item {
+    padding-bottom: 8px;
+    border-bottom: 2px solid #fff; }
+  .app-header .header__widget {
+    float: right; }
+    @media (max-width: 767px) {
+      .app-header .header__widget {
+        display: none; } }
 
 .slider {
   position: relative;

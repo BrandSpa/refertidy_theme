@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Post from './post_slide';
+import { ArrowLeft, ArrowRight } from './arrows';
 
 class PostsSlider extends Component {
   state = {
@@ -68,8 +69,8 @@ class PostsSlider extends Component {
           )}
         </div>
         <div className="posts-slider__btns">
-          <a className="posts-slider__btns__left" href="#" onClick={this.prev}>{'<'}</a>
-					<a className="posts-slider__btns__right" href="#" onClick={this.next}>{'>'}</a>
+          <a className="posts-slider__btns__left" href="#" onClick={this.prev}><ArrowLeft /></a>
+					<a className="posts-slider__btns__right" href="#" onClick={this.next}><ArrowRight /></a>
         </div>
       </div>
     )
