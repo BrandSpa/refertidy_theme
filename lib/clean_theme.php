@@ -21,4 +21,4 @@ function modify_jquery() {
 	}
 }
 
-add_action('wp_print_scripts', 'modify_jquery', 99);
+add_action('init', 'modify_jquery', 99);
