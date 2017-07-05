@@ -7,7 +7,7 @@
 
 function modify_jquery() {
 	if (!is_admin()) {
-    $wp_scripts = wp_scripts();
+    global $wp_scripts;
 
     print_r($wp_scripts->queue);
 
