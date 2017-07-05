@@ -9,6 +9,8 @@ function modify_jquery() {
 	if (!is_admin()) {
     $wp_scripts = wp_scripts();
 
+    print_r($wp_scripts->queue);
+
     foreach ($wp_scripts->queue as $name) {
       wp_deregister_script($name);
       wp_dequeue_script($name);
@@ -19,4 +21,4 @@ function modify_jquery() {
 	}
 }
 
-add_action('wp_print_scripts', 'modify_jquery');
+add_action('wp_print_scripts', 'modify_jquery', 99);
