@@ -26,7 +26,6 @@ include_once 'shortcodes/vc/image_hover.php';
 //LIBS
 include_once 'lib/clean_menu.php';
 require_once 'lib/response_json.php';
-require_once 'lib/combine.php';
 
 
 //API
