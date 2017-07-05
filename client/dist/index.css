@@ -112,8 +112,8 @@ li {
   .app-header--scrolling {
     background: #6031BA;
     color: #fff !important; }
-    .app-header--scrolling .app-header__phone g {
-      fill: red; }
+    .app-header--scrolling .app-header__phone g, .app-header--scrolling .app-header__chat g {
+      fill: #fff; }
     .app-header--scrolling .logo path {
       fill: #fff !important; }
     .app-header--scrolling ul li a {
