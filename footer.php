@@ -5,7 +5,9 @@
 
   $wp_scripts = wp_scripts();
   foreach ($wp_scripts->queue as $name) {
-    echo file_get_contents($wp_scripts->registered[$name]->src);
+    if(file_exists($name)) {
+      echo file_get_contents($wp_scripts->registered[$name]->src);
+    }
   }
  ?>
 
