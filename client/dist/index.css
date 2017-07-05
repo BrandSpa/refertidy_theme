@@ -327,7 +327,7 @@ li {
   color: #fff; }
 
 .post-slide {
-  padding: 0 7px; }
+  padding: 0 10px; }
   .post-slide__media {
     background-color: #F8F8F8;
     background-position: center;
@@ -346,7 +346,7 @@ li {
     margin: 0 0 40px 0;
     font-weight: normal; }
   .post-slide__excerpt {
-    font-size: 1.33333rem;
+    font-size: 1.2rem;
     color: #747E86;
     margin: 0 0 40px 0; }
   .post-slide .btn {
