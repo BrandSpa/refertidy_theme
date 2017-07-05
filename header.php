@@ -1,7 +1,8 @@
 <?php
 http_cache_etag();
 
- ?>
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
