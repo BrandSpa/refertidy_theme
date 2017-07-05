@@ -8,7 +8,7 @@ function ra_image_hover_sc( $atts ) {
     "bg_color"  => "#000"
   ], $atts);
 
-	$at['image'] = wp_get_attachment_url($at['image_overlay']);
+	$at['image'] = wp_get_attachment_url($at['image']);
 	$at['image_overlay'] = wp_get_attachment_url($at['image_overlay']);
 
 	ob_start();
