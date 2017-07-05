@@ -2,7 +2,7 @@
 
   global $wp_scripts;
   foreach ($wp_scripts->queue as $key => $value) {
-    echo $value;
+    echo $value . ', ';
   }
  ?>
 
