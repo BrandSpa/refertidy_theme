@@ -1,3 +1,5 @@
+<?php global $wp_scripts; var_dump($wp_scripts); ?>
+
 <!--wordpress files-->
 <?php wp_footer() ?>
 <!-- /wordpress files-->
