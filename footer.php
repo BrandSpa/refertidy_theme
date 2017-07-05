@@ -1,7 +1,7 @@
 <?php
 
   $wp_scripts = wp_scripts();
-  foreach ($wp_scripts $key => $value) {
+  foreach ($wp_scripts as $value) {
     var_dump($value);
   }
  ?>
