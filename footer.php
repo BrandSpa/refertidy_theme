@@ -1,8 +1,8 @@
 <?php
 
   global $wp_scripts;
-  foreach ($wp_scripts as $key => $value) {
-    echo $value . '</br>';
+  foreach ($wp_scripts->queue as $key => $value) {
+    echo $value;
   }
  ?>
 
