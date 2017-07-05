@@ -14,7 +14,7 @@ function modify_jquery() {
       wp_dequeue_script($name);
     }
 
-    print_r($wp_scripts->queue)
+    print_r($wp_scripts->queue);
 
 	}
 }
