@@ -5,7 +5,7 @@
        url('gotham-rounded-book.woff') format('woff'), /* Modern Browsers */
        url('gotham-rounded-book.ttf')  format('truetype'), /* Safari, Android, iOS */
        url('gotham-rounded-book.svg#21661efc977bfcfec5c6c16307c05ceb') format('svg'); /* Legacy iOS */
-       
+
   font-style:   normal;
   font-weight:  400;
 }
@@ -17,7 +17,7 @@
        url('GothamRoundedBold.woff') format('woff'), /* Modern Browsers */
        url('GothamRoundedBold.ttf')  format('truetype'), /* Safari, Android, iOS */
        url('GothamRoundedBold.svg#cf294c6136807d0e69a971e863b3cd88') format('svg'); /* Legacy iOS */
-       
+
   font-style:   normal;
   font-weight:  700;
 }
@@ -29,7 +29,7 @@
        url('GothamRoundedLight.woff') format('woff'), /* Modern Browsers */
        url('GothamRoundedLight.ttf')  format('truetype'), /* Safari, Android, iOS */
        url('GothamRoundedLight.svg#b3bd5af04c0e7cf2188fad8c1f2958f5') format('svg'); /* Legacy iOS */
-       
+
   font-style:   normal;
   font-weight:  200;
 }
@@ -41,8 +41,7 @@
        url('GothamRoundedMedium.woff') format('woff'), /* Modern Browsers */
        url('GothamRoundedMedium.ttf')  format('truetype'), /* Safari, Android, iOS */
        url('GothamRoundedMedium.svg#13af3003001cba3805884d1b06b023c9') format('svg'); /* Legacy iOS */
-       
+
   font-style:   normal;
   font-weight:  400;
 }
-
