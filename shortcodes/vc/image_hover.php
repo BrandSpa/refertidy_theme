@@ -1,6 +1,6 @@
 <?php
 
-function ra_quo_fixed_vc() {
+function ra_image_hover_vc() {
 	vc_map([
 		'name' => 'Image hover',
 		'base' => 'ra_image_hover',
@@ -25,4 +25,4 @@ function ra_quo_fixed_vc() {
 	]);
 }
 
-add_action('vc_before_init', 'ra_quo_fixed_vc');
+add_action('vc_before_init', 'ra_image_hover_vc');
