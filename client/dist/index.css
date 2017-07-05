@@ -22,6 +22,9 @@ h1, h2, h3, h4, h5, h6 {
 h1 {
   font-family: 'Gotham Rounded Book'; }
 
+h3 {
+  font-family: 'Gotham Rounded Medium'; }
+
 a {
   text-decoration: none;
   font-size: 1rem; }
