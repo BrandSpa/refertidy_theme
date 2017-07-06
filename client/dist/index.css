@@ -180,9 +180,8 @@ li {
     stroke-dasharray: 1000;
     stroke-dashoffset: 1000;
     stroke: #fff;
-    stroke-width: 1;
-    fill: transparent; }
-  90% {
+    stroke-width: 1; }
+  95% {
     stroke-dashoffset: 0; }
   100% {
     fill: #fff; } }
@@ -192,9 +191,8 @@ li {
     stroke-dasharray: 1000;
     stroke-dashoffset: 1000;
     stroke: #fff;
-    stroke-width: 1;
-    fill: transparent; }
-  90% {
+    stroke-width: 1; }
+  95% {
     stroke-dashoffset: 0; }
   100% {
     fill: #fff; } }
