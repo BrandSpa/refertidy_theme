@@ -181,9 +181,11 @@ li {
     stroke-dashoffset: 1000;
     stroke: #fff;
     stroke-width: 1; }
-  95% {
+  75% {
     stroke-dashoffset: 0; }
   100% {
+    stroke-dasharray: 1000;
+    stroke-dashoffset: 1000;
     fill: #fff; } }
 
 @keyframes dash {
@@ -192,9 +194,11 @@ li {
     stroke-dashoffset: 1000;
     stroke: #fff;
     stroke-width: 1; }
-  95% {
+  75% {
     stroke-dashoffset: 0; }
   100% {
+    stroke-dasharray: 1000;
+    stroke-dashoffset: 1000;
     fill: #fff; } }
 
 .app-header {
@@ -216,8 +220,8 @@ li {
     .app-header--scrolling .app-header__phone g, .app-header--scrolling .app-header__chat g {
       fill: #fff; }
     .app-header--scrolling .logo path {
-      -webkit-animation: dash 4s cubic-bezier(0.4, 0, 1, 1);
-      animation: dash 4s cubic-bezier(0.4, 0, 1, 1); }
+      -webkit-animation: dash 3s cubic-bezier(0.4, 0, 1, 1);
+      animation: dash 3s cubic-bezier(0.4, 0, 1, 1); }
     .app-header--scrolling ul li a {
       color: #fff !important; }
     .app-header--scrolling .header__widget a {

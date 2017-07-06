@@ -6,11 +6,13 @@
     stroke-width: 1;
   }
 
-  95% {
+  75% {
     stroke-dashoffset: 0;
   }
 
   100% {
+    stroke-dasharray: 1000;
+    stroke-dashoffset: 1000;
     fill: #fff;
   }
 }
@@ -42,7 +44,7 @@
 
     .logo {
       path {
-        animation: dash 4s cubic-bezier(0.4, 0, 1, 1);
+        animation: dash 3s cubic-bezier(0.4, 0, 1, 1);
       }
     }
 
