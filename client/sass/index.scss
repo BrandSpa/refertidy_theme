@@ -151,9 +151,12 @@ li {
   width: 100%;
   z-index: 999;
   color: #fff;
+
   a {
     color: #fff;
   }
+
+  padding: 20px;
   @media #{$s} {
     display: block;
   }

@@ -115,7 +115,8 @@ li {
   display: none;
   width: 100%;
   z-index: 999;
-  color: #fff; }
+  color: #fff;
+  padding: 20px; }
   .footer-fixed_mobile a {
     color: #fff; }
   @media (max-width: 767px) {
