@@ -150,9 +150,14 @@ li {
   display: none;
   width: 100%;
   z-index: 999;
+  color: #fff;
+  a {
+    color: #fff;
+  }
   @media #{$s} {
     display: block;
   }
+
 }
 
 @import 'animations';

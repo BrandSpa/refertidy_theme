@@ -114,7 +114,10 @@ li {
   background: #6031BD;
   display: none;
   width: 100%;
-  z-index: 999; }
+  z-index: 999;
+  color: #fff; }
+  .footer-fixed_mobile a {
+    color: #fff; }
   @media (max-width: 767px) {
     .footer-fixed_mobile {
       display: block; } }
