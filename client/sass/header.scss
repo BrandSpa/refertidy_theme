@@ -1,14 +1,14 @@
 @keyframes dash {
   from {
-    stroke-dashoffset: 0;
+    stroke-dasharray: 1000;
+    stroke-dashoffset: 1000;
     stroke: #fff;
     stroke-width: 1;
     fill: transparent;
   }
 
   to {
-    stroke-dasharray: 1000;
-    stroke-dashoffset: 1000;
+    stroke-dashoffset: 0;
     fill: #fff;
   }
 }
