@@ -111,7 +111,7 @@ li {
   position: fixed;
   bottom: 0;
   height: 70px;
-  background: red;
+  background: #6031BD;
   display: none;
   width: 100%;
   z-index: 999; }
