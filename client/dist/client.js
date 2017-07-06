@@ -6,9 +6,70 @@ webpackJsonp([0],{
 "use strict";
 
 
-var stringify = __webpack_require__(518);
-var parse = __webpack_require__(519);
-var formats = __webpack_require__(210);
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+exports.ArrowRight = exports.ArrowLeft = undefined;
+
+var _react = __webpack_require__(31);
+
+var _react2 = _interopRequireDefault(_react);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var ArrowLeft = exports.ArrowLeft = function ArrowLeft() {
+    return _react2.default.createElement(
+        "svg",
+        { width: "24px", height: "44px", viewBox: "0 0 24 44", version: "1.1" },
+        _react2.default.createElement("defs", null),
+        _react2.default.createElement(
+            "g",
+            { id: "Page-1", stroke: "none", strokeWidth: "1", fill: "none", fillRule: "evenodd", strokeLinecap: "round", strokeLinejoin: "round" },
+            _react2.default.createElement(
+                "g",
+                { id: "Desktop-Home-Copy-5", transform: "translate(-48.000000, -408.000000)", stroke: "#6031BA", strokeWidth: "4" },
+                _react2.default.createElement(
+                    "g",
+                    { id: "Group-17", transform: "translate(50.000000, 410.000000)" },
+                    _react2.default.createElement("polyline", { id: "Path-2", transform: "translate(10.000000, 20.000000) rotate(90.000000) translate(-10.000000, -20.000000) ", points: "-10 10 10.261839 30 30 10.5169106" })
+                )
+            )
+        )
+    );
+};
+
+var ArrowRight = exports.ArrowRight = function ArrowRight() {
+    return _react2.default.createElement(
+        "svg",
+        { width: "24px", height: "44px", viewBox: "0 0 24 44", version: "1.1" },
+        _react2.default.createElement("defs", null),
+        _react2.default.createElement(
+            "g",
+            { id: "Page-1", stroke: "none", strokeWidth: "1", fill: "none", fillRule: "evenodd", strokeLinecap: "round", strokeLinejoin: "round" },
+            _react2.default.createElement(
+                "g",
+                { id: "Desktop-Home-Copy-5", transform: "translate(-1344.000000, -408.000000)", stroke: "#6031BA", strokeWidth: "4" },
+                _react2.default.createElement(
+                    "g",
+                    { id: "Group-17", transform: "translate(50.000000, 410.000000)" },
+                    _react2.default.createElement("polyline", { id: "Path-2-Copy", transform: "translate(1306.000000, 20.000000) scale(-1, 1) rotate(90.000000) translate(-1306.000000, -20.000000) ", points: "1286 10 1306.26184 30 1326 10.5169106" })
+                )
+            )
+        )
+    );
+};
+
+/***/ }),
+
+/***/ 209:
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var stringify = __webpack_require__(520);
+var parse = __webpack_require__(521);
+var formats = __webpack_require__(211);
 
 module.exports = {
     formats: formats,
@@ -19,7 +80,7 @@ module.exports = {
 
 /***/ }),
 
-/***/ 209:
+/***/ 210:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -209,7 +270,7 @@ exports.isBuffer = function (obj) {
 
 /***/ }),
 
-/***/ 210:
+/***/ 211:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -235,13 +296,13 @@ module.exports = {
 
 /***/ }),
 
-/***/ 514:
+/***/ 515:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-var _react = __webpack_require__(45);
+var _react = __webpack_require__(31);
 
 var _react2 = _interopRequireDefault(_react);
 
@@ -253,23 +314,23 @@ var _reactMultipleRender = __webpack_require__(200);
 
 var _reactMultipleRender2 = _interopRequireDefault(_reactMultipleRender);
 
-var _slider = __webpack_require__(515);
+var _slider = __webpack_require__(516);
 
 var _slider2 = _interopRequireDefault(_slider);
 
-var _sliderImgs = __webpack_require__(516);
+var _sliderImgs = __webpack_require__(518);
 
 var _sliderImgs2 = _interopRequireDefault(_sliderImgs);
 
-var _quotation_form_fixed = __webpack_require__(517);
+var _quotation_form_fixed = __webpack_require__(519);
 
 var _quotation_form_fixed2 = _interopRequireDefault(_quotation_form_fixed);
 
-var _contact = __webpack_require__(520);
+var _contact = __webpack_require__(522);
 
 var _contact2 = _interopRequireDefault(_contact);
 
-var _posts_slider = __webpack_require__(521);
+var _posts_slider = __webpack_require__(523);
 
 var _posts_slider2 = _interopRequireDefault(_posts_slider);
 
@@ -285,7 +346,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 /***/ }),
 
-/***/ 515:
+/***/ 516:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -297,15 +358,15 @@ Object.defineProperty(exports, "__esModule", {
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-var _react = __webpack_require__(45);
+var _react = __webpack_require__(31);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _slider_slide = __webpack_require__(523);
+var _slider_slide = __webpack_require__(517);
 
 var _slider_slide2 = _interopRequireDefault(_slider_slide);
 
-var _arrows = __webpack_require__(524);
+var _arrows = __webpack_require__(208);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -403,7 +464,123 @@ exports.default = Slider;
 
 /***/ }),
 
-/***/ 516:
+/***/ 517:
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = __webpack_require__(31);
+
+var _react2 = _interopRequireDefault(_react);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var SliderSlide = function (_Component) {
+  _inherits(SliderSlide, _Component);
+
+  function SliderSlide() {
+    var _ref;
+
+    var _temp, _this, _ret;
+
+    _classCallCheck(this, SliderSlide);
+
+    for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
+      args[_key] = arguments[_key];
+    }
+
+    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = SliderSlide.__proto__ || Object.getPrototypeOf(SliderSlide)).call.apply(_ref, [this].concat(args))), _this), _this.state = {
+      mobile: false
+    }, _temp), _possibleConstructorReturn(_this, _ret);
+  }
+
+  _createClass(SliderSlide, [{
+    key: 'componentDidMount',
+    value: function componentDidMount() {
+      if (window.innerWidth < 768) {
+        this.setState({ mobile: true });
+      }
+    }
+  }, {
+    key: 'render',
+    value: function render() {
+      var mobile = this.state.mobile;
+      var _props = this.props,
+          slide = _props.slide,
+          slideWidth = _props.slideWidth,
+          current = _props.current,
+          index = _props.index;
+
+
+      var slideStyle = {
+        height: '100vh',
+        width: '100%',
+        position: 'absolute',
+        top: '0',
+        backgroundPosition: 'center',
+        backgroundSize: 'cover'
+      };
+
+      return _react2.default.createElement(
+        'section',
+        {
+          className: 'slider__slide ' + (current == index ? "slider__slide--active" : ""),
+          style: { position: "relative", height: "100vh", width: slideWidth, float: 'left', backgroundColor: slide.bg_color }
+        },
+        _react2.default.createElement(
+          'div',
+          { className: 'container ra-vertical-center ra-full-height' },
+          _react2.default.createElement(
+            'div',
+            { className: 'slider__slide__content' },
+            _react2.default.createElement('div', { dangerouslySetInnerHTML: { __html: slide.slide_content } }),
+            _react2.default.createElement(
+              'a',
+              { href: slide.btn_link, className: 'slider__content__btn', style: { background: slide.btn_color } },
+              slide.btn_txt
+            )
+          )
+        ),
+        _react2.default.createElement('div', {
+          className: 'lazyload',
+          style: slideStyle,
+          'data-bgset': slide.bg_img
+        }),
+        _react2.default.createElement('div', {
+          className: 'slider__slide__model lazyload blur-up',
+          style: slideStyle,
+          'data-bgset': slide.model_img_mobile + ' [(max-width: 767px)] | ' + slide.model_img
+        }),
+        _react2.default.createElement('div', {
+          className: 'slider__slide__object lazyload blur-up',
+          style: slideStyle,
+          'data-bgset': slide.object_img_mobile + ' [(max-width: 767px)] | ' + slide.object_img
+        })
+      );
+    }
+  }]);
+
+  return SliderSlide;
+}(_react.Component);
+
+exports.default = SliderSlide;
+
+/***/ }),
+
+/***/ 518:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -415,7 +592,7 @@ Object.defineProperty(exports, "__esModule", {
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-var _react = __webpack_require__(45);
+var _react = __webpack_require__(31);
 
 var _react2 = _interopRequireDefault(_react);
 
@@ -502,7 +679,7 @@ exports.default = SliderImgs;
 
 /***/ }),
 
-/***/ 517:
+/***/ 519:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -514,7 +691,7 @@ Object.defineProperty(exports, "__esModule", {
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-var _react = __webpack_require__(45);
+var _react = __webpack_require__(31);
 
 var _react2 = _interopRequireDefault(_react);
 
@@ -522,7 +699,7 @@ var _axios = __webpack_require__(136);
 
 var _axios2 = _interopRequireDefault(_axios);
 
-var _qs = __webpack_require__(208);
+var _qs = __webpack_require__(209);
 
 var _qs2 = _interopRequireDefault(_qs);
 
@@ -686,14 +863,14 @@ exports.default = QuotationFormFixed;
 
 /***/ }),
 
-/***/ 518:
+/***/ 520:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-var utils = __webpack_require__(209);
-var formats = __webpack_require__(210);
+var utils = __webpack_require__(210);
+var formats = __webpack_require__(211);
 
 var arrayPrefixGenerators = {
     brackets: function brackets(prefix) { // eslint-disable-line func-name-matching
@@ -901,13 +1078,13 @@ module.exports = function (object, opts) {
 
 /***/ }),
 
-/***/ 519:
+/***/ 521:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-var utils = __webpack_require__(209);
+var utils = __webpack_require__(210);
 
 var has = Object.prototype.hasOwnProperty;
 
@@ -1076,7 +1253,7 @@ module.exports = function (str, opts) {
 
 /***/ }),
 
-/***/ 520:
+/***/ 522:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1088,7 +1265,7 @@ Object.defineProperty(exports, "__esModule", {
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-var _react = __webpack_require__(45);
+var _react = __webpack_require__(31);
 
 var _react2 = _interopRequireDefault(_react);
 
@@ -1096,7 +1273,7 @@ var _axios = __webpack_require__(136);
 
 var _axios2 = _interopRequireDefault(_axios);
 
-var _qs = __webpack_require__(208);
+var _qs = __webpack_require__(209);
 
 var _qs2 = _interopRequireDefault(_qs);
 
@@ -1281,7 +1458,7 @@ exports.default = Contact;
 
 /***/ }),
 
-/***/ 521:
+/***/ 523:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1293,15 +1470,15 @@ Object.defineProperty(exports, "__esModule", {
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-var _react = __webpack_require__(45);
+var _react = __webpack_require__(31);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _post_slide = __webpack_require__(522);
+var _post_slide = __webpack_require__(524);
 
 var _post_slide2 = _interopRequireDefault(_post_slide);
 
-var _arrows = __webpack_require__(524);
+var _arrows = __webpack_require__(208);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -1414,7 +1591,7 @@ exports.default = PostsSlider;
 
 /***/ }),
 
-/***/ 522:
+/***/ 524:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1426,7 +1603,7 @@ Object.defineProperty(exports, "__esModule", {
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-var _react = __webpack_require__(45);
+var _react = __webpack_require__(31);
 
 var _react2 = _interopRequireDefault(_react);
 
@@ -1506,183 +1683,6 @@ var PostSlide = function (_Component) {
 
 exports.default = PostSlide;
 
-/***/ }),
-
-/***/ 523:
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-var _react = __webpack_require__(45);
-
-var _react2 = _interopRequireDefault(_react);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-var SliderSlide = function (_Component) {
-  _inherits(SliderSlide, _Component);
-
-  function SliderSlide() {
-    var _ref;
-
-    var _temp, _this, _ret;
-
-    _classCallCheck(this, SliderSlide);
-
-    for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
-      args[_key] = arguments[_key];
-    }
-
-    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = SliderSlide.__proto__ || Object.getPrototypeOf(SliderSlide)).call.apply(_ref, [this].concat(args))), _this), _this.state = {
-      mobile: false
-    }, _temp), _possibleConstructorReturn(_this, _ret);
-  }
-
-  _createClass(SliderSlide, [{
-    key: 'componentDidMount',
-    value: function componentDidMount() {
-      if (window.innerWidth < 768) {
-        this.setState({ mobile: true });
-      }
-    }
-  }, {
-    key: 'render',
-    value: function render() {
-      var mobile = this.state.mobile;
-      var _props = this.props,
-          slide = _props.slide,
-          slideWidth = _props.slideWidth,
-          current = _props.current,
-          index = _props.index;
-
-
-      var slideStyle = {
-        height: '100vh',
-        width: '100%',
-        position: 'absolute',
-        top: '0',
-        backgroundPosition: 'center',
-        backgroundSize: 'cover'
-      };
-
-      return _react2.default.createElement(
-        'section',
-        {
-          className: 'slider__slide ' + (current == index ? "slider__slide--active" : ""),
-          style: { position: "relative", height: "100vh", width: slideWidth, float: 'left', backgroundColor: slide.bg_color }
-        },
-        _react2.default.createElement(
-          'div',
-          { className: 'container' },
-          _react2.default.createElement(
-            'div',
-            { className: 'slider__slide__content' },
-            _react2.default.createElement('div', { dangerouslySetInnerHTML: { __html: slide.slide_content } }),
-            _react2.default.createElement(
-              'a',
-              { href: slide.btn_link, className: 'slider__content__btn', style: { background: slide.btn_color } },
-              slide.btn_txt
-            )
-          )
-        ),
-        _react2.default.createElement('div', {
-          className: 'lazyload',
-          style: slideStyle,
-          'data-bgset': slide.bg_img
-        }),
-        _react2.default.createElement('div', {
-          className: 'slider__slide__model lazyload blur-up',
-          style: slideStyle,
-          'data-bgset': slide.model_img_mobile + ' [(max-width: 767px)] | ' + slide.model_img
-        }),
-        _react2.default.createElement('div', {
-          className: 'slider__slide__object lazyload blur-up',
-          style: slideStyle,
-          'data-bgset': slide.object_img_mobile + ' [(max-width: 767px)] | ' + slide.object_img
-        })
-      );
-    }
-  }]);
-
-  return SliderSlide;
-}(_react.Component);
-
-exports.default = SliderSlide;
-
-/***/ }),
-
-/***/ 524:
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-exports.ArrowRight = exports.ArrowLeft = undefined;
-
-var _react = __webpack_require__(45);
-
-var _react2 = _interopRequireDefault(_react);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-var ArrowLeft = exports.ArrowLeft = function ArrowLeft() {
-    return _react2.default.createElement(
-        "svg",
-        { width: "24px", height: "44px", viewBox: "0 0 24 44", version: "1.1" },
-        _react2.default.createElement("defs", null),
-        _react2.default.createElement(
-            "g",
-            { id: "Page-1", stroke: "none", strokeWidth: "1", fill: "none", fillRule: "evenodd", strokeLinecap: "round", strokeLinejoin: "round" },
-            _react2.default.createElement(
-                "g",
-                { id: "Desktop-Home-Copy-5", transform: "translate(-48.000000, -408.000000)", stroke: "#6031BA", strokeWidth: "4" },
-                _react2.default.createElement(
-                    "g",
-                    { id: "Group-17", transform: "translate(50.000000, 410.000000)" },
-                    _react2.default.createElement("polyline", { id: "Path-2", transform: "translate(10.000000, 20.000000) rotate(90.000000) translate(-10.000000, -20.000000) ", points: "-10 10 10.261839 30 30 10.5169106" })
-                )
-            )
-        )
-    );
-};
-
-var ArrowRight = exports.ArrowRight = function ArrowRight() {
-    return _react2.default.createElement(
-        "svg",
-        { width: "24px", height: "44px", viewBox: "0 0 24 44", version: "1.1" },
-        _react2.default.createElement("defs", null),
-        _react2.default.createElement(
-            "g",
-            { id: "Page-1", stroke: "none", strokeWidth: "1", fill: "none", fillRule: "evenodd", strokeLinecap: "round", strokeLinejoin: "round" },
-            _react2.default.createElement(
-                "g",
-                { id: "Desktop-Home-Copy-5", transform: "translate(-1344.000000, -408.000000)", stroke: "#6031BA", strokeWidth: "4" },
-                _react2.default.createElement(
-                    "g",
-                    { id: "Group-17", transform: "translate(50.000000, 410.000000)" },
-                    _react2.default.createElement("polyline", { id: "Path-2-Copy", transform: "translate(1306.000000, 20.000000) scale(-1, 1) rotate(90.000000) translate(-1306.000000, -20.000000) ", points: "1286 10 1306.26184 30 1326 10.5169106" })
-                )
-            )
-        )
-    );
-};
-
 /***/ })
 
-},[514]);
+},[515]);
