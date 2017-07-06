@@ -1,5 +1,5 @@
 @keyframes dash {
-  from {
+  0%  {
     stroke-dasharray: 1000;
     stroke-dashoffset: 1000;
     stroke: #fff;
@@ -7,8 +7,11 @@
     fill: transparent;
   }
 
-  to {
+  50% {
     stroke-dashoffset: 0;
+  }
+
+  100% {
     fill: #fff;
   }
 }
