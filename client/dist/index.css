@@ -306,8 +306,7 @@ li {
   .slider__slide__content {
     max-width: 500px;
     position: absolute;
-    z-index: 998;
-    margin-top: 15%; }
+    z-index: 998; }
     @media (max-width: 767px) {
       .slider__slide__content {
         margin-top: 20%;
