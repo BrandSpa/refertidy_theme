@@ -1,13 +1,4 @@
 
-<?php
-
-  $wp_scripts = wp_scripts();
-
-  foreach ($wp_scripts->queue as $name) {
-      echo '<span>'.$wp_scripts->registered[$name]->src.'</span>';
-  }
- ?>
-
 <!--wordpress files-->
 <?php wp_footer() ?>
 <!-- /wordpress files-->
