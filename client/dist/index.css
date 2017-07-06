@@ -182,8 +182,9 @@ li {
   background: rgba(255, 255, 255, 0.01);
   padding: 40px 0;
   z-index: 999;
-  -webkit-transition: all 500ms;
-  transition: all 500ms; }
+  will-change: background;
+  -webkit-transition: background .7;
+  transition: background .7; }
   @media (max-width: 767px) {
     .app-header {
       padding: 20px 0;
