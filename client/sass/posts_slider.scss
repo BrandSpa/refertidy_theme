@@ -45,6 +45,10 @@
 .post-slide {
   padding: 0 10px;
 
+  @media #{$s} {
+    padding: 40px 0;
+  }
+
   &__media {
     background-color: #F8F8F8;
     background-position: center;
