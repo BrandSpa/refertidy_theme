@@ -258,7 +258,7 @@ li {
     font-weight: normal; }
     @media (max-width: 767px) {
       .slider__content__title {
-        padding-top: 40px; } }
+        padding: 40px 0; } }
   .slider__content__btn {
     display: inline-block;
     height: 60px;
