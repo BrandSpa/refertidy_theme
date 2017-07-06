@@ -13,7 +13,6 @@
   100% {
     stroke-dasharray: 1000;
     stroke-dashoffset: 1000;
-    fill: #fff;
   }
 }
 
@@ -45,6 +44,7 @@
     .logo {
       path {
         animation: dash 3s cubic-bezier(0.4, 0, 1, 1);
+        fill: #fff;
       }
     }
 
