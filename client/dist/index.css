@@ -180,24 +180,28 @@ li {
     stroke-dasharray: 1000;
     stroke-dashoffset: 1000;
     stroke: #fff;
-    stroke-width: 1; }
+    stroke-width: 1;
+    fill: rgba(255, 255, 255, 0); }
   75% {
     stroke-dashoffset: 0; }
   100% {
     stroke-dasharray: 1000;
-    stroke-dashoffset: 1000; } }
+    stroke-dashoffset: 1000;
+    fill: white; } }
 
 @keyframes dash {
   0% {
     stroke-dasharray: 1000;
     stroke-dashoffset: 1000;
     stroke: #fff;
-    stroke-width: 1; }
+    stroke-width: 1;
+    fill: rgba(255, 255, 255, 0); }
   75% {
     stroke-dashoffset: 0; }
   100% {
     stroke-dasharray: 1000;
-    stroke-dashoffset: 1000; } }
+    stroke-dashoffset: 1000;
+    fill: white; } }
 
 .app-header {
   position: fixed;
