@@ -5,8 +5,7 @@
   background: rgba(255, 255, 255, 0.01);
   padding: 40px 0;
   z-index: 999;
-  will-change: background;
-  transition: background .7;
+  transition: all .7;
 
   @media #{$s} {
     padding: 20px 0;
