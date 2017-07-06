@@ -175,6 +175,20 @@ li {
     -webkit-transform: translate3d(0, 0, 0);
     transform: translate3d(0, 0, 0); } }
 
+@-webkit-keyframes dash {
+  from {
+    stroke-dashoffset: 0; }
+  to {
+    stroke-dasharray: 1000;
+    stroke-dashoffset: 1000; } }
+
+@keyframes dash {
+  from {
+    stroke-dashoffset: 0; }
+  to {
+    stroke-dasharray: 1000;
+    stroke-dashoffset: 1000; } }
+
 .app-header {
   position: fixed;
   top: 0;
@@ -189,12 +203,14 @@ li {
       padding: 20px 0;
       text-align: center; } }
   .app-header--scrolling {
-    background: RGBA(96, 49, 186, 0.9);
+    background: RGBA(96, 49, 186, 1);
     color: #fff !important; }
     .app-header--scrolling .app-header__phone g, .app-header--scrolling .app-header__chat g {
       fill: #fff; }
     .app-header--scrolling .logo path {
-      fill: #fff !important; }
+      fill: #fff !important;
+      -webkit-animation: dash 1s;
+      animation: dash 1s; }
     .app-header--scrolling ul li a {
       color: #fff !important; }
     .app-header--scrolling .header__widget a {
