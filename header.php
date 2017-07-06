@@ -62,3 +62,7 @@
 
 	</div>
 </header>
+
+<div class="footer-fixed_mobile">
+	<?php dynamic_sidebar( 'footer_fixed_widget' ); ?>
+</div>
