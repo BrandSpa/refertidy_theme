@@ -217,8 +217,8 @@ li {
       fill: #fff; }
     .app-header--scrolling .logo path {
       fill: #fff !important;
-      -webkit-animation: dash .7s;
-      animation: dash .7s; }
+      -webkit-animation: dash 2s;
+      animation: dash 2s; }
     .app-header--scrolling ul li a {
       color: #fff !important; }
     .app-header--scrolling .header__widget a {
