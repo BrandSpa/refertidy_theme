@@ -264,11 +264,12 @@ li {
 .ra-full-height {
   height: 100%; }
 
-.ra-remove-vertical-center {
-  display: block;
-  -webkit-box-align: baseline;
-  -ms-flex-align: baseline;
-  align-items: baseline; }
+@media (max-width: 767px) {
+  .ra-remove-vertical-center {
+    display: block;
+    -webkit-box-align: baseline;
+    -ms-flex-align: baseline;
+    align-items: baseline; } }
 
 .slider {
   position: relative;

@@ -542,7 +542,7 @@ var SliderSlide = function (_Component) {
         },
         _react2.default.createElement(
           'div',
-          { className: 'container ra-vertical-center ra-full-height' },
+          { className: 'container ra-vertical-center ra-full-height ra-remove-vertical-center' },
           _react2.default.createElement(
             'div',
             { className: 'slider__slide__content' },

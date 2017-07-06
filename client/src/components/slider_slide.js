@@ -33,7 +33,7 @@ class SliderSlide extends Component {
         style={{ position: "relative", height: "100vh", width: slideWidth, float: 'left', backgroundColor: slide.bg_color }}
       >
 
-      <div className="container ra-vertical-center ra-full-height">
+      <div className="container ra-vertical-center ra-full-height ra-remove-vertical-center">
        <div className="slider__slide__content">
          <div dangerouslySetInnerHTML={{__html: slide.slide_content}} />
          <a href={slide.btn_link} className="slider__content__btn" style={{background: slide.btn_color}}>
