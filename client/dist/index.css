@@ -216,8 +216,8 @@ li {
     .app-header--scrolling .app-header__phone g, .app-header--scrolling .app-header__chat g {
       fill: #fff; }
     .app-header--scrolling .logo path {
-      -webkit-animation: dash 4s linear;
-      animation: dash 4s linear; }
+      -webkit-animation: dash 4s cubic-bezier(0.4, 0, 1, 1);
+      animation: dash 4s cubic-bezier(0.4, 0, 1, 1); }
     .app-header--scrolling ul li a {
       color: #fff !important; }
     .app-header--scrolling .header__widget a {
