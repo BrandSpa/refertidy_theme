@@ -112,7 +112,9 @@ li {
   bottom: 0;
   height: 70px;
   background: red;
-  display: none; }
+  display: none;
+  width: 100%;
+  z-index: 999; }
   @media (max-width: 767px) {
     .footer-fixed_mobile {
       display: block; } }
