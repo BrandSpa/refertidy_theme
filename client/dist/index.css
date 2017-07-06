@@ -107,6 +107,16 @@ li {
     margin-left: -20px;
     width: 15px; }
 
+.footer-fixed_mobile {
+  position: fixed;
+  bottom: 0;
+  height: 70px;
+  background: red;
+  display: none; }
+  @media (max-width: 767px) {
+    .footer-fixed_mobile {
+      display: block; } }
+
 @-webkit-keyframes slideModel {
   from {
     -webkit-transform: translate3d(50px, 0, 0);
