@@ -182,7 +182,7 @@ li {
     stroke: #fff;
     stroke-width: 1;
     fill: transparent; }
-  50% {
+  90% {
     stroke-dashoffset: 0; }
   100% {
     fill: #fff; } }
@@ -194,7 +194,7 @@ li {
     stroke: #fff;
     stroke-width: 1;
     fill: transparent; }
-  50% {
+  90% {
     stroke-dashoffset: 0; }
   100% {
     fill: #fff; } }
