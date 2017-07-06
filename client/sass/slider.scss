@@ -35,6 +35,9 @@
       color: #6031ba;
       line-height: 1.16;
       font-weight: normal;
+      @media #{$s} {
+        padding-top: 40px;
+      }
     }
 
     &__btn {
