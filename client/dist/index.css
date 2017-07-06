@@ -382,7 +382,7 @@ li {
   padding: 0 10px; }
   @media (max-width: 767px) {
     .post-slide {
-      padding: 40px 0; } }
+      padding: 0 40px; } }
   .post-slide__media {
     background-color: #F8F8F8;
     background-position: center;
