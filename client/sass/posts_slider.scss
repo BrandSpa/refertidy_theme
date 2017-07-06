@@ -35,7 +35,7 @@
     &__right {
       right: -40px;
       @media #{$s} {
-        right: 0;
+        right: -10px;
       }
     }
 

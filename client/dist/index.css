@@ -376,7 +376,7 @@ li {
       right: -40px; }
       @media (max-width: 767px) {
         .posts-slider__btns__right {
-          right: 0; } }
+          right: -10px; } }
 
 .post-slide {
   padding: 0 10px; }
