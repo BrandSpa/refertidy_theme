@@ -37,7 +37,9 @@
     .logo {
       path {
         fill: #fff !important;
-        animation: dash 1s;
+        animation: dash .7s;
+        stroke: red;
+        stroke-width: 2;
       }
     }
 
