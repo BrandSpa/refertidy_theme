@@ -1,11 +1,15 @@
 @keyframes dash {
   from {
     stroke-dashoffset: 0;
+    stroke: #fff;
+    stroke-width: 1;
+    fill: transparent;
   }
 
   to {
     stroke-dasharray: 1000;
     stroke-dashoffset: 1000;
+    fill: #fff;
   }
 }
 
@@ -38,8 +42,6 @@
       path {
         fill: #fff !important;
         animation: dash .7s;
-        stroke: red;
-        stroke-width: 2;
       }
     }
 

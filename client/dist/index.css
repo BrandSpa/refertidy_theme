@@ -177,17 +177,25 @@ li {
 
 @-webkit-keyframes dash {
   from {
-    stroke-dashoffset: 0; }
+    stroke-dashoffset: 0;
+    stroke: #fff;
+    stroke-width: 1;
+    fill: transparent; }
   to {
     stroke-dasharray: 1000;
-    stroke-dashoffset: 1000; } }
+    stroke-dashoffset: 1000;
+    fill: #fff; } }
 
 @keyframes dash {
   from {
-    stroke-dashoffset: 0; }
+    stroke-dashoffset: 0;
+    stroke: #fff;
+    stroke-width: 1;
+    fill: transparent; }
   to {
     stroke-dasharray: 1000;
-    stroke-dashoffset: 1000; } }
+    stroke-dashoffset: 1000;
+    fill: #fff; } }
 
 .app-header {
   position: fixed;
@@ -210,9 +218,7 @@ li {
     .app-header--scrolling .logo path {
       fill: #fff !important;
       -webkit-animation: dash .7s;
-      animation: dash .7s;
-      stroke: red;
-      stroke-width: 2; }
+      animation: dash .7s; }
     .app-header--scrolling ul li a {
       color: #fff !important; }
     .app-header--scrolling .header__widget a {
