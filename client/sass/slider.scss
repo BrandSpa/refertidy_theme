@@ -8,6 +8,11 @@
   height: 100%;
 }
 
+.ra-remove-vertical-center {
+  display: block;
+  align-items: baseline;
+}
+
 .slider {
   position: relative;
   overflow: hidden;
@@ -89,9 +94,16 @@
 .slider__btns .slider__btns__left {
   left: 40px;
   font-size: 25px;
+  @media #{$s} {
+    left: 10px;
+  }
 }
 
 .slider__btns .slider__btns__right {
   right: 40px;
   font-size: 25px;
+  
+  @media #{$s} {
+    right: 10px;
+  }
 }

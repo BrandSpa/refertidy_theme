@@ -264,6 +264,12 @@ li {
 .ra-full-height {
   height: 100%; }
 
+.ra-remove-vertical-center {
+  display: block;
+  -webkit-box-align: baseline;
+  -ms-flex-align: baseline;
+  align-items: baseline; }
+
 .slider {
   position: relative;
   overflow: hidden;
@@ -324,10 +330,16 @@ li {
 .slider__btns .slider__btns__left {
   left: 40px;
   font-size: 25px; }
+  @media (max-width: 767px) {
+    .slider__btns .slider__btns__left {
+      left: 10px; } }
 
 .slider__btns .slider__btns__right {
   right: 40px;
   font-size: 25px; }
+  @media (max-width: 767px) {
+    .slider__btns .slider__btns__right {
+      right: 10px; } }
 
 .quo-fixed {
   position: fixed;
