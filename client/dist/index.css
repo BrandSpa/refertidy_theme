@@ -281,10 +281,8 @@ li {
     font-size: 45px;
     color: #6031ba;
     line-height: 1.16;
-    font-weight: normal; }
-    @media (max-width: 767px) {
-      .slider__content__title {
-        padding: 40px 0; } }
+    font-weight: normal;
+    padding: 40px 0; }
   .slider__content__btn {
     display: inline-block;
     height: 60px;
