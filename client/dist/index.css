@@ -123,6 +123,21 @@ li {
     .footer-fixed_mobile {
       display: block; } }
 
+.radius-100 {
+  border-radius: 100px; }
+
+.radius-left-100 {
+  border-radius: 100px 0 0 0; }
+
+.radius-right-100 {
+  border-radius: 0 100px 0 0; }
+
+.radius-bottom-left-100 {
+  border-radius: 0 0 0 100px; }
+
+.radius-bottom-right-100 {
+  border-radius: 0 0 100px 0; }
+
 @-webkit-keyframes slideModel {
   from {
     -webkit-transform: translate3d(50px, 0, 0);

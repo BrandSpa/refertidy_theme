@@ -163,6 +163,27 @@ li {
 
 }
 
+.radius-100 {
+  border-radius: 100px;
+}
+
+.radius-left-100 {
+  border-radius: 100px 0 0 0;
+}
+
+.radius-right-100 {
+  border-radius: 0 100px 0 0;
+}
+
+.radius-bottom-left-100 {
+  border-radius: 0 0 0 100px;
+}
+
+.radius-bottom-right-100 {
+  border-radius: 0 0 100px 0;
+}
+
+
 @import 'animations';
 @import 'header';
 @import 'slider';
