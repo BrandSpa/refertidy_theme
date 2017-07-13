@@ -4,7 +4,8 @@
 /* Landscape phones and smaller */
 body, html {
   -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale; }
+  -moz-osx-font-smoothing: grayscale;
+  word-wrap: break-word; }
 
 body {
   font-family: 'Aktiv Grotesk';

@@ -12,6 +12,7 @@ $xs: "(max-width: 369px)";
 body, html {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  word-wrap: break-word;
 }
 
 body {
