@@ -405,7 +405,8 @@ body {
   font-size: 15px;
   line-height: 20px;
   margin: 0;
-  padding: 0 0 100px 0; }
+  padding: 0 0 100px 0;
+  background: #F9F9FB; }
   @media (max-width: 767px) {
     body {
       font-size: 13px;
