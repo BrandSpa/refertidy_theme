@@ -403,11 +403,13 @@ body, html {
 body {
   font-family: 'Aktiv Grotesk Light';
   font-size: 15px;
+  line-height: 20px;
   margin: 0;
   padding: 0 0 100px 0; }
   @media (max-width: 767px) {
     body {
-      font-size: 13px; } }
+      font-size: 13px;
+      line-height: 18px; } }
 
 normalize.css
 h1, h2, h3, h4, h5, h6 {
@@ -895,7 +897,6 @@ li {
     color: #6031BA;
     margin: 0 0 40px 0; }
   .post-slide__excerpt {
-    font-size: 1.2rem;
     color: #747E86;
     margin: 0 0 40px 0; }
   .post-slide .btn {
