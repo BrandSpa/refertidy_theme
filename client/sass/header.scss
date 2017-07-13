@@ -32,6 +32,7 @@
   &--scrolling {
     background: RGBA(96, 49, 186, 1);
     color: #fff !important;
+    box-shadow: 0 0 5px rgba(0,0,0, .4);
 
     .app-header__phone, .app-header__chat {
       g {

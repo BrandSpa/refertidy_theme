@@ -668,7 +668,9 @@ li {
       text-align: center; } }
   .app-header--scrolling {
     background: RGBA(96, 49, 186, 1);
-    color: #fff !important; }
+    color: #fff !important;
+    -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.4);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.4); }
     .app-header--scrolling .app-header__phone g, .app-header--scrolling .app-header__chat g {
       fill: #fff; }
     .app-header--scrolling .logo path {
