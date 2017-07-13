@@ -474,7 +474,8 @@ input, select, textarea {
   color: #fff;
   background: transparent;
   width: 100%;
-  font-size: 1rem; }
+  font-size: 15px;
+  font-family: 'Aktiv Grotesk'; }
 
 input, select {
   height: 35px; }
