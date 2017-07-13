@@ -11,7 +11,7 @@
   width: 100%;
   min-height: 80px;
   border-radius: 100px 0 0 0;
-  padding: 20px 0 10px 0;
+  padding: 20px 0 20px 0;
 
   @media #{$m} {
     width: 100%;
@@ -27,11 +27,12 @@
   }
 
   &__errors {
-    color: #fff;
+    color: #6031BA;
   }
 
   input, select {
     border-color: #6031BA;
+    color: #6031BA;
 
     &::-webkit-input-placeholder {
       color: #6031BA;

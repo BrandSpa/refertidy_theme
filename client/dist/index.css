@@ -810,7 +810,7 @@ li {
   width: 100%;
   min-height: 80px;
   border-radius: 100px 0 0 0;
-  padding: 20px 0 10px 0; }
+  padding: 20px 0 20px 0; }
   @media (min-width: 768px) and (max-width: 991px) {
     .quo-fixed {
       width: 100%; } }
@@ -821,9 +821,10 @@ li {
     width: 100%;
     padding: 0px 0px 0 50px; }
   .quo-fixed__errors {
-    color: #fff; }
+    color: #6031BA; }
   .quo-fixed input, .quo-fixed select {
-    border-color: #6031BA; }
+    border-color: #6031BA;
+    color: #6031BA; }
     .quo-fixed input::-webkit-input-placeholder, .quo-fixed select::-webkit-input-placeholder {
       color: #6031BA; }
     .quo-fixed input:-moz-placeholder, .quo-fixed select:-moz-placeholder {
