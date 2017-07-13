@@ -12,6 +12,7 @@
   min-height: 80px;
   border-radius: 100px 0 0 0;
   padding: 20px 0 20px 0;
+  box-shadow: 0 10px 30px -5px rgba(10, 16, 34, 0.2);
 
   @media #{$m} {
     width: 100%;
