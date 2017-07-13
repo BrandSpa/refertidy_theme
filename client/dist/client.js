@@ -846,7 +846,7 @@ var QuotationFormFixed = function (_Component) {
               { className: 'col-lg-2 col-md-2' },
               _react2.default.createElement(
                 'button',
-                { className: 'btn btn--outline', style: { borderColor: '#6031BA' } },
+                { className: 'btn btn--outline', style: { borderColor: '#6031BA', color: '#6031BA' } },
                 'COTIZAR'
               )
             )
