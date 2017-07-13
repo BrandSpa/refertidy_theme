@@ -68,6 +68,8 @@ h4 {
   font-size: 20px;
   line-height: 26px;
   font-weight: 500;
+  font-family:  'Gotham Rounded Medium';
+  letter-spacing: 1.5;
 }
 
 h5 {
@@ -75,15 +77,16 @@ h5 {
   margin-bottom: 10px;
   font-size: 17px;
   line-height: 20px;
-  font-weight: 500;
+  font-family: 'Aktiv Grotesk Medium';
 }
 
 h6 {
   margin-bottom: 10px;
   font-size: 15px;
   line-height: 19px;
-  font-weight: 400;
+  font-family: 'Aktiv Grotesk Regular';
 }
+
 
 a {
   text-decoration: none;
