@@ -439,7 +439,7 @@ h3 {
 h4 {
   margin-top: 10px;
   margin-bottom: 10px;
-  font-size: 20px;
+  font-size: 17px;
   line-height: 26px;
   font-weight: 500;
   font-family: 'Gotham Rounded Medium';
@@ -450,8 +450,7 @@ h5 {
   margin-bottom: 10px;
   font-size: 17px;
   line-height: 20px;
-  font-family: 'Gotham Rounded Medium';
-  letter-spacing: 2px; }
+  font-family: 'Aktiv Grotesk Medium'; }
 
 h6 {
   margin-bottom: 10px;
