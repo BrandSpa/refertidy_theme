@@ -471,7 +471,7 @@ input, input:focus, select, textarea {
 
 input, select, textarea {
   border: none;
-  border-bottom: 1px solid #fff;
+  border-bottom: 2px solid #fff;
   color: #fff;
   background: transparent;
   width: 100%;
