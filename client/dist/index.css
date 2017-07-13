@@ -20,31 +20,24 @@ h1, h2, h3, h4, h5, h6 {
   margin: 0; }
 
 h1 {
-  font-family: 'Gotham Rounded Book'; }
-
-h3 {
-  font-family: 'Gotham Rounded Medium'; }
-
-h1 {
   margin-top: 0px;
   margin-bottom: 20px;
   font-size: 50px;
   line-height: 60px;
-  font-weight: 500; }
+  font-family: 'Gotham Rounded Book'; }
 
 h2 {
   margin-top: 10px;
   margin-bottom: 15px;
   font-size: 40px;
-  line-height: 50px;
-  font-weight: 500; }
+  line-height: 50px; }
 
 h3 {
   margin-top: 10px;
   margin-bottom: 10px;
   font-size: 32px;
   line-height: 42px;
-  font-weight: 500; }
+  font-family: 'Aktiv Grotesk'; }
 
 h4 {
   margin-top: 10px;
@@ -67,6 +60,9 @@ h6 {
   font-size: 15px;
   line-height: 19px;
   font-family: 'Aktiv Grotesk Regular'; }
+
+p {
+  font-family: 'Aktiv Grotesk Light'; }
 
 a {
   text-decoration: none;
