@@ -23,7 +23,7 @@ class PostSlide extends Component {
         >
         </div>
         <div className="post-slide__content">
-            <h2 className="post-slide__title">{post.post_title}</h2>
+            <h4 className="post-slide__title">{post.post_title}</h4>
             <div className="post-slide__excerpt">
               {post.post_excerpt.substr(0, 150)}
             </div>
