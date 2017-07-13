@@ -904,7 +904,9 @@ li {
     width: 100%; }
   .post-slide__title {
     color: #6031BA;
-    margin: 0 0 40px 0; }
+    margin: 0 0 20px 0;
+    letter-spacing: normal;
+    line-height: 1.2; }
   .post-slide__excerpt {
     color: #747E86;
     margin: 0 0 40px 0; }
