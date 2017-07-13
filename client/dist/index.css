@@ -500,10 +500,11 @@ li {
   height: 50px;
   border: none;
   cursor: pointer;
-  font-size: 1.33333rem;
-  padding: 12px 0;
+  font-size: 17px;
+  padding: 15px;
   text-align: center;
-  font-family: 'Gotham Rounded Medium'; }
+  font-family: 'Gotham Rounded Medium';
+  letter-spacing: 2px; }
   .btn--outline {
     background: transparent;
     border: 2px solid #fff; }

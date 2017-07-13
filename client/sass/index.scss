@@ -136,10 +136,11 @@ li {
   height: 50px;
   border: none;
   cursor: pointer;
-  font-size: 20 / 15 * 1rem;
-  padding: 12px 0;
+  font-size: 17px;
+  padding: 15px;
   text-align: center;
   font-family:  'Gotham Rounded Medium';
+  letter-spacing: 2px;
 
   &--outline {
     background: transparent;
