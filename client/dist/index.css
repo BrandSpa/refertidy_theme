@@ -4,8 +4,7 @@
 /* Landscape phones and smaller */
 body, html {
   -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  word-wrap: break-word; }
+  -moz-osx-font-smoothing: grayscale; }
 
 body {
   font-family: 'Aktiv Grotesk';
@@ -48,7 +47,7 @@ h4 {
   line-height: 26px;
   font-weight: 500;
   font-family: 'Gotham Rounded Medium';
-  letter-spacing: 1.5; }
+  letter-spacing: 2; }
 
 h5 {
   margin-top: 10px;

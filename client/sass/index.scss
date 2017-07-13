@@ -12,7 +12,6 @@ $xs: "(max-width: 369px)";
 body, html {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  word-wrap: break-word;
 }
 
 body {
@@ -63,7 +62,7 @@ h4 {
   line-height: 26px;
   font-weight: 500;
   font-family:  'Gotham Rounded Medium';
-  letter-spacing: 1.5;
+  letter-spacing: 2;
 }
 
 h5 {
