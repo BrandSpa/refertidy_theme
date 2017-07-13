@@ -443,14 +443,15 @@ h4 {
   line-height: 26px;
   font-weight: 500;
   font-family: 'Gotham Rounded Medium';
-  letter-spacing: 2; }
+  letter-spacing: 2px; }
 
 h5 {
   margin-top: 10px;
   margin-bottom: 10px;
   font-size: 17px;
   line-height: 20px;
-  font-family: 'Aktiv Grotesk Medium'; }
+  font-family: 'Gotham Rounded Medium';
+  letter-spacing: 2px; }
 
 h6 {
   margin-bottom: 10px;
