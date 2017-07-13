@@ -803,14 +803,14 @@ li {
   left: 0;
   right: 0;
   z-index: 998;
-  max-width: 1110px;
+  max-width: 1125px;
   margin: 0 auto;
   padding: 0 15px;
-  background: #6031BA;
+  background: #fff;
   width: 100%;
-  min-height: 100px;
+  min-height: 80px;
   border-radius: 100px 0 0 0;
-  padding: 30px 40px; }
+  padding: 20px 0 10px 0; }
   @media (min-width: 768px) and (max-width: 991px) {
     .quo-fixed {
       width: 100%; } }
@@ -819,19 +819,21 @@ li {
       display: none; } }
   .quo-fixed__container {
     width: 100%;
-    padding: 0 50px; }
+    padding: 0px 0px 0 50px; }
   .quo-fixed__errors {
     color: #fff; }
-  .quo-fixed input::-webkit-input-placeholder {
-    color: #fff; }
-  .quo-fixed input:-moz-placeholder {
-    /* Firefox 18- */
-    color: #fff; }
-  .quo-fixed input::-moz-placeholder {
-    /* Firefox 19+ */
-    color: #fff; }
-  .quo-fixed input:-ms-input-placeholder {
-    color: #fff; }
+  .quo-fixed input {
+    border-color: #6031BA; }
+    .quo-fixed input::-webkit-input-placeholder {
+      color: #6031BA; }
+    .quo-fixed input:-moz-placeholder {
+      /* Firefox 18- */
+      color: #6031BA; }
+    .quo-fixed input::-moz-placeholder {
+      /* Firefox 19+ */
+      color: #6031BA; }
+    .quo-fixed input:-ms-input-placeholder {
+      color: #6031BA; }
 
 .form-contact input::-webkit-input-placeholder, .form-contact textarea::-webkit-input-placeholder {
   color: #fff; }

@@ -4,14 +4,14 @@
   left: 0;
   right: 0;
   z-index: 998;
-  max-width: 1110px;
+  max-width: 1125px;
   margin: 0 auto;
   padding: 0 15px;
-  background: #6031BA;
+  background: #fff;
   width: 100%;
-  min-height: 100px;
+  min-height: 80px;
   border-radius: 100px 0 0 0;
-  padding: 30px 40px;
+  padding: 20px 0 10px 0;
 
   @media #{$m} {
     width: 100%;
@@ -22,8 +22,8 @@
   }
 
   &__container {
-     width: 100%;
-    padding: 0 50px;
+    width: 100%;
+    padding: 0px 0px 0 50px;
   }
 
   &__errors {
@@ -31,22 +31,24 @@
   }
 
   input {
+    border-color: #6031BA;
+
     &::-webkit-input-placeholder {
-      color: #fff;
+      color: #6031BA;
     }
 
     &:-moz-placeholder {
       /* Firefox 18- */
-      color: #fff;
+      color: #6031BA;
     }
 
     &::-moz-placeholder {
       /* Firefox 19+ */
-      color: #fff;
+      color: #6031BA;
     }
 
     &:-ms-input-placeholder {
-      color: #fff;
+      color: #6031BA;
     }
   }
 
