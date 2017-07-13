@@ -897,11 +897,18 @@ li {
     min-height: 250px;
     cursor: pointer; }
   .post-slide__content {
-    background: #F8F8F8;
+    background: #FFF;
     border-radius: 0 0 0 100px;
     padding: 40px;
     float: left;
-    width: 100%; }
+    width: 100%;
+    -webkit-box-shadow: 0 1px 1px 0 rgba(10, 16, 34, 0.2);
+    box-shadow: 0 1px 1px 0 rgba(10, 16, 34, 0.2);
+    -webkit-transition: all .7s;
+    transition: all .7s; }
+    .post-slide__content:hover {
+      -webkit-box-shadow: 0 10px 30px -5px rgba(10, 16, 34, 0.2);
+      box-shadow: 0 10px 30px -5px rgba(10, 16, 34, 0.2); }
   .post-slide__title {
     color: #6031BA;
     margin: 0 0 20px 0;
