@@ -83,7 +83,7 @@ class QuotationFormFixed extends Component {
             </div>
 
             <div className="col-lg-2 col-md-2">
-              <button className="btn" style={{color: '#6031BA'}}>COTIZAR</button>
+              <button className="btn btn--outline" style={{borderColor: '#6031BA'}}>COTIZAR</button>
             </div>
           </div>
         </form>

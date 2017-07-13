@@ -822,17 +822,17 @@ li {
     padding: 0px 0px 0 50px; }
   .quo-fixed__errors {
     color: #fff; }
-  .quo-fixed input {
+  .quo-fixed input, .quo-fixed select {
     border-color: #6031BA; }
-    .quo-fixed input::-webkit-input-placeholder {
+    .quo-fixed input::-webkit-input-placeholder, .quo-fixed select::-webkit-input-placeholder {
       color: #6031BA; }
-    .quo-fixed input:-moz-placeholder {
+    .quo-fixed input:-moz-placeholder, .quo-fixed select:-moz-placeholder {
       /* Firefox 18- */
       color: #6031BA; }
-    .quo-fixed input::-moz-placeholder {
+    .quo-fixed input::-moz-placeholder, .quo-fixed select::-moz-placeholder {
       /* Firefox 19+ */
       color: #6031BA; }
-    .quo-fixed input:-ms-input-placeholder {
+    .quo-fixed input:-ms-input-placeholder, .quo-fixed select:-ms-input-placeholder {
       color: #6031BA; }
 
 .form-contact input::-webkit-input-placeholder, .form-contact textarea::-webkit-input-placeholder {
