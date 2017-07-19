@@ -44,7 +44,7 @@ class SliderSlide extends Component {
         const moveX = ( -1 * x - x ) / bounds.width * relmousepos.x + x;
         const moveY = ( -1 * y - y ) / bounds.height * relmousepos.y + y;
         console.log(this.obj_img);
-        this.obj_img.style.transform = `translate(${moveX}, ${moveY })`;
+        this.obj_img.style.transform = `translate(${moveX}px, ${moveY}px)`;
       })
 
     });
