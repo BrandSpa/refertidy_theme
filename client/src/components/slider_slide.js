@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import anime from 'animejs';
 
 // from http://www.quirksmode.org/js/events_properties.html#position
 const getMousePos = function(ev) {
@@ -17,7 +18,6 @@ const getMousePos = function(ev) {
   return { x : posx, y : posy };
 };
 
-
 class SliderSlide extends Component {
   state = {
     mobile: false
@@ -28,7 +28,7 @@ class SliderSlide extends Component {
       this.setState({mobile: true});
     }
 
-    document.addEventListener('mousemove', () => {
+    this.el.addEventListener('mousemove', () => {
       requestAnimationFrame(() => {
         getMousePos(this.obj_img);
       })
@@ -53,6 +53,7 @@ class SliderSlide extends Component {
 
     return (
       <section
+        ref={el => this.el = el}
         className={`slider__slide ${current == index
           ? "slider__slide--active"
           : ""}`

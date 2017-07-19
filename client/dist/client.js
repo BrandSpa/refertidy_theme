@@ -1,6 +1,6 @@
 webpackJsonp([0],{
 
-/***/ 208:
+/***/ 209:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -61,15 +61,15 @@ var ArrowRight = exports.ArrowRight = function ArrowRight() {
 
 /***/ }),
 
-/***/ 209:
+/***/ 210:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-var stringify = __webpack_require__(520);
-var parse = __webpack_require__(521);
-var formats = __webpack_require__(211);
+var stringify = __webpack_require__(521);
+var parse = __webpack_require__(522);
+var formats = __webpack_require__(212);
 
 module.exports = {
     formats: formats,
@@ -80,7 +80,7 @@ module.exports = {
 
 /***/ }),
 
-/***/ 210:
+/***/ 211:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -270,7 +270,7 @@ exports.isBuffer = function (obj) {
 
 /***/ }),
 
-/***/ 211:
+/***/ 212:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -296,7 +296,7 @@ module.exports = {
 
 /***/ }),
 
-/***/ 515:
+/***/ 516:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -314,23 +314,23 @@ var _reactMultipleRender = __webpack_require__(200);
 
 var _reactMultipleRender2 = _interopRequireDefault(_reactMultipleRender);
 
-var _slider = __webpack_require__(516);
+var _slider = __webpack_require__(517);
 
 var _slider2 = _interopRequireDefault(_slider);
 
-var _sliderImgs = __webpack_require__(518);
+var _sliderImgs = __webpack_require__(519);
 
 var _sliderImgs2 = _interopRequireDefault(_sliderImgs);
 
-var _quotation_form_fixed = __webpack_require__(519);
+var _quotation_form_fixed = __webpack_require__(520);
 
 var _quotation_form_fixed2 = _interopRequireDefault(_quotation_form_fixed);
 
-var _contact = __webpack_require__(522);
+var _contact = __webpack_require__(523);
 
 var _contact2 = _interopRequireDefault(_contact);
 
-var _posts_slider = __webpack_require__(523);
+var _posts_slider = __webpack_require__(524);
 
 var _posts_slider2 = _interopRequireDefault(_posts_slider);
 
@@ -346,7 +346,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 /***/ }),
 
-/***/ 516:
+/***/ 517:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -362,11 +362,11 @@ var _react = __webpack_require__(31);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _slider_slide = __webpack_require__(517);
+var _slider_slide = __webpack_require__(518);
 
 var _slider_slide2 = _interopRequireDefault(_slider_slide);
 
-var _arrows = __webpack_require__(208);
+var _arrows = __webpack_require__(209);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -464,7 +464,7 @@ exports.default = Slider;
 
 /***/ }),
 
-/***/ 517:
+/***/ 518:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -479,6 +479,10 @@ var _createClass = function () { function defineProperties(target, props) { for 
 var _react = __webpack_require__(31);
 
 var _react2 = _interopRequireDefault(_react);
+
+var _animejs = __webpack_require__(208);
+
+var _animejs2 = _interopRequireDefault(_animejs);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -532,7 +536,7 @@ var SliderSlide = function (_Component) {
         this.setState({ mobile: true });
       }
 
-      document.addEventListener('mousemove', function () {
+      this.el.addEventListener('mousemove', function () {
         requestAnimationFrame(function () {
           getMousePos(_this2.obj_img);
         });
@@ -563,6 +567,9 @@ var SliderSlide = function (_Component) {
       return _react2.default.createElement(
         'section',
         {
+          ref: function ref(el) {
+            return _this3.el = el;
+          },
           className: 'slider__slide ' + (current == index ? "slider__slide--active" : ""),
           style: { position: "relative", height: "100vh", width: slideWidth, float: 'left', backgroundColor: slide.bg_color }
         },
@@ -609,7 +616,7 @@ exports.default = SliderSlide;
 
 /***/ }),
 
-/***/ 518:
+/***/ 519:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -708,7 +715,7 @@ exports.default = SliderImgs;
 
 /***/ }),
 
-/***/ 519:
+/***/ 520:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -728,7 +735,7 @@ var _axios = __webpack_require__(136);
 
 var _axios2 = _interopRequireDefault(_axios);
 
-var _qs = __webpack_require__(209);
+var _qs = __webpack_require__(210);
 
 var _qs2 = _interopRequireDefault(_qs);
 
@@ -892,14 +899,14 @@ exports.default = QuotationFormFixed;
 
 /***/ }),
 
-/***/ 520:
+/***/ 521:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-var utils = __webpack_require__(210);
-var formats = __webpack_require__(211);
+var utils = __webpack_require__(211);
+var formats = __webpack_require__(212);
 
 var arrayPrefixGenerators = {
     brackets: function brackets(prefix) { // eslint-disable-line func-name-matching
@@ -1107,13 +1114,13 @@ module.exports = function (object, opts) {
 
 /***/ }),
 
-/***/ 521:
+/***/ 522:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-var utils = __webpack_require__(210);
+var utils = __webpack_require__(211);
 
 var has = Object.prototype.hasOwnProperty;
 
@@ -1282,7 +1289,7 @@ module.exports = function (str, opts) {
 
 /***/ }),
 
-/***/ 522:
+/***/ 523:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1302,7 +1309,7 @@ var _axios = __webpack_require__(136);
 
 var _axios2 = _interopRequireDefault(_axios);
 
-var _qs = __webpack_require__(209);
+var _qs = __webpack_require__(210);
 
 var _qs2 = _interopRequireDefault(_qs);
 
@@ -1487,7 +1494,7 @@ exports.default = Contact;
 
 /***/ }),
 
-/***/ 523:
+/***/ 524:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1503,11 +1510,11 @@ var _react = __webpack_require__(31);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _post_slide = __webpack_require__(524);
+var _post_slide = __webpack_require__(525);
 
 var _post_slide2 = _interopRequireDefault(_post_slide);
 
-var _arrows = __webpack_require__(208);
+var _arrows = __webpack_require__(209);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -1620,7 +1627,7 @@ exports.default = PostsSlider;
 
 /***/ }),
 
-/***/ 524:
+/***/ 525:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1714,4 +1721,4 @@ exports.default = PostSlide;
 
 /***/ })
 
-},[515]);
+},[516]);

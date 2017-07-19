@@ -10,7 +10,8 @@ module.exports = {
       'react-multiple-render',
       'axios',
       'lazysizes/lazysizes.min.js',
-      'lazysizes/plugins/bgset/ls.bgset.min.js'
+      'lazysizes/plugins/bgset/ls.bgset.min.js',
+      'animejs'
     ],
 		client: './src/app.js'
 	},

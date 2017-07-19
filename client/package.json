@@ -9,6 +9,7 @@
     "build:prod": "webpack --p"
   },
   "dependencies": {
+    "animejs": "^2.0.2",
     "axios": "^0.16.2",
     "lazysizes": "^4.0.0-rc3",
     "normalize.css": "^7.0.0",
