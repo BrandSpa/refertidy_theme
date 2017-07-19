@@ -517,6 +517,8 @@ var moveEl = function moveEl(el, x, y, evnt) {
     top: document.body.scrollTop + document.documentElement.scrollTop
   };
 
+  console.log(el);
+
   var bounds = el.getBoundingClientRect();
 
   var relmousepos = {
