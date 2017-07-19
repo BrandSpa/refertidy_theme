@@ -9,8 +9,7 @@ const getMousePos = function(ev) {
   if (ev.pageX || ev.pageY) 	{
     posx = ev.pageX;
     posy = ev.pageY;
-  }
-  else if (ev.clientX || ev.clientY) 	{
+  } else if (ev.clientX || ev.clientY) 	{
     posx = ev.clientX + document.body.scrollLeft + document.documentElement.scrollLeft;
     posy = ev.clientY + document.body.scrollTop + document.documentElement.scrollTop;
   }
@@ -26,8 +25,6 @@ const moveEl = (el, x, y, evnt) => {
     left : document.body.scrollLeft + document.documentElement.scrollLeft,
     top : document.body.scrollTop + document.documentElement.scrollTop
   };
-
-  console.log(el);
 
   const bounds = el.getBoundingClientRect();
 
