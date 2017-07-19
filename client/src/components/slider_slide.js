@@ -28,11 +28,16 @@ class SliderSlide extends Component {
       this.setState({mobile: true});
     }
 
+    const docScrolls = {
+			left : document.body.scrollLeft + document.documentElement.scrollLeft,
+			top : document.body.scrollTop + document.documentElement.scrollTop
+		};
+
     this.el.addEventListener('mousemove', () => {
       requestAnimationFrame(() => {
         getMousePos(this.el);
         const bounds = this.el.getBoundingClientRect();
-        console.log(bounds);
+        console.log(bounds, docScrolls);
       })
 
     });

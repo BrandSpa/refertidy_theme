@@ -536,11 +536,16 @@ var SliderSlide = function (_Component) {
         this.setState({ mobile: true });
       }
 
+      var docScrolls = {
+        left: document.body.scrollLeft + document.documentElement.scrollLeft,
+        top: document.body.scrollTop + document.documentElement.scrollTop
+      };
+
       this.el.addEventListener('mousemove', function () {
         requestAnimationFrame(function () {
           getMousePos(_this2.el);
           var bounds = _this2.el.getBoundingClientRect();
-          console.log(bounds);
+          console.log(bounds, docScrolls);
         });
       });
     }
