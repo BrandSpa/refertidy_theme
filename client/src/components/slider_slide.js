@@ -33,11 +33,15 @@ class SliderSlide extends Component {
 			top : document.body.scrollTop + document.documentElement.scrollTop
 		};
 
+    const x = 30;
+
     this.el.addEventListener('mousemove', () => {
       requestAnimationFrame(() => {
-        getMousePos(this.el);
+        let mousepos = getMousePos(this.el);
         const bounds = this.el.getBoundingClientRect();
-        console.log(bounds, docScrolls);
+        const relmousepos = { x : mousepos.x - bounds.left - docScrolls.left, y : mousepos.y - bounds.top - docScrolls.top };
+
+        console.log(( -1 * x - x ) / bounds.width * relmousepos.x + x);
       })
 
     });

@@ -541,11 +541,15 @@ var SliderSlide = function (_Component) {
         top: document.body.scrollTop + document.documentElement.scrollTop
       };
 
+      var x = 30;
+
       this.el.addEventListener('mousemove', function () {
         requestAnimationFrame(function () {
-          getMousePos(_this2.el);
+          var mousepos = getMousePos(_this2.el);
           var bounds = _this2.el.getBoundingClientRect();
-          console.log(bounds, docScrolls);
+          var relmousepos = { x: mousepos.x - bounds.left - docScrolls.left, y: mousepos.y - bounds.top - docScrolls.top };
+
+          console.log((-1 * x - x) / bounds.width * relmousepos.x + x);
         });
       });
     }
