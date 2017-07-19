@@ -542,14 +542,17 @@ var SliderSlide = function (_Component) {
       };
 
       var x = 30;
+      var y = 50;
 
       this.el.addEventListener('mousemove', function () {
         requestAnimationFrame(function () {
-          var mousepos = getMousePos(_this2.el);
+          var mousepos = getMousePos(_this2.obj_img);
           var bounds = _this2.el.getBoundingClientRect();
           var relmousepos = { x: mousepos.x - bounds.left - docScrolls.left, y: mousepos.y - bounds.top - docScrolls.top };
-
-          console.log((-1 * x - x) / bounds.width * relmousepos.x + x);
+          var moveX = (-1 * x - x) / bounds.width * relmousepos.x + x;
+          var moveY = (-1 * y - y) / bounds.height * relmousepos.y + y;
+          console.log(moveX, moveY);
+          _this2.obj_img.style.transform = 'translate(' + moveX + ', ' + moveY + ')';
         });
       });
     }
