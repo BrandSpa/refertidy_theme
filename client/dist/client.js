@@ -552,7 +552,7 @@ var SliderSlide = function (_Component) {
           var moveY = (-1 * y - y) / bounds.height * relmousepos.y + y;
           console.log(mousepos, relmousepos);
           _this2.obj_img.style.transition = 'all 1s';
-          _this2.obj_img.style.transform = 'translateX(' + moveX + 'px) translateY' + moveY + 'px)';
+          _this2.obj_img.style.transform = 'translateX(' + moveX + 'px) translateY(' + moveY + 'px)';
         });
       });
     }
