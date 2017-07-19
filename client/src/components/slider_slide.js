@@ -28,7 +28,14 @@ class SliderSlide extends Component {
       this.setState({mobile: true});
     }
 
-    getMousePos(this.obj_img);
+    document.addEventListener('mousemove', () => {
+      requestAnimationFrame(() => {
+        getMousePos(this.obj_img);
+      })
+
+    });
+
+
   }
 
   render() {

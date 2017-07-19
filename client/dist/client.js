@@ -526,16 +526,22 @@ var SliderSlide = function (_Component) {
   _createClass(SliderSlide, [{
     key: 'componentDidMount',
     value: function componentDidMount() {
+      var _this2 = this;
+
       if (window.innerWidth < 768) {
         this.setState({ mobile: true });
       }
 
-      getMousePos(this.obj_img);
+      document.addEventListener('mousemove', function () {
+        requestAnimationFrame(function () {
+          getMousePos(_this2.obj_img);
+        });
+      });
     }
   }, {
     key: 'render',
     value: function render() {
-      var _this2 = this;
+      var _this3 = this;
 
       var mobile = this.state.mobile;
       var _props = this.props,
@@ -586,7 +592,7 @@ var SliderSlide = function (_Component) {
         }),
         _react2.default.createElement('div', {
           ref: function ref(obj_img) {
-            return _this2.obj_img = obj_img;
+            return _this3.obj_img = obj_img;
           },
           className: 'slider__slide__object lazyload blur-up',
           style: slideStyle,
