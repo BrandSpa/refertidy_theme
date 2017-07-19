@@ -18,7 +18,7 @@ const getMousePos = function(ev) {
   return { x : posx, y : posy };
 };
 
-const moveEl = (el, x, y,evnt) => {
+const moveEl = (el, x, y, evnt) => {
 
   let mousepos = getMousePos(evnt);
 
@@ -56,7 +56,7 @@ class SliderSlide extends Component {
     this.el.addEventListener('mousemove', (evnt) => {
       requestAnimationFrame(() => {
         moveEl(this.object_img, 20, 20, evnt);
-        moveEl(this.this.text, -20, -20, evnt);
+        moveEl(this.text, -20, -20, evnt);
       });
     });
 
