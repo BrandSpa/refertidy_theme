@@ -14,7 +14,7 @@ const getMousePos = function(ev) {
     posx = ev.clientX + document.body.scrollLeft + document.documentElement.scrollLeft;
     posy = ev.clientY + document.body.scrollTop + document.documentElement.scrollTop;
   }
-  console.log({ x : posx, y : posy });
+
   return { x : posx, y : posy };
 };
 
@@ -29,23 +29,29 @@ class SliderSlide extends Component {
     }
 
 
-    const x = 100;
-    const y = 150;
+    const x = 25;
+    const y = 25;
 
     this.el.addEventListener('mousemove', () => {
+
       requestAnimationFrame(() => {
         let mousepos = getMousePos(this.obj_img);
         const docScrolls = {
           left : document.body.scrollLeft + document.documentElement.scrollLeft,
           top : document.body.scrollTop + document.documentElement.scrollTop
         };
+
         const bounds = this.obj_img.getBoundingClientRect();
         const relmousepos = { x : mousepos.x - bounds.left - docScrolls.left, y : mousepos.y - bounds.top - docScrolls.top };
+
         const moveX = ( -1 * x - x ) / bounds.width * relmousepos.x + x;
         const moveY = ( -1 * y - y ) / bounds.height * relmousepos.y + y;
-        console.log(mousepos, relmousepos);
+
+        console.log('x:', mousepos.x, bounds.left, docScrolls.left);
+        
         this.obj_img.style.transition = `all 1s`;
-        this.obj_img.style.transform = `translateX(${moveX}px) translateY(${moveY}px)`;
+
+        // this.obj_img.style.transform = `translateX(${moveX}px) translateY(${moveY}px)`;
       })
 
     });

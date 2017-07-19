@@ -504,7 +504,7 @@ var getMousePos = function getMousePos(ev) {
     posx = ev.clientX + document.body.scrollLeft + document.documentElement.scrollLeft;
     posy = ev.clientY + document.body.scrollTop + document.documentElement.scrollTop;
   }
-  console.log({ x: posx, y: posy });
+
   return { x: posx, y: posy };
 };
 
@@ -536,23 +536,29 @@ var SliderSlide = function (_Component) {
         this.setState({ mobile: true });
       }
 
-      var x = 100;
-      var y = 150;
+      var x = 25;
+      var y = 25;
 
       this.el.addEventListener('mousemove', function () {
+
         requestAnimationFrame(function () {
           var mousepos = getMousePos(_this2.obj_img);
           var docScrolls = {
             left: document.body.scrollLeft + document.documentElement.scrollLeft,
             top: document.body.scrollTop + document.documentElement.scrollTop
           };
+
           var bounds = _this2.obj_img.getBoundingClientRect();
           var relmousepos = { x: mousepos.x - bounds.left - docScrolls.left, y: mousepos.y - bounds.top - docScrolls.top };
+
           var moveX = (-1 * x - x) / bounds.width * relmousepos.x + x;
           var moveY = (-1 * y - y) / bounds.height * relmousepos.y + y;
-          console.log(mousepos, relmousepos);
+
+          console.log('x:', mousepos.x, bounds.left, docScrolls.left);
+
           _this2.obj_img.style.transition = 'all 1s';
-          _this2.obj_img.style.transform = 'translateX(' + moveX + 'px) translateY(' + moveY + 'px)';
+
+          // this.obj_img.style.transform = `translateX(${moveX}px) translateY(${moveY}px)`;
         });
       });
     }
