@@ -539,10 +539,10 @@ var SliderSlide = function (_Component) {
       var x = 25;
       var y = 25;
 
-      this.el.addEventListener('mousemove', function () {
+      this.el.addEventListener('mousemove', function (ev) {
 
         requestAnimationFrame(function () {
-          var mousepos = getMousePos(_this2.obj_img);
+          var mousepos = getMousePos(ev);
           var docScrolls = {
             left: document.body.scrollLeft + document.documentElement.scrollLeft,
             top: document.body.scrollTop + document.documentElement.scrollTop
@@ -558,7 +558,7 @@ var SliderSlide = function (_Component) {
 
           _this2.obj_img.style.transition = 'all 1s';
 
-          // this.obj_img.style.transform = `translateX(${moveX}px) translateY(${moveY}px)`;
+          _this2.obj_img.style.transform = 'translateX(' + moveX + 'px) translateY(' + moveY + 'px)';
         });
       });
     }

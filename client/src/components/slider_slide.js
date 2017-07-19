@@ -32,10 +32,10 @@ class SliderSlide extends Component {
     const x = 25;
     const y = 25;
 
-    this.el.addEventListener('mousemove', () => {
+    this.el.addEventListener('mousemove', (ev) => {
 
       requestAnimationFrame(() => {
-        let mousepos = getMousePos(this.obj_img);
+        let mousepos = getMousePos(ev);
         const docScrolls = {
           left : document.body.scrollLeft + document.documentElement.scrollLeft,
           top : document.body.scrollTop + document.documentElement.scrollTop
@@ -48,10 +48,10 @@ class SliderSlide extends Component {
         const moveY = ( -1 * y - y ) / bounds.height * relmousepos.y + y;
 
         console.log('x:', mousepos.x, bounds.left, docScrolls.left);
-        
+
         this.obj_img.style.transition = `all 1s`;
 
-        // this.obj_img.style.transform = `translateX(${moveX}px) translateY(${moveY}px)`;
+        this.obj_img.style.transform = `translateX(${moveX}px) translateY(${moveY}px)`;
       })
 
     });
