@@ -29,8 +29,8 @@ class SliderSlide extends Component {
     }
 
 
-    const x = 50;
-    const y = 50;
+    const x = 20;
+    const y = 20;
 
     this.el.addEventListener('mousemove', (ev) => {
 
