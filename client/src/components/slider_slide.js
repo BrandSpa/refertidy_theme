@@ -55,7 +55,7 @@ class SliderSlide extends Component {
 
     this.el.addEventListener('mousemove', (evnt) => {
       requestAnimationFrame(() => {
-        moveEl(this.obj_img, 15, 15, evnt);
+        moveEl(this.obj_img, 25, 25, evnt);
         moveEl(this.text, -5, -5, evnt);
       });
     });
@@ -89,7 +89,7 @@ class SliderSlide extends Component {
 
       <div className="container ra-vertical-center ra-full-height ra-remove-vertical-center">
        <div className="slider__slide__content">
-         <div style={{transition: 'tranform .3s ease-out'}} ref={text => this.text = text} dangerouslySetInnerHTML={{__html: slide.slide_content}} />
+         <div style={{transition: 'transform 0.3s ease-out'}} ref={text => this.text = text} dangerouslySetInnerHTML={{__html: slide.slide_content}} />
          <a href={slide.btn_link} className="btn" style={{background: slide.btn_color}}>
           {slide.btn_txt}
          </a>
