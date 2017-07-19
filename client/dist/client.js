@@ -488,6 +488,22 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
+// from http://www.quirksmode.org/js/events_properties.html#position
+var getMousePos = function getMousePos(ev) {
+  var posx = 0;
+  var posy = 0;
+  if (!ev) ev = window.event;
+  if (ev.pageX || ev.pageY) {
+    posx = ev.pageX;
+    posy = ev.pageY;
+  } else if (ev.clientX || ev.clientY) {
+    posx = ev.clientX + document.body.scrollLeft + document.documentElement.scrollLeft;
+    posy = ev.clientY + document.body.scrollTop + document.documentElement.scrollTop;
+  }
+  console.log({ x: posx, y: posy });
+  return { x: posx, y: posy };
+};
+
 var SliderSlide = function (_Component) {
   _inherits(SliderSlide, _Component);
 
@@ -513,10 +529,14 @@ var SliderSlide = function (_Component) {
       if (window.innerWidth < 768) {
         this.setState({ mobile: true });
       }
+
+      getMousePos(this.obj_img);
     }
   }, {
     key: 'render',
     value: function render() {
+      var _this2 = this;
+
       var mobile = this.state.mobile;
       var _props = this.props,
           slide = _props.slide,
@@ -565,6 +585,9 @@ var SliderSlide = function (_Component) {
           'data-bgset': slide.model_img_mobile + ' [(max-width: 767px)] | ' + slide.model_img
         }),
         _react2.default.createElement('div', {
+          ref: function ref(obj_img) {
+            return _this2.obj_img = bj_img;
+          },
           className: 'slider__slide__object lazyload blur-up',
           style: slideStyle,
           'data-bgset': slide.object_img_mobile + ' [(max-width: 767px)] | ' + slide.object_img

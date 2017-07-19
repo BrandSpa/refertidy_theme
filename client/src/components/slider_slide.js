@@ -1,5 +1,23 @@
 import React, { Component } from "react";
 
+// from http://www.quirksmode.org/js/events_properties.html#position
+const getMousePos = function(ev) {
+  let posx = 0;
+  let posy = 0;
+  if (!ev) ev = window.event;
+  if (ev.pageX || ev.pageY) 	{
+    posx = ev.pageX;
+    posy = ev.pageY;
+  }
+  else if (ev.clientX || ev.clientY) 	{
+    posx = ev.clientX + document.body.scrollLeft + document.documentElement.scrollLeft;
+    posy = ev.clientY + document.body.scrollTop + document.documentElement.scrollTop;
+  }
+  console.log({ x : posx, y : posy });
+  return { x : posx, y : posy };
+};
+
+
 class SliderSlide extends Component {
   state = {
     mobile: false
@@ -9,6 +27,8 @@ class SliderSlide extends Component {
     if(window.innerWidth < 768) {
       this.setState({mobile: true});
     }
+
+    getMousePos(this.obj_img);
   }
 
   render() {
@@ -55,6 +75,7 @@ class SliderSlide extends Component {
         />
 
         <div
+          ref={obj_img => this.obj_img = bj_img}
           className="slider__slide__object lazyload blur-up"
           style={slideStyle}
           data-bgset={`${slide.object_img_mobile} [(max-width: 767px)] | ${slide.object_img}`}
