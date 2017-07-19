@@ -536,8 +536,8 @@ var SliderSlide = function (_Component) {
         this.setState({ mobile: true });
       }
 
-      var x = 25;
-      var y = 25;
+      var x = 50;
+      var y = 50;
 
       this.el.addEventListener('mousemove', function (ev) {
 
@@ -554,9 +554,7 @@ var SliderSlide = function (_Component) {
           var moveX = (-1 * x - x) / bounds.width * relmousepos.x + x;
           var moveY = (-1 * y - y) / bounds.height * relmousepos.y + y;
 
-          console.log('x:', mousepos.x, bounds.left, docScrolls.left);
-
-          _this2.obj_img.style.transition = 'all 1s';
+          console.log(moveX, moveY);
 
           _this2.obj_img.style.transform = 'translateX(' + moveX + 'px) translateY(' + moveY + 'px)';
         });
@@ -581,7 +579,8 @@ var SliderSlide = function (_Component) {
         position: 'absolute',
         top: '0',
         backgroundPosition: 'center',
-        backgroundSize: 'cover'
+        backgroundSize: 'cover',
+        transition: 'transform .3s'
       };
 
       return _react2.default.createElement(

@@ -29,8 +29,8 @@ class SliderSlide extends Component {
     }
 
 
-    const x = 25;
-    const y = 25;
+    const x = 50;
+    const y = 50;
 
     this.el.addEventListener('mousemove', (ev) => {
 
@@ -47,9 +47,7 @@ class SliderSlide extends Component {
         const moveX = ( -1 * x - x ) / bounds.width * relmousepos.x + x;
         const moveY = ( -1 * y - y ) / bounds.height * relmousepos.y + y;
 
-        console.log('x:', mousepos.x, bounds.left, docScrolls.left);
-
-        this.obj_img.style.transition = `all 1s`;
+        console.log(moveX, moveY);
 
         this.obj_img.style.transform = `translateX(${moveX}px) translateY(${moveY}px)`;
       })
@@ -69,7 +67,8 @@ class SliderSlide extends Component {
 			position: 'absolute',
 			top: '0',
       backgroundPosition: 'center',
-      backgroundSize: 'cover'
+      backgroundSize: 'cover',
+      transition: 'transform .3s'
 		};
 
     return (
