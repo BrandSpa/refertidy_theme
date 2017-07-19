@@ -580,7 +580,8 @@ var SliderSlide = function (_Component) {
         top: '0',
         backgroundPosition: 'center',
         backgroundSize: 'cover',
-        transition: 'transform .3s'
+        transition: 'transform 0.3s ease-out'
+
       };
 
       return _react2.default.createElement(
