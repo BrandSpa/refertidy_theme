@@ -552,6 +552,7 @@ var SliderSlide = function (_Component) {
           var moveX = (-1 * x - x) / bounds.width * relmousepos.x + x;
           var moveY = (-1 * y - y) / bounds.height * relmousepos.y + y;
           console.log(mousepos, relmousepos);
+          _this2.obj_img.style.transition = 'all 1s';
           _this2.obj_img.style.transform = 'translate(' + moveX + 'px, ' + moveY + 'px)';
         });
       });
