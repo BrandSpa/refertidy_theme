@@ -55,8 +55,8 @@ class SliderSlide extends Component {
 
     this.el.addEventListener('mousemove', (evnt) => {
       requestAnimationFrame(() => {
-        moveEl(this.obj_img, 20, 20, evnt);
-        moveEl(this.text, -20, -20, evnt);
+        moveEl(this.obj_img, 15, 15, evnt);
+        moveEl(this.text, -10, -10, evnt);
       });
     });
 
