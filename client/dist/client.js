@@ -586,7 +586,7 @@ var SliderSlide = function (_Component) {
         }),
         _react2.default.createElement('div', {
           ref: function ref(obj_img) {
-            return _this2.obj_img = bj_img;
+            return _this2.obj_img = obj_img;
           },
           className: 'slider__slide__object lazyload blur-up',
           style: slideStyle,

@@ -75,7 +75,7 @@ class SliderSlide extends Component {
         />
 
         <div
-          ref={obj_img => this.obj_img = bj_img}
+          ref={obj_img => this.obj_img = obj_img}
           className="slider__slide__object lazyload blur-up"
           style={slideStyle}
           data-bgset={`${slide.object_img_mobile} [(max-width: 767px)] | ${slide.object_img}`}
