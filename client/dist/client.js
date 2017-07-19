@@ -536,24 +536,23 @@ var SliderSlide = function (_Component) {
         this.setState({ mobile: true });
       }
 
-      var docScrolls = {
-        left: document.body.scrollLeft + document.documentElement.scrollLeft,
-        top: document.body.scrollTop + document.documentElement.scrollTop
-      };
-
-      var x = 30;
-      var y = 50;
+      var x = 100;
+      var y = 150;
 
       this.el.addEventListener('mousemove', function () {
         requestAnimationFrame(function () {
           var mousepos = getMousePos(_this2.obj_img);
+          var docScrolls = {
+            left: document.body.scrollLeft + document.documentElement.scrollLeft,
+            top: document.body.scrollTop + document.documentElement.scrollTop
+          };
           var bounds = _this2.obj_img.getBoundingClientRect();
           var relmousepos = { x: mousepos.x - bounds.left - docScrolls.left, y: mousepos.y - bounds.top - docScrolls.top };
           var moveX = (-1 * x - x) / bounds.width * relmousepos.x + x;
           var moveY = (-1 * y - y) / bounds.height * relmousepos.y + y;
           console.log(mousepos, relmousepos);
           _this2.obj_img.style.transition = 'all 1s';
-          _this2.obj_img.style.transform = 'translate(' + moveX + 'px, ' + moveY + 'px)';
+          _this2.obj_img.style.transform = 'translateX(' + moveX + 'px) translateY' + moveY + 'px)';
         });
       });
     }
