@@ -29,13 +29,14 @@ class SliderSlide extends Component {
     }
 
 
-    const x = 20;
-    const y = 20;
+    const x = -20;
+    const y = -20;
 
-    this.el.addEventListener('mousemove', (ev) => {
+    this.el.addEventListener('mousemove', (evnt) => {
 
       requestAnimationFrame(() => {
-        let mousepos = getMousePos(ev);
+        let mousepos = getMousePos(evnt);
+
         const docScrolls = {
           left : document.body.scrollLeft + document.documentElement.scrollLeft,
           top : document.body.scrollTop + document.documentElement.scrollTop

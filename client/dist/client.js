@@ -536,13 +536,14 @@ var SliderSlide = function (_Component) {
         this.setState({ mobile: true });
       }
 
-      var x = 20;
-      var y = 20;
+      var x = -20;
+      var y = -20;
 
-      this.el.addEventListener('mousemove', function (ev) {
+      this.el.addEventListener('mousemove', function (evnt) {
 
         requestAnimationFrame(function () {
-          var mousepos = getMousePos(ev);
+          var mousepos = getMousePos(evnt);
+
           var docScrolls = {
             left: document.body.scrollLeft + document.documentElement.scrollLeft,
             top: document.body.scrollTop + document.documentElement.scrollTop
