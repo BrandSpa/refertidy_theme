@@ -547,11 +547,11 @@ var SliderSlide = function (_Component) {
       this.el.addEventListener('mousemove', function () {
         requestAnimationFrame(function () {
           var mousepos = getMousePos(_this2.obj_img);
-          var bounds = _this2.el.getBoundingClientRect();
+          var bounds = _this2.obj_img.getBoundingClientRect();
           var relmousepos = { x: mousepos.x - bounds.left - docScrolls.left, y: mousepos.y - bounds.top - docScrolls.top };
           var moveX = (-1 * x - x) / bounds.width * relmousepos.x + x;
           var moveY = (-1 * y - y) / bounds.height * relmousepos.y + y;
-          console.log(_this2.obj_img);
+          console.log(mousepos, relmousepos);
           _this2.obj_img.style.transform = 'translate(' + moveX + 'px, ' + moveY + 'px)';
         });
       });
