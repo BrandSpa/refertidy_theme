@@ -538,7 +538,7 @@ var SliderSlide = function (_Component) {
 
       this.el.addEventListener('mousemove', function () {
         requestAnimationFrame(function () {
-          getMousePos(_this2.obj_img);
+          getMousePos();
           var bounds = _this2.el.getBoundingClientRect();
           console.log(bounds);
         });
