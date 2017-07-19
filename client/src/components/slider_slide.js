@@ -30,7 +30,7 @@ class SliderSlide extends Component {
 
     this.el.addEventListener('mousemove', () => {
       requestAnimationFrame(() => {
-        getMousePos();
+        getMousePos(this.el);
         const bounds = this.el.getBoundingClientRect();
         console.log(bounds);
       })
