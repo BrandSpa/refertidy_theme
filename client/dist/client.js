@@ -508,6 +508,28 @@ var getMousePos = function getMousePos(ev) {
   return { x: posx, y: posy };
 };
 
+var moveEl = function moveEl(el, x, y, evnt) {
+
+  var mousepos = getMousePos(evnt);
+
+  var docScrolls = {
+    left: document.body.scrollLeft + document.documentElement.scrollLeft,
+    top: document.body.scrollTop + document.documentElement.scrollTop
+  };
+
+  var bounds = el.getBoundingClientRect();
+
+  var relmousepos = {
+    x: mousepos.x - bounds.left - docScrolls.left,
+    y: mousepos.y - bounds.top - docScrolls.top
+  };
+
+  var moveX = (-1 * x - x) / bounds.width * relmousepos.x + x;
+  var moveY = (-1 * y - y) / bounds.height * relmousepos.y + y;
+
+  el.style.transform = 'translateX(' + moveX + 'px) translateY(' + moveY + 'px)';
+};
+
 var SliderSlide = function (_Component) {
   _inherits(SliderSlide, _Component);
 
@@ -536,28 +558,10 @@ var SliderSlide = function (_Component) {
         this.setState({ mobile: true });
       }
 
-      var x = -20;
-      var y = -20;
-
       this.el.addEventListener('mousemove', function (evnt) {
-
         requestAnimationFrame(function () {
-          var mousepos = getMousePos(evnt);
-
-          var docScrolls = {
-            left: document.body.scrollLeft + document.documentElement.scrollLeft,
-            top: document.body.scrollTop + document.documentElement.scrollTop
-          };
-
-          var bounds = _this2.obj_img.getBoundingClientRect();
-          var relmousepos = { x: mousepos.x - bounds.left - docScrolls.left, y: mousepos.y - bounds.top - docScrolls.top };
-
-          var moveX = (-1 * x - x) / bounds.width * relmousepos.x + x;
-          var moveY = (-1 * y - y) / bounds.height * relmousepos.y + y;
-
-          console.log(moveX, moveY);
-
-          _this2.obj_img.style.transform = 'translateX(' + moveX + 'px) translateY(' + moveY + 'px)';
+          moveEl(_this2.object_img, 20, 20, evnt);
+          moveEl(_this2.this.text, -20, -20, evnt);
         });
       });
     }
@@ -600,7 +604,9 @@ var SliderSlide = function (_Component) {
           _react2.default.createElement(
             'div',
             { className: 'slider__slide__content' },
-            _react2.default.createElement('div', { dangerouslySetInnerHTML: { __html: slide.slide_content } }),
+            _react2.default.createElement('div', { ref: function ref(text) {
+                return _this3.text = text;
+              }, dangerouslySetInnerHTML: { __html: slide.slide_content } }),
             _react2.default.createElement(
               'a',
               { href: slide.btn_link, className: 'btn', style: { background: slide.btn_color } },

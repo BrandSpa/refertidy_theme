@@ -18,6 +18,29 @@ const getMousePos = function(ev) {
   return { x : posx, y : posy };
 };
 
+const moveEl = (el, x, y,evnt) => {
+
+  let mousepos = getMousePos(evnt);
+
+  const docScrolls = {
+    left : document.body.scrollLeft + document.documentElement.scrollLeft,
+    top : document.body.scrollTop + document.documentElement.scrollTop
+  };
+
+  const bounds = el.getBoundingClientRect();
+
+  const relmousepos = {
+    x : mousepos.x - bounds.left - docScrolls.left,
+    y : mousepos.y - bounds.top - docScrolls.top
+  };
+
+  const moveX = ( -1 * x - x ) / bounds.width * relmousepos.x + x;
+  const moveY = ( -1 * y - y ) / bounds.height * relmousepos.y + y;
+
+
+  el.style.transform = `translateX(${moveX}px) translateY(${moveY}px)`;
+};
+
 class SliderSlide extends Component {
   state = {
     mobile: false
@@ -29,32 +52,13 @@ class SliderSlide extends Component {
     }
 
 
-    const x = -20;
-    const y = -20;
 
     this.el.addEventListener('mousemove', (evnt) => {
-
       requestAnimationFrame(() => {
-        let mousepos = getMousePos(evnt);
-
-        const docScrolls = {
-          left : document.body.scrollLeft + document.documentElement.scrollLeft,
-          top : document.body.scrollTop + document.documentElement.scrollTop
-        };
-
-        const bounds = this.obj_img.getBoundingClientRect();
-        const relmousepos = { x : mousepos.x - bounds.left - docScrolls.left, y : mousepos.y - bounds.top - docScrolls.top };
-
-        const moveX = ( -1 * x - x ) / bounds.width * relmousepos.x + x;
-        const moveY = ( -1 * y - y ) / bounds.height * relmousepos.y + y;
-
-        console.log(moveX, moveY);
-
-        this.obj_img.style.transform = `translateX(${moveX}px) translateY(${moveY}px)`;
-      })
-
+        moveEl(this.object_img, 20, 20, evnt);
+        moveEl(this.this.text, -20, -20, evnt);
+      });
     });
-
 
   }
 
@@ -85,7 +89,7 @@ class SliderSlide extends Component {
 
       <div className="container ra-vertical-center ra-full-height ra-remove-vertical-center">
        <div className="slider__slide__content">
-         <div dangerouslySetInnerHTML={{__html: slide.slide_content}} />
+         <div ref={text => this.text = text} dangerouslySetInnerHTML={{__html: slide.slide_content}} />
          <a href={slide.btn_link} className="btn" style={{background: slide.btn_color}}>
           {slide.btn_txt}
          </a>
