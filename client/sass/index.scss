@@ -234,6 +234,13 @@ li {
   border-radius: 0 0 100px 0;
 }
 
+.card-shadow {
+  box-shadow: 0 1px 1px 0 rgba(10, 16, 34, 0.2);
+  &:hover {
+    box-shadow: 0 10px 30px -5px rgba(10, 16, 34, 0.2);
+  }
+}
+
 @import 'animations';
 @import 'header';
 @import 'slider';

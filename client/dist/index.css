@@ -578,6 +578,13 @@ li {
 .radius-bottom-right-100 {
   border-radius: 0 0 100px 0; }
 
+.card-shadow {
+  -webkit-box-shadow: 0 1px 1px 0 rgba(10, 16, 34, 0.2);
+  box-shadow: 0 1px 1px 0 rgba(10, 16, 34, 0.2); }
+  .card-shadow:hover {
+    -webkit-box-shadow: 0 10px 30px -5px rgba(10, 16, 34, 0.2);
+    box-shadow: 0 10px 30px -5px rgba(10, 16, 34, 0.2); }
+
 @-webkit-keyframes slideModel {
   from {
     -webkit-transform: translate3d(50px, 0, 0);
