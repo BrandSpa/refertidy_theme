@@ -563,7 +563,7 @@ var SliderSlide = function (_Component) {
       this.el.addEventListener('mousemove', function (evnt) {
         requestAnimationFrame(function () {
           moveEl(_this2.obj_img, 15, 15, evnt);
-          moveEl(_this2.text, -10, -10, evnt);
+          moveEl(_this2.text, -5, -5, evnt);
         });
       });
     }
@@ -606,7 +606,7 @@ var SliderSlide = function (_Component) {
           _react2.default.createElement(
             'div',
             { className: 'slider__slide__content' },
-            _react2.default.createElement('div', { ref: function ref(text) {
+            _react2.default.createElement('div', { style: { transition: 'tranform .3s ease-out' }, ref: function ref(text) {
                 return _this3.text = text;
               }, dangerouslySetInnerHTML: { __html: slide.slide_content } }),
             _react2.default.createElement(
