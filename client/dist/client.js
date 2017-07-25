@@ -346,14 +346,37 @@ function _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr
 
 (0, _reactMultipleRender2.default)(_posts_slider2.default, '.ra-posts-slider');
 
+function hasClass(el, classNm) {
+  if (subMenu.className.indexOf(classNm) > -1) {
+    return true;
+  }
+
+  return false;
+}
+
+function addClass(el, classNm) {
+  if (!hasClass(el, classNm)) {
+    el.className += ' ' + classNm;
+  }
+}
+
+function removeClass(el, classNm) {
+  if (hasClass(el, classNm)) {
+    var cls = el.className.replace(classNm, '');
+    el.className = cls;
+  }
+}
+
 var els = document.querySelectorAll('.menu-item-has-children');
 
 [].concat(_toConsumableArray(els)).forEach(function (el) {
   el.addEventListener('mouseover', function (e) {
     e.preventDefault();
     var subMenu = e.currentTarget.querySelector('.sub-menu');
-    if (subMenu.className.indexOf('sub-menu--open') == -1) {
-      subMenu.className += ' sub-menu--open';
+    if (hasClass(subMenu, 'sub-menu--open')) {
+      removeClass(subMenu, 'sub-menu--open');
+    } else {
+      addClass(subMenu, 'sub-menu--open');
     }
 
     console.log(e, subMenu);

@@ -18,14 +18,37 @@ multipleRender(Contact, '.ra-contact');
 
 multipleRender(PostsSlider, '.ra-posts-slider');
 
+function hasClass(el, classNm) {
+  if(subMenu.className.indexOf(classNm) > -1) {
+    return true;
+  }
+
+  return false;
+}
+
+function addClass(el, classNm) {
+  if(!hasClass(el, classNm)) {
+    el.className += ` ${classNm}`;
+  }
+}
+
+function removeClass(el, classNm) {
+  if(hasClass(el, classNm)) {
+    const cls = el.className.replace(classNm, '');
+    el.className = cls;
+  }
+}
+
 let els = document.querySelectorAll('.menu-item-has-children');
 
 [...els].forEach(el => {
   el.addEventListener('mouseover', (e) => {
     e.preventDefault();
     const subMenu = e.currentTarget.querySelector('.sub-menu');
-    if(subMenu.className.indexOf('sub-menu--open') == -1) {
-      subMenu.className += ' sub-menu--open';
+    if(hasClass(subMenu, 'sub-menu--open')) {
+        removeClass(subMenu, 'sub-menu--open');
+    } else {
+      addClass(subMenu, 'sub-menu--open');
     }
 
     console.log(e, subMenu);
