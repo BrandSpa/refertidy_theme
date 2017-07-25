@@ -19,7 +19,7 @@ multipleRender(Contact, '.ra-contact');
 multipleRender(PostsSlider, '.ra-posts-slider');
 
 function hasClass(el, classNm) {
-  if(subMenu.className.indexOf(classNm) > -1) {
+  if(el.className.indexOf(classNm) > -1) {
     return true;
   }
 

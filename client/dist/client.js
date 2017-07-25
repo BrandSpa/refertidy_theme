@@ -347,7 +347,7 @@ function _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr
 (0, _reactMultipleRender2.default)(_posts_slider2.default, '.ra-posts-slider');
 
 function hasClass(el, classNm) {
-  if (subMenu.className.indexOf(classNm) > -1) {
+  if (el.className.indexOf(classNm) > -1) {
     return true;
   }
 
