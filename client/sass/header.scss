@@ -110,9 +110,8 @@
     top: 35px;
     min-width: 100px;
     background: #fff;
-    padding: 10px;
     box-shadow: 0 0 10px rgba(0,0,0,.3);
-    
+
     li {
       display: block;
       width: 100%;
@@ -120,8 +119,11 @@
       padding-bottom: 10px;
 
       a {
+        display: block
         color: #6031BA;
-        font-size: 12px;
+        font-size: 14px;
+        padding: 10px 20px 10px 16px;
+        border-bottom: 1px solid #6031BA;
       }
     }
     &--open {

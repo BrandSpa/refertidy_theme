@@ -732,7 +732,6 @@ li {
     top: 35px;
     min-width: 100px;
     background: #fff;
-    padding: 10px;
     -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); }
     .app-header .sub-menu li {
@@ -741,8 +740,10 @@ li {
       margin: 0;
       padding-bottom: 10px; }
       .app-header .sub-menu li a {
+        display: blocl;
         color: #6031BA;
-        font-size: 12px; }
+        font-size: 14px;
+        padding: 10px 20px 10px 16px; }
     .app-header .sub-menu--open {
       display: block; }
 
