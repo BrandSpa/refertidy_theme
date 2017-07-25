@@ -508,8 +508,8 @@ li {
   font-family: 'Gotham Rounded Medium';
   letter-spacing: 2px;
   color: #fff;
-  -webkit-transition: all .5s ease-in-out;
-  transition: all .5s ease-in-out; }
+  -webkit-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out; }
   .btn--outline {
     background: transparent;
     border: 2px solid #fff; }
