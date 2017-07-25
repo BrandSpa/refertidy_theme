@@ -42,16 +42,17 @@ function removeClass(el, classNm) {
 let els = document.querySelectorAll('.menu-item-has-children');
 
 [...els].forEach(el => {
-  el.addEventListener('mouseover', (e) => {
+  el.addEventListener('click', (e) => {
     e.preventDefault();
     const subMenu = e.currentTarget.querySelector('.sub-menu');
-    addClass(subMenu, 'sub-menu--open');
+    if(hasClass(subMenu, 'sub-menu--open')) {
+      removeClass(subMenu, 'sub-menu--open');
+    } else {
+      addClass(subMenu, 'sub-menu--open');
+    }
+
+
   });
 
-  el.addEventListener('mouseleave', (e) => {
-    e.preventDefault();
-    const subMenu = e.currentTarget.querySelector('.sub-menu');
-    removeClass(subMenu, 'sub-menu--open');
-  });
 
 });

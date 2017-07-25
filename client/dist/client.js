@@ -370,16 +370,14 @@ function removeClass(el, classNm) {
 var els = document.querySelectorAll('.menu-item-has-children');
 
 [].concat(_toConsumableArray(els)).forEach(function (el) {
-  el.addEventListener('mouseover', function (e) {
+  el.addEventListener('click', function (e) {
     e.preventDefault();
     var subMenu = e.currentTarget.querySelector('.sub-menu');
-    addClass(subMenu, 'sub-menu--open');
-  });
-
-  el.addEventListener('mouseleave', function (e) {
-    e.preventDefault();
-    var subMenu = e.currentTarget.querySelector('.sub-menu');
-    removeClass(subMenu, 'sub-menu--open');
+    if (hasClass(subMenu, 'sub-menu--open')) {
+      removeClass(subMenu, 'sub-menu--open');
+    } else {
+      addClass(subMenu, 'sub-menu--open');
+    }
   });
 });
 
