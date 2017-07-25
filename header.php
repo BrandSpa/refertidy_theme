@@ -42,7 +42,9 @@
 
 <header class="app-header">
 	<div class="container">
-		<?php  require('templates/logo.php') ?>
+		<a href="/" class="">
+			<?php  require('templates/logo.php') ?>
+		</a>
 		<?php if ( is_active_sidebar( 'header_widget' ) ) : ?>
 			<div class="header__widget">
 				<?php dynamic_sidebar( 'header_widget' ); ?>
