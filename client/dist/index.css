@@ -700,18 +700,18 @@ li {
       color: #fff !important; }
   .app-header img {
     float: left; }
-  .app-header > ul {
+  .app-header__menu {
     float: right;
     margin: 0;
     padding: 10px 0 0 0; }
     @media (max-width: 767px) {
-      .app-header > ul {
+      .app-header__menu {
         display: none; } }
-    .app-header > ul li {
+    .app-header__menu li {
       display: inline-block;
       margin: 0 10px;
       position: relative; }
-      .app-header > ul li a {
+      .app-header__menu li a {
         color: #6031BA;
         display: block;
         font-family: 'Aktiv Grotesk Medium';

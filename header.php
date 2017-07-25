@@ -53,6 +53,7 @@
 			<?php
 			$nav = wp_nav_menu([
 					'theme_location' => 'header',
+					'menu_class' => 'app-header__menu',
 					'container' => false,
 					'echo' => false
 				]);
