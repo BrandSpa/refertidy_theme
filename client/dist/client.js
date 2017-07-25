@@ -372,8 +372,8 @@ var els = document.querySelectorAll('.menu-item-has-children');
 [].concat(_toConsumableArray(els)).forEach(function (el) {
 
   el.addEventListener('click', function (e) {
-    e.stopPropagation();
-    e.currentTarget.preventDefault();
+    e.preventDefault();
+
     console.log(undefined);
     var subMenu = e.currentTarget.querySelector('.sub-menu');
     if (hasClass(subMenu, 'sub-menu--open')) {
@@ -381,7 +381,7 @@ var els = document.querySelectorAll('.menu-item-has-children');
     } else {
       addClass(subMenu, 'sub-menu--open');
     }
-  });
+  }, true);
 });
 
 /***/ }),
