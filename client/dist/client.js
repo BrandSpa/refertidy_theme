@@ -374,7 +374,7 @@ var els = document.querySelectorAll('.menu-item-has-children > a');
   el.addEventListener('click', function (e) {
     e.preventDefault();
     console.log(e.target);
-    var subMenu = e.currentTarget.querySelector('.sub-menu');
+    var subMenu = e.currentTarget.parentElement.querySelector('.sub-menu');
     if (hasClass(subMenu, 'sub-menu--open')) {
       removeClass(subMenu, 'sub-menu--open');
     } else {

@@ -46,7 +46,7 @@ let els = document.querySelectorAll('.menu-item-has-children > a');
   el.addEventListener('click', (e) => {
     e.preventDefault();
     console.log(e.target);
-    const subMenu = e.currentTarget.querySelector('.sub-menu');
+    const subMenu = e.currentTarget.parentElement.querySelector('.sub-menu');
     if(hasClass(subMenu, 'sub-menu--open')) {
       removeClass(subMenu, 'sub-menu--open');
     } else {
