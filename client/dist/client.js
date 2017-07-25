@@ -352,7 +352,10 @@ var els = document.querySelectorAll('.menu-item-has-children');
   el.addEventListener('mouseover', function (e) {
     e.preventDefault();
     var subMenu = e.currentTarget.querySelector('.sub-menu');
-    subMenu.className += ' .sub-menu--open';
+    if (subMenu.className.indexOf('sub-menu--open') == -1) {
+      subMenu.className += ' sub-menu--open';
+    }
+
     console.log(e, subMenu);
   });
 });
