@@ -344,6 +344,14 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 (0, _reactMultipleRender2.default)(_posts_slider2.default, '.ra-posts-slider');
 
+var els = document.querySelectorAll('.menu-item-has-children');
+
+els.forEach(function (el) {
+  el.addEventListener('hover', function () {
+    console.log('hover');
+  });
+});
+
 /***/ }),
 
 /***/ 517:

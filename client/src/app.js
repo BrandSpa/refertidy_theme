@@ -17,3 +17,11 @@ multipleRender(QuotationFormFixed, '.ra-quotation-form-fixed');
 multipleRender(Contact, '.ra-contact');
 
 multipleRender(PostsSlider, '.ra-posts-slider');
+
+let els = document.querySelectorAll('.menu-item-has-children');
+
+els.forEach(el => {
+  el.addEventListener('hover', () => {
+    console.log('hover');
+  })
+});
