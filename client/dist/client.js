@@ -351,7 +351,7 @@ var els = document.querySelectorAll('.menu-item-has-children');
 [].concat(_toConsumableArray(els)).forEach(function (el) {
   el.addEventListener('mouseover', function (e) {
     e.preventDefault();
-    console.log(e.target.querySelector('.sub-menu'));
+    console.log(e, e.currentTarget.querySelector('.sub-menu'));
   });
 });
 
