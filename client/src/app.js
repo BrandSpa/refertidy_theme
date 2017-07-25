@@ -23,6 +23,6 @@ let els = document.querySelectorAll('.menu-item-has-children');
 [...els].forEach(el => {
   el.addEventListener('mouseover', (e) => {
     e.preventDefault();
-    console.log('hover');
+    console.log(e.target.querySelector('.sub-menu'));
   })
 });
