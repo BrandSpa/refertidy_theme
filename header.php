@@ -49,19 +49,16 @@
 			</div><!-- #primary-sidebar -->
 		<?php endif; ?>
 
-		<ul>
 			<?php
 			$nav = wp_nav_menu([
 					'theme_location' => 'header',
 					'menu_class' => 'app-header__menu',
-					'menu_id' => false,
-					'before' => false,
+					'menu_id' => '',
 					'container' => false,
 					'echo' => false
 				]);
 				echo clean_menu($nav);
    	 ?>
-		</ul>
 
 	</div>
 </header>
