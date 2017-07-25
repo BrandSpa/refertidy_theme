@@ -349,7 +349,8 @@ function _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr
 var els = document.querySelectorAll('.menu-item-has-children');
 
 [].concat(_toConsumableArray(els)).forEach(function (el) {
-  el.addEventListener('mouseover', function () {
+  el.addEventListener('mouseover', function (e) {
+    e.preventDefault();
     console.log('hover');
   });
 });

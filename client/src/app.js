@@ -21,7 +21,8 @@ multipleRender(PostsSlider, '.ra-posts-slider');
 let els = document.querySelectorAll('.menu-item-has-children');
 
 [...els].forEach(el => {
-  el.addEventListener('mouseover', () => {
+  el.addEventListener('mouseover', (e) => {
+    e.preventDefault();
     console.log('hover');
   })
 });
