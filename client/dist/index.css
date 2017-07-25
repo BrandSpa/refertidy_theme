@@ -729,16 +729,20 @@ li {
   .app-header .sub-menu {
     display: none;
     position: absolute;
+    top: 35px;
     min-width: 100px;
     background: #fff;
-    padding: 40px;
+    padding: 10px;
     -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); }
     .app-header .sub-menu li {
       display: block;
-      width: 100%; }
+      width: 100%;
+      margin: 0;
+      padding-bottom: 10px; }
       .app-header .sub-menu li a {
-        color: #000; }
+        color: #6031BA;
+        font-size: 12px; }
     .app-header .sub-menu--open {
       display: block; }
 

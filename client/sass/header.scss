@@ -107,16 +107,21 @@
   .sub-menu {
     display: none;
     position: absolute;
+    top: 35px;
     min-width: 100px;
     background: #fff;
-    padding: 40px;
+    padding: 10px;
     box-shadow: 0 0 10px rgba(0,0,0,.3);
+    
     li {
       display: block;
       width: 100%;
+      margin: 0;
+      padding-bottom: 10px;
 
       a {
-        color: #000;
+        color: #6031BA;
+        font-size: 12px;
       }
     }
     &--open {

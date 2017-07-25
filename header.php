@@ -50,13 +50,13 @@
 		<?php endif; ?>
 
 			<?php
-			$nav = wp_nav_menu([
-					'theme_location' => 'header',
-					'menu_class' => 'app-header__menu',
-					'menu_id' => '',
-					'container' => false,
-					'echo' => false
-				]);
+				$nav = wp_nav_menu([
+						'theme_location' => 'header',
+						'menu_class' => 'app-header__menu',
+						'menu_id' => '',
+						'container' => false,
+						'echo' => false
+					]);
 				echo clean_menu($nav);
    	 ?>
 
