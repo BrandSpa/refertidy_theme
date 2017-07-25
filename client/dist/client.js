@@ -561,7 +561,7 @@ var SliderSlide = function (_Component) {
       this.el.addEventListener('mousemove', function (evnt) {
         requestAnimationFrame(function () {
           moveEl(_this2.obj_img, 25, 25, evnt);
-          moveEl(_this2.text, -5, -5, evnt);
+          moveEl(_this2.model, -5, -5, evnt);
         });
       });
     }
@@ -604,9 +604,7 @@ var SliderSlide = function (_Component) {
           _react2.default.createElement(
             'div',
             { className: 'slider__slide__content' },
-            _react2.default.createElement('div', { style: { transition: 'transform 0.3s ease-out' }, ref: function ref(text) {
-                return _this3.text = text;
-              }, dangerouslySetInnerHTML: { __html: slide.slide_content } }),
+            _react2.default.createElement('div', { style: { transition: 'transform 0.3s ease-out' }, dangerouslySetInnerHTML: { __html: slide.slide_content } }),
             _react2.default.createElement(
               'a',
               { href: slide.btn_link, className: 'btn', style: { background: slide.btn_color } },
@@ -620,6 +618,9 @@ var SliderSlide = function (_Component) {
           'data-bgset': slide.bg_img
         }),
         _react2.default.createElement('div', {
+          ref: function ref(model) {
+            return _this3.model = model;
+          },
           className: 'slider__slide__model lazyload blur-up',
           style: slideStyle,
           'data-bgset': slide.model_img_mobile + ' [(max-width: 767px)] | ' + slide.model_img
