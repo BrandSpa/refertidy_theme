@@ -44,9 +44,7 @@ let els = document.querySelectorAll('.menu-item-has-children');
 [...els].forEach(el => {
 
   el.addEventListener('click', (e) => {
-     e.preventDefault();
-     
-     console.log(this);
+    console.log(e.target);
     const subMenu = e.currentTarget.querySelector('.sub-menu');
     if(hasClass(subMenu, 'sub-menu--open')) {
       removeClass(subMenu, 'sub-menu--open');
@@ -54,6 +52,5 @@ let els = document.querySelectorAll('.menu-item-has-children');
       addClass(subMenu, 'sub-menu--open');
     }
 
-  }, true);
-
+  });
 });
