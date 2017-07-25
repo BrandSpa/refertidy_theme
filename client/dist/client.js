@@ -373,6 +373,7 @@ var els = document.querySelectorAll('.menu-item-has-children');
 
   el.addEventListener('click', function (e) {
     e.stopPropagation();
+    e.preventDefault();
 
     var subMenu = e.currentTarget.querySelector('.sub-menu');
     if (hasClass(subMenu, 'sub-menu--open')) {

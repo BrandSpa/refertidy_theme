@@ -45,6 +45,7 @@ let els = document.querySelectorAll('.menu-item-has-children');
 
   el.addEventListener('click', (e) => {
     e.stopPropagation();
+    e.preventDefault();
 
     const subMenu = e.currentTarget.querySelector('.sub-menu');
     if(hasClass(subMenu, 'sub-menu--open')) {
