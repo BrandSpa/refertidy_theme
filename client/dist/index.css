@@ -511,6 +511,9 @@ li {
   .btn--outline {
     background: transparent;
     border: 2px solid #fff; }
+  .btn:hover {
+    -webkit-box-shadow: 4 2px 6px 0 rgba(0, 0, 0, 0.3);
+    box-shadow: 4 2px 6px 0 rgba(0, 0, 0, 0.3); }
 
 .lazyload,
 .lazyloading {
