@@ -67,7 +67,7 @@
     float: left;
   }
 
-  ul {
+  & > ul {
     float: right;
     margin: 0;
     padding: 10px 0 0 0;
@@ -79,6 +79,7 @@
     li {
       display: inline-block;
 	    margin: 0 10px;
+      position: relative;
 
       a {
         color: #6031BA;
@@ -103,6 +104,25 @@
     }
   }
 
+  .sub-menu {
+    display: none;
+    position: absolute;
+    min-width: 100px;
+    background: #fff;
+    padding: 40px;
+    box-shadow: 0 0 10px rgba(0,0,0,.3);
+    li {
+      display: block;
+      width: 100%;
+
+      a {
+        color: #000;
+      }
+    }
+    &--open {
+      display: block;
+    }
+  }
 
 
 }
