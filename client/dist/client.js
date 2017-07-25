@@ -373,13 +373,13 @@ var els = document.querySelectorAll('.menu-item-has-children');
   el.addEventListener('mouseover', function (e) {
     e.preventDefault();
     var subMenu = e.currentTarget.querySelector('.sub-menu');
-    if (hasClass(subMenu, 'sub-menu--open')) {
-      removeClass(subMenu, 'sub-menu--open');
-    } else {
-      addClass(subMenu, 'sub-menu--open');
-    }
+    addClass(subMenu, 'sub-menu--open');
+  });
 
-    console.log(e, subMenu);
+  el.addEventListener('mouseleave', function (e) {
+    e.preventDefault();
+    var subMenu = e.currentTarget.querySelector('.sub-menu');
+    removeClass(subMenu, 'sub-menu--open');
   });
 });
 

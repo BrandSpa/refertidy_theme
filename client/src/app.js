@@ -45,12 +45,12 @@ let els = document.querySelectorAll('.menu-item-has-children');
   el.addEventListener('mouseover', (e) => {
     e.preventDefault();
     const subMenu = e.currentTarget.querySelector('.sub-menu');
-    if(hasClass(subMenu, 'sub-menu--open')) {
-        removeClass(subMenu, 'sub-menu--open');
-    } else {
-      addClass(subMenu, 'sub-menu--open');
-    }
+    addClass(subMenu, 'sub-menu--open');
+  });
 
-    console.log(e, subMenu);
-  })
+  el.addEventListener('mouseleave', (e) => {
+    e.preventDefault();
+    const subMenu = e.currentTarget.querySelector('.sub-menu');
+    removeClass(subMenu, 'sub-menu--open');
+  });
 });
