@@ -362,7 +362,7 @@ function addClass(el, classNm) {
 
 function removeClass(el, classNm) {
   if (hasClass(el, classNm)) {
-    var cls = el.className.replace(classNm, '');
+    var cls = el.className.replace(' ' + classNm, '');
     el.className = cls;
   }
 }

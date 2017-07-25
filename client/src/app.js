@@ -34,7 +34,7 @@ function addClass(el, classNm) {
 
 function removeClass(el, classNm) {
   if(hasClass(el, classNm)) {
-    const cls = el.className.replace(classNm, '');
+    const cls = el.className.replace(` ${classNm}`, '');
     el.className = cls;
   }
 }
@@ -53,4 +53,5 @@ let els = document.querySelectorAll('.menu-item-has-children');
     const subMenu = e.currentTarget.querySelector('.sub-menu');
     removeClass(subMenu, 'sub-menu--open');
   });
+
 });
