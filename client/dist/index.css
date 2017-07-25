@@ -740,10 +740,13 @@ li {
       margin: 0;
       padding-bottom: 10px; }
       .app-header .sub-menu li a {
-        display: blocl;
+        display: block;
         color: #6031BA;
         font-size: 14px;
-        padding: 10px 20px 10px 16px; }
+        padding: 10px 20px 10px 16px;
+        border-bottom: 1px solid #6031BA; }
+        .app-header .sub-menu li a:last-child {
+          border: none; }
     .app-header .sub-menu--open {
       display: block; }
 

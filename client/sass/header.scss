@@ -119,13 +119,17 @@
       padding-bottom: 10px;
 
       a {
-        display: block
+        display: block;
         color: #6031BA;
         font-size: 14px;
         padding: 10px 20px 10px 16px;
         border-bottom: 1px solid #6031BA;
+        &:last-child {
+          border: none;
+        }
       }
     }
+
     &--open {
       display: block;
     }
