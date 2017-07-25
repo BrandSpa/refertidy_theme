@@ -371,6 +371,7 @@ var els = document.querySelectorAll('.menu-item-has-children');
 
 [].concat(_toConsumableArray(els)).forEach(function (el) {
   el.addEventListener('click', function (e) {
+    e.preventDefault();
     e.stopPropagation();
     var subMenu = e.currentTarget.querySelector('.sub-menu');
     if (hasClass(subMenu, 'sub-menu--open')) {

@@ -43,6 +43,7 @@ let els = document.querySelectorAll('.menu-item-has-children');
 
 [...els].forEach(el => {
   el.addEventListener('click', (e) => {
+    e.preventDefault();
     e.stopPropagation();
     const subMenu = e.currentTarget.querySelector('.sub-menu');
     if(hasClass(subMenu, 'sub-menu--open')) {
