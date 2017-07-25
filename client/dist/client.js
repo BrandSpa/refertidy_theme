@@ -336,6 +336,8 @@ var _posts_slider2 = _interopRequireDefault(_posts_slider);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+function _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = Array(arr.length); i < arr.length; i++) { arr2[i] = arr[i]; } return arr2; } else { return Array.from(arr); } }
+
 (0, _reactMultipleRender2.default)(_slider2.default, '.ra-slider');
 
 (0, _reactMultipleRender2.default)(_quotation_form_fixed2.default, '.ra-quotation-form-fixed');
@@ -346,7 +348,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 var els = document.querySelectorAll('.menu-item-has-children');
 
-els.forEach(function (el) {
+[].concat(_toConsumableArray(els)).forEach(function (el) {
   el.addEventListener('hover', function () {
     console.log('hover');
   });
