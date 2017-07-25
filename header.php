@@ -54,6 +54,8 @@
 			$nav = wp_nav_menu([
 					'theme_location' => 'header',
 					'menu_class' => 'app-header__menu',
+					'menu_id' => false,
+					'before' => false,
 					'container' => false,
 					'echo' => false
 				]);
