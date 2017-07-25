@@ -560,8 +560,8 @@ var SliderSlide = function (_Component) {
 
       this.el.addEventListener('mousemove', function (evnt) {
         requestAnimationFrame(function () {
-          moveEl(_this2.obj_img, 25, 25, evnt);
-          moveEl(_this2.model, -5, -5, evnt);
+          moveEl(_this2.obj_img, 15, 15, evnt);
+          moveEl(_this2.model, -10, -10, evnt);
         });
       });
     }
