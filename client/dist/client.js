@@ -367,11 +367,12 @@ function removeClass(el, classNm) {
   }
 }
 
-var els = document.querySelectorAll('.menu-item-has-children');
+var els = document.querySelectorAll('.menu-item-has-children > a');
 
 [].concat(_toConsumableArray(els)).forEach(function (el) {
 
   el.addEventListener('click', function (e) {
+    e.preventDefault();
     console.log(e.target);
     var subMenu = e.currentTarget.querySelector('.sub-menu');
     if (hasClass(subMenu, 'sub-menu--open')) {

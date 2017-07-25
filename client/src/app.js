@@ -39,11 +39,12 @@ function removeClass(el, classNm) {
   }
 }
 
-let els = document.querySelectorAll('.menu-item-has-children');
+let els = document.querySelectorAll('.menu-item-has-children > a');
 
 [...els].forEach(el => {
 
   el.addEventListener('click', (e) => {
+    e.preventDefault();
     console.log(e.target);
     const subMenu = e.currentTarget.querySelector('.sub-menu');
     if(hasClass(subMenu, 'sub-menu--open')) {
