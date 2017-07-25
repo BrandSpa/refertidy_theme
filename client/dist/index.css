@@ -781,15 +781,6 @@ li {
       .slider__slide__content {
         margin-top: 20%;
         text-align: center; } }
-  .slider__slide--active .slider__slide__model {
-    -webkit-animation: slideModel 2s;
-    animation: slideModel 2s; }
-  .slider__slide--active .slider__slide__object {
-    -webkit-animation: slideObject 3s;
-    animation: slideObject 3s; }
-  .slider__slide--active .slider__slide__content {
-    -webkit-animation: slideContent 1s;
-    animation: slideContent 1s; }
 
 .slider__btns .slider__btns__left {
   left: 40px;
