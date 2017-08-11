@@ -683,8 +683,8 @@ li {
   transition: all .7s; }
   @media (max-width: 767px) {
     .app-header {
-      padding: 20px 0;
-      text-align: center; } }
+      padding: 10px 0;
+      height: 70px; } }
   .app-header--scrolling {
     background: RGBA(96, 49, 186, 1);
     color: #fff !important;
@@ -692,6 +692,9 @@ li {
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.4); }
     .app-header--scrolling .app-header__phone g, .app-header--scrolling .app-header__chat g {
       fill: #fff; }
+    @media (max-width: 767px) {
+      .app-header--scrolling .logo {
+        width: 50%; } }
     .app-header--scrolling .logo path {
       -webkit-animation: dash 2s cubic-bezier(0.42, 0, 1, 0.6);
       animation: dash 2s cubic-bezier(0.42, 0, 1, 0.6);

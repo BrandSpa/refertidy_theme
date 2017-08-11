@@ -25,8 +25,8 @@
   transition: all .7s;
 
   @media #{$s} {
-    padding: 20px 0;
-    text-align: center;
+    padding: 10px 0;
+    height: 70px;
   }
 
   &--scrolling {
@@ -41,6 +41,10 @@
     }
 
     .logo {
+      @media #{$s} {
+        width: 50%;
+      }
+      
       path {
         animation: dash 2s cubic-bezier(0.42, 0, 1, 0.6);
         fill: #fff;
