@@ -401,7 +401,8 @@ body, html {
   -moz-osx-font-smoothing: grayscale; }
 
 body {
-  font-family: 'Aktiv Grotesk Light';
+  font-family: 'Aktiv Grotesk';
+  font-weight: 100;
   font-size: 15px;
   line-height: 20px;
   margin: 0;
@@ -460,7 +461,8 @@ h6 {
   font-family: 'Aktiv Grotesk'; }
 
 p {
-  font-family: 'Aktiv Grotesk Light'; }
+  font-family: 'Aktiv Grotesk';
+  font-weight: 100; }
 
 a {
   text-decoration: none;
