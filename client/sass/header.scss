@@ -29,6 +29,19 @@
     height: 70px;
   }
 
+  .logo {
+    @media #{$s} {
+      width: 50%;
+    }
+  }
+
+  &__navicon {
+    float: right;
+    padding-top: 7px;
+    font-size: 20px;
+    color: #fff;
+  }
+
   &--scrolling {
     background: RGBA(96, 49, 186, 1);
     color: #fff !important;
@@ -41,10 +54,8 @@
     }
 
     .logo {
-      @media #{$s} {
-        width: 50%;
-      }
-      
+
+
       path {
         animation: dash 2s cubic-bezier(0.42, 0, 1, 0.6);
         fill: #fff;

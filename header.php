@@ -59,8 +59,11 @@
 						'container' => false,
 						'echo' => false
 					]);
+
 				echo clean_menu($nav);
    	 ?>
+
+		 <a href="#" class="app-header__navicon"><i class="ion-navicon-round"></i></a>
 
 	</div>
 </header>
