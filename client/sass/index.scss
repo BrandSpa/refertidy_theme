@@ -24,6 +24,7 @@ body {
   margin: 0;
   padding: 0 0 100px 0;
   background: #F9F9FB;
+
   @media #{$s} {
     font-size: 13px;
     line-height: 18px;
@@ -86,7 +87,8 @@ h6 {
 
 p {
   font-family: 'Aktiv Grotesk';
-  font-weight: 100
+  font-weight: 100;
+  line-height: 155%;
 }
 
 a {
