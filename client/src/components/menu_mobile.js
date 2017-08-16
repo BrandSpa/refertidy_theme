@@ -53,7 +53,7 @@ class MenuMobile extends Component {
         <div className={show ? "app-header__nav app-header__nav--show" : "app-header__nav"}>
           <ul>
             {links.map(link =>
-              <li><a href="#" onClick={this.handleLinkClick.bind(null, link)}>{link.title}</a></li>
+              <li key={link.ID}><a href="#" onClick={this.handleLinkClick.bind(null, link)}>{link.title}</a></li>
             )}
           </ul>
           <button
