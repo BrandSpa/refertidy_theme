@@ -5,6 +5,8 @@
   height: 70px;
   background: #6031ba;
   z-index: 98;
+  display: flex;
+  align-items: center;
 
   button {
     border: 1px solid #FFFFFF;
@@ -13,6 +15,7 @@
     height: 40px;
     color: #fff;
     background: transparent;
+    text-transform: uppercase;
   }
 
   a {
@@ -22,5 +25,9 @@
     display: block;
     font-size: 22px;
     color: #fff;
+    border-radius: 40px;
+    text-align: center;
+    padding-top: 8px;
+    margin-left: 5px;
   }
 }
