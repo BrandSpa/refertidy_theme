@@ -11,7 +11,7 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.ArrowRight = exports.ArrowLeft = undefined;
 
-var _react = __webpack_require__(26);
+var _react = __webpack_require__(18);
 
 var _react2 = _interopRequireDefault(_react);
 
@@ -67,9 +67,190 @@ var ArrowRight = exports.ArrowRight = function ArrowRight() {
 "use strict";
 
 
-var stringify = __webpack_require__(521);
-var parse = __webpack_require__(522);
-var formats = __webpack_require__(212);
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = __webpack_require__(18);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _axios = __webpack_require__(136);
+
+var _axios2 = _interopRequireDefault(_axios);
+
+var _qs = __webpack_require__(211);
+
+var _qs2 = _interopRequireDefault(_qs);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var endpoint = '/wp-admin/admin-ajax.php';
+
+var QuotationForm = function (_Component) {
+  _inherits(QuotationForm, _Component);
+
+  function QuotationForm() {
+    var _ref;
+
+    var _temp, _this, _ret;
+
+    _classCallCheck(this, QuotationForm);
+
+    for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
+      args[_key] = arguments[_key];
+    }
+
+    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = QuotationForm.__proto__ || Object.getPrototypeOf(QuotationForm)).call.apply(_ref, [this].concat(args))), _this), _this.state = {
+      name: '',
+      email: '',
+      phone: '',
+      product: '',
+      errors: {}
+    }, _this.handleChange = function (e) {
+      _this.setState(_defineProperty({}, e.target.name, e.target.value));
+    }, _this.handleSubmit = function (e) {
+      if (e) e.preventDefault();
+      var reqData = _qs2.default.stringify({ action: 'store_quotation', data: _this.state });
+
+      _axios2.default.post(endpoint, reqData).then(function (_ref2) {
+        var data = _ref2.data;
+
+        if (Object.keys(data).length > 0) {
+          _this.setState({ errors: data });
+        }
+      });
+    }, _temp), _possibleConstructorReturn(_this, _ret);
+  }
+
+  _createClass(QuotationForm, [{
+    key: 'render',
+    value: function render() {
+      var _state = this.state,
+          name = _state.name,
+          email = _state.email,
+          phone = _state.phone,
+          product = _state.product,
+          errors = _state.errors;
+
+
+      return _react2.default.createElement(
+        'form',
+        { onSubmit: this.handleSubmit },
+        _react2.default.createElement(
+          'div',
+          { className: 'row quo-fixed__container' },
+          _react2.default.createElement(
+            'div',
+            { className: 'col-lg-3 col-md-3' },
+            _react2.default.createElement('input', {
+              type: 'text',
+              name: 'name',
+              placeholder: 'Nombre',
+              onChange: this.handleChange,
+              value: name
+            }),
+            _react2.default.createElement(
+              'span',
+              { className: 'input-error', style: errors.name ? { display: 'block' } : { display: 'none' } },
+              errors.name
+            )
+          ),
+          _react2.default.createElement(
+            'div',
+            { className: 'col-lg-3 col-md-3' },
+            _react2.default.createElement('input', {
+              type: 'text',
+              name: 'email',
+              placeholder: 'Email',
+              onChange: this.handleChange,
+              value: email
+            }),
+            _react2.default.createElement(
+              'span',
+              { className: 'input-error', style: errors.email ? { display: 'block' } : { display: 'none' } },
+              errors.email
+            )
+          ),
+          _react2.default.createElement(
+            'div',
+            { className: 'col-lg-2 col-md-2' },
+            _react2.default.createElement('input', {
+              type: 'text',
+              name: 'phone',
+              placeholder: 'T\xE9lefono',
+              onChange: this.handleChange,
+              value: phone
+            })
+          ),
+          _react2.default.createElement(
+            'div',
+            { className: 'col-lg-2 col-md-2' },
+            _react2.default.createElement(
+              'select',
+              { name: 'product', onChange: this.handleChange, value: product },
+              _react2.default.createElement(
+                'option',
+                { value: '' },
+                'Equipos'
+              ),
+              _react2.default.createElement(
+                'option',
+                { value: 'Desktops' },
+                'Desktops'
+              ),
+              _react2.default.createElement(
+                'option',
+                { value: 'Laptops' },
+                'Laptops'
+              ),
+              _react2.default.createElement(
+                'option',
+                { value: 'Servers' },
+                'Servers'
+              )
+            )
+          ),
+          _react2.default.createElement(
+            'div',
+            { className: 'col-lg-2 col-md-2' },
+            _react2.default.createElement(
+              'button',
+              { className: 'btn btn--outline', style: { borderColor: '#6031BA', color: '#6031BA' } },
+              'COTIZAR'
+            )
+          )
+        )
+      );
+    }
+  }]);
+
+  return QuotationForm;
+}(_react.Component);
+
+exports.default = QuotationForm;
+
+/***/ }),
+
+/***/ 211:
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var stringify = __webpack_require__(522);
+var parse = __webpack_require__(523);
+var formats = __webpack_require__(213);
 
 module.exports = {
     formats: formats,
@@ -80,7 +261,7 @@ module.exports = {
 
 /***/ }),
 
-/***/ 211:
+/***/ 212:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -270,7 +451,7 @@ exports.isBuffer = function (obj) {
 
 /***/ }),
 
-/***/ 212:
+/***/ 213:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -296,13 +477,13 @@ module.exports = {
 
 /***/ }),
 
-/***/ 516:
+/***/ 517:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-var _react = __webpack_require__(26);
+var _react = __webpack_require__(18);
 
 var _react2 = _interopRequireDefault(_react);
 
@@ -314,27 +495,27 @@ var _reactMultipleRender = __webpack_require__(200);
 
 var _reactMultipleRender2 = _interopRequireDefault(_reactMultipleRender);
 
-var _slider = __webpack_require__(517);
+var _slider = __webpack_require__(518);
 
 var _slider2 = _interopRequireDefault(_slider);
 
-var _sliderImgs = __webpack_require__(519);
+var _sliderImgs = __webpack_require__(520);
 
 var _sliderImgs2 = _interopRequireDefault(_sliderImgs);
 
-var _quotation_form_fixed = __webpack_require__(520);
+var _quotation_form_fixed = __webpack_require__(521);
 
 var _quotation_form_fixed2 = _interopRequireDefault(_quotation_form_fixed);
 
-var _contact = __webpack_require__(523);
+var _contact = __webpack_require__(524);
 
 var _contact2 = _interopRequireDefault(_contact);
 
-var _posts_slider = __webpack_require__(524);
+var _posts_slider = __webpack_require__(525);
 
 var _posts_slider2 = _interopRequireDefault(_posts_slider);
 
-var _menu_mobile = __webpack_require__(526);
+var _menu_mobile = __webpack_require__(527);
 
 var _menu_mobile2 = _interopRequireDefault(_menu_mobile);
 
@@ -392,7 +573,7 @@ var els = document.querySelectorAll('.menu-item-has-children > a');
 
 /***/ }),
 
-/***/ 517:
+/***/ 518:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -404,11 +585,11 @@ Object.defineProperty(exports, "__esModule", {
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-var _react = __webpack_require__(26);
+var _react = __webpack_require__(18);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _slider_slide = __webpack_require__(518);
+var _slider_slide = __webpack_require__(519);
 
 var _slider_slide2 = _interopRequireDefault(_slider_slide);
 
@@ -510,7 +691,7 @@ exports.default = Slider;
 
 /***/ }),
 
-/***/ 518:
+/***/ 519:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -522,7 +703,7 @@ Object.defineProperty(exports, "__esModule", {
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-var _react = __webpack_require__(26);
+var _react = __webpack_require__(18);
 
 var _react2 = _interopRequireDefault(_react);
 
@@ -690,7 +871,7 @@ exports.default = SliderSlide;
 
 /***/ }),
 
-/***/ 519:
+/***/ 520:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -702,7 +883,7 @@ Object.defineProperty(exports, "__esModule", {
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-var _react = __webpack_require__(26);
+var _react = __webpack_require__(18);
 
 var _react2 = _interopRequireDefault(_react);
 
@@ -789,7 +970,7 @@ exports.default = SliderImgs;
 
 /***/ }),
 
-/***/ 520:
+/***/ 521:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -801,11 +982,11 @@ Object.defineProperty(exports, "__esModule", {
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-var _react = __webpack_require__(26);
+var _react = __webpack_require__(18);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _quotation_form = __webpack_require__(527);
+var _quotation_form = __webpack_require__(210);
 
 var _quotation_form2 = _interopRequireDefault(_quotation_form);
 
@@ -845,14 +1026,14 @@ exports.default = QuotationFormFixed;
 
 /***/ }),
 
-/***/ 521:
+/***/ 522:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-var utils = __webpack_require__(211);
-var formats = __webpack_require__(212);
+var utils = __webpack_require__(212);
+var formats = __webpack_require__(213);
 
 var arrayPrefixGenerators = {
     brackets: function brackets(prefix) { // eslint-disable-line func-name-matching
@@ -1060,13 +1241,13 @@ module.exports = function (object, opts) {
 
 /***/ }),
 
-/***/ 522:
+/***/ 523:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-var utils = __webpack_require__(211);
+var utils = __webpack_require__(212);
 
 var has = Object.prototype.hasOwnProperty;
 
@@ -1235,7 +1416,7 @@ module.exports = function (str, opts) {
 
 /***/ }),
 
-/***/ 523:
+/***/ 524:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1247,7 +1428,7 @@ Object.defineProperty(exports, "__esModule", {
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-var _react = __webpack_require__(26);
+var _react = __webpack_require__(18);
 
 var _react2 = _interopRequireDefault(_react);
 
@@ -1255,7 +1436,7 @@ var _axios = __webpack_require__(136);
 
 var _axios2 = _interopRequireDefault(_axios);
 
-var _qs = __webpack_require__(210);
+var _qs = __webpack_require__(211);
 
 var _qs2 = _interopRequireDefault(_qs);
 
@@ -1440,7 +1621,7 @@ exports.default = Contact;
 
 /***/ }),
 
-/***/ 524:
+/***/ 525:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1452,11 +1633,11 @@ Object.defineProperty(exports, "__esModule", {
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-var _react = __webpack_require__(26);
+var _react = __webpack_require__(18);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _post_slide = __webpack_require__(525);
+var _post_slide = __webpack_require__(526);
 
 var _post_slide2 = _interopRequireDefault(_post_slide);
 
@@ -1573,7 +1754,7 @@ exports.default = PostsSlider;
 
 /***/ }),
 
-/***/ 525:
+/***/ 526:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1585,7 +1766,7 @@ Object.defineProperty(exports, "__esModule", {
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-var _react = __webpack_require__(26);
+var _react = __webpack_require__(18);
 
 var _react2 = _interopRequireDefault(_react);
 
@@ -1632,11 +1813,6 @@ var PostSlide = function (_Component) {
       return _react2.default.createElement(
         'div',
         { className: 'post-slide', style: { width: postWidth, float: 'left' } },
-        _react2.default.createElement('div', {
-          className: 'post-slide__media lazyload',
-          onClick: this.openPost,
-          'data-bgset': post.post_thumbnail
-        }),
         _react2.default.createElement(
           'div',
           { className: 'post-slide__content' },
@@ -1667,7 +1843,7 @@ exports.default = PostSlide;
 
 /***/ }),
 
-/***/ 526:
+/***/ 527:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1679,7 +1855,7 @@ Object.defineProperty(exports, "__esModule", {
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-var _react = __webpack_require__(26);
+var _react = __webpack_require__(18);
 
 var _react2 = _interopRequireDefault(_react);
 
@@ -1785,187 +1961,6 @@ exports.default = MenuMobile;
 
 /***/ }),
 
-/***/ 527:
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-var _react = __webpack_require__(26);
-
-var _react2 = _interopRequireDefault(_react);
-
-var _axios = __webpack_require__(136);
-
-var _axios2 = _interopRequireDefault(_axios);
-
-var _qs = __webpack_require__(210);
-
-var _qs2 = _interopRequireDefault(_qs);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-var endpoint = '/wp-admin/admin-ajax.php';
-
-var QuotationForm = function (_Component) {
-  _inherits(QuotationForm, _Component);
-
-  function QuotationForm() {
-    var _ref;
-
-    var _temp, _this, _ret;
-
-    _classCallCheck(this, QuotationForm);
-
-    for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
-      args[_key] = arguments[_key];
-    }
-
-    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = QuotationForm.__proto__ || Object.getPrototypeOf(QuotationForm)).call.apply(_ref, [this].concat(args))), _this), _this.state = {
-      name: '',
-      email: '',
-      phone: '',
-      product: '',
-      errors: {}
-    }, _this.handleChange = function (e) {
-      _this.setState(_defineProperty({}, e.target.name, e.target.value));
-    }, _this.handleSubmit = function (e) {
-      if (e) e.preventDefault();
-      var reqData = _qs2.default.stringify({ action: 'store_quotation', data: _this.state });
-
-      _axios2.default.post(endpoint, reqData).then(function (_ref2) {
-        var data = _ref2.data;
-
-        if (Object.keys(data).length > 0) {
-          _this.setState({ errors: data });
-        }
-      });
-    }, _temp), _possibleConstructorReturn(_this, _ret);
-  }
-
-  _createClass(QuotationForm, [{
-    key: 'render',
-    value: function render() {
-      var _state = this.state,
-          name = _state.name,
-          email = _state.email,
-          phone = _state.phone,
-          product = _state.product,
-          errors = _state.errors;
-
-
-      return _react2.default.createElement(
-        'form',
-        { onSubmit: this.handleSubmit },
-        _react2.default.createElement(
-          'div',
-          { className: 'row quo-fixed__container' },
-          _react2.default.createElement(
-            'div',
-            { className: 'col-lg-3 col-md-3' },
-            _react2.default.createElement('input', {
-              type: 'text',
-              name: 'name',
-              placeholder: 'Nombre',
-              onChange: this.handleChange,
-              value: name
-            }),
-            _react2.default.createElement(
-              'span',
-              { className: 'input-error', style: errors.name ? { display: 'block' } : { display: 'none' } },
-              errors.name
-            )
-          ),
-          _react2.default.createElement(
-            'div',
-            { className: 'col-lg-3 col-md-3' },
-            _react2.default.createElement('input', {
-              type: 'text',
-              name: 'email',
-              placeholder: 'Email',
-              onChange: this.handleChange,
-              value: email
-            }),
-            _react2.default.createElement(
-              'span',
-              { className: 'input-error', style: errors.email ? { display: 'block' } : { display: 'none' } },
-              errors.email
-            )
-          ),
-          _react2.default.createElement(
-            'div',
-            { className: 'col-lg-2 col-md-2' },
-            _react2.default.createElement('input', {
-              type: 'text',
-              name: 'phone',
-              placeholder: 'T\xE9lefono',
-              onChange: this.handleChange,
-              value: phone
-            })
-          ),
-          _react2.default.createElement(
-            'div',
-            { className: 'col-lg-2 col-md-2' },
-            _react2.default.createElement(
-              'select',
-              { name: 'product', onChange: this.handleChange, value: product },
-              _react2.default.createElement(
-                'option',
-                { value: '' },
-                'Equipos'
-              ),
-              _react2.default.createElement(
-                'option',
-                { value: 'Desktops' },
-                'Desktops'
-              ),
-              _react2.default.createElement(
-                'option',
-                { value: 'Laptops' },
-                'Laptops'
-              ),
-              _react2.default.createElement(
-                'option',
-                { value: 'Servers' },
-                'Servers'
-              )
-            )
-          ),
-          _react2.default.createElement(
-            'div',
-            { className: 'col-lg-2 col-md-2' },
-            _react2.default.createElement(
-              'button',
-              { className: 'btn btn--outline', style: { borderColor: '#6031BA', color: '#6031BA' } },
-              'COTIZAR'
-            )
-          )
-        )
-      );
-    }
-  }]);
-
-  return QuotationForm;
-}(_react.Component);
-
-exports.default = QuotationForm;
-
-/***/ }),
-
 /***/ 528:
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -1978,11 +1973,11 @@ Object.defineProperty(exports, "__esModule", {
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-var _react = __webpack_require__(26);
+var _react = __webpack_require__(18);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _quotation_form = __webpack_require__(527);
+var _quotation_form = __webpack_require__(210);
 
 var _quotation_form2 = _interopRequireDefault(_quotation_form);
 
@@ -2063,4 +2058,4 @@ exports.default = FooterMobile;
 
 /***/ })
 
-},[516]);
+},[517]);
