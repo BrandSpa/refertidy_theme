@@ -101,14 +101,17 @@
         fill: #fff;
       }
     }
-
-    > ul {
-      li {
-        a {
-          color: #fff !important;
-        }
-      }
+    
+    &__menu  {
+      ul {
+       li {
+         a {
+           color: #fff !important;
+         }
+       }
+     }
     }
+
 
     .header__widget {
       a {
