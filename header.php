@@ -64,7 +64,9 @@
 				echo clean_menu($nav);
    	 ?>
 
-		 <a href="#" class="app-header__navicon"><i class="ion-navicon-round"></i></a>
+		 <a href="#" class="app-header__navicon">
+			 <i class="ion-navicon"></i>
+		 </a>
 
 	</div>
 </header>
