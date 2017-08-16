@@ -12,9 +12,13 @@ class MenuMobile extends Component {
   handleClick = (e) => {
     const el = this.container;
     if (!el.contains(e.target)) {
-      jQuery('body').removeClass('open-menu');
-      this.setState({show: false});
+      this.closeMenu();
     }
+  }
+
+  closeMenu = () => {
+    jQuery('body').removeClass('open-menu');
+    this.setState({show: false});
   }
 
   toggleMenu = (e) => {
@@ -52,7 +56,7 @@ class MenuMobile extends Component {
               <li><a href="#" onClick={this.handleLinkClick.bind(null, link)}>{link.title}</a></li>
             )}
           </ul>
-          <button className="app-header__nav__close"><i className="ion-close-round"></i></button>
+          <button className="app-header__nav__close" onClick={this.}><i className="ion-close-round"></i></button>
         </div>
       </div>
     )
