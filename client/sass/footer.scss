@@ -38,10 +38,15 @@
     position: fixed;
     display: flex;
     align-items: center;
-    top: 70px;
+    top: 0;
     background: #fff;
     height: 100%;
     width: 100%;
     z-index: 97;
+    input, select {
+      border-color: #6031BA;
+      color: #6031BA;
+      margin-top: 10px;
+    }
   }
 }
