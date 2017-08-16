@@ -987,7 +987,9 @@ li {
     transition: all .7s; }
     .post-slide__content:hover {
       -webkit-box-shadow: 0 10px 30px -5px rgba(10, 16, 34, 0.2);
-      box-shadow: 0 10px 30px -5px rgba(10, 16, 34, 0.2); }
+      box-shadow: 0 10px 30px -5px rgba(10, 16, 34, 0.2);
+      -webkit-transform: scale(1.07);
+      transform: scale(1.07); }
   .post-slide__title {
     color: #6031BA;
     margin: 0 0 20px 0;
