@@ -738,7 +738,7 @@ li {
       -webkit-animation: dash 2s cubic-bezier(0.42, 0, 1, 0.6);
       animation: dash 2s cubic-bezier(0.42, 0, 1, 0.6);
       fill: #fff; }
-    .app-header--scrolling__menu ul li a {
+    .app-header--scrolling .app-header__menu ul li a {
       color: #fff !important; }
     .app-header--scrolling .header__widget a {
       color: #fff !important; }
