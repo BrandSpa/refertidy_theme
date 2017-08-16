@@ -46,12 +46,14 @@
     position: fixed;
     right: -100%;
     top: 0;
+    width: 70%;
     height: 100%;
     background: #fff;
     transition: right .3s ease-in-out;
+    box-shadow: 10px 0 10px rgba(0,0,0,.2);
     
     &--show {
-      left: 0;
+      right: 0;
     }
   }
 

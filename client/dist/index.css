@@ -697,12 +697,15 @@ li {
     position: fixed;
     right: -100%;
     top: 0;
+    width: 70%;
     height: 100%;
     background: #fff;
     -webkit-transition: right .3s ease-in-out;
-    transition: right .3s ease-in-out; }
+    transition: right .3s ease-in-out;
+    -webkit-box-shadow: 10px 0 10px rgba(0, 0, 0, 0.2);
+    box-shadow: 10px 0 10px rgba(0, 0, 0, 0.2); }
     .app-header__nav--show {
-      left: 0; }
+      right: 0; }
   .app-header--scrolling {
     background: RGBA(96, 49, 186, 1);
     color: #fff !important;
