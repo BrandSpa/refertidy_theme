@@ -16,6 +16,11 @@ function ra_image_hover_vc() {
         'heading' => 'Image overlay',
         'param_name' => 'image_overlay'
       ],
+			[
+        'type' => 'textfield',
+        'heading' => 'url',
+        'param_name' => 'url'
+      ],
       [
         'type' => 'colorpicker',
         'heading' => 'background',
