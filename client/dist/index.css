@@ -1017,9 +1017,6 @@ li {
     font-size: 14px;
     font-weight: 600;
     padding-top: 20px;
-    position: absolute;
-    bottom: 40px;
-    right: 40px;
     border-top: 1px solid #6031BA; }
   .post-slide .btn {
     float: right; }
