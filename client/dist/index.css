@@ -1054,3 +1054,12 @@ li {
     text-align: center;
     padding-top: 8px;
     margin-left: 5px; }
+  .footer-mobile__form {
+    position: fixed;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    background: #f7f7f7; }

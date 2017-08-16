@@ -2008,20 +2008,26 @@ var FooterMobile = function (_Component) {
       args[_key] = arguments[_key];
     }
 
-    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = FooterMobile.__proto__ || Object.getPrototypeOf(FooterMobile)).call.apply(_ref, [this].concat(args))), _this), _this.toggleQuo = function (e) {
+    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = FooterMobile.__proto__ || Object.getPrototypeOf(FooterMobile)).call.apply(_ref, [this].concat(args))), _this), _this.state = {
+      showForm: false
+    }, _this.toggleQuo = function (e) {
       if (e) e.preventDefault();
+      _this.setState({ showForm: !_this.state.showForm });
     }, _temp), _possibleConstructorReturn(_this, _ret);
   }
 
   _createClass(FooterMobile, [{
     key: 'render',
     value: function render() {
+      var showForm = this.state.showForm;
+
+
       return _react2.default.createElement(
         'div',
         null,
         _react2.default.createElement(
           'div',
-          { className: 'footer-mobile__form', style: { display: 'none' } },
+          { className: 'footer-mobile__form', style: showForm ? { display: 'block' } : { display: 'none' } },
           _react2.default.createElement(_quotation_form2.default, null)
         ),
         _react2.default.createElement(
