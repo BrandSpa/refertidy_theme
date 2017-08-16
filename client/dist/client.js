@@ -1821,9 +1821,13 @@ var PostSlide = function (_Component) {
           'div',
           { className: 'post-slide__content' },
           _react2.default.createElement(
-            'h4',
-            { className: 'post-slide__title' },
-            post.post_title
+            'a',
+            { href: post.guid },
+            _react2.default.createElement(
+              'h4',
+              { className: 'post-slide__title' },
+              post.post_title
+            )
           ),
           _react2.default.createElement(
             'a',
