@@ -688,9 +688,10 @@ li {
   @media (max-width: 767px) {
     .app-header .logo {
       width: 50%; } }
+  .app-header .ra-menu-mobile {
+    float: right; }
   .app-header__navicon {
     float: right;
-    padding-top: 7px;
     font-size: 40px;
     color: #fff;
     display: none; }

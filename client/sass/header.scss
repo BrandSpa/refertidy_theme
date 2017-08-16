@@ -35,13 +35,16 @@
     }
   }
 
+  .ra-menu-mobile {
+    float: right;
+  }
+
   &__navicon {
     float: right;
-    padding-top: 7px;
     font-size: 40px;
     color: #fff;
     display: none;
-    
+
     @media #{$s} {
       display: block;
     }
