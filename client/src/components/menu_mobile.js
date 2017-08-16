@@ -5,8 +5,15 @@ class MenuMobile extends Component {
     show: false
   }
 
+  componentDidMount() {
+    jQuery('body').on('click', () => {
+      this.toggleMenu();
+    })
+  }
+
   toggleMenu = (e) => {
     if(e) e.preventDefault();
+
     if(!this.state.show) {
       jQuery('body').addClass('open-menu');
     } else {

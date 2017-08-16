@@ -1832,6 +1832,7 @@ var MenuMobile = function (_Component) {
       show: false
     }, _this.toggleMenu = function (e) {
       if (e) e.preventDefault();
+
       if (!_this.state.show) {
         jQuery('body').addClass('open-menu');
       } else {
@@ -1848,9 +1849,18 @@ var MenuMobile = function (_Component) {
   }
 
   _createClass(MenuMobile, [{
+    key: 'componentDidMount',
+    value: function componentDidMount() {
+      var _this2 = this;
+
+      jQuery('body').on('click', function () {
+        _this2.toggleMenu();
+      });
+    }
+  }, {
     key: 'render',
     value: function render() {
-      var _this2 = this;
+      var _this3 = this;
 
       var links = this.props.links;
       var show = this.state.show;
@@ -1876,7 +1886,7 @@ var MenuMobile = function (_Component) {
                 null,
                 _react2.default.createElement(
                   'a',
-                  { href: '#', onClick: _this2.handleClick.bind(null, link) },
+                  { href: '#', onClick: _this3.handleClick.bind(null, link) },
                   link.title
                 )
               );
