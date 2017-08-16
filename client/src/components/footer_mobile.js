@@ -21,3 +21,5 @@ class FooterMobile extends Component {
     )
   }
 }
+
+export default FooterMobile;
