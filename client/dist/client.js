@@ -1849,10 +1849,129 @@ exports.default = PostSlide;
 /***/ }),
 
 /***/ 527:
-/***/ (function(module, exports) {
+/***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-throw new Error("Module build failed: SyntaxError: Unexpected token (59:67)\n\n\u001b[0m \u001b[90m 57 | \u001b[39m            )}\n \u001b[90m 58 | \u001b[39m          \u001b[33m<\u001b[39m\u001b[33m/\u001b[39m\u001b[33mul\u001b[39m\u001b[33m>\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 59 | \u001b[39m          \u001b[33m<\u001b[39m\u001b[33mbutton\u001b[39m className\u001b[33m=\u001b[39m\u001b[32m\"app-header__nav__close\"\u001b[39m onClick\u001b[33m=\u001b[39m{\u001b[36mthis\u001b[39m\u001b[33m.\u001b[39m}\u001b[33m>\u001b[39m\u001b[33m<\u001b[39m\u001b[33mi\u001b[39m className\u001b[33m=\u001b[39m\u001b[32m\"ion-close-round\"\u001b[39m\u001b[33m>\u001b[39m\u001b[33m<\u001b[39m\u001b[33m/\u001b[39m\u001b[33mi\u001b[39m\u001b[33m>\u001b[39m\u001b[33m<\u001b[39m\u001b[33m/\u001b[39m\u001b[33mbutton\u001b[39m\u001b[33m>\u001b[39m\n \u001b[90m    | \u001b[39m                                                                   \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 60 | \u001b[39m        \u001b[33m<\u001b[39m\u001b[33m/\u001b[39m\u001b[33mdiv\u001b[39m\u001b[33m>\u001b[39m\n \u001b[90m 61 | \u001b[39m      \u001b[33m<\u001b[39m\u001b[33m/\u001b[39m\u001b[33mdiv\u001b[39m\u001b[33m>\u001b[39m\n \u001b[90m 62 | \u001b[39m    )\u001b[0m\n");
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = __webpack_require__(18);
+
+var _react2 = _interopRequireDefault(_react);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var MenuMobile = function (_Component) {
+  _inherits(MenuMobile, _Component);
+
+  function MenuMobile() {
+    var _ref;
+
+    var _temp, _this, _ret;
+
+    _classCallCheck(this, MenuMobile);
+
+    for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
+      args[_key] = arguments[_key];
+    }
+
+    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = MenuMobile.__proto__ || Object.getPrototypeOf(MenuMobile)).call.apply(_ref, [this].concat(args))), _this), _this.state = {
+      show: false
+    }, _this.handleClick = function (e) {
+      var el = _this.container;
+      if (!el.contains(e.target)) {
+        _this.closeMenu();
+      }
+    }, _this.closeMenu = function () {
+      jQuery('body').removeClass('open-menu');
+      _this.setState({ show: false });
+    }, _this.toggleMenu = function (e) {
+      if (e) e.preventDefault();
+
+      if (!_this.state.show) {
+        jQuery('body').addClass('open-menu');
+      } else {
+        jQuery('body').removeClass('open-menu');
+      }
+
+      _this.setState({ show: !_this.state.show });
+    }, _this.handleLinkClick = function (link) {
+      setTimeout(function () {
+        _this.toggleMenu();
+        window.location = link.url;
+      });
+    }, _temp), _possibleConstructorReturn(_this, _ret);
+  }
+
+  _createClass(MenuMobile, [{
+    key: 'componentDidMount',
+    value: function componentDidMount() {
+      document.addEventListener('click', this.handleClick, true);
+    }
+  }, {
+    key: 'render',
+    value: function render() {
+      var _this2 = this;
+
+      var links = this.props.links;
+      var show = this.state.show;
+
+
+      return _react2.default.createElement(
+        'div',
+        { ref: function ref(container) {
+            return _this2.container = container;
+          } },
+        _react2.default.createElement(
+          'a',
+          { href: '#', className: 'app-header__navicon', onClick: this.toggleMenu },
+          _react2.default.createElement('span', { className: 'ion-navicon' })
+        ),
+        _react2.default.createElement(
+          'div',
+          { className: show ? "app-header__nav app-header__nav--show" : "app-header__nav" },
+          _react2.default.createElement(
+            'ul',
+            null,
+            links.map(function (link) {
+              return _react2.default.createElement(
+                'li',
+                null,
+                _react2.default.createElement(
+                  'a',
+                  { href: '#', onClick: _this2.handleLinkClick.bind(null, link) },
+                  link.title
+                )
+              );
+            })
+          ),
+          _react2.default.createElement(
+            'button',
+            {
+              className: 'app-header__nav__close',
+              onClick: this.closeMenu },
+            _react2.default.createElement('i', { className: 'ion-close-round' })
+          )
+        )
+      );
+    }
+  }]);
+
+  return MenuMobile;
+}(_react.Component);
+
+exports.default = MenuMobile;
 
 /***/ }),
 

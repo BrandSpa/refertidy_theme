@@ -56,7 +56,9 @@ class MenuMobile extends Component {
               <li><a href="#" onClick={this.handleLinkClick.bind(null, link)}>{link.title}</a></li>
             )}
           </ul>
-          <button className="app-header__nav__close" onClick={this.}><i className="ion-close-round"></i></button>
+          <button
+            className="app-header__nav__close"
+            onClick={this.closeMenu}><i className="ion-close-round"></i></button>
         </div>
       </div>
     )
