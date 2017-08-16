@@ -935,7 +935,8 @@ li {
   position: relative;
   margin: 0 -10px; }
   .posts-slider__container {
-    overflow: hidden; }
+    overflow: hidden;
+    padding: 40px 5px; }
   .posts-slider__viewport {
     position: relative;
     -webkit-transition: left .7s;
@@ -990,10 +991,10 @@ li {
     transition: all .7s;
     min-height: 220px; }
     .post-slide__content:hover {
-      -webkit-box-shadow: 0 10px 30px -5px rgba(10, 16, 34, 0.2);
-      box-shadow: 0 10px 30px -5px rgba(10, 16, 34, 0.2);
-      -webkit-transform: scale(1.07);
-      transform: scale(1.07); }
+      -webkit-box-shadow: 0 10px 20px -5px rgba(10, 16, 34, 0.2);
+      box-shadow: 0 10px 20px -5px rgba(10, 16, 34, 0.2);
+      -webkit-transform: scale(1.02);
+      transform: scale(1.02); }
   .post-slide__title {
     color: #6031BA;
     margin: 0 0 20px 0;
