@@ -932,8 +932,10 @@ li {
   color: #fff; }
 
 .posts-slider {
-  overflow: hidden;
+  position: relative;
   margin: 0 -10px; }
+  .posts-slider__container {
+    overflow: hidden; }
   .posts-slider__viewport {
     position: relative;
     -webkit-transition: left .7s;

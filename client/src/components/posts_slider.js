@@ -63,10 +63,12 @@ class PostsSlider extends Component {
 
     return (
       <div className="posts-slider">
-        <div className="posts-slider__viewport" style={{width: viewportWidth,  left: viewportLeft}}>
-          {posts.map(post =>
-            <Post key={post.ID} post={post} total={posts.length} mobile={this.state.mobile} />
-          )}
+        <div className="posts-slider__container">
+          <div className="posts-slider__viewport" style={{width: viewportWidth,  left: viewportLeft}}>
+            {posts.map(post =>
+              <Post key={post.ID} post={post} total={posts.length} mobile={this.state.mobile} />
+            )}
+          </div>
         </div>
         <div className="posts-slider__btns">
           <a className="posts-slider__btns__left" href="#" onClick={this.prev}><ArrowLeft /></a>

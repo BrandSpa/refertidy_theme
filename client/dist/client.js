@@ -1724,10 +1724,14 @@ var PostsSlider = function (_Component) {
         { className: 'posts-slider' },
         _react2.default.createElement(
           'div',
-          { className: 'posts-slider__viewport', style: { width: viewportWidth, left: viewportLeft } },
-          posts.map(function (post) {
-            return _react2.default.createElement(_post_slide2.default, { key: post.ID, post: post, total: posts.length, mobile: _this2.state.mobile });
-          })
+          { className: 'posts-slider__container' },
+          _react2.default.createElement(
+            'div',
+            { className: 'posts-slider__viewport', style: { width: viewportWidth, left: viewportLeft } },
+            posts.map(function (post) {
+              return _react2.default.createElement(_post_slide2.default, { key: post.ID, post: post, total: posts.length, mobile: _this2.state.mobile });
+            })
+          )
         ),
         _react2.default.createElement(
           'div',

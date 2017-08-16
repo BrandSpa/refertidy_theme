@@ -1,6 +1,10 @@
 .posts-slider {
-  overflow: hidden;
+  position: relative;
   margin: 0 -10px;
+
+  &__container {
+    overflow: hidden;
+  }
 
   &__viewport {
     position: relative;
