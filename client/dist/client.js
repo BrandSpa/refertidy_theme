@@ -1797,7 +1797,9 @@ var PostSlide = function (_Component) {
     }
 
     return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = PostSlide.__proto__ || Object.getPrototypeOf(PostSlide)).call.apply(_ref, [this].concat(args))), _this), _this.openPost = function () {
-      window.location = _this.props.post.guid;
+      setTimeout(function () {
+        window.location = _this.props.post.guid;
+      });
     }, _temp), _possibleConstructorReturn(_this, _ret);
   }
 
@@ -1951,6 +1953,11 @@ var MenuMobile = function (_Component) {
                 )
               );
             })
+          ),
+          _react2.default.createElement(
+            'button',
+            { className: 'app-header__nav__close' },
+            _react2.default.createElement('i', { className: 'ion-close-round' })
           )
         )
       );

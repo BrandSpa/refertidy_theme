@@ -706,7 +706,7 @@ li {
     z-index: 99;
     right: -100%;
     top: 0;
-    width: 70%;
+    width: 80%;
     height: 100%;
     background: #fff;
     -webkit-transition: right .3s ease-in-out;
@@ -715,6 +715,10 @@ li {
     box-shadow: -10px 0 10px rgba(0, 0, 0, 0.2); }
     .app-header__nav--show {
       right: 0; }
+    .app-header__nav__close {
+      position: absolute;
+      bottom: 40px;
+      left: 20%; }
     .app-header__nav ul {
       width: 100%;
       padding: 0;

@@ -3,7 +3,9 @@ import React, { Component } from 'react';
 class PostSlide extends Component {
 
   openPost = () => {
-    window.location = this.props.post.guid;
+    setTimeout(() => {
+      window.location = this.props.post.guid;
+    });
   }
 
   render() {

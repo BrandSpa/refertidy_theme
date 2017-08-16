@@ -55,7 +55,7 @@
     z-index: 99;
     right: -100%;
     top: 0;
-    width: 70%;
+    width: 80%;
     height: 100%;
     background: #fff;
     transition: right .3s ease-in-out;
@@ -63,6 +63,12 @@
 
     &--show {
       right: 0;
+    }
+
+    &__close {
+      position: absolute;
+      bottom: 40px;
+      left: 20%;
     }
 
     ul {
