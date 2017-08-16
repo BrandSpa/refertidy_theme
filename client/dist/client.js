@@ -1709,7 +1709,7 @@ var MenuMobile = function (_Component) {
       show: false
     }, _this.handleClick = function (e) {
       var el = _this.container;
-      if (!el.contains(e.target)) _this.toggleMenu(e);
+      if (!el.contains(e.target)) _this.setState({ show: false });
     }, _this.toggleMenu = function (e) {
       if (e) e.preventDefault();
 

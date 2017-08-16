@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Form from './quotation_form';
 
 class FooterMobile extends Component {
+
   toggleQuo = (e) => {
     if(e) e.preventDefault();
   }
