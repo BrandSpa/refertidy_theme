@@ -1040,7 +1040,8 @@ li {
     height: 40px;
     color: #fff;
     background: transparent;
-    text-transform: uppercase; }
+    text-transform: uppercase;
+    font-weight: 600; }
   .footer-mobile a {
     border: 1px solid #FFFFFF;
     width: 40px;
