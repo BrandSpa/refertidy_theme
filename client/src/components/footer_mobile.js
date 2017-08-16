@@ -16,7 +16,7 @@ class FooterMobile extends Component {
 
     return (
       <div >
-        <div className="footer-mobile__form" style={showForm ? {display: 'block'} : {display: 'none'}}>
+        <div className="footer-mobile__form" style={showForm ? {display: 'flex'} : {display: 'none'}}>
           <Form />
         </div>
 

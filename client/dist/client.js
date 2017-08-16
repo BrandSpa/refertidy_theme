@@ -2027,7 +2027,7 @@ var FooterMobile = function (_Component) {
         null,
         _react2.default.createElement(
           'div',
-          { className: 'footer-mobile__form', style: showForm ? { display: 'block' } : { display: 'none' } },
+          { className: 'footer-mobile__form', style: showForm ? { display: 'flex' } : { display: 'none' } },
           _react2.default.createElement(_quotation_form2.default, null)
         ),
         _react2.default.createElement(
