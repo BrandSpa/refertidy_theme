@@ -1828,8 +1828,8 @@ var PostSlide = function (_Component) {
           ),
           _react2.default.createElement(
             'a',
-            { href: post.guid },
-            'VER MAS'
+            { href: post.guid, className: 'post-slide__link' },
+            'VER M\xC1S'
           )
         )
       );
