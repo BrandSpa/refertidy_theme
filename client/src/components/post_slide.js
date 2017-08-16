@@ -16,12 +16,6 @@ class PostSlide extends Component {
 
     return (
       <div className="post-slide" style={{width: postWidth, float: 'left'}}>
-        <div
-          className="post-slide__media lazyload"
-          onClick={this.openPost}
-          data-bgset={post.post_thumbnail}
-        >
-        </div>
         <div className="post-slide__content">
             <h4 className="post-slide__title">{post.post_title}</h4>
             <div className="post-slide__excerpt">

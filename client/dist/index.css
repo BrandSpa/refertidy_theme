@@ -977,7 +977,7 @@ li {
     cursor: pointer; }
   .post-slide__content {
     background: #FFF;
-    border-radius: 0 0 0 100px;
+    border-radius: 20px;
     padding: 40px;
     float: left;
     width: 100%;
@@ -992,10 +992,14 @@ li {
     color: #6031BA;
     margin: 0 0 20px 0;
     letter-spacing: normal;
-    line-height: 1.2; }
+    line-height: 1.5;
+    font-family: 'Aktiv Grotesk';
+    font-size: 20px; }
   .post-slide__excerpt {
     color: #747E86;
-    margin: 0 0 40px 0; }
+    margin: 0 0 40px 0;
+    font-size: 16px;
+    line-height: 1.4; }
   .post-slide .btn {
     float: right; }
 
