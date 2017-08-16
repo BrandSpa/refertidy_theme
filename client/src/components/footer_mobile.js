@@ -11,12 +11,18 @@ class FooterMobile extends Component {
     this.setState({showForm: !this.state.showForm})
   }
 
+  closeForm(e) {
+    if(e) e.preventDefault();
+    this.setState({showForm: false})
+  }
+
   render() {
     const { showForm } = this.state;
 
     return (
-      <div >
+      <div>
         <div className="footer-mobile__form" style={showForm ? {display: 'flex'} : {display: 'none'}}>
+          <a href="#" onClick={this.closeForm}><i className="ion-close-round"></i></a>
           <Form />
         </div>
 

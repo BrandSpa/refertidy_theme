@@ -2017,6 +2017,12 @@ var FooterMobile = function (_Component) {
   }
 
   _createClass(FooterMobile, [{
+    key: 'closeForm',
+    value: function closeForm(e) {
+      if (e) e.preventDefault();
+      this.setState({ showForm: false });
+    }
+  }, {
     key: 'render',
     value: function render() {
       var showForm = this.state.showForm;
@@ -2028,6 +2034,11 @@ var FooterMobile = function (_Component) {
         _react2.default.createElement(
           'div',
           { className: 'footer-mobile__form', style: showForm ? { display: 'flex' } : { display: 'none' } },
+          _react2.default.createElement(
+            'a',
+            { href: '#', onClick: this.closeForm },
+            _react2.default.createElement('i', { className: 'ion-close-round' })
+          ),
           _react2.default.createElement(_quotation_form2.default, null)
         ),
         _react2.default.createElement(
