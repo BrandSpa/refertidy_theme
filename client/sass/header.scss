@@ -40,10 +40,16 @@
     padding-top: 7px;
     font-size: 40px;
     color: #fff;
+    display: none;
+    
+    @media #{$s} {
+      display: block;
+    }
   }
 
   &__nav {
     position: fixed;
+    z-index: 99;
     right: -100%;
     top: 0;
     width: 70%;

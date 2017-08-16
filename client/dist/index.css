@@ -565,7 +565,7 @@ li {
   background: #6031BD;
   display: none;
   width: 100%;
-  z-index: 999;
+  z-index: 98;
   color: #fff;
   padding: 20px; }
   .footer-fixed_mobile a {
@@ -692,9 +692,14 @@ li {
     float: right;
     padding-top: 7px;
     font-size: 40px;
-    color: #fff; }
+    color: #fff;
+    display: none; }
+    @media (max-width: 767px) {
+      .app-header__navicon {
+        display: block; } }
   .app-header__nav {
     position: fixed;
+    z-index: 99;
     right: -100%;
     top: 0;
     width: 70%;
