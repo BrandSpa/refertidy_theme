@@ -1832,37 +1832,43 @@ var MenuMobile = function (_Component) {
       show: false
     }, _this.toggleMenu = function (e) {
       e.preventDefault();
+      if (!_this.state.show) {
+        $('body').addClass('open-menu');
+      } else {
+        $('body').removeClass('open-menu');
+      }
+
       _this.setState({ show: !_this.state.show });
     }, _temp), _possibleConstructorReturn(_this, _ret);
   }
 
   _createClass(MenuMobile, [{
-    key: "render",
+    key: 'render',
     value: function render() {
       var links = this.props.links;
       var show = this.state.show;
 
 
       return _react2.default.createElement(
-        "div",
+        'div',
         null,
         _react2.default.createElement(
-          "a",
-          { href: "#", className: "app-header__navicon", onClick: this.toggleMenu },
-          _react2.default.createElement("span", { className: "ion-navicon" })
+          'a',
+          { href: '#', className: 'app-header__navicon', onClick: this.toggleMenu },
+          _react2.default.createElement('span', { className: 'ion-navicon' })
         ),
         _react2.default.createElement(
-          "div",
+          'div',
           { className: show ? "app-header__nav app-header__nav--show" : "app-header__nav" },
           _react2.default.createElement(
-            "ul",
+            'ul',
             null,
             links.map(function (link) {
               return _react2.default.createElement(
-                "li",
+                'li',
                 null,
                 _react2.default.createElement(
-                  "a",
+                  'a',
                   { href: link.url },
                   link.title
                 )
