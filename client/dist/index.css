@@ -718,7 +718,12 @@ li {
     .app-header__nav__close {
       position: absolute;
       bottom: 40px;
-      left: 20%; }
+      left: -25px;
+      width: 50px;
+      height: 50px;
+      border-radius: 50px;
+      background: #6031BA;
+      font-size: 25px; }
     .app-header__nav ul {
       width: 100%;
       padding: 0;
