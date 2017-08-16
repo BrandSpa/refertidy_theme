@@ -13,7 +13,7 @@ class FooterMobile extends Component {
 
   render() {
     const { showForm } = this.state;
-    
+
     return (
       <div >
         <div className="footer-mobile__form" style={showForm ? {display: 'block'} : {display: 'none'}}>
