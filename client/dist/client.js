@@ -1833,9 +1833,9 @@ var MenuMobile = function (_Component) {
     }, _this.toggleMenu = function (e) {
       e.preventDefault();
       if (!_this.state.show) {
-        $('body').addClass('open-menu');
+        jQuery('body').addClass('open-menu');
       } else {
-        $('body').removeClass('open-menu');
+        jQuery('body').removeClass('open-menu');
       }
 
       _this.setState({ show: !_this.state.show });

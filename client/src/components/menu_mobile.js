@@ -8,11 +8,11 @@ class MenuMobile extends Component {
   toggleMenu = (e) => {
     e.preventDefault();
     if(!this.state.show) {
-      $('body').addClass('open-menu');
+      jQuery('body').addClass('open-menu');
     } else {
-      $('body').removeClass('open-menu');
+      jQuery('body').removeClass('open-menu');
     }
-    
+
     this.setState({ show: !this.state.show });
   }
 
