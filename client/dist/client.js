@@ -1830,7 +1830,7 @@ var MenuMobile = function (_Component) {
 
     return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = MenuMobile.__proto__ || Object.getPrototypeOf(MenuMobile)).call.apply(_ref, [this].concat(args))), _this), _this.state = {
       show: false
-    }, _this.handleClick = function () {
+    }, _this.handleClick = function (e) {
       var el = _this.container;
       if (!el.contains(e.target)) _this.toggleMenu(e);
     }, _this.toggleMenu = function (e) {

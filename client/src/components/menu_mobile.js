@@ -9,7 +9,7 @@ class MenuMobile extends Component {
      document.addEventListener('click', this.handleClick, true)
   }
 
-  handleClick = () => {
+  handleClick = (e) => {
     const el = this.container
    if (!el.contains(e.target)) this.toggleMenu(e)
   }
