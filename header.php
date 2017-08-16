@@ -65,7 +65,7 @@
    	 ?>
 
 		 <a href="#" class="app-header__navicon">
-			 <i class="ion-navicon"></i>
+			 <span class="ion-navicon"></span>
 		 </a>
 
 	</div>
