@@ -2013,16 +2013,13 @@ var FooterMobile = function (_Component) {
     }, _this.toggleQuo = function (e) {
       if (e) e.preventDefault();
       _this.setState({ showForm: !_this.state.showForm });
+    }, _this.closeForm = function (e) {
+      if (e) e.preventDefault();
+      _this.setState({ showForm: false });
     }, _temp), _possibleConstructorReturn(_this, _ret);
   }
 
   _createClass(FooterMobile, [{
-    key: 'closeForm',
-    value: function closeForm(e) {
-      if (e) e.preventDefault();
-      this.setState({ showForm: false });
-    }
-  }, {
     key: 'render',
     value: function render() {
       var showForm = this.state.showForm;

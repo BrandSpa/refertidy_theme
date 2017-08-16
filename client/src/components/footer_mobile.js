@@ -11,7 +11,7 @@ class FooterMobile extends Component {
     this.setState({showForm: !this.state.showForm})
   }
 
-  closeForm(e) {
+  closeForm = (e) => {
     if(e) e.preventDefault();
     this.setState({showForm: false})
   }
