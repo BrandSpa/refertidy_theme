@@ -1016,3 +1016,16 @@ li {
     position: relative;
     max-width: 100%;
     z-index: 1; }
+
+.footer-mobile {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 70px;
+  background: #6031ba;
+  z-index: 98; }
+  .footer-mobile button {
+    border: 1px solid #FFFFFF;
+    border-radius: 89px;
+    padding: 0 40px;
+    height: 40px; }
