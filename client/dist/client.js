@@ -1831,7 +1831,7 @@ var MenuMobile = function (_Component) {
     return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = MenuMobile.__proto__ || Object.getPrototypeOf(MenuMobile)).call.apply(_ref, [this].concat(args))), _this), _this.state = {
       show: false
     }, _this.toggleMenu = function (e) {
-      e.preventDefault();
+      if (e) e.preventDefault();
       if (!_this.state.show) {
         jQuery('body').addClass('open-menu');
       } else {
@@ -1839,12 +1839,19 @@ var MenuMobile = function (_Component) {
       }
 
       _this.setState({ show: !_this.state.show });
+    }, _this.handleClick = function (link) {
+      setTimeout(function () {
+        _this.toggleMenu();
+        window.location = link.url;
+      });
     }, _temp), _possibleConstructorReturn(_this, _ret);
   }
 
   _createClass(MenuMobile, [{
     key: 'render',
     value: function render() {
+      var _this2 = this;
+
       var links = this.props.links;
       var show = this.state.show;
 
@@ -1869,7 +1876,7 @@ var MenuMobile = function (_Component) {
                 null,
                 _react2.default.createElement(
                   'a',
-                  { href: link.url },
+                  { href: '#', onClick: _this2.handleClick.bind(null, link) },
                   link.title
                 )
               );

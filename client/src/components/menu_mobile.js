@@ -6,7 +6,7 @@ class MenuMobile extends Component {
   }
 
   toggleMenu = (e) => {
-    e.preventDefault();
+    if(e) e.preventDefault();
     if(!this.state.show) {
       jQuery('body').addClass('open-menu');
     } else {
@@ -14,6 +14,13 @@ class MenuMobile extends Component {
     }
 
     this.setState({ show: !this.state.show });
+  }
+
+  handleClick = (link) => {
+    setTimeout(() => {
+      this.toggleMenu();
+      window.location = link.url;
+    });
   }
 
   render() {
@@ -25,10 +32,11 @@ class MenuMobile extends Component {
         <a href="#" className="app-header__navicon" onClick={this.toggleMenu}>
           <span className="ion-navicon"></span>
         </a>
+
         <div className={show ? "app-header__nav app-header__nav--show" : "app-header__nav"}>
           <ul>
             {links.map(link =>
-              <li><a href={link.url}>{link.title}</a></li>
+              <li><a href="#" onClick={this.handleClick.bind(null, link)}>{link.title}</a></li>
             )}
           </ul>
         </div>
