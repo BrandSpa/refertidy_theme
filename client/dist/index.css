@@ -984,7 +984,8 @@ li {
     -webkit-box-shadow: 0 1px 1px 0 rgba(10, 16, 34, 0.2);
     box-shadow: 0 1px 1px 0 rgba(10, 16, 34, 0.2);
     -webkit-transition: all .7s;
-    transition: all .7s; }
+    transition: all .7s;
+    min-height: 300px; }
     .post-slide__content:hover {
       -webkit-box-shadow: 0 10px 30px -5px rgba(10, 16, 34, 0.2);
       box-shadow: 0 10px 30px -5px rgba(10, 16, 34, 0.2);
