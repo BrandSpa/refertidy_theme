@@ -1848,8 +1848,8 @@ var MenuMobile = function (_Component) {
         null,
         _react2.default.createElement(
           "a",
-          { href: "#", "class": "app-header__navicon", onClick: this.toggleMenu },
-          _react2.default.createElement("span", { "class": "ion-navicon" })
+          { href: "#", className: "app-header__navicon", onClick: this.toggleMenu },
+          _react2.default.createElement("span", { className: "ion-navicon" })
         ),
         _react2.default.createElement(
           "div",

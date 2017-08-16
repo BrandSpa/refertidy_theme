@@ -16,8 +16,8 @@ class MenuMobile extends Component {
 
     return (
       <div>
-        <a href="#" class="app-header__navicon" onClick={this.toggleMenu}>
-          <span class="ion-navicon"></span>
+        <a href="#" className="app-header__navicon" onClick={this.toggleMenu}>
+          <span className="ion-navicon"></span>
         </a>
         <div className={show ? "app-header__nav app-header__nav--show" : "app-header__nav"}>
           <ul>
