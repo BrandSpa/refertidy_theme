@@ -6,10 +6,10 @@
   height: 70px;
   background: #6031ba;
   z-index: 98;
-  display: flex;
   align-items: center;
   justify-content: center;
   border-radius: 100px 0 0 0;
+  
   @media #{$s} {
     display: flex;
   }
