@@ -723,7 +723,8 @@ li {
       height: 50px;
       border-radius: 50px;
       background: #6031BA;
-      font-size: 25px; }
+      font-size: 25px;
+      color: #fff; }
     .app-header__nav ul {
       width: 100%;
       padding: 0;
