@@ -989,7 +989,8 @@ li {
     box-shadow: 0 1px 1px 0 rgba(10, 16, 34, 0.2);
     -webkit-transition: all .7s;
     transition: all .7s;
-    min-height: 220px; }
+    min-height: 220px;
+    position: relative; }
     .post-slide__content:hover {
       -webkit-box-shadow: 0 10px 20px -5px rgba(10, 16, 34, 0.2);
       box-shadow: 0 10px 20px -5px rgba(10, 16, 34, 0.2);
@@ -1001,7 +1002,9 @@ li {
     letter-spacing: normal;
     line-height: 1.5;
     font-family: 'Aktiv Grotesk';
-    font-size: 18px; }
+    font-size: 18px;
+    border-bottom: 1px solid #6031BA;
+    padding-bottom: 40px; }
   .post-slide__excerpt {
     color: #747E86;
     margin: 0 0 10px 0;
@@ -1015,8 +1018,10 @@ li {
     color: #6031BA;
     font-size: 14px;
     font-weight: 600;
-    border-top: 1px solid #6031BA;
-    padding-top: 20px; }
+    padding-top: 20px;
+    position: absolute;
+    bottom: 40px;
+    right: 40px; }
   .post-slide .btn {
     float: right; }
 
