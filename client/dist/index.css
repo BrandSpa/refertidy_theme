@@ -1002,9 +1002,7 @@ li {
     letter-spacing: normal;
     line-height: 1.5;
     font-family: 'Aktiv Grotesk';
-    font-size: 18px;
-    border-bottom: 1px solid #6031BA;
-    padding-bottom: 40px; }
+    font-size: 18px; }
   .post-slide__excerpt {
     color: #747E86;
     margin: 0 0 10px 0;
@@ -1021,7 +1019,8 @@ li {
     padding-top: 20px;
     position: absolute;
     bottom: 40px;
-    right: 40px; }
+    right: 40px;
+    border-top: 1px solid #6031BA; }
   .post-slide .btn {
     float: right; }
 

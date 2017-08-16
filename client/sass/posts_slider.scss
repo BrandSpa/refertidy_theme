@@ -89,8 +89,6 @@
     line-height: 1.5;
     font-family: 'Aktiv Grotesk';
     font-size: 18px;
-    border-bottom: 1px solid #6031BA;
-    padding-bottom: 40px;
   }
 
   &__excerpt {
@@ -112,6 +110,7 @@
     position: absolute;
     bottom: 40px;
     right: 40px;
+    border-top: 1px solid #6031BA;
   }
 
   .btn {
