@@ -1830,6 +1830,9 @@ var MenuMobile = function (_Component) {
 
     return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = MenuMobile.__proto__ || Object.getPrototypeOf(MenuMobile)).call.apply(_ref, [this].concat(args))), _this), _this.state = {
       show: false
+    }, _this.handleClick = function () {
+      var el = _this.container;
+      if (!el.contains(e.target)) _this.toggleMenu(e);
     }, _this.toggleMenu = function (e) {
       if (e) e.preventDefault();
 
@@ -1840,7 +1843,7 @@ var MenuMobile = function (_Component) {
       }
 
       _this.setState({ show: !_this.state.show });
-    }, _this.handleClick = function (link) {
+    }, _this.handleLinkClick = function (link) {
       setTimeout(function () {
         _this.toggleMenu();
         window.location = link.url;
@@ -1851,16 +1854,12 @@ var MenuMobile = function (_Component) {
   _createClass(MenuMobile, [{
     key: 'componentDidMount',
     value: function componentDidMount() {
-      var _this2 = this;
-
-      jQuery('body').on('click', function () {
-        _this2.toggleMenu();
-      });
+      document.addEventListener('click', this.handleClick, true);
     }
   }, {
     key: 'render',
     value: function render() {
-      var _this3 = this;
+      var _this2 = this;
 
       var links = this.props.links;
       var show = this.state.show;
@@ -1868,7 +1867,9 @@ var MenuMobile = function (_Component) {
 
       return _react2.default.createElement(
         'div',
-        null,
+        { ref: function ref(container) {
+            return _this2.container = container;
+          } },
         _react2.default.createElement(
           'a',
           { href: '#', className: 'app-header__navicon', onClick: this.toggleMenu },
@@ -1886,7 +1887,7 @@ var MenuMobile = function (_Component) {
                 null,
                 _react2.default.createElement(
                   'a',
-                  { href: '#', onClick: _this3.handleClick.bind(null, link) },
+                  { href: '#', onClick: _this2.handleLinkClick.bind(null, link) },
                   link.title
                 )
               );

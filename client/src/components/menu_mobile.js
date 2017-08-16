@@ -6,9 +6,12 @@ class MenuMobile extends Component {
   }
 
   componentDidMount() {
-    jQuery('body').on('click', () => {
-      this.toggleMenu();
-    })
+     document.addEventListener('click', this.handleClick, true)
+  }
+
+  handleClick = () => {
+    const el = this.container
+   if (!el.contains(e.target)) this.toggleMenu(e)
   }
 
   toggleMenu = (e) => {
@@ -23,7 +26,7 @@ class MenuMobile extends Component {
     this.setState({ show: !this.state.show });
   }
 
-  handleClick = (link) => {
+  handleLinkClick = (link) => {
     setTimeout(() => {
       this.toggleMenu();
       window.location = link.url;
@@ -35,7 +38,7 @@ class MenuMobile extends Component {
     const { show } = this.state;
 
     return (
-      <div>
+      <div ref={container => this.container = container}>
         <a href="#" className="app-header__navicon" onClick={this.toggleMenu}>
           <span className="ion-navicon"></span>
         </a>
@@ -43,7 +46,7 @@ class MenuMobile extends Component {
         <div className={show ? "app-header__nav app-header__nav--show" : "app-header__nav"}>
           <ul>
             {links.map(link =>
-              <li><a href="#" onClick={this.handleClick.bind(null, link)}>{link.title}</a></li>
+              <li><a href="#" onClick={this.handleLinkClick.bind(null, link)}>{link.title}</a></li>
             )}
           </ul>
         </div>
