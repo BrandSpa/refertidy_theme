@@ -37,13 +37,7 @@
     margin-left: 5px;
   }
 
-  &__close {
-    position: absolute;
-    top: 100px;
-    right: 40px;
-    font-size: 40px;
-    color: red;
-  }
+
 
   &__form {
     position: fixed;
@@ -54,10 +48,19 @@
     height: 100%;
     width: 100%;
     z-index: 97;
+    
     input, select {
       border-color: #6031BA;
       color: #6031BA;
       margin-bottom: 10px;
+    }
+
+    &__close {
+      position: absolute;
+      top: 100px;
+      right: 40px;
+      font-size: 40px;
+      color: red;
     }
   }
 }
