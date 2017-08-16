@@ -1822,11 +1822,6 @@ var PostSlide = function (_Component) {
             post.post_title
           ),
           _react2.default.createElement(
-            'div',
-            { className: 'post-slide__excerpt' },
-            post.post_excerpt.substr(0, 150)
-          ),
-          _react2.default.createElement(
             'a',
             { href: post.guid, className: 'post-slide__link' },
             'VER M\xC1S'

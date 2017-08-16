@@ -18,9 +18,7 @@ class PostSlide extends Component {
       <div className="post-slide" style={{width: postWidth, float: 'left'}}>
         <div className="post-slide__content">
             <h4 className="post-slide__title">{post.post_title}</h4>
-            <div className="post-slide__excerpt">
-              {post.post_excerpt.substr(0, 150)}
-            </div>
+
             <a href={post.guid} className="post-slide__link">VER MÁS</a>
         </div>
       </div>
