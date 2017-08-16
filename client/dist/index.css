@@ -691,8 +691,18 @@ li {
   .app-header__navicon {
     float: right;
     padding-top: 7px;
-    font-size: 20px;
+    font-size: 40px;
     color: #fff; }
+  .app-header__nav {
+    position: fixed;
+    right: -100%;
+    top: 0;
+    height: 100%;
+    background: #fff;
+    -webkit-transition: right .3s ease-in-out;
+    transition: right .3s ease-in-out; }
+    .app-header__nav--show {
+      left: 0; }
   .app-header--scrolling {
     background: RGBA(96, 49, 186, 1);
     color: #fff !important;

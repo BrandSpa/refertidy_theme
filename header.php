@@ -64,10 +64,13 @@
 				echo clean_menu($nav);
    	 ?>
 
-		 <a href="#" class="app-header__navicon">
-			 <span class="ion-navicon"></span>
-		 </a>
+		 <?php
+		 	$menuProps = [
+				'links' => getMenuArr('header')
+			];
+		 ?>
 
+		 <div class="ra-menu-mobile" data-props='<?php echo json_encode($menuProps) ?>'></div>
 	</div>
 </header>
 

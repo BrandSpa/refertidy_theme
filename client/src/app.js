@@ -9,14 +9,14 @@ import SliderImgs from './components/sliderImgs';
 import QuotationFormFixed from './components/quotation_form_fixed';
 import Contact from './components/contact';
 import PostsSlider from './components/posts_slider';
+import MenuMobile from './components/menu_mobile';
 
+multipleRender(MenuMobile, '.ra-menu-mobile');
 multipleRender(Slider, '.ra-slider');
-
 multipleRender(QuotationFormFixed, '.ra-quotation-form-fixed');
-
 multipleRender(Contact, '.ra-contact');
-
 multipleRender(PostsSlider, '.ra-posts-slider');
+
 
 function hasClass(el, classNm) {
   if(el.className.indexOf(classNm) > -1) {

@@ -38,8 +38,21 @@
   &__navicon {
     float: right;
     padding-top: 7px;
-    font-size: 20px;
+    font-size: 40px;
     color: #fff;
+  }
+
+  &__nav {
+    position: fixed;
+    right: -100%;
+    top: 0;
+    height: 100%;
+    background: #fff;
+    transition: right .3s ease-in-out;
+    
+    &--show {
+      left: 0;
+    }
   }
 
   &--scrolling {
