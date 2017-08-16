@@ -11,7 +11,10 @@ class MenuMobile extends Component {
 
   handleClick = (e) => {
     const el = this.container;
-    if (!el.contains(e.target)) this.setState({show: false});
+    if (!el.contains(e.target)) {
+      jQuery('body').removeClass('open-menu');
+      this.setState({show: false});
+    }
   }
 
   toggleMenu = (e) => {
