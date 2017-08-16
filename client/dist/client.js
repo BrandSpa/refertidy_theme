@@ -338,10 +338,15 @@ var _menu_mobile = __webpack_require__(526);
 
 var _menu_mobile2 = _interopRequireDefault(_menu_mobile);
 
+var _footer_mobile = __webpack_require__(528);
+
+var _footer_mobile2 = _interopRequireDefault(_footer_mobile);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = Array(arr.length); i < arr.length; i++) { arr2[i] = arr[i]; } return arr2; } else { return Array.from(arr); } }
 
+(0, _reactMultipleRender2.default)(_footer_mobile2.default, '.ra-footer-mobile');
 (0, _reactMultipleRender2.default)(_menu_mobile2.default, '.ra-menu-mobile');
 (0, _reactMultipleRender2.default)(_slider2.default, '.ra-slider');
 (0, _reactMultipleRender2.default)(_quotation_form_fixed2.default, '.ra-quotation-form-fixed');
@@ -800,17 +805,11 @@ var _react = __webpack_require__(26);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _axios = __webpack_require__(136);
+var _quotation_form = __webpack_require__(527);
 
-var _axios2 = _interopRequireDefault(_axios);
-
-var _qs = __webpack_require__(210);
-
-var _qs2 = _interopRequireDefault(_qs);
+var _quotation_form2 = _interopRequireDefault(_quotation_form);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
@@ -818,145 +817,23 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var endpoint = '/wp-admin/admin-ajax.php';
-
 var QuotationFormFixed = function (_Component) {
   _inherits(QuotationFormFixed, _Component);
 
   function QuotationFormFixed() {
-    var _ref;
-
-    var _temp, _this, _ret;
-
     _classCallCheck(this, QuotationFormFixed);
 
-    for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
-      args[_key] = arguments[_key];
-    }
-
-    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = QuotationFormFixed.__proto__ || Object.getPrototypeOf(QuotationFormFixed)).call.apply(_ref, [this].concat(args))), _this), _this.state = {
-      name: '',
-      email: '',
-      phone: '',
-      product: '',
-      errors: {}
-    }, _this.handleChange = function (e) {
-      _this.setState(_defineProperty({}, e.target.name, e.target.value));
-    }, _this.handleSubmit = function (e) {
-      if (e) e.preventDefault();
-      var reqData = _qs2.default.stringify({ action: 'store_quotation', data: _this.state });
-
-      _axios2.default.post(endpoint, reqData).then(function (_ref2) {
-        var data = _ref2.data;
-
-        if (Object.keys(data).length > 0) {
-          _this.setState({ errors: data });
-        }
-      });
-    }, _temp), _possibleConstructorReturn(_this, _ret);
+    return _possibleConstructorReturn(this, (QuotationFormFixed.__proto__ || Object.getPrototypeOf(QuotationFormFixed)).apply(this, arguments));
   }
 
   _createClass(QuotationFormFixed, [{
-    key: 'render',
+    key: "render",
     value: function render() {
-      var _state = this.state,
-          name = _state.name,
-          email = _state.email,
-          phone = _state.phone,
-          product = _state.product,
-          errors = _state.errors;
 
       return _react2.default.createElement(
-        'div',
-        { className: 'quo-fixed' },
-        _react2.default.createElement(
-          'form',
-          { onSubmit: this.handleSubmit },
-          _react2.default.createElement(
-            'div',
-            { className: 'row quo-fixed__container' },
-            _react2.default.createElement(
-              'div',
-              { className: 'col-lg-3 col-md-3' },
-              _react2.default.createElement('input', {
-                type: 'text',
-                name: 'name',
-                placeholder: 'Nombre',
-                onChange: this.handleChange,
-                value: name
-              }),
-              _react2.default.createElement(
-                'span',
-                { className: 'input-error', style: errors.name ? { display: 'block' } : { display: 'none' } },
-                errors.name
-              )
-            ),
-            _react2.default.createElement(
-              'div',
-              { className: 'col-lg-3 col-md-3' },
-              _react2.default.createElement('input', {
-                type: 'text',
-                name: 'email',
-                placeholder: 'Email',
-                onChange: this.handleChange,
-                value: email
-              }),
-              _react2.default.createElement(
-                'span',
-                { className: 'input-error', style: errors.email ? { display: 'block' } : { display: 'none' } },
-                errors.email
-              )
-            ),
-            _react2.default.createElement(
-              'div',
-              { className: 'col-lg-2 col-md-2' },
-              _react2.default.createElement('input', {
-                type: 'text',
-                name: 'phone',
-                placeholder: 'T\xE9lefono',
-                onChange: this.handleChange,
-                value: phone
-              })
-            ),
-            _react2.default.createElement(
-              'div',
-              { className: 'col-lg-2 col-md-2' },
-              _react2.default.createElement(
-                'select',
-                { name: 'product', onChange: this.handleChange, value: product },
-                _react2.default.createElement(
-                  'option',
-                  { value: '' },
-                  'Equipos'
-                ),
-                _react2.default.createElement(
-                  'option',
-                  { value: 'Desktops' },
-                  'Desktops'
-                ),
-                _react2.default.createElement(
-                  'option',
-                  { value: 'Laptops' },
-                  'Laptops'
-                ),
-                _react2.default.createElement(
-                  'option',
-                  { value: 'Servers' },
-                  'Servers'
-                )
-              )
-            ),
-            _react2.default.createElement(
-              'div',
-              { className: 'col-lg-2 col-md-2' },
-              _react2.default.createElement(
-                'button',
-                { className: 'btn btn--outline', style: { borderColor: '#6031BA', color: '#6031BA' } },
-                'COTIZAR'
-              )
-            )
-          )
-        )
+        "div",
+        { className: "quo-fixed" },
+        _react2.default.createElement(_quotation_form2.default, null)
       );
     }
   }]);
@@ -1902,6 +1779,264 @@ var MenuMobile = function (_Component) {
 }(_react.Component);
 
 exports.default = MenuMobile;
+
+/***/ }),
+
+/***/ 527:
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = __webpack_require__(26);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _axios = __webpack_require__(136);
+
+var _axios2 = _interopRequireDefault(_axios);
+
+var _qs = __webpack_require__(210);
+
+var _qs2 = _interopRequireDefault(_qs);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var endpoint = '/wp-admin/admin-ajax.php';
+
+var QuotationForm = function (_Component) {
+  _inherits(QuotationForm, _Component);
+
+  function QuotationForm() {
+    var _ref;
+
+    var _temp, _this, _ret;
+
+    _classCallCheck(this, QuotationForm);
+
+    for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
+      args[_key] = arguments[_key];
+    }
+
+    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = QuotationForm.__proto__ || Object.getPrototypeOf(QuotationForm)).call.apply(_ref, [this].concat(args))), _this), _this.state = {
+      name: '',
+      email: '',
+      phone: '',
+      product: '',
+      errors: {}
+    }, _this.handleChange = function (e) {
+      _this.setState(_defineProperty({}, e.target.name, e.target.value));
+    }, _this.handleSubmit = function (e) {
+      if (e) e.preventDefault();
+      var reqData = _qs2.default.stringify({ action: 'store_quotation', data: _this.state });
+
+      _axios2.default.post(endpoint, reqData).then(function (_ref2) {
+        var data = _ref2.data;
+
+        if (Object.keys(data).length > 0) {
+          _this.setState({ errors: data });
+        }
+      });
+    }, _temp), _possibleConstructorReturn(_this, _ret);
+  }
+
+  _createClass(QuotationForm, [{
+    key: 'render',
+    value: function render() {
+      var _state = this.state,
+          name = _state.name,
+          email = _state.email,
+          phone = _state.phone,
+          product = _state.product,
+          errors = _state.errors;
+
+
+      return _react2.default.createElement(
+        'form',
+        { onSubmit: this.handleSubmit },
+        _react2.default.createElement(
+          'div',
+          { className: 'row quo-fixed__container' },
+          _react2.default.createElement(
+            'div',
+            { className: 'col-lg-3 col-md-3' },
+            _react2.default.createElement('input', {
+              type: 'text',
+              name: 'name',
+              placeholder: 'Nombre',
+              onChange: this.handleChange,
+              value: name
+            }),
+            _react2.default.createElement(
+              'span',
+              { className: 'input-error', style: errors.name ? { display: 'block' } : { display: 'none' } },
+              errors.name
+            )
+          ),
+          _react2.default.createElement(
+            'div',
+            { className: 'col-lg-3 col-md-3' },
+            _react2.default.createElement('input', {
+              type: 'text',
+              name: 'email',
+              placeholder: 'Email',
+              onChange: this.handleChange,
+              value: email
+            }),
+            _react2.default.createElement(
+              'span',
+              { className: 'input-error', style: errors.email ? { display: 'block' } : { display: 'none' } },
+              errors.email
+            )
+          ),
+          _react2.default.createElement(
+            'div',
+            { className: 'col-lg-2 col-md-2' },
+            _react2.default.createElement('input', {
+              type: 'text',
+              name: 'phone',
+              placeholder: 'T\xE9lefono',
+              onChange: this.handleChange,
+              value: phone
+            })
+          ),
+          _react2.default.createElement(
+            'div',
+            { className: 'col-lg-2 col-md-2' },
+            _react2.default.createElement(
+              'select',
+              { name: 'product', onChange: this.handleChange, value: product },
+              _react2.default.createElement(
+                'option',
+                { value: '' },
+                'Equipos'
+              ),
+              _react2.default.createElement(
+                'option',
+                { value: 'Desktops' },
+                'Desktops'
+              ),
+              _react2.default.createElement(
+                'option',
+                { value: 'Laptops' },
+                'Laptops'
+              ),
+              _react2.default.createElement(
+                'option',
+                { value: 'Servers' },
+                'Servers'
+              )
+            )
+          ),
+          _react2.default.createElement(
+            'div',
+            { className: 'col-lg-2 col-md-2' },
+            _react2.default.createElement(
+              'button',
+              { className: 'btn btn--outline', style: { borderColor: '#6031BA', color: '#6031BA' } },
+              'COTIZAR'
+            )
+          )
+        )
+      );
+    }
+  }]);
+
+  return QuotationForm;
+}(_react.Component);
+
+exports.default = QuotationForm;
+
+/***/ }),
+
+/***/ 528:
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = __webpack_require__(26);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _quotation_form = __webpack_require__(527);
+
+var _quotation_form2 = _interopRequireDefault(_quotation_form);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var FooterMobile = function (_Component) {
+  _inherits(FooterMobile, _Component);
+
+  function FooterMobile() {
+    var _ref;
+
+    var _temp, _this, _ret;
+
+    _classCallCheck(this, FooterMobile);
+
+    for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
+      args[_key] = arguments[_key];
+    }
+
+    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = FooterMobile.__proto__ || Object.getPrototypeOf(FooterMobile)).call.apply(_ref, [this].concat(args))), _this), _this.toggleQuo = function (e) {
+      if (e) e.preventDefault();
+    }, _temp), _possibleConstructorReturn(_this, _ret);
+  }
+
+  _createClass(FooterMobile, [{
+    key: 'render',
+    value: function render() {
+      return _react2.default.createElement(
+        'div',
+        null,
+        _react2.default.createElement(
+          'div',
+          { className: 'footer-mobile__form', style: { display: 'none' } },
+          _react2.default.createElement(_quotation_form2.default, null)
+        ),
+        _react2.default.createElement(
+          'div',
+          { className: 'footer-mobile' },
+          _react2.default.createElement(
+            'button',
+            { onClick: this.toggleQuo },
+            'Cotizar Ahora'
+          ),
+          _react2.default.createElement(
+            'a',
+            { href: 'tel:0316361051' },
+            _react2.default.createElement('i', { className: 'ion-ios-telephone' })
+          )
+        )
+      );
+    }
+  }]);
+
+  return FooterMobile;
+}(_react.Component);
 
 /***/ })
 

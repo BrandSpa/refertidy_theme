@@ -10,7 +10,9 @@ import QuotationFormFixed from './components/quotation_form_fixed';
 import Contact from './components/contact';
 import PostsSlider from './components/posts_slider';
 import MenuMobile from './components/menu_mobile';
+import FooterMobile from './components/footer_mobile';
 
+multipleRender(FooterMobile, '.ra-footer-mobile');
 multipleRender(MenuMobile, '.ra-menu-mobile');
 multipleRender(Slider, '.ra-slider');
 multipleRender(QuotationFormFixed, '.ra-quotation-form-fixed');
