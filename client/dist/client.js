@@ -2033,7 +2033,7 @@ var FooterMobile = function (_Component) {
           { className: 'footer-mobile__form', style: showForm ? { display: 'flex' } : { display: 'none' } },
           _react2.default.createElement(
             'a',
-            { href: '#', onClick: this.closeForm },
+            { href: '#', className: 'footer-mobile__form__close', onClick: this.closeForm },
             _react2.default.createElement('i', { className: 'ion-close-round' })
           ),
           _react2.default.createElement(_quotation_form2.default, null)
