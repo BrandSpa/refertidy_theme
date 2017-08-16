@@ -1828,7 +1828,7 @@ var PostSlide = function (_Component) {
           ),
           _react2.default.createElement(
             'a',
-            { href: post.guid, className: 'btn btn--outline', style: { borderColor: '#6031BA', color: '#6031BA' } },
+            { href: post.guid },
             'VER MAS'
           )
         )
