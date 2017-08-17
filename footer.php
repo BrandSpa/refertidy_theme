@@ -3,6 +3,7 @@
 <?php wp_footer() ?>
 <!-- /wordpress files-->
 <script src="<?php echo get_template_directory_uri() ?>/client/dist/vendor.js"></script>
+
 <!--async load app-->
 <script type="text/javascript">
 function appendScript(src) {
@@ -29,6 +30,26 @@ if (window.addEventListener) {
 }
 </script>
 <!--/async load app-->
+
+<!--google rich-->
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Organization",
+  "url": "https://<?php echo $_SERVER['HTTP_HOST'] ?>",
+  "contactPoint": [{
+    "@type": "ContactPoint",
+    "telephone": "+57-031-636-1051",
+    "contactType": "Servicio al cliente",
+    "areaServed": "CO"
+  },{
+    "@type": "ContactPoint",
+    "telephone": "+57-320-636-1051",
+    "contactType": "Whatsapp",
+    "areaServed": "CO"
+  }]
+}
+</script>
 
 </body>
 </html>
