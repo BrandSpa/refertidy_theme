@@ -40,12 +40,12 @@ if (window.addEventListener) {
   "contactPoint": [{
     "@type": "ContactPoint",
     "telephone": "+57-031-636-1051",
-    "contactType": "Servicio al cliente",
+    "contactType": "sales",
     "areaServed": "CO"
   },{
     "@type": "ContactPoint",
     "telephone": "+57-320-636-1051",
-    "contactType": "Whatsapp",
+    "contactType": "customer service",
     "areaServed": "CO"
   }]
 }
