@@ -36,7 +36,7 @@ class QuotationForm extends Component {
 
   render() {
     const { name, email, phone, product, errors, success } = this.state;
-    if(success) return (<div style={{textAlign: 'center'}}>{this.props.message}</div>);
+    if(success) return (<h5 style={{textAlign: 'center', color: '#6031ba'}}>{this.props.message}</h5>);
 
     return (
       <form onSubmit={this.handleSubmit}>

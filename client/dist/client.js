@@ -149,8 +149,8 @@ var QuotationForm = function (_Component) {
           success = _state.success;
 
       if (success) return _react2.default.createElement(
-        'div',
-        { style: { textAlign: 'center' } },
+        'h5',
+        { style: { textAlign: 'center', color: '#6031ba' } },
         this.props.message
       );
 
