@@ -28,7 +28,7 @@ function store_contact() {
     "validate_valid_email" => "{field} debe ser valido",
 		"validate_boolean" => "debe aceptar"
    ]);
-	 
+
 	$gump->set_field_name("name", "Nombre");
 	$gump->set_field_name("question", "Duda");
 
@@ -42,6 +42,22 @@ function store_contact() {
 		responseJson( $data );
 	}
 
+	die();
+}
+
+function getContacts() {
+	global $wpdb;
+
+	$gump = new GUMP();
+
+	$data = $gump->sanitize($_POST['data']);
+
+	$limit = $data['limit'] ? $data['limit'] : 25;
+	$offset = $data['offset'] ? $data['offset'] : 0;
+
+	$contacts = $wpdb->get_results( "SELECT id, name, email, question FROM contacts LIMIT ". $limit ." OFFSET " . $offset);
+
+	responseJson($contacts);
 	die();
 }
 
