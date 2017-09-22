@@ -75,7 +75,7 @@ class QuotationForm extends Component {
           <div className="col-lg-2 col-md-2">
             <select name="product" onChange={this.handleChange} value={product ? product : this.props.product}>
               <option value="">Equipos</option>
-              {this.props.products.map((product) =>
+              {this.props.products && this.props.products.map((product) =>
                 <option value={product}>{product}</option>
               )}
             </select>

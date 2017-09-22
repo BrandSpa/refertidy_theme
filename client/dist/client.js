@@ -204,7 +204,7 @@ var QuotationForm = function (_Component) {
                 { value: '' },
                 'Equipos'
               ),
-              this.props.products.map(function (product) {
+              this.props.products && this.props.products.map(function (product) {
                 return _react2.default.createElement(
                   'option',
                   { value: product },
