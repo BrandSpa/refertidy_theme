@@ -45,6 +45,9 @@ function store_contact() {
 	die();
 }
 
+add_action( 'wp_ajax_nopriv_store_contact', 'store_contact' );
+add_action( 'wp_ajax_store_contact', 'store_contact' );
+
 function getContacts() {
 	global $wpdb;
 
@@ -61,5 +64,4 @@ function getContacts() {
 	die();
 }
 
-add_action( 'wp_ajax_nopriv_store_contact', 'store_contact' );
-add_action( 'wp_ajax_store_contact', 'store_contact' );
+add_action( 'wp_ajax_get_contacts', 'get_contacts' );
