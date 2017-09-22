@@ -17,7 +17,7 @@ function ra_admin_quotations_options_menu() {
 
 function ra_quotations_options() {
   global $wpdb;
-  $slug = 'ra_quotations';
+  $slug = 'ra-quotations';
   $paged = isset($_GET['paged']) ? $_GET['paged'] : 0;
   $perpage = isset($_GET['perpage']) ? $_GET['perpage'] : 25;
   $postname = isset($_GET['postname']) ? $_GET['postname'] : '';
