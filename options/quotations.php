@@ -17,6 +17,7 @@ function ra_admin_quotations_options_menu() {
 
 function ra_quotations_options() {
   global $wpdb;
+  $slug = 'ra_quotations';
   $paged = isset($_GET['paged']) ? $_GET['paged'] : 0;
   $perpage = isset($_GET['perpage']) ? $_GET['perpage'] : 25;
   $postname = isset($_GET['postname']) ? $_GET['postname'] : '';
@@ -53,8 +54,8 @@ function ra_quotations_options() {
   <hr/>
 
   <div class="pagination">
-    <a class="prev-page button" href="/wp-admin/admin.php?page=bs-quotations&paged=<?php echo $paged > 0 ? $paged - 1 : 0 ?>">prev</a>
-    <a class="next-page button" href="/wp-admin/admin.php?page=bs-quotations&paged=<?php echo count($posts) > 0 ? $paged + 1 :  $paged - 1 ?>">next</a>
+    <a class="prev-page button" href="/wp-admin/admin.php?page=<?php echo $slug ?>&paged=<?php echo $paged > 0 ? $paged - 1 : 0 ?>">prev</a>
+    <a class="next-page button" href="/wp-admin/admin.php?page=<?php echo $slug ?>&paged=<?php echo count($posts) > 0 ? $paged + 1 :  $paged - 1 ?>">next</a>
   </div>
   <?php
   }
