@@ -1,6 +1,7 @@
 <?php
 
 function ra_quo_fixed_vc() {
+	$products = array_push(getProducts(), '');
 	vc_map([
 		'name' => 'quotation fixed',
 		'base' => 'ra_quo_fixed',
@@ -10,7 +11,7 @@ function ra_quo_fixed_vc() {
 				"type" => "dropdown",
 				"heading" => "pre selected product",
 				"param_name" => "product",
-				"value" => getProducts()
+				"value" => $products
 			]
 		]
 	]);
