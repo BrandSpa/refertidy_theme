@@ -13,7 +13,7 @@ function ra_quo_fixed_sc( $atts ) {
 	ob_start();
 	?>
 		<!--ra_quo_fixed-->
-		<div class="ra-quotation-form-fixed" data-props="<?php echo json_encode($props); ?>"></div>
+		<div class="ra-quotation-form-fixed" data-props='<?php echo json_encode($props); ?>'></div>
 		<!--/ra_quo_fixed-->
 	<?php
 	return ob_get_clean();
