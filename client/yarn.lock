@@ -2901,7 +2901,7 @@ rc@^1.1.7:
     minimist "^1.2.0"
     strip-json-comments "~2.0.1"
 
-react, react@^15.4.2:
+react:
   version "15.6.1"
   resolved "https://registry.yarnpkg.com/react/-/react-15.6.1.tgz#baa8434ec6780bde997cdc380b79cd33b96393df"
   dependencies:
@@ -2911,7 +2911,7 @@ react, react@^15.4.2:
     object-assign "^4.1.0"
     prop-types "^15.5.10"
 
-react-dom, react-dom@^15.4.2:
+react-dom:
   version "15.6.1"
   resolved "https://registry.yarnpkg.com/react-dom/-/react-dom-15.6.1.tgz#2cb0ed4191038e53c209eb3a79a23e2a4cf99470"
   dependencies:
@@ -2920,12 +2920,9 @@ react-dom, react-dom@^15.4.2:
     object-assign "^4.1.0"
     prop-types "^15.5.10"
 
-react-multiple-render:
-  version "1.0.8"
-  resolved "https://registry.yarnpkg.com/react-multiple-render/-/react-multiple-render-1.0.8.tgz#9e1d494717bde2d94558cd0d0373e1491ccaa4ff"
-  dependencies:
-    react "^15.4.2"
-    react-dom "^15.4.2"
+react-multiple-render@1.1.1:
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/react-multiple-render/-/react-multiple-render-1.1.1.tgz#53034b8e815d17754897dd9f3f2e0e255e359886"
 
 read-pkg-up@^1.0.1:
   version "1.0.1"

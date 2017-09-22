@@ -9,8 +9,9 @@ class QuotationForm extends Component {
 		email: '',
 		phone: '',
 		product: '',
+    protection: '',
     errors: {},
-    success: false
+    success: false,
 	}
 
   handleChange = e => {
@@ -20,22 +21,23 @@ class QuotationForm extends Component {
   handleSubmit = e => {
     if(e) e.preventDefault();
     const reqData = qs.stringify({action: 'store_quotation', data: this.state});
+    if(this.state.protection.length == 0) {
+      request
+      .post(endpoint, reqData)
+      .then(({data}) => {
 
-    request
-    .post(endpoint, reqData)
-    .then(({data}) => {
+        if(data.success == false) {
+          return this.setState({errors: data.errors});
+        }
 
-      if(data.success == false) {
-        return this.setState({errors: data.errors});
-      }
+        return this.setState({success: data.success});
 
-      return this.setState({success: data.success});
-
-    })
+      })
+    }
   }
 
   render() {
-    const { name, email, phone, product, errors, success } = this.state;
+    const { name, email, phone, product, errors, success, protection } = this.state;
     if(success) return (<h5 style={{textAlign: 'center', color: '#6031ba'}}>{this.props.message}</h5>);
 
     return (
@@ -53,6 +55,8 @@ class QuotationForm extends Component {
               {errors.name}
             </span>
           </div>
+
+          <input type="hidden" name="protection" onChange={this.handleChange} value={protection} />
 
           <div className="col-lg-3 col-md-3">
             <input

@@ -116,6 +116,7 @@ var QuotationForm = function (_Component) {
       email: '',
       phone: '',
       product: '',
+      protection: '',
       errors: {},
       success: false
     }, _this.handleChange = function (e) {
@@ -123,17 +124,18 @@ var QuotationForm = function (_Component) {
     }, _this.handleSubmit = function (e) {
       if (e) e.preventDefault();
       var reqData = _qs2.default.stringify({ action: 'store_quotation', data: _this.state });
+      if (_this.state.protection.length == 0) {
+        _axios2.default.post(endpoint, reqData).then(function (_ref2) {
+          var data = _ref2.data;
 
-      _axios2.default.post(endpoint, reqData).then(function (_ref2) {
-        var data = _ref2.data;
 
+          if (data.success == false) {
+            return _this.setState({ errors: data.errors });
+          }
 
-        if (data.success == false) {
-          return _this.setState({ errors: data.errors });
-        }
-
-        return _this.setState({ success: data.success });
-      });
+          return _this.setState({ success: data.success });
+        });
+      }
     }, _temp), _possibleConstructorReturn(_this, _ret);
   }
 
@@ -146,7 +148,8 @@ var QuotationForm = function (_Component) {
           phone = _state.phone,
           product = _state.product,
           errors = _state.errors,
-          success = _state.success;
+          success = _state.success,
+          protection = _state.protection;
 
       if (success) return _react2.default.createElement(
         'h5',
@@ -176,6 +179,7 @@ var QuotationForm = function (_Component) {
               errors.name
             )
           ),
+          _react2.default.createElement('input', { type: 'hidden', name: 'protection', onChange: this.handleChange, value: protection }),
           _react2.default.createElement(
             'div',
             { className: 'col-lg-3 col-md-3' },
@@ -1474,7 +1478,7 @@ var Contact = function (_Component) {
       phone: '',
       company: '',
       question: '',
-      privacy: false,
+      privacy: true,
       errors: {}
     }, _this.handleChange = function (e) {
       var _e$target = e.target,
