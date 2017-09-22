@@ -36,7 +36,8 @@ class QuotationForm extends Component {
 
   render() {
     const { name, email, phone, product, errors, success } = this.state;
-    if(success) return (<div>some message</div>);
+    if(success) return (<div style={{textAlign: 'center'}}>some message</div>);
+
     return (
       <form onSubmit={this.handleSubmit}>
         <div className="row quo-fixed__container">

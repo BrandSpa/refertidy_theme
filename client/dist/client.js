@@ -150,9 +150,10 @@ var QuotationForm = function (_Component) {
 
       if (success) return _react2.default.createElement(
         'div',
-        null,
+        { style: { textAlign: 'center' } },
         'some message'
       );
+
       return _react2.default.createElement(
         'form',
         { onSubmit: this.handleSubmit },
