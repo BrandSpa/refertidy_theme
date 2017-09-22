@@ -1541,7 +1541,7 @@ var Contact = function (_Component) {
 
       if (success) return _react2.default.createElement(
         'h5',
-        { style: { textAlign: 'center', color: '#6031ba' } },
+        { style: { textAlign: 'center', color: '#fff' } },
         this.props.message
       );
 
