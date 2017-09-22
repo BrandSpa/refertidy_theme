@@ -23,7 +23,8 @@ class QuotationForm extends Component {
     request
     .post(endpoint, reqData)
     .then(({data}) => {
-      if(Object.keys(data).length > 0) {
+      console.log(data);
+      if(data.success) {
         this.setState({errors: data});
       }
 

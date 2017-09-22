@@ -126,7 +126,8 @@ var QuotationForm = function (_Component) {
       _axios2.default.post(endpoint, reqData).then(function (_ref2) {
         var data = _ref2.data;
 
-        if (Object.keys(data).length > 0) {
+        console.log(data);
+        if (data.success) {
           _this.setState({ errors: data });
         }
       });

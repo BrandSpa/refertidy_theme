@@ -29,10 +29,10 @@ function store_quotation() {
 	$isValid = $gump->run($data);
 
 	if($isValid === false) {
-		responseJson( $gump->get_errors_array() );
+		responseJson(["errors" => $gump->get_errors_array(), "success" => false ]);
 	} else {
 		$res = $wpdb->insert( 'quotations', $data, [ '%s', '%s', '%s', '%s' ] );
-		responseJson($data);
+		responseJson(["success" => true]);
 	}
 
 	die();
