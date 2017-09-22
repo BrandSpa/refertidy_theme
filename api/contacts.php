@@ -48,7 +48,7 @@ function store_contact() {
 add_action( 'wp_ajax_nopriv_store_contact', 'store_contact' );
 add_action( 'wp_ajax_store_contact', 'store_contact' );
 
-function getContacts() {
+function get_contacts() {
 	global $wpdb;
 
 	$gump = new GUMP();

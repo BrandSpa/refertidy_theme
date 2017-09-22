@@ -40,3 +40,21 @@ function store_quotation() {
 
 add_action( 'wp_ajax_nopriv_store_quotation', 'store_quotation' );
 add_action( 'wp_ajax_store_quotation', 'store_quotation' );
+
+function get_quotations() {
+	global $wpdb;
+
+	$gump = new GUMP();
+
+	$data = $gump->sanitize($_POST['data']);
+
+	$limit = $data['limit'] ? $data['limit'] : 25;
+	$offset = $data['offset'] ? $data['offset'] : 0;
+
+	$contacts = $wpdb->get_results( "SELECT id, name, email, question FROM quotations LIMIT ". $limit ." OFFSET " . $offset);
+
+	responseJson($contacts);
+	die();
+}
+
+add_action( 'wp_ajax_get_quotations', 'get_quotations' );
