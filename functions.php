@@ -1,6 +1,12 @@
 <?php
 require_once 'vendor/autoload.php';
 
+//LIBS
+include_once 'lib/clean_menu.php';
+require_once 'lib/response_json.php';
+require_once 'lib/menu_array.php';
+require_once 'lib/products.php';
+
 //MIGRATIONS
 include_once 'migrations/contacts.php';
 include_once 'migrations/quotations.php';
@@ -23,10 +29,6 @@ include_once 'shortcodes/vc/quo_fixed.php';
 include_once 'shortcodes/vc/posts_slider.php';
 include_once 'shortcodes/vc/image_hover.php';
 
-//LIBS
-include_once 'lib/clean_menu.php';
-require_once 'lib/response_json.php';
-require_once 'lib/menu_array.php';
 
 //API
 include_once 'api/quotations.php';
