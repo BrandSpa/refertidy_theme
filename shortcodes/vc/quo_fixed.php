@@ -1,7 +1,7 @@
 <?php
 
 function ra_quo_fixed_vc() {
-	$products = array_push(getProducts(), '');
+	$products = array_merge(['product'], getProducts());
 	vc_map([
 		'name' => 'quotation fixed',
 		'base' => 'ra_quo_fixed',
