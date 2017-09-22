@@ -15,7 +15,7 @@ function ra_admin_quotations_options_menu() {
   );
 }
 
-function bs_contacts_options() {
+function bs_quotations_options() {
   global $wpdb;
   $paged = isset($_GET['paged']) ? $_GET['paged'] : 0;
   $perpage = isset($_GET['perpage']) ? $_GET['perpage'] : 25;
