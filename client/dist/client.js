@@ -132,7 +132,7 @@ var QuotationForm = function (_Component) {
           return _this.setState({ errors: data.errors });
         }
 
-        return _this.setState({ succes: data.success });
+        return _this.setState({ success: data.success });
       });
     }, _temp), _possibleConstructorReturn(_this, _ret);
   }

@@ -29,7 +29,7 @@ class QuotationForm extends Component {
         return this.setState({errors: data.errors});
       }
 
-      return this.setState({succes: data.success});
+      return this.setState({success: data.success});
 
     })
   }
