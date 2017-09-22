@@ -3,7 +3,7 @@
 function getProducts() {
   $products = [
     'Portátiles',
-    'PC',
+    'Computadores',
     'Servidores',
     'Tablets',
     'Apple',
