@@ -25,6 +25,8 @@ function ra_quotations_options() {
   $posts = $wpdb->get_results( "SELECT id, name, email, phone, product FROM quotations LIMIT ". $perpage ." OFFSET " . $offset);
   ?>
 
+  <?php var_dump($posts) ?>
+
   <h2>Contacts</h2>
 
   <hr/>
