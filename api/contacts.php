@@ -28,7 +28,7 @@ function store_contact() {
     "validate_valid_email" => "{field} debe ser valido",
 		"validate_boolean" => "debe aceptar"
    ]);
-
+	 
 	$gump->set_field_name("name", "Nombre");
 	$gump->set_field_name("question", "Duda");
 

@@ -6,7 +6,7 @@ class MenuMobile extends Component {
   }
 
   componentDidMount() {
-     document.addEventListener('click', this.handleClick, true)
+    document.addEventListener('click', this.handleClick, true)
   }
 
   handleClick = (e) => {
