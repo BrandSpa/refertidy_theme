@@ -40,13 +40,12 @@ function ra_quotations_options() {
       </tr>
     </thead>
     <tbody>
-      <?php foreach($posts as $post): ?>
-        <?php $contact = json_decode(str_replace("\\", '', $post->post_content)); ?>
+      <?php foreach($posts as $quo): ?>
         <tr>
-          <td><?php echo $contact->email; ?></td>
-          <td><?php echo $contact->name; ?></td>
-          <td><?php echo $contact->phone; ?></td>
-          <td><?php echo $contact->product; ?></td>
+          <td><?php echo $quo->email; ?></td>
+          <td><?php echo $quo->name; ?></td>
+          <td><?php echo $quo->phone; ?></td>
+          <td><?php echo $quo->product; ?></td>
         </tr>
       <?php endforeach; ?>
     </tbody>
