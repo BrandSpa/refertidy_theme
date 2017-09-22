@@ -75,7 +75,4 @@
 	</div>
 </header>
 
-<div class="ra-footer-mobile">
-	<?php //dynamic_sidebar( 'footer_fixed_widget' ); ?>
-
-</div>
+<div class="ra-footer-mobile"></div>

@@ -19,6 +19,7 @@ include_once 'shortcodes/image_hover.php';
 include_once 'shortcodes/vc/slider.php';
 include_once 'shortcodes/vc/quo_fixed.php';
 include_once 'shortcodes/vc/contact.php';
+include_once 'shortcodes/vc/quo_fixed.php';
 include_once 'shortcodes/vc/posts_slider.php';
 include_once 'shortcodes/vc/image_hover.php';
 
