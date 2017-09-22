@@ -7,12 +7,10 @@ function ra_quo_fixed_vc() {
 		'category' => 'RA',
 		'params' => [
 			[
-				"type" => "textfield",
-				"holder" => "div",
-				"class" => "",
+				"type" => "dropdown",
 				"heading" => "pre selected product",
 				"param_name" => "propduct",
-				"value" => ""
+				"value" => getProducts()
 			]
 		]
 	]);
