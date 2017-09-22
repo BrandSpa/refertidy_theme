@@ -233,7 +233,7 @@ var QuotationForm = function (_Component) {
               this.props.products && this.props.products.map(function (product) {
                 return _react2.default.createElement(
                   'option',
-                  { value: product },
+                  { key: product, value: product },
                   product
                 );
               })
