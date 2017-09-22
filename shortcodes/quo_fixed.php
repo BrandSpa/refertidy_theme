@@ -3,7 +3,7 @@
 function ra_quo_fixed_sc( $atts ) {
 	$at = shortcode_atts([
 		"product" => "",
-		"message" => "message placeholder"
+		"message" => "Gracias, pronto un asesor se pondrá en contacto con usted."
 	], $atts);
 
 	$props = [

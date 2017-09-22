@@ -12,6 +12,12 @@ function ra_quo_fixed_vc() {
 				"heading" => "pre selected product",
 				"param_name" => "product",
 				"value" => $products
+			],
+			[
+				"type" => "textfield",
+				"heading" => "success message",
+				"param_name" => "message",
+				"value" => "Gracias, pronto un asesor se pondrá en contacto con usted."
 			]
 		]
 	]);
