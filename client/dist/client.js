@@ -151,7 +151,7 @@ var QuotationForm = function (_Component) {
       if (success) return _react2.default.createElement(
         'div',
         { style: { textAlign: 'center' } },
-        'some message'
+        this.props.message
       );
 
       return _react2.default.createElement(

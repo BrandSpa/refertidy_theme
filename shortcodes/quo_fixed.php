@@ -2,12 +2,14 @@
 
 function ra_quo_fixed_sc( $atts ) {
 	$at = shortcode_atts([
-		"product" => ""
+		"product" => "",
+		"message" => "message placeholder"
 	], $atts);
 
 	$props = [
 		'products' => getProducts(),
-		'product' => $at['product']
+		'product' => $at['product'],
+		'message' => $at['message']
 	];
 
 	ob_start();
