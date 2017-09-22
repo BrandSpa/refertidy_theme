@@ -34,6 +34,9 @@ include_once 'shortcodes/vc/image_hover.php';
 include_once 'api/quotations.php';
 include_once 'api/contacts.php';
 
+//OPTIONS
+include_once 'options/quotations.php';
+
 //MENUS
 register_nav_menus(
   array(

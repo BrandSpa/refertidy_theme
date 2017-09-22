@@ -51,7 +51,7 @@ function get_quotations() {
 	$limit = $data['limit'] ? $data['limit'] : 25;
 	$offset = $data['offset'] ? $data['offset'] : 0;
 
-	$contacts = $wpdb->get_results( "SELECT id, name, email, question FROM quotations LIMIT ". $limit ." OFFSET " . $offset);
+	$contacts = $wpdb->get_results( "SELECT id, name, email, phone, product FROM quotations LIMIT ". $limit ." OFFSET " . $offset);
 
 	responseJson($contacts);
 	die();
