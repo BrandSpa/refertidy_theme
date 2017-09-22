@@ -6,7 +6,7 @@ function ra_admin_quotations_options_menu() {
 
 		add_menu_page(
     'Brandspa theme options',
-    'Quotations', //menu name
+    'Cotizaciones', //menu name
     'manage_options', //allow it options
     'ra-quotations', //slug
     'ra_quotations_options',
