@@ -7,7 +7,7 @@ class QuotationFormFixed extends Component {
 
     return (
       <div className="quo-fixed">
-				<Form />
+				<Form {...this.props} />
       </div>
     );
   }

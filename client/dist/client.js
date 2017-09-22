@@ -198,27 +198,19 @@ var QuotationForm = function (_Component) {
             { className: 'col-lg-2 col-md-2' },
             _react2.default.createElement(
               'select',
-              { name: 'product', onChange: this.handleChange, value: product },
+              { name: 'product', onChange: this.handleChange, value: product ? product : this.props.product },
               _react2.default.createElement(
                 'option',
                 { value: '' },
                 'Equipos'
               ),
-              _react2.default.createElement(
-                'option',
-                { value: 'Desktops' },
-                'Desktops'
-              ),
-              _react2.default.createElement(
-                'option',
-                { value: 'Laptops' },
-                'Laptops'
-              ),
-              _react2.default.createElement(
-                'option',
-                { value: 'Servers' },
-                'Servers'
-              )
+              this.props.products.map(function (product) {
+                return _react2.default.createElement(
+                  'option',
+                  { value: product },
+                  product
+                );
+              })
             )
           ),
           _react2.default.createElement(
@@ -1014,7 +1006,7 @@ var QuotationFormFixed = function (_Component) {
       return _react2.default.createElement(
         "div",
         { className: "quo-fixed" },
-        _react2.default.createElement(_quotation_form2.default, null)
+        _react2.default.createElement(_quotation_form2.default, this.props)
       );
     }
   }]);
