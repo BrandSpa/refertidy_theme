@@ -6,12 +6,14 @@ function ra_quo_fixed_vc() {
 		'base' => 'ra_quo_fixed',
 		'category' => 'RA',
 		'params' => [
-			"type" => "textfield",
-			"holder" => "div",
-			"class" => "",
-			"heading" => "pre selected product",
-			"param_name" => "propduct",
-			"value" => ""
+			[
+				"type" => "textfield",
+				"holder" => "div",
+				"class" => "",
+				"heading" => "pre selected product",
+				"param_name" => "propduct",
+				"value" => ""
+			]
 		]
 	]);
 }
