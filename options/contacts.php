@@ -11,7 +11,7 @@ function ra_admin_contacts_options_menu() {
     'ra-contacts', //slug
     'ra_contacts_options',
     get_template_directory_uri() . '/public/img/bs.png', //icon on menu
-    114 //position on menu
+    112 //position on menu
   );
 }
 
@@ -26,7 +26,7 @@ function ra_contacts_options() {
   $contacts = $wpdb->get_results( "SELECT id, name, email, message FROM contacts LIMIT ". $perpage ." OFFSET " . $offset);
   ?>
 
-  <h2>Cotizaciones</h2>
+  <h2>Contactos</h2>
 
   <hr/>
   <table class="wp-list-table widefat fixed striped">

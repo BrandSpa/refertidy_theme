@@ -36,6 +36,7 @@ include_once 'api/contacts.php';
 
 //OPTIONS
 include_once 'options/quotations.php';
+include_once 'options/contacts.php';
 
 //MENUS
 register_nav_menus(
