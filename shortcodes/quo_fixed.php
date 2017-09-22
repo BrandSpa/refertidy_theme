@@ -2,7 +2,9 @@
 
 
 function ra_quo_fixed_sc( $atts ) {
-	$at = shortcode_atts([], $atts);
+	$at = shortcode_atts([
+		"product" => ""
+	], $atts);
 	ob_start();
 	?>
 		<!--ra_quo_fixed-->
