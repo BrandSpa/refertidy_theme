@@ -11,6 +11,7 @@ class Contact extends Component {
       company: '',
       question: '',
       privacy: true,
+      protection: '',
       errors: {}
   }
 
@@ -55,7 +56,7 @@ class Contact extends Component {
       errors,
       success
     } = this.state;
-    
+
     if(success) return (<h5 style={{textAlign: 'center', color: '#6031ba'}}>{this.props.message}</h5>);
 
     return (

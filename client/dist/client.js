@@ -1491,6 +1491,7 @@ var Contact = function (_Component) {
       company: '',
       question: '',
       privacy: true,
+      protection: '',
       errors: {}
     }, _this.handleChange = function (e) {
       var _e$target = e.target,
