@@ -21,7 +21,7 @@ class QuotationForm extends Component {
   handleSubmit = e => {
     if(e) e.preventDefault();
     const reqData = qs.stringify({action: 'store_quotation', data: this.state});
-    console.log(this.protection.value);
+
     if(this.protection.value.length == 0) {
       request
       .post(endpoint, reqData)

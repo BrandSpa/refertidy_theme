@@ -124,7 +124,7 @@ var QuotationForm = function (_Component) {
     }, _this.handleSubmit = function (e) {
       if (e) e.preventDefault();
       var reqData = _qs2.default.stringify({ action: 'store_quotation', data: _this.state });
-      console.log(_this.protection.value);
+
       if (_this.protection.value.length == 0) {
         _axios2.default.post(endpoint, reqData).then(function (_ref2) {
           var data = _ref2.data;
@@ -1505,21 +1505,26 @@ var Contact = function (_Component) {
     }, _this.handleSubmit = function (e) {
       e.preventDefault();
       var data = _qs2.default.stringify({ action: 'store_contact', data: _this.state });
+      if (_this.protection.value.length == 0) {
+        _axios2.default.post(endpoint, data).then(function (_ref2) {
+          var data = _ref2.data;
 
-      _axios2.default.post(endpoint, data).then(function (_ref2) {
-        var data = _ref2.data;
 
+          if (data.success == false) {
+            return _this.setState({ errors: data.errors });
+          }
 
-        if (Object.keys(data).length > 0) {
-          _this.setState({ errors: data });
-        }
-      });
+          return _this.setState({ success: data.success });
+        });
+      }
     }, _temp), _possibleConstructorReturn(_this, _ret);
   }
 
   _createClass(Contact, [{
     key: 'render',
     value: function render() {
+      var _this2 = this;
+
       var _state = this.state,
           name = _state.name,
           email = _state.email,
@@ -1528,8 +1533,15 @@ var Contact = function (_Component) {
           question = _state.question,
           privacy = _state.privacy,
           privacyErr = _state.privacyErr,
-          errors = _state.errors;
+          errors = _state.errors,
+          success = _state.success;
 
+
+      if (success) return _react2.default.createElement(
+        'h5',
+        { style: { textAlign: 'center', color: '#6031ba' } },
+        this.props.message
+      );
 
       return _react2.default.createElement(
         'form',
@@ -1604,6 +1616,16 @@ var Contact = function (_Component) {
             errors.question
           )
         ),
+        _react2.default.createElement('input', {
+          type: 'text',
+          ref: function ref(protection) {
+            return _this2.protection = protection;
+          },
+          name: 'protection',
+          onChange: this.handleChange,
+          value: protection,
+          style: { display: 'none' }
+        }),
         _react2.default.createElement(
           'div',
           { className: 'checkbox' },

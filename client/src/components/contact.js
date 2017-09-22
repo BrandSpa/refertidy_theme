@@ -27,21 +27,36 @@ class Contact extends Component {
   handleSubmit = e => {
     e.preventDefault();
     const data = qs.stringify({action: 'store_contact', data: this.state});
+    if(this.protection.value.length == 0) {
+      request
+      .post(endpoint, data)
+      .then(({data}) => {
 
-    request
-    .post(endpoint, data)
-    .then(({data}) => {
+        if(data.success == false) {
+          return this.setState({errors: data.errors});
+        }
 
-      if(Object.keys(data).length > 0) {
-        this.setState({errors: data});
-      }
+        return this.setState({success: data.success});
 
-    })
 
+      })
+    }
   }
 
   render() {
-    const {name, email, phone, company, question, privacy, privacyErr, errors} = this.state;
+    const {
+      name,
+      email,
+      phone,
+      company,
+      question,
+      privacy,
+      privacyErr,
+      errors,
+      success
+    } = this.state;
+    
+    if(success) return (<h5 style={{textAlign: 'center', color: '#6031ba'}}>{this.props.message}</h5>);
 
     return (
       <form className="form-contact" onSubmit={this.handleSubmit}>
@@ -97,6 +112,15 @@ class Contact extends Component {
             value={question}/>
           <div className="input-error" style={ errors.question ? {display: 'block'} : {display: 'none'}}>{errors.question}</div>
         </div>
+
+        <input
+          type="text"
+          ref={protection => this.protection = protection}
+          name="protection"
+          onChange={this.handleChange}
+          value={protection}
+          style={{display: 'none'}}
+        />
 
         <div className="checkbox">
           <label htmlFor="privacy" onClick={this.toggleCheckbox}>

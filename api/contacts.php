@@ -36,10 +36,10 @@ function store_contact() {
 	$isValid = $gump->run($data);
 
 	if($isValid === false) {
-		responseJson( $gump->get_errors_array() );
+		responseJson(["errors" => $gump->get_errors_array(), "success" => false ]);
 	} else {
 		$res = $wpdb->insert( 'contacts', $data, [ '%s', '%s', '%s', '%s', '%s', '%s' ] );
-		responseJson( $data );
+		responseJson(["success" => true]);
 	}
 
 	die();
