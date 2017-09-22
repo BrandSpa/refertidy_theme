@@ -41,7 +41,7 @@ function ra_quotations_options() {
     <tbody>
       <?php foreach($quotations as $quo): ?>
         <tr>
-          <td><?php echo $quo->email; ?></td>
+          <td><a href="mailto:<?php echo $quo->email; ?>"><?php echo $quo->email; ?></a></td>
           <td><?php echo $quo->name; ?></td>
           <td><?php echo $quo->phone; ?></td>
           <td><?php echo $quo->product; ?></td>

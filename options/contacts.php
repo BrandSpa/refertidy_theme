@@ -41,7 +41,7 @@ function ra_contacts_options() {
     <tbody>
       <?php foreach($contacts as $contact): ?>
         <tr>
-          <td><a href="mailto:<?php echo $contact->email; ?>"></a><?php echo $contact->email; ?></td>
+          <td><a href="mailto:<?php echo $contact->email; ?>" target="new"><?php echo $contact->email; ?></a></td>
           <td><?php echo $contact->name; ?></td>
           <td><?php echo $contact->phone; ?></td>
           <td><?php echo $contact->question; ?></td>
