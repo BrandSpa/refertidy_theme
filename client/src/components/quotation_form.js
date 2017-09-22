@@ -9,7 +9,8 @@ class QuotationForm extends Component {
 		email: '',
 		phone: '',
 		product: '',
-    errors: {}
+    errors: {},
+    success: false
 	}
 
   handleChange = e => {
@@ -23,17 +24,19 @@ class QuotationForm extends Component {
     request
     .post(endpoint, reqData)
     .then(({data}) => {
-      console.log(data);
-      if(data.success) {
-        this.setState({errors: data});
+
+      if(data.success == false) {
+        return this.setState({errors: data.errors});
       }
+
+      return this.setState({succes: data.success});
 
     })
   }
 
   render() {
-    const { name, email, phone, product, errors } = this.state;
-
+    const { name, email, phone, product, errors, success } = this.state;
+    if(success) return (<div>some message</div>);
     return (
       <form onSubmit={this.handleSubmit}>
         <div className="row quo-fixed__container">

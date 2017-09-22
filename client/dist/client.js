@@ -116,7 +116,8 @@ var QuotationForm = function (_Component) {
       email: '',
       phone: '',
       product: '',
-      errors: {}
+      errors: {},
+      success: false
     }, _this.handleChange = function (e) {
       _this.setState(_defineProperty({}, e.target.name, e.target.value));
     }, _this.handleSubmit = function (e) {
@@ -126,10 +127,12 @@ var QuotationForm = function (_Component) {
       _axios2.default.post(endpoint, reqData).then(function (_ref2) {
         var data = _ref2.data;
 
-        console.log(data);
-        if (data.success) {
-          _this.setState({ errors: data });
+
+        if (data.success == false) {
+          return _this.setState({ errors: data.errors });
         }
+
+        return _this.setState({ succes: data.success });
       });
     }, _temp), _possibleConstructorReturn(_this, _ret);
   }
@@ -142,9 +145,14 @@ var QuotationForm = function (_Component) {
           email = _state.email,
           phone = _state.phone,
           product = _state.product,
-          errors = _state.errors;
+          errors = _state.errors,
+          success = _state.success;
 
-
+      if (success) return _react2.default.createElement(
+        'div',
+        null,
+        'some message'
+      );
       return _react2.default.createElement(
         'form',
         { onSubmit: this.handleSubmit },
