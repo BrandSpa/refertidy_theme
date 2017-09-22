@@ -1535,7 +1535,8 @@ var Contact = function (_Component) {
           privacy = _state.privacy,
           privacyErr = _state.privacyErr,
           errors = _state.errors,
-          success = _state.success;
+          success = _state.success,
+          protection = _state.protection;
 
 
       if (success) return _react2.default.createElement(
