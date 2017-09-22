@@ -182,9 +182,16 @@ var QuotationForm = function (_Component) {
               errors.name
             )
           ),
-          _react2.default.createElement('input', { type: 'hidden', ref: function ref(protection) {
+          _react2.default.createElement('input', {
+            type: 'text',
+            ref: function ref(protection) {
               return _this2.protection = protection;
-            }, name: 'protection', onChange: this.handleChange, value: protection }),
+            },
+            name: 'protection',
+            onChange: this.handleChange,
+            value: protection,
+            style: { display: 'none' }
+          }),
           _react2.default.createElement(
             'div',
             { className: 'col-lg-3 col-md-3' },

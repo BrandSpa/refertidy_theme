@@ -57,7 +57,14 @@ class QuotationForm extends Component {
             </span>
           </div>
 
-          <input type="hidden" ref={protection => this.protection = protection} name="protection" onChange={this.handleChange} value={protection} />
+          <input
+            type="text"
+            ref={protection => this.protection = protection}
+            name="protection"
+            onChange={this.handleChange}
+            value={protection}
+            style={{display: 'none'}}
+          />
 
           <div className="col-lg-3 col-md-3">
             <input
