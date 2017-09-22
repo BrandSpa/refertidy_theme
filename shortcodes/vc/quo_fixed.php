@@ -9,7 +9,7 @@ function ra_quo_fixed_vc() {
 			[
 				"type" => "dropdown",
 				"heading" => "pre selected product",
-				"param_name" => "propduct",
+				"param_name" => "product",
 				"value" => getProducts()
 			]
 		]
