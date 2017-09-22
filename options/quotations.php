@@ -23,12 +23,10 @@ function ra_quotations_options() {
   $postname = isset($_GET['postname']) ? $_GET['postname'] : '';
   $offset = $paged * $perpage;
 
-  $posts = $wpdb->get_results( "SELECT id, name, email, phone, product FROM quotations LIMIT ". $perpage ." OFFSET " . $offset);
+  $quotations = $wpdb->get_results( "SELECT id, name, email, phone, product FROM quotations LIMIT ". $perpage ." OFFSET " . $offset);
   ?>
 
-  <?php var_dump($posts) ?>
-
-  <h2>Contacts</h2>
+  <h2>Cotizaciones</h2>
 
   <hr/>
   <table class="wp-list-table widefat fixed striped">
@@ -41,7 +39,7 @@ function ra_quotations_options() {
       </tr>
     </thead>
     <tbody>
-      <?php foreach($posts as $quo): ?>
+      <?php foreach($quotations as $quo): ?>
         <tr>
           <td><?php echo $quo->email; ?></td>
           <td><?php echo $quo->name; ?></td>
