@@ -6,7 +6,7 @@ function ra_quo_fixed_sc( $atts ) {
 	], $atts);
 
 	$props = [
-		'products' => $products,
+		'products' => getProducts(),
 		'product' => $at['product']
 	];
 
