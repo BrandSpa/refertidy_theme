@@ -124,7 +124,8 @@ var QuotationForm = function (_Component) {
     }, _this.handleSubmit = function (e) {
       if (e) e.preventDefault();
       var reqData = _qs2.default.stringify({ action: 'store_quotation', data: _this.state });
-      if (_this.state.protection.length == 0) {
+      console.log(_this.protection.value);
+      if (_this.protection.value.length == 0) {
         _axios2.default.post(endpoint, reqData).then(function (_ref2) {
           var data = _ref2.data;
 
@@ -142,6 +143,8 @@ var QuotationForm = function (_Component) {
   _createClass(QuotationForm, [{
     key: 'render',
     value: function render() {
+      var _this2 = this;
+
       var _state = this.state,
           name = _state.name,
           email = _state.email,
@@ -179,7 +182,9 @@ var QuotationForm = function (_Component) {
               errors.name
             )
           ),
-          _react2.default.createElement('input', { type: 'hidden', name: 'protection', onChange: this.handleChange, value: protection }),
+          _react2.default.createElement('input', { type: 'hidden', ref: function ref(protection) {
+              return _this2.protection = protection;
+            }, name: 'protection', onChange: this.handleChange, value: protection }),
           _react2.default.createElement(
             'div',
             { className: 'col-lg-3 col-md-3' },

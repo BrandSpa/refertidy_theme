@@ -21,7 +21,8 @@ class QuotationForm extends Component {
   handleSubmit = e => {
     if(e) e.preventDefault();
     const reqData = qs.stringify({action: 'store_quotation', data: this.state});
-    if(this.state.protection.length == 0) {
+    console.log(this.protection.value);
+    if(this.protection.value.length == 0) {
       request
       .post(endpoint, reqData)
       .then(({data}) => {
@@ -56,7 +57,7 @@ class QuotationForm extends Component {
             </span>
           </div>
 
-          <input type="hidden" name="protection" onChange={this.handleChange} value={protection} />
+          <input type="hidden" ref={protection => this.protection = protection} name="protection" onChange={this.handleChange} value={protection} />
 
           <div className="col-lg-3 col-md-3">
             <input
