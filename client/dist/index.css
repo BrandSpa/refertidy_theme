@@ -788,8 +788,8 @@ li {
     background: #fff;
     -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    padding: 40px;
-    border-radius: 10px 10px 0 10px; }
+    padding: 20px 40px;
+    border-radius: 10px 10px 40px 10px; }
     .app-header .sub-menu li {
       display: block;
       width: 100%;
@@ -799,8 +799,8 @@ li {
       .app-header .sub-menu li a {
         display: block;
         color: #6031BA !important;
-        font-size: 4px;
-        padding: 14px; }
+        font-size: 12px;
+        padding: 4px; }
     .app-header .sub-menu--open {
       display: block; }
 
