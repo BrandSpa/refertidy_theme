@@ -5,8 +5,8 @@
   "author": "Alejandro Sanabria <alejandro@brandspa.com>",
   "license": "MIT",
   "scripts": {
-    "build": "webpack --watch",
-    "build:prod": "webpack --p"
+    "build:dev": "webpack --watch",
+    "build": "webpack --p"
   },
   "dependencies": {
     "animejs": "^2.0.2",

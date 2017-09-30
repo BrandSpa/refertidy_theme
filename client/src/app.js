@@ -47,7 +47,7 @@ let els = document.querySelectorAll('.menu-item-has-children > a');
 
   el.addEventListener('click', (e) => {
     e.preventDefault();
-    console.log(e.target);
+
     const subMenu = e.currentTarget.parentElement.querySelector('.sub-menu');
     if(hasClass(subMenu, 'sub-menu--open')) {
       removeClass(subMenu, 'sub-menu--open');
@@ -56,4 +56,13 @@ let els = document.querySelectorAll('.menu-item-has-children > a');
     }
 
   });
+
+  const handleClick = function(e) {
+    const el = document.querySelector('.menu-header');
+    if (!el.contains(e.target)) {
+      jQuery('.sub-menu--open').removeClass('sub-menu--open');
+    }
+  }
+
+  document.addEventListener('click', handleClick, true);
 });
