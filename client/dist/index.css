@@ -773,7 +773,6 @@ li {
         -webkit-transition: all 500ms;
         transition: all 500ms; }
   .app-header .current_page_item {
-    padding-bottom: 8px;
     border-bottom: 2px solid #fff; }
   .app-header .header__widget {
     float: right; }
@@ -786,8 +785,8 @@ li {
     top: 30px;
     min-width: 100px;
     background: #fff;
-    -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.01);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.01);
     padding: 20px 40px;
     border-radius: 10px 10px 40px 10px; }
     .app-header .sub-menu li {
