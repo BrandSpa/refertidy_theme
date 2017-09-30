@@ -58,7 +58,7 @@ let els = document.querySelectorAll('.menu-item-has-children > a');
   });
 
   const handleClick = function(e) {
-    const el = document.querySelector('.menu-header');
+    const el = document.querySelector('#menu-header');
     if (!el.contains(e.target)) {
       jQuery('.sub-menu--open').removeClass('sub-menu--open');
     }
