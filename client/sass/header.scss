@@ -60,6 +60,7 @@
     background: #fff;
     transition: right .3s ease-in-out;
     box-shadow: -10px 0 10px rgba(0,0,0,.2);
+    overflow: auto;
 
     &--show {
       right: 0;

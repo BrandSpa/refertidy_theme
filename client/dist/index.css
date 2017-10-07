@@ -712,7 +712,8 @@ li {
     -webkit-transition: right .3s ease-in-out;
     transition: right .3s ease-in-out;
     -webkit-box-shadow: -10px 0 10px rgba(0, 0, 0, 0.2);
-    box-shadow: -10px 0 10px rgba(0, 0, 0, 0.2); }
+    box-shadow: -10px 0 10px rgba(0, 0, 0, 0.2);
+    overflow: auto; }
     .app-header__nav--show {
       right: 0; }
     .app-header__nav__close {

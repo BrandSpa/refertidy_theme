@@ -6,7 +6,8 @@
   "license": "MIT",
   "scripts": {
     "build:dev": "webpack --watch",
-    "build": "webpack --p"
+    "build": "webpack --p",
+    "css": "gulp"
   },
   "dependencies": {
     "animejs": "^2.0.2",
