@@ -23,7 +23,7 @@ function ra_contacts_options() {
   $postname = isset($_GET['postname']) ? $_GET['postname'] : '';
   $offset = $paged * $perpage;
 
-  $contacts = $wpdb->get_results( "SELECT id, name, email, phone, question FROM contacts LIMIT ". $perpage ." OFFSET " . $offset);
+  $contacts = $wpdb->get_results( "SELECT id, name, email, phone, question, company FROM contacts LIMIT ". $perpage ." OFFSET " . $offset);
   ?>
 
   <h2>Contactos</h2>
