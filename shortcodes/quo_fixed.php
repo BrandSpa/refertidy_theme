@@ -17,6 +17,7 @@ function ra_quo_fixed_sc( $atts ) {
 		<!--ra_quo_fixed-->
 		<div class="ra-quotation-form-fixed" data-props='<?php echo json_encode($props); ?>'></div>
 		<!--/ra_quo_fixed-->
+		<div class="ra-footer-mobile" data-props='<?php echo json_encode($props); ?>'></div>
 	<?php
 	return ob_get_clean();
 }
