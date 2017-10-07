@@ -36,6 +36,7 @@ function ra_contacts_options() {
         <th>Name</th>
         <th>phone</th>
         <th>Message</th>
+        <th>Company</th>
       </tr>
     </thead>
     <tbody>
@@ -45,6 +46,7 @@ function ra_contacts_options() {
           <td><?php echo $contact->name; ?></td>
           <td><?php echo $contact->phone; ?></td>
           <td><?php echo $contact->question; ?></td>
+          <td><?php echo $contact->company; ?></td>
         </tr>
       <?php endforeach; ?>
     </tbody>

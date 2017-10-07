@@ -36,6 +36,7 @@ function ra_quotations_options() {
         <th>Name</th>
         <th>Phone</th>
         <th>Product</th>
+        <th>Company</th>
       </tr>
     </thead>
     <tbody>
@@ -45,6 +46,7 @@ function ra_quotations_options() {
           <td><?php echo $quo->name; ?></td>
           <td><?php echo $quo->phone; ?></td>
           <td><?php echo $quo->product; ?></td>
+         
         </tr>
       <?php endforeach; ?>
     </tbody>
