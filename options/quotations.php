@@ -53,7 +53,7 @@ function ra_quotations_options() {
 
   <div class="pagination">
     <a class="prev-page button" href="/wp-admin/admin.php?page=<?php echo $slug ?>&paged=<?php echo $paged > 0 ? $paged - 1 : 0 ?>">prev</a>
-    <a class="next-page button" href="/wp-admin/admin.php?page=<?php echo $slug ?>&paged=<?php echo count($posts) > 0 ? $paged + 1 :  $paged - 1 ?>">next</a>
+    <a class="next-page button" href="/wp-admin/admin.php?page=<?php echo $slug ?>&paged=<?php echo count($quotations) > 0 ? $paged + 1 :  $paged - 1 ?>">next</a>
   </div>
   <?php
   }
