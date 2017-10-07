@@ -12,9 +12,8 @@ Entrar a la carpeta
 cd ra
 ```
 
-dentro de la carpeta.
 
-entrar a la carpeta y correr npm install para instalar las dependecies de los componentes
+entrar a la carpeta client y correr npm install para instalar las dependecies de los componentes
 
 ```bash
 cd client
@@ -33,7 +32,7 @@ Y hay haces el commit de lo que hiciste y luego el push.
 
 ```bash
 git add -A
-git commit -m"ejemplo de commit"
+git commit -m"arregle el slider"
 git push
 ```
 
