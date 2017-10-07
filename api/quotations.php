@@ -25,6 +25,7 @@ function store_quotation() {
   ));
 
 	$gump->set_field_name("name", "Nombre");
+	$gump->set_field_name("product", "Producto");
 
 	$gump->validation_rules($rules);
 	$isValid = $gump->run($data);

@@ -96,6 +96,9 @@ class QuotationForm extends Component {
                 <option key={product} value={product}>{product}</option>
               )}
             </select>
+            <span className="input-error" style={errors.product ? {display: 'block'} : {display: 'none'}}>
+            {errors.product}
+          </span>
           </div>
 
           <div className="col-lg-2 col-md-2">
