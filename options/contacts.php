@@ -4,7 +4,7 @@ add_action('admin_menu', 'ra_admin_contacts_options_menu');
 
 function ra_admin_contacts_options_menu() {
 
-		add_menu_page(
+	add_menu_page(
     'Brandspa theme options',
     'Contactos', //menu name
     'manage_options', //allow it options
@@ -53,7 +53,7 @@ function ra_contacts_options() {
 
   <div class="pagination">
     <a class="prev-page button" href="/wp-admin/admin.php?page=<?php echo $slug ?>&paged=<?php echo $paged > 0 ? $paged - 1 : 0 ?>">prev</a>
-    <a class="next-page button" href="/wp-admin/admin.php?page=<?php echo $slug ?>&paged=<?php echo count($posts) > 0 ? $paged + 1 :  $paged - 1 ?>">next</a>
+    <a class="next-page button" href="/wp-admin/admin.php?page=<?php echo $slug ?>&paged=<?php echo count($contacts) > 0 ? $paged + 1 :  $paged - 1 ?>">next</a>
   </div>
   <?php
   }
