@@ -37,3 +37,10 @@ git push
 ```
 
 Lo mismo para los cambios de los archivos de PHP sin necesidad claramente de npm run build.
+
+
+para el css esta hecho sass, simplemente para compilarlo se corre el comando
+
+```bash 
+yarn css
+```

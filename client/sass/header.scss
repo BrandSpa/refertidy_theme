@@ -60,7 +60,6 @@
     background: #fff;
     transition: right .3s ease-in-out;
     box-shadow: -10px 0 10px rgba(0,0,0,.2);
-    overflow: auto;
 
     &--show {
       right: 0;
@@ -82,6 +81,8 @@
       width: 100%;
       padding: 0;
       margin: 0;
+      height: 100%;
+      overflow: auto;
 
       li {
         width: 100%;
