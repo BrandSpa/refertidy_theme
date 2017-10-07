@@ -23,7 +23,7 @@ class FooterMobile extends Component {
       <div>
         <div className="footer-mobile__form" style={showForm ? {display: 'flex'} : {display: 'none'}}>
           <a href="#" className="footer-mobile__form__close" onClick={this.closeForm}><i className="ion-close-round"></i></a>
-          <Form />
+          <Form {...this.props} />
         </div>
 
         <div className="footer-mobile">
