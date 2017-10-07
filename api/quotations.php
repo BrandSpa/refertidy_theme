@@ -6,7 +6,8 @@ function store_quotation() {
 
 	$rules = array(
 		'name'  => 'required',
-		'email' => 'required|valid_email'
+		'email' => 'required|valid_email',
+		'product' => 'required'
 	);
 
 	$data = $gump->sanitize($_POST['data']);
