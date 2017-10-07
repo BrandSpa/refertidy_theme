@@ -6,7 +6,7 @@ Clonar el proyecto
 git clone https://github.com/BrandSpa/ra
 ```
 
-Entras a la carpeta ra
+Entrar a la carpeta
 
 ```bash
 cd ra
@@ -14,9 +14,10 @@ cd ra
 
 dentro de la carpeta.
 
-correr npm para instalar las dependecies de los componentes
+entrar a la carpeta y correr npm install para instalar las dependecies de los componentes
 
 ```bash
+cd client
 npm install
 ```
 
