@@ -696,7 +696,7 @@ li {
   .app-header__navicon {
     float: right;
     font-size: 40px;
-    color: #fff;
+    color: #6032ba;
     display: none; }
     @media (max-width: 767px) {
       .app-header__navicon {
@@ -752,6 +752,10 @@ li {
       fill: #fff; }
     .app-header--scrolling .app-header__menu li a {
       color: #fff !important; }
+    .app-header--scrolling .app-header__navicon {
+      float: right;
+      font-size: 40px;
+      color: #fff; }
     .app-header--scrolling .header__widget a {
       color: #fff !important; }
   .app-header img {
@@ -852,6 +856,11 @@ li {
     line-height: 150%;
     color: #6031ba;
     padding: 40px 0; }
+    @media (max-width: 767px) {
+      .slider__content__title {
+        font-size: 1.8em;
+        line-height: 1.4;
+        padding: 1.3em 0 0.37em 0; } }
   .slider__content__btn {
     display: inline-block;
     height: 60px;
@@ -861,13 +870,17 @@ li {
     letter-spacing: 1.5px;
     font-size: 1.333rem;
     color: #fff; }
+    @media (max-width: 767px) {
+      .slider__content__btn {
+        font-size: 1em;
+        text-transform: uppercase; } }
   .slider__slide__content {
     max-width: 500px;
     position: absolute;
     z-index: 998; }
     @media (max-width: 767px) {
       .slider__slide__content {
-        margin-top: 20%;
+        margin-top: 63px 0.3em;
         text-align: center; } }
 
 .slider__btns .slider__btns__left {
@@ -1077,6 +1090,15 @@ li {
     background: transparent;
     text-transform: uppercase;
     font-weight: 600; }
+    @media (max-width: 767px) {
+      .footer-mobile button {
+        font-weight: 100;
+        padding: 0px !important;
+        letter-spacing: 2px;
+        font-family: 'Gotham Rounded Medium';
+        width: 166px;
+        height: 2.7em;
+        cursor: pointer; } }
   .footer-mobile a {
     border: 1px solid #FFFFFF;
     width: 40px;
