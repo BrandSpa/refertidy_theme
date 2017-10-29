@@ -22,6 +22,17 @@
     background: transparent;
     text-transform: uppercase;
     font-weight: 600;
+
+    @media #{$s} {
+      font-weight: 100;
+      padding: 0px !important;
+      letter-spacing: 2px;
+      font-family: 'Gotham Rounded Medium';
+      width: 166px;
+      height: 2.7em;
+      cursor: pointer;
+    }
+
   }
 
   a {

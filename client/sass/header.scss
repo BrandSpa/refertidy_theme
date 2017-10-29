@@ -42,7 +42,7 @@
   &__navicon {
     float: right;
     font-size: 40px;
-    color: #fff;
+    color: #6032ba;
     display: none;
 
     @media #{$s} {
@@ -124,8 +124,11 @@
          }
        }
     }
-
-
+    .app-header__navicon {
+        float: right;
+        font-size: 40px;
+        color: #fff;
+    }
     .header__widget {
       a {
         color: #fff !important;
