@@ -7,7 +7,8 @@
   "scripts": {
     "build:dev": "webpack --watch",
     "build": "webpack --p",
-    "css": "gulp"
+    "css:watch": "gulp",
+    "css": "gulp styles"
   },
   "dependencies": {
     "animejs": "^2.0.2",
