@@ -43,11 +43,11 @@ class Contact extends Component {
         if(data.success == false) {
           return this.setState({errors: data.errors});
         }
-
+        console.log(data);
         if(this.props.redirect == "true" && this.props.thanks_page != ""){
           window.location = this.props.thanks_page;
         }else{
-          console.log(data);
+          
           return this.setState({success: data.success});
         }
 
