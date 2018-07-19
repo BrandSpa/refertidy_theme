@@ -79,9 +79,12 @@ function store_contact() {
 		responseJson(["errors" => $gump->get_errors_array(), "success" => false ]);
 	} else {
 		$res = $wpdb->insert( 'contacts', $data, [ '%s', '%s', '%s', '%s', '%s', '%s' ] );
-		if($data['to'] != "")
-		wp_mail($data['to'], "Nuevo mensaje de contacto",  $message);
-		responseJson(["success" => true]);
+		$status = false;
+		if($data['to'] != ""){
+			$status = wp_mail($data['to'], "Nuevo mensaje de contacto",  $message);
+		}
+		
+		responseJson(["success" => true, "status" => $status]);
 	}
 
 	die();

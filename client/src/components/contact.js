@@ -47,6 +47,7 @@ class Contact extends Component {
         if(this.props.redirect == "true" && this.props.thanks_page != ""){
           window.location = this.props.thanks_page;
         }else{
+          console.log(data);
           return this.setState({success: data.success});
         }
 
