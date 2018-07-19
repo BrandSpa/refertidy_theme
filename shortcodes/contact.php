@@ -2,7 +2,9 @@
 
 function ra_contact_sc( $atts ) {
   $at = shortcode_atts([
-    "message" => "Gracias, pronto un asesor se pondrá en contacto con usted."
+    "message" => "Gracias, pronto un asesor se pondrá en contacto con usted.",
+    "redirect" => 'false',
+    "thanks_page" => ''
   ], $atts);
   $props = [
     "message" => $at['message'],
