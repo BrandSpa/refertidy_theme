@@ -80,7 +80,7 @@ function store_contact() {
 	} else {
 		$res = $wpdb->insert( 'contacts', $data, [ '%s', '%s', '%s', '%s', '%s', '%s' ] );
 		$status = false;
-		if($data['to'] != ""){
+		if($_POST['to'] != ""){
 			$status = wp_mail($data['to'], "Nuevo mensaje de contacto",  $message);
 		}
 		
