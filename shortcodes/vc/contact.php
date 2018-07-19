@@ -13,6 +13,12 @@ function ra_contact_vc() {
 				"value" => "Gracias, pronto un asesor se pondrá en contacto con usted."
 			],
 			[
+				"type" => "textfield",
+				"heading" => "To",
+				"param_name" => "to",
+				"value" => "comercial@rentadvisor.com.co"
+			],
+			[
 				"type" => "checkbox",
 				"heading" => "Redirigir",
 				"param_name" => "redirect",

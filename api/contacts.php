@@ -10,7 +10,6 @@ function store_contact() {
 	$rules = array(
 		'name'  => 'required',
 		'email' => 'required|valid_email',
-		'question' => 'required',
 		'privacy' => 'contains, 1'
 	);
 
@@ -39,6 +38,7 @@ function store_contact() {
 		responseJson(["errors" => $gump->get_errors_array(), "success" => false ]);
 	} else {
 		$res = $wpdb->insert( 'contacts', $data, [ '%s', '%s', '%s', '%s', '%s', '%s' ] );
+		//wp_mail($data['to'], )
 		responseJson(["success" => true]);
 	}
 

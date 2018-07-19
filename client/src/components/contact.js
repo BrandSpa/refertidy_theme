@@ -12,12 +12,13 @@ class Contact extends Component {
       question: '',
       privacy: true,
       protection: '',
+      to: false,
       errors: {}
   }
 
   
   componentWillMount() {
-    //console.log(this.props);
+    this.setState({to: this.props.to});
   }
   
 
@@ -33,7 +34,7 @@ class Contact extends Component {
 
   handleSubmit = e => {
     e.preventDefault();
-    const data = qs.stringify({action: 'store_contact', data: this.state });
+    const data = qs.stringify({action: 'store_contact', data: this.state});
     if(this.protection.value.length == 0) {
       request
       .post(endpoint, data)
