@@ -15,6 +15,12 @@ class Contact extends Component {
       errors: {}
   }
 
+  
+  componentWillMount() {
+    console.log(this.props);
+  }
+  
+
   handleChange = e =>  {
     let { name, value } = e.target;
     this.setState({ [name]: value });
