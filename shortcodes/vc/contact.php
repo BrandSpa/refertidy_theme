@@ -16,6 +16,9 @@ function ra_contact_vc() {
 				"type" => "checkbox",
 				"heading" => "Redirigir",
 				"param_name" => "redirect",
+				"value" => array(
+					"" => "false"
+				),
 			],
 			[
 				"type" => "textfield",
@@ -24,7 +27,7 @@ function ra_contact_vc() {
 				"value" => "",
 				"dependency" => array(
 					"element" => "redirect",
-					"value" => "1"
+					"value" => "true"
 				)
 			]
 		]
