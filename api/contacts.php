@@ -81,10 +81,10 @@ function store_contact() {
 		$res = $wpdb->insert( 'contacts', $data, [ '%s', '%s', '%s', '%s', '%s', '%s' ] );
 		$status = false;
 		if($_POST['to'] != ""){
-			$status = wp_mail($data['to'], "Nuevo mensaje de contacto",  $message);
+			$status = wp_mail($_POST['to'], "Nuevo mensaje de contacto",  $message);
 		}
 		
-		responseJson(["success" => true, "status" => $status]);
+		responseJson(["success" => true, "status" => $_POST['to']]);
 	}
 
 	die();
