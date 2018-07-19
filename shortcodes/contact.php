@@ -4,7 +4,7 @@ function ra_contact_sc( $atts ) {
   $at = shortcode_atts([
     "message" => "Gracias, pronto un asesor se pondrá en contacto con usted.",
     "redirect" => 'false',
-    "to" => 'comercial@rentadvisor.com.co',
+    "to" => '',
     "thanks_page" => ''
   ], $atts);
   $props = [

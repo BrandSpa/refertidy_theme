@@ -16,7 +16,7 @@ function ra_contact_vc() {
 				"type" => "textfield",
 				"heading" => "To",
 				"param_name" => "to",
-				"value" => "comercial@rentadvisor.com.co"
+				"value" => ""
 			],
 			[
 				"type" => "checkbox",

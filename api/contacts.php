@@ -7,6 +7,47 @@ function store_contact() {
 
 	$data = $gump->sanitize($_POST['data']);
 
+	$message = '
+		<html>
+			<style>
+				*{font-family: Arial, Helvetica, sans-serif}
+				body{
+					background: #b7e3fd
+				}
+			</style>
+			<body>
+				<table cellspadding="0" cellspacing="0" style="width: 600px; margin: 0 auto; border: 1px solid #d3d3d3; border-radius: 10px; padding: 0; background: #FFF" >
+					<tr>
+						<td style="text-align: center; padding: 10px">
+							<h2 style="font-size: 22px; color: #6853cb;">Gana3 Rentadvisor</h2>
+						</td>
+					</tr>
+					<tr>
+						<td style="padding-bottom: 30px">
+							<table cellspadding="0" cellspacing="0" style="width: 600px;">
+								<tr>
+									<td style="text-align: right; padding: 10px; width: 300px;">Nombre</td><td style="width: 300px">'.$data["nombre"].'</td>
+								</tr>
+								<tr>
+									<td style="text-align: right; padding: 10px; width: 300px;">Email</td><td style="width: 300px">'.$data["email"].'</td>
+								</tr>
+								<tr>
+									<td style="text-align: right; padding: 10px; width: 300px;">Pregunta</td><td style="width: 300px">'.$data["question"].'</td>
+								</tr>
+								<tr>
+									<td style="text-align: right; padding: 10px; width: 300px;">Teléfono</td><td style="width: 300px">'.$data["phone"].'</td>
+								</tr>
+								<tr>
+									<td style="text-align: right; padding: 10px; width: 300px;">Empresa</td><td style="width: 300px">'.$data["company"].'</td>
+								</tr>
+							</table>
+						</td>
+					</tr>
+				</table>
+			</body>
+		</html>
+	';
+
 	$rules = array(
 		'name'  => 'required',
 		'email' => 'required|valid_email',
@@ -38,7 +79,8 @@ function store_contact() {
 		responseJson(["errors" => $gump->get_errors_array(), "success" => false ]);
 	} else {
 		$res = $wpdb->insert( 'contacts', $data, [ '%s', '%s', '%s', '%s', '%s', '%s' ] );
-		//wp_mail($data['to'], )
+		if($data['to'] != "")
+		wp_mail($data['to'], "Nuevo mensaje de contacto",  $message);
 		responseJson(["success" => true]);
 	}
 
