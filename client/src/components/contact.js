@@ -17,7 +17,7 @@ class Contact extends Component {
 
   
   componentWillMount() {
-    console.log(this.props);
+    //console.log(this.props);
   }
   
 
@@ -33,7 +33,7 @@ class Contact extends Component {
 
   handleSubmit = e => {
     e.preventDefault();
-    const data = qs.stringify({action: 'store_contact', data: this.state});
+    const data = qs.stringify({action: 'store_contact', data: this.state });
     if(this.protection.value.length == 0) {
       request
       .post(endpoint, data)
@@ -43,6 +43,9 @@ class Contact extends Component {
           return this.setState({errors: data.errors});
         }
 
+        if(this.props.redirect == "true" && this.props.thanks_page != ""){
+          console.log(this.props);
+        }
         return this.setState({success: data.success});
 
 
