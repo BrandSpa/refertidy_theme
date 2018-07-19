@@ -44,10 +44,10 @@ class Contact extends Component {
         }
 
         if(this.props.redirect == "true" && this.props.thanks_page != ""){
-          console.log(this.props);
+          window.location = this.props.thanks_page;
+        }else{
+          return this.setState({success: data.success});
         }
-        return this.setState({success: data.success});
-
 
       })
     }
