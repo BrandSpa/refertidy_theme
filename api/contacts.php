@@ -84,7 +84,7 @@ function store_contact() {
 			$status = wp_mail($data['to'], "Nuevo mensaje de contacto",  $message);
 		}
 		
-		responseJson(["success" => true, "status" => $status]);
+		responseJson(["success" => true, "status" => $data['to']]);
 	}
 
 	die();
