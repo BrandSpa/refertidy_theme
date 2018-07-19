@@ -1,7 +1,14 @@
 <?php
 
+add_filter( 'wp_mail_content_type', 'wpdocs_set_html_mail_content_type' );
+
+function wpdocs_set_html_mail_content_type() {
+    return 'text/html';
+}
+
 function store_contact() {
 	global $wpdb;
+	
 
 	$gump = new GUMP();
 
