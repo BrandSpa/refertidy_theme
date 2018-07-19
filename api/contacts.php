@@ -33,7 +33,7 @@ function store_contact() {
 						<td style="padding-bottom: 30px">
 							<table cellspadding="0" cellspacing="0" style="width: 600px;">
 								<tr>
-									<td style="text-align: right; padding: 10px; width: 300px;">Nombre</td><td style="width: 300px">'.$data["nombre"].'</td>
+									<td style="text-align: right; padding: 10px; width: 300px;">Nombre</td><td style="width: 300px">'.$data["name"].'</td>
 								</tr>
 								<tr>
 									<td style="text-align: right; padding: 10px; width: 300px;">Email</td><td style="width: 300px">'.$data["email"].'</td>
