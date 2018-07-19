@@ -5,7 +5,9 @@ function ra_contact_sc( $atts ) {
     "message" => "Gracias, pronto un asesor se pondrá en contacto con usted."
   ], $atts);
   $props = [
-    "message" => $at['message']
+    "message" => $at['message'],
+    "redirect" => $at['redirect'],
+    "thanks_page" => $at['thanks_page'],
   ];
 
   ob_start();
