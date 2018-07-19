@@ -17,7 +17,7 @@ function ra_contact_vc() {
 				"heading" => "Redirigir",
 				"param_name" => "redirect",
 				"value" => array(
-					"" => "false"
+					"" => "true"
 				),
 			],
 			[
