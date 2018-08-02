@@ -103,6 +103,7 @@ abbr[title] {
   /* 1 */
   text-decoration: underline;
   /* 2 */
+  -webkit-text-decoration: underline dotted;
   text-decoration: underline dotted;
   /* 2 */ }
 
@@ -952,6 +953,11 @@ li {
 
 .form-contact input:-ms-input-placeholder, .form-contact textarea:-ms-input-placeholder {
   color: #fff; }
+
+.form-contact .flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
 
 .posts-slider {
   position: relative;

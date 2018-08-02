@@ -73,7 +73,7 @@ class Contact extends Component {
 
     return (
       <form className="form-contact" onSubmit={this.handleSubmit}>
-        <div className="form-group">
+        <div className="form-group flex">
           <div className="input-group-prepend">
             <div className="input-group-text"><i className="fas fa-user"></i></div>
           </div>
@@ -87,7 +87,7 @@ class Contact extends Component {
           <div className="input-error" style={ errors.name ? {display: 'block'} : {display: 'none'}}>{errors.name}</div>
         </div>
 
-        <div className="form-group">
+        <div className="form-group flex">
           <div className="input-group-prepend">
             <div className="input-group-text"><i className="fas fa-envelope"></i></div>
           </div>
@@ -101,7 +101,7 @@ class Contact extends Component {
           <div className="input-error" style={ errors.email ? {display: 'block'} : {display: 'none'}}>{errors.email}</div>
         </div>
 
-        <div className="form-group">
+        <div className="form-group flex">
           <div className="input-group-prepend">
             <div className="input-group-text"><i className="fas fa-phone"></i></div>
           </div>
@@ -114,7 +114,7 @@ class Contact extends Component {
             value={phone}/>
         </div>
 
-        <div className="form-group">
+        <div className="form-group flex">
           <div className="input-group-prepend">
             <div className="input-group-text"><i className="fas fa-building"></i></div>
           </div>
