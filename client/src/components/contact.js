@@ -74,6 +74,9 @@ class Contact extends Component {
     return (
       <form className="form-contact" onSubmit={this.handleSubmit}>
         <div className="form-group">
+          <div class="input-group-prepend">
+            <div class="input-group-text"><i className="fas fa-user"></i></div>
+          </div>
           <input
             name="name"
             type="text"
@@ -85,6 +88,9 @@ class Contact extends Component {
         </div>
 
         <div className="form-group">
+          <div class="input-group-prepend">
+            <div class="input-group-text"><i className="fas fa-envelope"></i></div>
+          </div>
           <input
             name="email"
             type="text"
@@ -96,6 +102,9 @@ class Contact extends Component {
         </div>
 
         <div className="form-group">
+          <div class="input-group-prepend">
+            <div class="input-group-text"><i className="fas fa-phone"></i></div>
+          </div>
           <input
             name="phone"
             type="text"
@@ -106,6 +115,9 @@ class Contact extends Component {
         </div>
 
         <div className="form-group">
+          <div class="input-group-prepend">
+            <div class="input-group-text"><i className="fas fa-building"></i></div>
+          </div>
           <input
             name="company"
             type="text"
@@ -113,17 +125,6 @@ class Contact extends Component {
             placeholder="Empresa"
             onChange={this.handleChange}
             value={company}/>
-        </div>
-
-        <div className="form-group">
-          <textarea
-            name="question"
-            rows="4"
-            className="form-control"
-            placeholder="¿Dudas?"
-            onChange={this.handleChange}
-            value={question}/>
-          <div className="input-error" style={ errors.question ? {display: 'block'} : {display: 'none'}}>{errors.question}</div>
         </div>
 
         <input
