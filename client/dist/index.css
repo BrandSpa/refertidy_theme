@@ -832,6 +832,8 @@ li {
   position: relative;
   overflow: hidden;
   height: 100vh; }
+  .slider .ml-20 {
+    margin-left: 20px; }
   .slider__viewport {
     overflow: hidden;
     will-change: transform;
