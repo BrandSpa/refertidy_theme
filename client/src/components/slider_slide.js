@@ -92,7 +92,7 @@ class SliderSlide extends Component {
          </a>
          {
            slide.btn_2_link ? 
-            <a href={slide.btn_2_link} className="btn" style={{background: slide.btn_2_color}}>
+            <a href={slide.btn_2_link} className="btn ml-20" style={{background: slide.btn_2_color}}>
               {slide.btn_2_txt}
             </a>
             : null
