@@ -56,7 +56,23 @@
         "type" => "colorpicker",
 				"heading" => "Button color",
 				"param_name" => "btn_color"
+      ],
+      [
+        "type" => "textfield",
+				"heading" => "Button 2 link",
+				"param_name" => "btn_2_link"
+      ],
+      [
+        "type" => "textfield",
+				"heading" => "Button 2 text",
+				"param_name" => "btn_2_txt"
+      ],
+      [
+        "type" => "colorpicker",
+				"heading" => "Button 2 color",
+				"param_name" => "btn_2_color"
       ]
+      
 	 ];
 
 	 $params = [
