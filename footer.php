@@ -3,6 +3,32 @@
 <?php wp_footer() ?>
 <!-- /wordpress files-->
 <script src="<?php echo get_template_directory_uri() ?>/client/dist/vendor.js"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script>
+$(document).ready(function () {
+    // handle links with @href started with '#' only
+    $(document).on('click', 'a[href^="#"]', function(e) {
+        // target element id
+        var id = $(this).attr('href');
+
+        // target element
+        var $id = $(id);
+        if ($id.length === 0) {
+            return;
+        }
+
+        // prevent standard hash navigation (avoid blinking in IE)
+        e.preventDefault();
+
+        // top position relative to the document
+        var pos = $id.offset().top;
+
+        // animated top scrolling
+        $('body, html').animate({scrollTop: pos-110});
+    });
+})
+
+</script>
 
 <!--async load app-->
 <script type="text/javascript">
