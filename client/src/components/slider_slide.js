@@ -105,7 +105,7 @@ class SliderSlide extends Component {
         <div
           className="lazyload"
           style={slideStyle}
-          data-bgset={slide.bg_img}
+          data-bgset={`${slide.bg_img_mobile} [(max-width: 767px)] | ${slide.bg_img}`}
         />
 
         <div
