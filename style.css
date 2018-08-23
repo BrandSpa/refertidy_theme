@@ -9,6 +9,51 @@ This theme, like WordPress, is licensed under the GPL.
 Use it to make something cool, have fun, and share what you've learned with others.
 */
 
+@font-face {
+  font-family: 'brandon_grotesquebold';
+  src: url('fonts/brandon_bld-webfont.woff2') format('woff2'),
+       url('fonts/brandon_bld-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+
+
+
+@font-face {
+  font-family: 'brandon_grotesqueblack';
+  src: url('fonts/brandon_blk-webfont.woff2') format('woff2'),
+       url('fonts/brandon_blk-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+
+
+
+@font-face {
+  font-family: 'brandon_grotesquemedium';
+  src: url('fonts/brandongrotesque-medium-webfont.woff2') format('woff2'),
+       url('fonts/brandongrotesque-medium-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+
+
+
+@font-face {
+  font-family: 'brandon_grotesqueregular';
+  src: url('fonts/brandongrotesque-regular-webfont.woff2') format('woff2'),
+       url('fonts/brandongrotesque-regular-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+
+}
+
 h1 {
   font-size: 2.7em;
   line-height: 150%;
