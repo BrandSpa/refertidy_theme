@@ -12,7 +12,7 @@ Use it to make something cool, have fun, and share what you've learned with othe
 h1 {
   font-size: 2.7em;
   line-height: 150%;
-  font-family: 'Gotham Rounded Book';
+  font-family: 'BrandonGrotesque-Black';
 }
 
 h2 {
@@ -20,12 +20,13 @@ h2 {
   margin-bottom: 15px;
   font-size: 40px;
   line-height: 50px;
+  font-family: 'BrandonGrotesque-Bold';
 }
 
 h3 {
   font-size: 1.5em;
   line-height: 140%;
-  font-family: 'Aktiv Grotesk';
+  font-family: 'Assistant-Light';
   font-weight: 900;
 }
 
@@ -35,7 +36,7 @@ h4 {
   font-size: 0.9em;
   line-height: 150%;
   font-weight: 500;
-  font-family: 'Gotham Rounded Medium';
+  font-family: 'BrandonGrotesque-Regular';
   letter-spacing: 2px;
 }
 
@@ -52,11 +53,11 @@ h6 {
   margin-bottom: 10px;
   font-size: 13px;
   line-height: 19px;
-  font-family: 'Aktiv Grotesk';
+  font-family: 'BrandonGrotesque-Regular';
 }
 
 p {
-  font-family: 'Aktiv Grotesk';
+  font-family: 'Assistant-Light';
   font-weight: 300;
   font-size: 1em;
   line-height: 155%;

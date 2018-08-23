@@ -5,7 +5,7 @@
 	<meta name="theme-color" content="#6031ba">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<title>RentAdvisor</title>
+	<title>Refertidy</title>
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha.6/css/bootstrap-grid.css">
 	<link rel="stylesheet" href="<?php echo get_template_directory_uri() ?>/fonts/aktiv.css">
 	<link rel="stylesheet" href="<?php echo get_template_directory_uri() ?>/fonts/gotham_rounded.css">
@@ -45,9 +45,10 @@
 
 <header class="app-header">
 	<div class="container">
-		<a href="/" class="">
+		<a href="/" class="logo_header">
 			<?php  require('templates/logo.php') ?>
 		</a>
+		<!--<p id="slogan_logo" style="color:#6778FF;font-family: 'BrandonGrotesque-Regular' !important;display: inline-block;">Cada cliente es un tesoro</p>-->
 		<?php if ( is_active_sidebar( 'header_widget' ) ) : ?>
 			<div class="header__widget">
 				<?php dynamic_sidebar( 'header_widget' ); ?>
@@ -72,7 +73,8 @@
 			];
 		 ?>
 
-		 <div class="ra-menu-mobile" data-props='<?php echo json_encode($menuProps) ?>'></div>
+		 <div class="ra-menu-mobile" data-props='<?php echo json_encode($menuProps)?>'>
+		</div>
 	</div>
 </header>
 
