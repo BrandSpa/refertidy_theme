@@ -6,14 +6,14 @@ function ra_quotations_migration() {
 	$charset_collate = $wpdb->get_charset_collate();
 
 	$sql = "CREATE TABLE quotations (
-				id int(9) NOT NULL AUTO_INCREMENT,
+				id mediumint(9) NOT NULL AUTO_INCREMENT,
             name varchar(55),
             phone varchar(55),
             email varchar(55),
             product varchar(55),
             created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
-            UNIQUE KEY id (id)
-        );";
+            UNIQUE KEY id 
+        ) $charset_collate;";
 
   if ( ! function_exists('dbDelta') ) {
 		require_once( ABSPATH . 'wp-admin/includes/upgrade.php' );
