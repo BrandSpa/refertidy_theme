@@ -14,7 +14,7 @@ function ra_contacts_migration() {
             question TEXT,
             privacy BOOLEAN DEFAULT 0,
 						created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
-            UNIQUE KEY id 
+            UNIQUE (ID)
         ) $charset_collate;";
 
   if ( ! function_exists('dbDelta') ) {

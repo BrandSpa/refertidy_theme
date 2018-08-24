@@ -12,7 +12,7 @@ function ra_quotations_migration() {
             email varchar(55),
             product varchar(55),
             created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
-            UNIQUE KEY id 
+            UNIQUE (ID)
         ) $charset_collate;";
 
   if ( ! function_exists('dbDelta') ) {
