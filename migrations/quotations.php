@@ -13,7 +13,7 @@ function ra_quotations_migration() {
             product varchar(55),
             created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
             UNIQUE KEY id (id)
-        ) $charset_collate;";
+        );";
 
   if ( ! function_exists('dbDelta') ) {
 		require_once( ABSPATH . 'wp-admin/includes/upgrade.php' );
