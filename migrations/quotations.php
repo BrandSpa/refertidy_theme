@@ -6,7 +6,7 @@ function ra_quotations_migration() {
 	$charset_collate = $wpdb->get_charset_collate();
 
 	$sql = "CREATE TABLE quotations (
-				id mediumint(9) NOT NULL AUTO_INCREMENT,
+				id int(9) NOT NULL AUTO_INCREMENT,
             name varchar(55),
             phone varchar(55),
             email varchar(55),

@@ -6,7 +6,7 @@ function ra_contacts_migration() {
 	$charset_collate = $wpdb->get_charset_collate();
 
 	$sql = "CREATE TABLE contacts (
-				id mediumint(9) NOT NULL AUTO_INCREMENT,
+				id int(10) NOT NULL AUTO_INCREMENT,
             name varchar(55),
             phone varchar(55),
             email varchar(55),
