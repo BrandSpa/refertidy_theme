@@ -13,7 +13,7 @@ function ra_contacts_migration() {
             company varchar(155),
             question TEXT,
             privacy BOOLEAN DEFAULT 0,
-						created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+						created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
             UNIQUE (ID)
         ) $charset_collate;";
 
